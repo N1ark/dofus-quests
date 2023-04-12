@@ -1,0 +1,271 @@
+body {
+  background-color: #121212;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+#cy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#side-bar {
+  z-index: 10;
+  pointer-events: none;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.column-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-column, .column-stack {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  height: fit-content;
+}
+
+.side-column h1:first-child, .side-column h2:first-child {
+  margin-top: 0;
+}
+
+.side-column {
+  background-color: rgb(69 69 69 / 30%);
+  backdrop-filter: blur(3px);
+  pointer-events: visible;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 15px;
+  max-width: 250px;
+}
+
+.column-stack .side-column {
+  margin-bottom: 10px;
+}
+
+#almanax.side-column {
+  overflow: initial;
+}
+
+#results {
+  margin-top: 20px;
+}
+
+.result button::before {
+  content: "• ";
+  font-size: 18px;
+}
+
+.result.quest button::before {
+  color: #256FD1;
+}
+
+.result.achievement button::before {
+  color: #e0961f;
+}
+
+.result button {
+  color: white;
+  text-align: start;
+  margin-top: 5px;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+h1, h2, p, a {
+  color: white;
+}
+
+h1 { font-size: 1.3em; }
+
+p { font-size: 1em; }
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.finish-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fancy-button, .finish-bar button {
+  background-color: rgba(70 70 70 / 60%);
+  color: white;
+  border: 0;
+  height: 24px;
+  border-radius: 5px;
+  margin-left: 5px;
+  transition: background-color ease-in 0.3s;
+}
+
+.fancy-button:hover, .finish-bar button:hover {
+  cursor: pointer;
+  background-color: rgba(120 120 120 / 60%);
+}
+
+.large-button {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.1em;
+  height: fit-content;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.1, 1.1);
+}
+
+/* Almanax */
+
+#almanax .date {
+  font-size: 0.8em;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+#almanax .quest-name {
+  margin-top: 0;
+}
+
+#almanax .item-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+#almanax .bonus-type {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+#almanax .bonus-info {
+  margin-top: 5px;
+}
+
+/* Popup */
+
+.popup {
+  position: fixed;
+  padding-left: calc(50vw - 300px);
+  padding-right: calc(50vw - 300px);
+  width: 600px;
+  height: 100vh;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.popup .popup-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup .close-button {
+  align-self: flex-start;
+}
+
+.popup p {
+  word-break: normal;
+  width: 75%;
+}
+
+.popup textarea {
+  resize: none;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(70 70 70 / 60%);
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.popup::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(69 69 69 / 30%);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+
+/* Round on/off switch */
+
+.switch {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}

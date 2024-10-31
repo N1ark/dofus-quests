@@ -1,24 +1,7 @@
-const animationEasing = 'ease'
-const animationDuration = 500
-
-const layout = {
-    name: 'elk',
-    elk: {
-        algorithm: 'layered',
-        'elk.direction': 'DOWN',
-    },
-    nodeDimensionsIncludeLabels: true,
-    animate: true,
-    animationDuration: animationDuration,
-    animationEasing: animationEasing,
-}
-
-const style = `
+export const style = `
 edge {
   curve-style: bezier;
   target-arrow-shape: triangle;
-  line-color: data(favColor);
-  target-arrow-color: data(favColor);
   arrow-scale: 1.3;
   opacity: 0.3;
   width: 3;
@@ -64,6 +47,27 @@ node.highlighted {
   z-index: 9999;
 }
 
+edge[type = "AVAILABLE"] {
+    line-color: #2bc899;
+    target-arrow-color: #2bc899;
+}
+edge[type = "FINISHED"] {
+    line-color: #29d35c;
+    target-arrow-color: #29d35c;
+}
+edge[type = "NOT_FINISHED"] {
+    line-color: #e14a4a;
+    target-arrow-color: #e14a4a;
+}
+edge[type = "FINISHED_N_TIMES"] {
+    line-color: #2bc899;
+    target-arrow-color: #2bc899;
+}
+edge[type = "IN_PROGRESS"] {
+    line-color: #e1cc4a;
+    target-arrow-color: #e1cc4a;
+}
+
 edge.highlighted {
 	opacity: 0.8;
 	width: 4;
@@ -86,5 +90,3 @@ edge.faded {
 	display: none;
 }
 `
-
-export { layout, style }

@@ -150,8 +150,9 @@
         cyInstance.remove(cyInstance.elements())
         cyInstance.add(toCyto(data))
         untrack(() => {
-            layout()
             updateCompleted()
+            updateVisible()
+            layout()
         })
     })
 
@@ -160,6 +161,18 @@
         if (!cyInstance) return
         untrack(() => {
             layout(true)
+        })
+    })
+
+    $effect(() => {
+        if (refresh) return
+        const _unused1 = ownShowCompleted
+        const _unused2 = ownCompleted
+        if (!cyInstance) return
+        untrack(() => {
+            updateCompleted()
+            updateVisible()
+            requestAnimationFrame(() => layout(true))
         })
     })
 </script>

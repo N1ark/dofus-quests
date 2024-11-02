@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { onMount } from 'svelte'
     import { getRawCompleted, setRawCompleted } from '../../state.svelte'
     import Column from './Column.svelte'
     import Container from './Container.svelte'
@@ -6,8 +7,13 @@
 
     const { close }: { close?: () => any } = $props()
 
-    const data = getRawCompleted()
     let backup: string = $state('')
+    let visible = $state(false)
+    const data = $derived(visible ? getRawCompleted() : '')
+
+    $effect(() => {
+        if (!visible) backup = ''
+    })
 
     const addToClipboard = () => {
         navigator.clipboard.writeText(data)
@@ -22,9 +28,21 @@
             alert('Invalid data')
         }
     }
+
+    onMount(() => {
+        const hashCheck = () => {
+            const hash = window.location.hash.slice(1)
+            visible = hash === 'backup'
+        }
+
+        hashCheck()
+
+        window.addEventListener('hashchange', hashCheck)
+        return () => window.removeEventListener('hashchange', hashCheck)
+    })
 </script>
 
-<Container classes="modal">
+<Container classes={`modal ${visible ? '' : 'hidden'}`}>
     <h2>Backup</h2>
     <Row>
         <Column classes="modal-col">
@@ -49,9 +67,11 @@
 
 <style>
     :global(.modal) {
-        position: absolute;
-        inset: 64px;
-        z-index: 100;
+        width: 100%;
+        pointer-events: auto;
+        &:global(.hidden) {
+            display: none;
+        }
     }
     :global(.modal-col) {
         width: 50%;

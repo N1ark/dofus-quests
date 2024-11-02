@@ -5,6 +5,7 @@
     import EyeClosed from 'lucide-svelte/icons/eye-closed'
     import Reload from 'lucide-svelte/icons/refresh-cw'
 
+    import { onMount } from 'svelte'
     import BackupPopup from './lib/components/BackupPopup.svelte'
     import Button from './lib/components/Button.svelte'
     import Column from './lib/components/Column.svelte'
@@ -14,11 +15,20 @@
     import { data } from './lib/data'
     import { showCompleted } from './state.svelte'
 
-    let refreshIdx = $state(0)
-    let showBackupModal = $state(false)
+    let refreshIdx = $state(1)
     let ownShowCompleted = $state(false)
     showCompleted.subscribe((value) => {
         ownShowCompleted = value
+    })
+
+    onMount(() => {
+        const keyListener = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                window.location.hash = ''
+            }
+        }
+        window.addEventListener('keydown', keyListener)
+        return () => window.removeEventListener('keydown', keyListener)
     })
 </script>
 
@@ -39,15 +49,15 @@
             <Button
                 Icon={Archive}
                 title="Backup"
-                onclick={() => (showBackupModal = !showBackupModal)}
+                onclick={() =>
+                    (window.location.hash =
+                        window.location.hash === '#backup' ? '' : 'backup')}
             />
             <Button Icon={Calendar} title="Almanax" />
         </Column>
         <SelectedQuestView />
+        <BackupPopup />
     </Row>
-    {#if showBackupModal}
-        <BackupPopup close={() => (showBackupModal = false)} />
-    {/if}
 </main>
 
 <style>

@@ -30,20 +30,10 @@
             }
         }
 
-        const keyListener = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') {
-                window.location.hash = ''
-            }
-        }
-
         hashCheck()
 
         window.addEventListener('hashchange', hashCheck)
-        window.addEventListener('keydown', keyListener)
-        return () => {
-            window.removeEventListener('hashchange', hashCheck)
-            window.removeEventListener('keydown', keyListener)
-        }
+        return () => window.removeEventListener('hashchange', hashCheck)
     })
 </script>
 

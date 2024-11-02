@@ -714,7 +714,7 @@
     },
     {
       "requirements": [
-        "Être un 16",
+        "Être un Eliotrope",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Un rayon de soleil",
@@ -862,7 +862,7 @@
       "type": "achievement"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Produits naturels",
       "description": "",
       "id": "q1649",
@@ -928,7 +928,7 @@
       "type": "achievement"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Mise à l'épreuve",
       "description": "",
       "id": "q1642",
@@ -996,7 +996,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Un peu de pigment",
       "description": "",
       "id": "q1655",
@@ -1074,7 +1074,7 @@
       "type": "achievement"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "L'anneau de tous les dangers",
       "description": "",
       "id": "q1629",
@@ -1147,21 +1147,21 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Transport peu commun",
       "description": "",
       "id": "q1639",
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Cryptologie",
       "description": "",
       "id": "q1638",
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "La galette secrète",
       "description": "",
       "id": "q1637",
@@ -1182,14 +1182,14 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Mort au rat !",
       "description": "",
       "id": "q1633",
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Le village dans les nuages",
       "description": "",
       "id": "q1632",
@@ -1573,7 +1573,7 @@
     },
     {
       "requirements": [
-        "Être un 17",
+        "Être un Huppermage",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Les paroles s'envolent, les aigris restent",
@@ -1865,7 +1865,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Où est passée la 7e compagnie ?",
       "description": "",
       "id": "q703",
@@ -1873,7 +1873,7 @@
     },
     {
       "requirements": [
-        "Être un 13",
+        "Être un Roublard",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Braquage à la Roublard",
@@ -2308,8 +2308,8 @@
     },
     {
       "requirements": [
-        "Être un 14",
-        "[Conseil de classe](q2009) finie"
+        "[Conseil de classe](q2009) finie",
+        "Être un Zobal"
       ],
       "name": "Zobal Hibaba et les 40 Roublards",
       "description": "",
@@ -2342,7 +2342,7 @@
     },
     {
       "requirements": [
-        "Être un 20",
+        "Être un Forgelance",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "La routine anodine du chevalier citadin",
@@ -3355,7 +3355,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Carnage de glace",
       "description": "Terminer 1 quête de chasse de Darwin Chester.",
       "id": "a927",
@@ -3593,7 +3593,7 @@
     },
     {
       "requirements": [
-        "(Être un 20 et Etre a la position 226492929) ou (Être un 14 et Etre a la position 69208064) ou (Être un 5 et Etre a la position 183763982) ou (Être un 15 et Etre a la position 96470528) ou (Être un 4 et Etre a la position 183768064) ou (Être un 10 et Etre a la position 183768078) ou (Être un 11 et Etre a la position 183767052) ou (Être un 13 et Etre a la position 67108864) ou (Être un 12 et Etre a la position 183769088) ou (Être un 18 et Etre a la position 177209344) ou (Être un 2 et Etre a la position 183762946) ou (Être un 8 et Etre a la position 183762952) ou (Être un 17 et Etre a la position 163054594) ou (Être un 3 et Etre a la position 17048576) ou (Être un 7 et Etre a la position 183763968) ou (Être un 16 et Etre a la position 148637185) ou (Être un 6 et Etre a la position 183766016) ou (Être un 9 et Etre a la position 183765004) ou (Être un 1 et Etre a la position 183764992)",
+        "(Être un Forgelance et Etre a la position 226492929) ou (Être un Zobal et Etre a la position 69208064) ou (Être un Xélor et Etre a la position 183763982) ou (Être un Steamer et Etre a la position 96470528) ou (Être un Sram et Etre a la position 183768064) ou (Être un Sadida et Etre a la position 183768078) ou (Être un Sacrieur et Etre a la position 183767052) ou (Être un Roublard et Etre a la position 67108864) ou (Être un Pandawa et Etre a la position 183769088) ou (Être un Ouginak et Etre a la position 177209344) ou (Être un Osamodas et Etre a la position 183762946) ou (Être un Iop et Etre a la position 183762952) ou (Être un Huppermage et Etre a la position 163054594) ou (Être un Enutrof et Etre a la position 17048576) ou (Être un Eniripsa et Etre a la position 183763968) ou (Être un Eliotrope et Etre a la position 148637185) ou (Être un Ecaflip et Etre a la position 183766016) ou (Être un Cra et Etre a la position 183765004) ou (Être un Féca et Etre a la position 183764992)",
         "Niveau >49"
       ],
       "name": "La colère des dieux",
@@ -4294,8 +4294,8 @@
     },
     {
       "requirements": [
-        "Être un 7",
-        "[Conseil de classe](q2009) finie"
+        "[Conseil de classe](q2009) finie",
+        "Être un Eniripsa"
       ],
       "name": "Piques de solution",
       "description": "",
@@ -4304,7 +4304,7 @@
     },
     {
       "requirements": [
-        "Être un 6",
+        "Être un Ecaflip",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Au petit malheur la chance",
@@ -4314,7 +4314,7 @@
     },
     {
       "requirements": [
-        "Être un 5",
+        "Être un Xélor",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Tarot, t'es très fort",
@@ -4324,7 +4324,7 @@
     },
     {
       "requirements": [
-        "Être un 4",
+        "Être un Sram",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Crime et châtiment",
@@ -4344,7 +4344,7 @@
     },
     {
       "requirements": [
-        "Être un 3",
+        "Être un Enutrof",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "La fête de la chocopépite",
@@ -4355,7 +4355,7 @@
     {
       "requirements": [
         "[Conseil de classe](q2009) finie",
-        "Être un 2"
+        "Être un Osamodas"
       ],
       "name": "Série animalière",
       "description": "",
@@ -4374,7 +4374,7 @@
     },
     {
       "requirements": [
-        "Être un 1",
+        "Être un Féca",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Tournée d'inspection",
@@ -4390,7 +4390,7 @@
       "type": "quest"
     },
     {
-      "requirements": ["(Etre a la position 224920576 et Être un 20 et [La routine anodine du chevalier citadin](q2470) finie) ou (Etre a la position 188745223 et Être un 1 et [Tournée d'inspection](q1963) finie) ou (Etre a la position 188744199 et Être un 2 et [Série animalière](q1964) finie) ou (Etre a la position 188743685 et Être un 3 et [La fête de la chocopépite](q1965) finie) ou (Etre a la position 188744710 et Être un 4 et [Crime et châtiment](q1966) finie) ou (Etre a la position 191104000 et Être un 5 et [Tarot, t'es très fort](q1967) finie) ou (Etre a la position 192413696 et Être un 6 et [Au petit malheur la chance](q1968) finie) ou (Etre a la position 192417798 et Être un 7 et [Piques de solution](q1969) finie) ou (Etre a la position 191105024 et Être un 8 et [Iop et hop](q1970) finie) ou (Etre a la position 188744198 et Être un 9 et [C'est pour ta pomme](q1971) finie) ou (Etre a la position 188743686 et Être un 10 et [C'est pourtant naturel](q1972) finie) ou (Etre a la position 192939018 et Être un 11 et [Souffre-douleur](q1973) finie) ou (Etre a la position 191106050 et Être un 12 et [Trempette dans un verre d'eau](q1974) finie) ou (Etre a la position 192414728 et Être un 13 et [Braquage à la Roublard](q704) finie) ou (Etre a la position 188746759 et Être un 14 et [Zobal Hibaba et les 40 Roublards](q716) finie) ou (Etre a la position 188743681 et Être un 15 et [L'étrange créature de l'étang bleu](q938) finie) ou (Etre a la position 192414724 et Être un 16 et [Un rayon de soleil](q1615) finie) ou (Etre a la position 191106052 et Être un 17 et [Les paroles s'envolent, les aigris restent](q1677) finie) ou (Etre a la position 83886090 et Être un 18 et [Une vie de milichien](q1841) finie)"],
+      "requirements": ["(Etre a la position 224920576 et Être un Forgelance et [La routine anodine du chevalier citadin](q2470) finie) ou (Etre a la position 188745223 et Être un Féca et [Tournée d'inspection](q1963) finie) ou (Etre a la position 188744199 et Être un Osamodas et [Série animalière](q1964) finie) ou (Etre a la position 188743685 et Être un Enutrof et [La fête de la chocopépite](q1965) finie) ou (Etre a la position 188744710 et Être un Sram et [Crime et châtiment](q1966) finie) ou (Etre a la position 191104000 et Être un Xélor et [Tarot, t'es très fort](q1967) finie) ou (Etre a la position 192413696 et Être un Ecaflip et [Au petit malheur la chance](q1968) finie) ou (Etre a la position 192417798 et Être un Eniripsa et [Piques de solution](q1969) finie) ou (Etre a la position 191105024 et Être un Iop et [Iop et hop](q1970) finie) ou (Etre a la position 188744198 et Être un Cra et [C'est pour ta pomme](q1971) finie) ou (Etre a la position 188743686 et Être un Sadida et [C'est pourtant naturel](q1972) finie) ou (Etre a la position 192939018 et Être un Sacrieur et [Souffre-douleur](q1973) finie) ou (Etre a la position 191106050 et Être un Pandawa et [Trempette dans un verre d'eau](q1974) finie) ou (Etre a la position 192414728 et Être un Roublard et [Braquage à la Roublard](q704) finie) ou (Etre a la position 188746759 et Être un Zobal et [Zobal Hibaba et les 40 Roublards](q716) finie) ou (Etre a la position 188743681 et Être un Steamer et [L'étrange créature de l'étang bleu](q938) finie) ou (Etre a la position 192414724 et Être un Eliotrope et [Un rayon de soleil](q1615) finie) ou (Etre a la position 191106052 et Être un Huppermage et [Les paroles s'envolent, les aigris restent](q1677) finie) ou (Etre a la position 83886090 et Être un Ouginak et [Une vie de milichien](q1841) finie)"],
       "name": "Ça sent le gaz",
       "description": "",
       "id": "q1960",
@@ -4479,7 +4479,7 @@
     },
     {
       "requirements": [
-        "Être un 12",
+        "Être un Pandawa",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Trempette dans un verre d'eau",
@@ -4489,7 +4489,7 @@
     },
     {
       "requirements": [
-        "Être un 11",
+        "Être un Sacrieur",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Souffre-douleur",
@@ -4499,8 +4499,8 @@
     },
     {
       "requirements": [
-        "Être un 10",
-        "[Conseil de classe](q2009) finie"
+        "[Conseil de classe](q2009) finie",
+        "Être un Sadida"
       ],
       "name": "C'est pourtant naturel",
       "description": "",
@@ -4509,7 +4509,7 @@
     },
     {
       "requirements": [
-        "Être un 9",
+        "Être un Cra",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "C'est pour ta pomme",
@@ -4519,7 +4519,7 @@
     },
     {
       "requirements": [
-        "Être un 8",
+        "Être un Iop",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Iop et hop",
@@ -4694,7 +4694,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Les principes d'Archie m'aident",
       "description": "",
       "id": "q1958",
@@ -5392,7 +5392,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Ce n'est qu'un début",
       "description": "Posséder 1 Page de Calendrier.",
       "id": "a569",
@@ -5466,7 +5466,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "La fin de l'éternité",
       "description": "Terminer la quête : L'éternelle moisson.",
       "id": "a565",
@@ -5542,7 +5542,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "La bonne attitude",
       "description": "Terminer la quête : Manuscrit de Terra Cogita.",
       "id": "a556",
@@ -6255,7 +6255,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Intrusion chez les wabbits",
       "description": "",
       "id": "q827",
@@ -6324,7 +6324,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "La fin du règne",
       "description": "",
       "id": "q826",
@@ -6875,7 +6875,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Mieux vaut ne pas se fier à la première impression",
       "description": "",
       "id": "q894",
@@ -7418,7 +7418,7 @@
     },
     {
       "requirements": [
-        "Être un 18",
+        "Être un Ouginak",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "Une vie de milichien",
@@ -8383,7 +8383,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "L'école fantastique",
       "description": "",
       "id": "q1445",
@@ -9033,7 +9033,7 @@
     },
     {
       "requirements": [
-        "Être un 15",
+        "Être un Steamer",
         "[Conseil de classe](q2009) finie"
       ],
       "name": "L'étrange créature de l'étang bleu",
@@ -9248,7 +9248,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Promenade sur les quais",
       "description": "",
       "id": "q950",
@@ -10112,7 +10112,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Gros œuvre au château d'Allister",
       "description": "",
       "id": "q132",
@@ -10422,7 +10422,7 @@
       "type": "achievement"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Pauvre pomme (de terre)",
       "description": "",
       "id": "q138",
@@ -10661,7 +10661,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Bienvenue au Krazybwork saloon",
       "description": "",
       "id": "q164",
@@ -14075,7 +14075,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "L'Ascension",
       "description": "",
       "id": "q681",
@@ -14119,7 +14119,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "T'as les boules",
       "description": "",
       "id": "q673",
@@ -14137,7 +14137,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Fantômes contre fantômes",
       "description": "",
       "id": "q675",
@@ -14223,7 +14223,7 @@
       "type": "quest"
     },
     {
-      "requirements": [""],
+      "requirements": [],
       "name": "Le nouveau monde",
       "description": "",
       "id": "q231",

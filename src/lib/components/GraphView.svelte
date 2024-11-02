@@ -1,61 +1,175 @@
-<script lang="ts">
+<script lang="ts" module>
     import cytoscape from 'cytoscape'
-    // @ts-ignore
+    // @ts-ignore-next-line
     import cytoscapeElk from 'cytoscape-elk'
-    import { onMount, setContext } from 'svelte'
+
+    cytoscape.use(cytoscapeElk)
+</script>
+
+<script lang="ts">
+    import { onMount, untrack } from 'svelte'
+    import { completed, showCompleted } from '../../state.svelte'
     import { style } from '../cytostyle'
-    import type { Data } from '../data'
+    import { type Data, toCyto } from '../data'
 
-    export let data: Data
+    let {
+        data,
+        refresh,
+    }: { data: Pick<Data, 'nodes' | 'edges'>; refresh?: any } = $props()
 
-    let innerWidth = 0
-    let innerHeight = 0
-    let container: HTMLElement
+    let containerDiv: HTMLElement
 
-    setContext('graphSharedState', {
-        getCyInstance: () => cyInstance,
+    let cyInstance: cytoscape.Core | null = $state(null)
+    let ownCompleted: Set<string> = $state(new Set())
+    let ownShowCompleted: boolean = $state(false)
+
+    completed.subscribe((value) => {
+        ownCompleted = new Set(value)
     })
-    let cyInstance: cytoscape.Core | null = null
+    showCompleted.subscribe((value) => {
+        ownShowCompleted = value
+    })
 
-    onMount(async () => {
-        cytoscape.use(cytoscapeElk)
-        cyInstance = cytoscape({
-            container: container,
-            // @ts-ignore
-            style,
-            elements: {
-                nodes: data.nodes.map(
-                    ({ id, name, type, description, requirements }) => ({
-                        data: { id, name, type, description, requirements },
-                    })
-                ),
-                edges: data.edges.map(({ from, to, type }) => ({
-                    data: { source: from, target: to, type: type },
-                })),
-            },
-        })
+    const center = () => {
+        if (!cyInstance) return
+        cyInstance.maxZoom(1.6)
+        cyInstance.fit(undefined, 50)
+        cyInstance.center()
+        cyInstance.maxZoom(3.5)
+    }
 
-        cyInstance
+    const layout = (animated: boolean = false) => {
+        if (!cyInstance) return
+        let elements = cyInstance.elements()
+        if (!ownShowCompleted) {
+            elements = elements.filter((element) => {
+                if (element.isNode()) return !ownCompleted.has(element.id())
+
+                const source = element.source()
+                const target = element.target()
+                return (
+                    !ownCompleted.has(source.id()) &&
+                    !ownCompleted.has(target.id())
+                )
+            })
+        }
+        elements
             .layout({
                 name: 'elk',
-                // @ts-ignore
+                // @ts-ignore-next-line
                 nodeDimensionsIncludeLabels: true,
-                elk: {
-                    algorithm: 'layered',
-                    'elk.direction': 'DOWN',
-                },
+                elk: { algorithm: 'layered', 'elk.direction': 'DOWN' },
+                ...(animated
+                    ? {
+                          animate: true,
+                          animationDuration: 500,
+                          animationEasing: 'ease',
+                      }
+                    : {}),
             })
             .run()
+            .on('layoutstop', animated ? () => {} : center)
+    }
+
+    const updateCompleted = () => {
+        cyInstance?.nodes().forEach((node) => {
+            if (ownCompleted.has(node.id())) {
+                node.addClass('finished')
+            } else {
+                node.removeClass('finished')
+            }
+        })
+    }
+
+    const updateVisible = () => {
+        cyInstance?.nodes('.hidden').removeClass('hidden')
+        if (!ownShowCompleted) cyInstance?.nodes('.finished').addClass('hidden')
+    }
+
+    $effect(() => {
+        const _unused1 = ownCompleted
+        const _unused2 = ownShowCompleted
+
+        updateCompleted()
+        updateVisible()
+    })
+
+    onMount(() => {
+        cyInstance = cytoscape({
+            container: containerDiv,
+            // @ts-ignore-next-line
+            style,
+            elements: toCyto(data),
+            maxZoom: 3.5,
+            minZoom: 0.04,
+        })
+
+        updateCompleted()
+        updateVisible()
+        layout()
+
+        cyInstance.on('tap', 'node', (event) => {
+            window.location.hash = event.target.id()
+        })
+        cyInstance.on('tap', (event) => {
+            if (event.target === cyInstance) {
+                window.location.hash = ''
+            }
+        })
+        cyInstance.on('resize', center)
+        cyInstance.on('cxttap', 'node', (event) => {
+            const toCompleted = !ownCompleted.has(event.target.id())
+            const nodes: string[] = event.originalEvent.shiftKey
+                ? event.target
+                      .predecessors('node')
+                      .map((n: any) => n.id())
+                      .concat(event.target.id())
+                : [event.target.id()]
+            let newCompleted = Array.from(ownCompleted)
+            if (toCompleted) {
+                nodes.forEach((node) => {
+                    if (!newCompleted.includes(node)) {
+                        newCompleted.push(node)
+                    }
+                })
+            } else {
+                nodes.forEach((node) => {
+                    const idx = newCompleted.indexOf(node)
+                    if (idx !== -1) {
+                        newCompleted.splice(idx, 1)
+                    }
+                })
+            }
+            completed.set(newCompleted)
+        })
+    })
+
+    $effect(() => {
+        const _unused = data
+        if (!cyInstance) return
+        cyInstance.remove(cyInstance.elements())
+        cyInstance.add(toCyto(data))
+        untrack(() => {
+            layout()
+            updateCompleted()
+        })
+    })
+
+    $effect(() => {
+        if (!refresh) return
+        if (!cyInstance) return
+        untrack(() => {
+            layout(true)
+        })
     })
 </script>
 
-<svelte:window bind:innerWidth bind:innerHeight />
-
-<div bind:this={container} class="container"></div>
+<div bind:this={containerDiv} class="container" onresize={center}></div>
 
 <style>
     .container {
         width: 100%;
         height: 100%;
+        pointer-events: auto;
     }
 </style>

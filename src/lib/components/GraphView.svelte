@@ -41,6 +41,7 @@
     const layout = (animated: boolean = false) => {
         if (!cyInstance) return
         let elements = cyInstance.elements()
+        if (elements.length === 0) return
         if (!ownShowCompleted) {
             elements = elements.filter((element) => {
                 if (element.isNode()) return !ownCompleted.has(element.id())
@@ -104,10 +105,6 @@
             minZoom: 0.04,
         })
 
-        updateCompleted()
-        updateVisible()
-        layout()
-
         cyInstance.on('tap', 'node', (event) => {
             window.location.hash = event.target.id()
         })
@@ -165,7 +162,7 @@
     })
 
     $effect(() => {
-        if (refresh) return
+        if (refresh !== undefined) return
         const _unused1 = ownShowCompleted
         const _unused2 = ownCompleted
         if (!cyInstance) return

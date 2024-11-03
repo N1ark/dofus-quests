@@ -25,6 +25,7 @@
                 node = tempNode
                 predecessors = onlyPredecessors(data, node.id)
             } else {
+                if (node === null) return
                 node = null
                 predecessors = { nodes: [], edges: [] }
             }

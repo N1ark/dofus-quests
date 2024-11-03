@@ -16,7 +16,7 @@
     import { data } from './lib/data'
     import { showCompleted } from './state.svelte'
 
-    let refreshIdx = $state(1)
+    let refreshIdx = $state(0)
     let ownShowCompleted = $state(false)
     showCompleted.subscribe((value) => {
         ownShowCompleted = value

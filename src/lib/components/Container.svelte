@@ -16,5 +16,6 @@
         padding: 16px;
         overflow: hidden;
         backdrop-filter: blur(2px);
+        box-sizing: border-box;
     }
 </style>

@@ -8,34 +8,45 @@ showCompleted.subscribe((value) => {
     localStorage.setItem('showCompleted', value.toString())
 })
 
-const readCompleted = (): string[] => {
-    const completedRaw = localStorage.getItem('finishedQuests')
-    if (completedRaw) {
-        const completedStr = decompressFromBase64(completedRaw)
-        const completedJson: string[] = JSON.parse(completedStr)
-        return Array.from(new Set(completedJson))
+type StorageData = {
+    completed: string[]
+    almanax: string[]
+}
+const readCompleted = (): StorageData => {
+    const v1 = localStorage.getItem('v1')
+    if (v1) {
+        const completedStr = decompressFromBase64(v1)
+        const completedJson: StorageData = JSON.parse(completedStr)
+        return completedJson
     }
-    return []
+
+    const v0 = localStorage.getItem('finishedQuests')
+    if (v0) {
+        const completedStr = decompressFromBase64(v0)
+        const completedJson = JSON.parse(completedStr)
+        return { completed: Array.from(new Set(completedJson)), almanax: [] }
+    }
+    return { completed: [], almanax: [] }
 }
-const storeCompleted = (completed: string[]) => {
-    const completedJson = JSON.stringify(Array.from(new Set(completed)))
+const storeCompleted = (completed: StorageData) => {
+    const completedJson = JSON.stringify({ ...localCompleted, ...completed })
     const completedStr = compressToBase64(completedJson)
-    localStorage.setItem('finishedQuests', completedStr)
+    localStorage.setItem('v1', completedStr)
 }
-export const completed = writable(readCompleted())
-let localCompleted: string[]
+export const completed = writable<StorageData>(readCompleted())
+let localCompleted: StorageData
 completed.subscribe((value) => {
     storeCompleted(value)
     localCompleted = value
 })
 
 export const getRawCompleted = () => {
-    const completedJson = JSON.stringify(Array.from(new Set(localCompleted)))
+    const completedJson = JSON.stringify(localCompleted)
     const completedStr = compressToBase64(completedJson)
     return completedStr
 }
 export const setRawCompleted = (completedStr: string) => {
     const completedJson = decompressFromBase64(completedStr)
-    const completedVal = JSON.parse(completedJson)
+    const completedVal: StorageData = JSON.parse(completedJson)
     completed.set(completedVal)
 }

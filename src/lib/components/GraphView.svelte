@@ -23,8 +23,8 @@
     let ownCompleted: Set<string> = $state(new Set())
     let ownShowCompleted: boolean = $state(false)
 
-    completed.subscribe((value) => {
-        ownCompleted = new Set(value)
+    completed.subscribe(({ completed }) => {
+        ownCompleted = new Set(completed)
     })
     showCompleted.subscribe((value) => {
         ownShowCompleted = value
@@ -140,7 +140,7 @@
                     }
                 })
             }
-            completed.set(newCompleted)
+            completed.update((v) => ({ ...v, completed: newCompleted }))
         })
     })
 

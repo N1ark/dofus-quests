@@ -25,11 +25,28 @@ svg {
 }
 
 button {
-    position: relative;
+    font-family: inherit;
     background-color: #181818;
     border: 1px solid rgba(128, 128, 128, 0.4);
     border-radius: 4px;
     padding: 6px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: background-color 0.1s;
+    cursor: pointer;
+    pointer-events: auto;
+    &:hover {
+        background-color: #333;
+    }
+}
+
+input {
+    font-family: inherit;
+    background-color: #181818;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 500px;
+    height: 16px;
+    padding: 6px 10px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     color: white;
     transition: background-color 0.1s;

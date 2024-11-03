@@ -36,6 +36,7 @@
         aspect-ratio: 1;
         line-height: 0;
         font-size: 1.2em;
+        position: relative;
 
         &:hover span {
             opacity: 1;

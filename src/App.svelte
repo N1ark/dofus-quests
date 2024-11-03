@@ -6,6 +6,7 @@
     import Reload from 'lucide-svelte/icons/refresh-cw'
 
     import { onMount } from 'svelte'
+    import AlmanaxModal from './lib/components/AlmanaxModal.svelte'
     import BackupPopup from './lib/components/BackupPopup.svelte'
     import Button from './lib/components/Button.svelte'
     import Column from './lib/components/Column.svelte'
@@ -53,10 +54,17 @@
                     (window.location.hash =
                         window.location.hash === '#backup' ? '' : 'backup')}
             />
-            <Button Icon={Calendar} title="Almanax" />
+            <Button
+                Icon={Calendar}
+                title="Almanax"
+                onclick={() =>
+                    (window.location.hash =
+                        window.location.hash === '#almanax' ? '' : 'almanax')}
+            />
         </Column>
         <SelectedQuestView />
         <BackupPopup />
+        <AlmanaxModal />
     </Row>
 </main>
 
@@ -64,6 +72,7 @@
     main {
         width: 100vw;
         height: 100vh;
+        overflow: hidden;
     }
 
     :global(.column) {

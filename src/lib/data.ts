@@ -16,6 +16,19 @@ export type Achievement = {
     requirements: string[]
 }
 
+export type Almanax = {
+    day: number
+    month: number
+    questId: string
+    itemId: number
+    itemImg: string
+    itemName: string
+    itemQuantity: number
+    questName: string
+    effectName: string
+    effectDesc: string
+}
+
 export type Edge = {
     to: string
     from: string
@@ -36,6 +49,7 @@ export type Data = {
     nodes: (Quest | Achievement)[]
     edges: Edge[]
     categories: Category[]
+    almanax: Almanax[]
 }
 
 export const data = dataRaw as Data
@@ -70,11 +84,11 @@ export const onlyPredecessors = (data: Data, id: string): Data => {
         })
     }
     return {
+        ...data,
         nodes: data.nodes.filter((node) => predecessorNodes.has(node.id)),
         edges: data.edges.filter(
             (edge) =>
                 predecessorNodes.has(edge.from) && predecessorNodes.has(edge.to)
         ),
-        categories: data.categories,
     }
 }

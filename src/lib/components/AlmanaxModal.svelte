@@ -3,6 +3,7 @@
     import { completed } from '../../state.svelte'
     import { data } from '../data'
     import Container from './Container.svelte'
+    import Progress from './Progress.svelte'
 
     let currentHeight = $state(0)
     let largestHeight = $state(0)
@@ -50,7 +51,7 @@
 
 <Container classes={`almanax-modal ${visible ? '' : 'hidden'}`}>
     <div class="title">
-        <h2>Almanax <span class="progress">{ownAlmanax.size}/366</span></h2>
+        <h2>Almanax <Progress total={366} amount={ownAlmanax.size} /></h2>
         <input type="text" placeholder="Search" bind:value={searchText} />
     </div>
 
@@ -157,12 +158,6 @@
             rgba(24, 24, 24, 1) 93%,
             rgba(24, 24, 24, 0) 100%
         );
-    }
-
-    .progress {
-        font-size: 0.7em;
-        opacity: 0.7;
-        margin-left: 8px;
     }
 
     .months {

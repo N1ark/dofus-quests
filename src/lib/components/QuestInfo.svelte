@@ -1,8 +1,20 @@
 <script lang="ts">
     import { Link } from 'lucide-svelte'
     import type { Achievement, Quest } from '../data'
+    import { data } from '../data'
 
     let { node }: { node: Quest | Achievement } = $props()
+    const category = $derived(
+        (node.type === 'achievement'
+            ? data.achievementCategories
+            : data.questCategories
+        ).find((c) => c.id === node.categoryId)
+    )
+    const categoryUrl = $derived(
+        (node.type === 'achievement' ? '#achievements' : '#quests') +
+            '-' +
+            category?.id
+    )
     const url = $derived(
         (node.type === 'quest'
             ? 'https://dofusdb.fr/fr/database/quest/'
@@ -12,6 +24,11 @@
 </script>
 
 <div class="content">
+    {#if category}
+        <div class="category">
+            <a href={categoryUrl}>{category.name}</a>
+        </div>
+    {/if}
     <h2>
         {node.name}
         <a
@@ -48,7 +65,8 @@
 <style>
     li,
     h2,
-    p {
+    p,
+    a {
         width: fit-content;
         pointer-events: auto;
     }
@@ -63,5 +81,12 @@
         &:hover {
             opacity: 1;
         }
+    }
+
+    .category {
+        font-size: 0.8em;
+    }
+    .category + h2 {
+        margin-top: 0;
     }
 </style>

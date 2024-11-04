@@ -1,9 +1,8 @@
 <script lang="ts" module>
     import cytoscape from 'cytoscape'
     // @ts-ignore-next-line
-    import cytoscapeElk from 'cytoscape-elk'
-
-    cytoscape.use(cytoscapeElk)
+    import elk from 'cytoscape-elk'
+    cytoscape.use(elk)
 </script>
 
 <script lang="ts">

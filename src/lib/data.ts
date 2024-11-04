@@ -6,6 +6,7 @@ export type Quest = {
     type: 'quest'
     description: string
     requirements: string[]
+    categoryId: number
 }
 
 export type Achievement = {
@@ -14,6 +15,8 @@ export type Achievement = {
     type: 'achievement'
     description: string
     requirements: string[]
+    categoryId: number
+    order: number
 }
 
 export type Almanax = {
@@ -43,12 +46,14 @@ export type Edge = {
 export type Category = {
     id: number
     name: string
+    order: number
 }
 
 export type Data = {
     nodes: (Quest | Achievement)[]
     edges: Edge[]
-    categories: Category[]
+    achievementCategories: Category[]
+    questCategories: Category[]
     almanax: Almanax[]
 }
 
@@ -60,7 +65,7 @@ export type CytoData = {
 }
 
 export const toCyto = (data: Pick<Data, 'nodes' | 'edges'>): CytoData => ({
-    nodes: data.nodes.map(({ id, name, type, description, requirements }) => ({
+    nodes: data.nodes.map(({ id, name, type }) => ({
         data: { id, name, type },
     })),
     edges: data.edges.map(({ from, to, type }) => ({

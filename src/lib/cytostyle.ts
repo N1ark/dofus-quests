@@ -12,7 +12,8 @@ node {
   label: data(name);
   text-wrap: wrap;
   font-size: 10;
-  min-zoomed-font-size: 13;
+  font-family: Inter, sans-serif;
+  min-zoomed-font-size: 11;
 	text-max-width: 100;
 	text-valign: center;
 	text-halign: center;

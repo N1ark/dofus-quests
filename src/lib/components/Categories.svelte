@@ -6,12 +6,25 @@
     import Container from './Container.svelte'
     import Progress from './Progress.svelte'
 
-    const categories = data.achievementCategories.sort(
-        (a, b) => a.order - b.order
+    const { mode }: { mode: 'quest' | 'achievement' } = $props()
+
+    const categories = $derived(
+        (mode === 'quest'
+            ? data.questCategories
+            : data.achievementCategories
+        ).sort((a, b) => a.order - b.order)
     )
-    const achievements = data.nodes
-        .filter((node) => node.type === 'achievement')
-        .sort((a, b) => a.order - b.order)
+    const elements = $derived(
+        mode === 'quest'
+            ? data.nodes
+                  .filter((node) => node.type === mode)
+                  .sort((a, b) => +a.id.slice(1) - +b.id.slice(1))
+            : data.nodes
+                  .filter((node) => node.type === mode)
+                  .sort((a, b) => a.order - b.order)
+    )
+    const hash = $derived(`${mode}s` as const)
+    const title = $derived(mode === 'quest' ? 'Quests' : 'Achievements')
 
     let ownCompleted = $state(new Set<string>())
     let ownShowCompleted = $state(false)
@@ -28,18 +41,18 @@
 
     onMount(() => {
         const hashCheck = () => {
-            visible = window.location.hash.startsWith('#achievements')
+            visible = window.location.hash.startsWith(`#${hash}`)
             if (!visible) {
                 search = ''
                 return
             }
             const target = parseInt(
-                window.location.hash.slice('#achievements-'.length)
+                window.location.hash.slice(`#${hash}-`.length)
             )
             if (isNaN(target)) return
-            window.location.hash = 'achievements'
+            window.location.hash = hash
             const targetElement = document.getElementById(
-                `achievementcategory-${target}`
+                `${mode}category-${target}`
             )
             if (!targetElement) return
             setTimeout(() => {
@@ -53,31 +66,31 @@
     })
 </script>
 
-<Container classes={`achievements ${visible ? '' : 'hidden'}`}>
+<Container classes={`categories ${visible ? '' : 'hidden'}`}>
     <h2>
-        Achievements <Progress
-            total={achievements.length}
-            amount={achievements.filter((node) => ownCompleted.has(node.id))
-                .length}
+        {title}
+        <Progress
+            total={elements.length}
+            amount={elements.filter(({ id }) => ownCompleted.has(id)).length}
         />
     </h2>
     <input type="text" placeholder="Search" bind:value={search} />
     {#each categories as category}
-        {@const achs = achievements.filter((n) => n.categoryId === category.id)}
-        {@const completed = achs.filter((node) => ownCompleted.has(node.id))}
-        {@const displayed = achs
+        {@const elems = elements.filter((n) => n.categoryId === category.id)}
+        {@const completed = elems.filter(({ id }) => ownCompleted.has(id))}
+        {@const displayed = elems
             .filter((node) => ownShowCompleted || !ownCompleted.has(node.id))
             .filter((node) => normalize(node.name).includes(searchNormalized))}
         {#if displayed.length !== 0}
-            <h3 id={`achievementcategory-${category.id}`}>
+            <h3 id={`${mode}category-${category.id}`}>
                 {category.name}
-                <Progress total={achs.length} amount={completed.length} />
+                <Progress total={elems.length} amount={completed.length} />
             </h3>
-            <ul>
-                {#each displayed as achievement}
-                    <li class:completed={ownCompleted.has(achievement.id)}>
-                        <a href={`#${achievement.id}`}>
-                            {achievement.name}
+            <ul class={mode}>
+                {#each displayed as elem}
+                    <li class:completed={ownCompleted.has(elem.id)}>
+                        <a href={`#${elem.id}`}>
+                            {elem.name}
                         </a>
                     </li>
                 {/each}
@@ -87,7 +100,7 @@
 </Container>
 
 <style>
-    :global(.achievements) {
+    :global(.categories) {
         height: fit-content;
         pointer-events: all;
         max-height: 100%;
@@ -104,13 +117,22 @@
     ul {
         margin-top: 0;
         padding-inline-start: 1em;
-    }
-    li {
-        &::marker {
-            color: #e0961f;
+
+        &.achievement li {
+            &::marker {
+                color: #e0961f;
+            }
+            &.completed::marker {
+                color: #a0d13d;
+            }
         }
-        &.completed::marker {
-            color: #a0d13d;
+        &.quest li {
+            &::marker {
+                color: #256fd1;
+            }
+            &.completed::marker {
+                color: #3dd17d;
+            }
         }
     }
 </style>

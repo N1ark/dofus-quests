@@ -8,13 +8,12 @@
     import Trophy from 'lucide-svelte/icons/trophy'
 
     import { onMount } from 'svelte'
-    import AchievementCategories from './lib/components/AchievementCategories.svelte'
     import AlmanaxModal from './lib/components/AlmanaxModal.svelte'
     import BackupPopup from './lib/components/BackupPopup.svelte'
     import Button from './lib/components/Button.svelte'
+    import Categories from './lib/components/Categories.svelte'
     import Column from './lib/components/Column.svelte'
     import GraphView from './lib/components/GraphView.svelte'
-    import QuestCategories from './lib/components/QuestCategories.svelte'
     import Row from './lib/components/Row.svelte'
     import SelectedQuestView from './lib/components/SelectedQuestView.svelte'
     import { data } from './lib/data'
@@ -78,8 +77,8 @@
         <SelectedQuestView />
         <BackupPopup />
         <AlmanaxModal />
-        <QuestCategories />
-        <AchievementCategories />
+        <Categories mode="quest" />
+        <Categories mode="achievement" />
     </Row>
 </main>
 

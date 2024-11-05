@@ -16385,7 +16385,7 @@
   ],
   "almanax": [
     {
-      "questId": "q132",
+      "questId": "q1072",
       "itemId": 29379,
       "itemImg": "https://api.dofusdb.fr/img/items/164174.png",
       "itemName": "Métronome du Début-Temps",
@@ -16397,7 +16397,7 @@
       "effectDesc": "<b>Onome<\/b> attend les aventuriers qui veulent célébrer la nouvelle année près du temple de Xélor. Sa bénédiction accorde un sortilège temporaire, le bond du Début-Temps, que vous serez capable de lancer durant 12 heures."
     },
     {
-      "questId": "q133",
+      "questId": "q1073",
       "itemId": 521,
       "itemImg": "https://api.dofusdb.fr/img/items/33011.png",
       "itemName": "Michette",
@@ -16409,7 +16409,7 @@
       "effectDesc": "Les <b>Paysans<\/b> économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q134",
+      "questId": "q1074",
       "itemId": 22217,
       "itemImg": "https://api.dofusdb.fr/img/items/15999.png",
       "itemName": "Capuche d'Armécréante",
@@ -16421,7 +16421,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de la <b>Tempête de l'Eliocalypse<\/b>."
     },
     {
-      "questId": "q135",
+      "questId": "q1075",
       "itemId": 11327,
       "itemImg": "https://api.dofusdb.fr/img/items/51472.png",
       "itemName": "Cœur de Crapeur",
@@ -16433,7 +16433,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans la zone des <b>Larmes d'Ouronigride<\/b>."
     },
     {
-      "questId": "q136",
+      "questId": "q1076",
       "itemId": 11109,
       "itemImg": "https://api.dofusdb.fr/img/items/34552.png",
       "itemName": "Frostiz",
@@ -16445,7 +16445,7 @@
       "effectDesc": "Les quantités de <b>Frostiz<\/b> récupérées par les Paysans sont augmentées de 200 %."
     },
     {
-      "questId": "q137",
+      "questId": "q1077",
       "itemId": 418,
       "itemImg": "https://api.dofusdb.fr/img/items/54114.png",
       "itemName": "Poils de Barbe du Grand Pa Wabbit",
@@ -16457,7 +16457,7 @@
       "effectDesc": "Une quête répétable spéciale est disponible aujourd'hui près de l'atelier des paysans du <b>village d'Amakna<\/b>. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande."
     },
     {
-      "questId": "q138",
+      "questId": "q1078",
       "itemId": 417,
       "itemImg": "https://api.dofusdb.fr/img/items/15116.png",
       "itemName": "Boue du Boo",
@@ -16469,7 +16469,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Gadouilleux<\/b>."
     },
     {
-      "questId": "q139",
+      "questId": "q1079",
       "itemId": 13487,
       "itemImg": "https://api.dofusdb.fr/img/items/55130.png",
       "itemName": "Serviette de Plage",
@@ -16481,7 +16481,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du <b>Château Ensablé<\/b>."
     },
     {
-      "questId": "q140",
+      "questId": "q1080",
       "itemId": 821,
       "itemImg": "https://api.dofusdb.fr/img/items/6001.png",
       "itemName": "Épée Sacrée",
@@ -16493,7 +16493,7 @@
       "effectDesc": "La qualité des objets fabriqués dans la ville de <b>Bonta<\/b> est augmentée."
     },
     {
-      "questId": "q141",
+      "questId": "q1081",
       "itemId": 1700,
       "itemImg": "https://api.dofusdb.fr/img/items/10017.png",
       "itemName": "Ceinture de Célérité",
@@ -16505,7 +16505,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos roux<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q142",
+      "questId": "q1082",
       "itemId": 13489,
       "itemImg": "https://api.dofusdb.fr/img/items/15092.png",
       "itemName": "Miroir de Dopeul",
@@ -16517,7 +16517,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Dopeuls<\/b>."
     },
     {
-      "questId": "q143",
+      "questId": "q1083",
       "itemId": 350,
       "itemImg": "https://api.dofusdb.fr/img/items/39028.png",
       "itemName": "Argent",
@@ -16529,7 +16529,7 @@
       "effectDesc": "Les quantités d'<b>Argent<\/b> récupérées par les Mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q144",
+      "questId": "q1084",
       "itemId": 13937,
       "itemImg": "https://api.dofusdb.fr/img/items/15828.png",
       "itemName": "Bave de Nessil",
@@ -16541,7 +16541,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans les 4 zones des remparts du  <b>Château Harebourg<\/b> et dans la <b>Tour de la Clepsydre<\/b>."
     },
     {
-      "questId": "q145",
+      "questId": "q1085",
       "itemId": 11107,
       "itemImg": "https://api.dofusdb.fr/img/items/38677.png",
       "itemName": "Bois de Tremble",
@@ -16553,7 +16553,7 @@
       "effectDesc": "Les quantités de <b>Bois de Tremble<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q146",
+      "questId": "q1086",
       "itemId": 3002,
       "itemImg": "https://api.dofusdb.fr/img/items/15648.png",
       "itemName": "Botte trouée de Mégabwork",
@@ -16565,7 +16565,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Bworks de Cania<\/b>."
     },
     {
-      "questId": "q147",
+      "questId": "q1087",
       "itemId": 13491,
       "itemImg": "https://api.dofusdb.fr/img/items/15094.png",
       "itemName": "Relique Familiale",
@@ -16577,7 +16577,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone de la <b>Bordure de Brâkmar<\/b>."
     },
     {
-      "questId": "q148",
+      "questId": "q1088",
       "itemId": 16215,
       "itemImg": "https://api.dofusdb.fr/img/items/164064.png",
       "itemName": "Glande d'Arak-haï",
@@ -16589,7 +16589,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Arak-haï<\/b>."
     },
     {
-      "questId": "q149",
+      "questId": "q1089",
       "itemId": 603,
       "itemImg": "https://api.dofusdb.fr/img/items/41277.png",
       "itemName": "Poisson-Chaton",
@@ -16601,7 +16601,7 @@
       "effectDesc": "Les quantités de poissons récupérées par les <b>Pêcheurs<\/b> de tous niveaux sont augmentées de 100 %."
     },
     {
-      "questId": "q150",
+      "questId": "q1090",
       "itemId": 21211,
       "itemImg": "https://api.dofusdb.fr/img/items/10339.png",
       "itemName": "Pagne d'Alashasss",
@@ -16613,7 +16613,7 @@
       "effectDesc": "Les gains d'expérience des montures sont augmentés de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de <b>Crocuzko<\/b>."
     },
     {
-      "questId": "q151",
+      "questId": "q1091",
       "itemId": 8571,
       "itemImg": "https://api.dofusdb.fr/img/items/165034.png",
       "itemName": "Poil de Rat Brâkmarien",
@@ -16625,7 +16625,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Rats Brâkmariens<\/b>."
     },
     {
-      "questId": "q152",
+      "questId": "q1092",
       "itemId": 9968,
       "itemImg": "https://api.dofusdb.fr/img/items/79177.png",
       "itemName": "Bouteille de Gloutoburg",
@@ -16637,7 +16637,7 @@
       "effectDesc": "Pour chaque objet fabriqué, les <b>Alchimistes<\/b> ont 25 % de chances de créer un second objet."
     },
     {
-      "questId": "q153",
+      "questId": "q1093",
       "itemId": 421,
       "itemImg": "https://api.dofusdb.fr/img/items/36642.png",
       "itemName": "Ortie",
@@ -16649,7 +16649,7 @@
       "effectDesc": "Les quantités d'<b>Ortie<\/b> récupérées par les Alchimistes sont augmentées de 125 %."
     },
     {
-      "questId": "q154",
+      "questId": "q1094",
       "itemId": 7434,
       "itemImg": "https://api.dofusdb.fr/img/items/78013.png",
       "itemName": "Rune So",
@@ -16661,7 +16661,7 @@
       "effectDesc": "Les <b>Sculptemages<\/b> ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer une arme."
     },
     {
-      "questId": "q155",
+      "questId": "q1095",
       "itemId": 13528,
       "itemImg": "https://api.dofusdb.fr/img/items/108230.png",
       "itemName": "Bourgeon d'Abraknyde Sombre Irascible",
@@ -16673,7 +16673,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de la <b>Clairière du Chêne Mou<\/b>."
     },
     {
-      "questId": "q156",
+      "questId": "q1096",
       "itemId": 8057,
       "itemImg": "https://api.dofusdb.fr/img/items/47640.png",
       "itemName": "Tibia de Koalak Fossoyeur",
@@ -16685,7 +16685,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone du <b>Cimetière Primitif<\/b>."
     },
     {
-      "questId": "q157",
+      "questId": "q1097",
       "itemId": 460,
       "itemImg": "https://api.dofusdb.fr/img/items/38092.png",
       "itemName": "Bois de Chêne",
@@ -16697,7 +16697,7 @@
       "effectDesc": "Les quantités de <b>Bois de Chêne<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q158",
+      "questId": "q1098",
       "itemId": 528,
       "itemImg": "https://api.dofusdb.fr/img/items/33007.png",
       "itemName": "Carasau",
@@ -16709,7 +16709,7 @@
       "effectDesc": "Pour chaque objet fabriqué, les <b>Paysans<\/b> ont 25 % de chances de créer un second objet."
     },
     {
-      "questId": "q159",
+      "questId": "q1099",
       "itemId": 13493,
       "itemImg": "https://api.dofusdb.fr/img/items/65521.png",
       "itemName": "Queue de Rat Pine",
@@ -16721,7 +16721,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du <b>Repaire de Sphincter Cell<\/b>."
     },
     {
-      "questId": "q160",
+      "questId": "q1100",
       "itemId": 384,
       "itemImg": "https://api.dofusdb.fr/img/items/57056.png",
       "itemName": "Laine de Bouftou",
@@ -16733,7 +16733,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone du <b>Coin des Bouftous<\/b>."
     },
     {
-      "questId": "q161",
+      "questId": "q1101",
       "itemId": 13505,
       "itemImg": "https://api.dofusdb.fr/img/items/141010.png",
       "itemName": "Bourse Suspecte",
@@ -16745,7 +16745,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Bandits<\/b>, dont les <b>Artisans sombres<\/b>."
     },
     {
-      "questId": "q162",
+      "questId": "q1102",
       "itemId": 380,
       "itemImg": "https://api.dofusdb.fr/img/items/36052.png",
       "itemName": "Menthe Sauvage",
@@ -16757,7 +16757,7 @@
       "effectDesc": "Les quantités de <b>Menthe Sauvage<\/b> récupérées par les Alchimistes sont augmentées de 125 %."
     },
     {
-      "questId": "q163",
+      "questId": "q1103",
       "itemId": 1493,
       "itemImg": "https://api.dofusdb.fr/img/items/9013.png",
       "itemName": "Blessure du Sacrieur",
@@ -16769,7 +16769,7 @@
       "effectDesc": "Les gains d'expérience lors des combats contre les monstres et les chances d'obtenir du butin sont augmentés de 50 % pour tous les aventuriers qui sont sous l'influence d'une <b>Idole de Tolgnas<\/b>."
     },
     {
-      "questId": "q164",
+      "questId": "q1104",
       "itemId": 10663,
       "itemImg": "https://api.dofusdb.fr/img/items/33071.png",
       "itemName": "Brioche à la viande de bouftou",
@@ -16781,7 +16781,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur toutes les créatures considérées comme des <b>Bouftous<\/b>, y compris les boufmouths et les boufcouls. De plus, les gains d'expérience sont augmentés de 50 % pour les Chasseurs, les Paysans et les Pêcheurs."
     },
     {
-      "questId": "q165",
+      "questId": "q1105",
       "itemId": 1614,
       "itemImg": "https://api.dofusdb.fr/img/items/15983.png",
       "itemName": "Bombe de Graboule",
@@ -16793,7 +16793,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Magik Riktus<\/b>."
     },
     {
-      "questId": "q166",
+      "questId": "q1106",
       "itemId": 11927,
       "itemImg": "https://api.dofusdb.fr/img/items/47681.png",
       "itemName": "Molaire de Blérice",
@@ -16805,7 +16805,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans la zone des <b>Crocs de verre<\/b>."
     },
     {
-      "questId": "q167",
+      "questId": "q1107",
       "itemId": 16219,
       "itemImg": "https://api.dofusdb.fr/img/items/164065.png",
       "itemName": "Fil de Néfileuse",
@@ -16817,7 +16817,7 @@
       "effectDesc": "Le butin généré par les Percepteurs est augmenté de 200 % dans les donjons de niveau 80 à 110."
     },
     {
-      "questId": "q168",
+      "questId": "q1108",
       "itemId": 147,
       "itemImg": "https://api.dofusdb.fr/img/items/7001.png",
       "itemName": "Marteau de Boisaille",
@@ -16829,7 +16829,7 @@
       "effectDesc": "Les <b>Forgerons<\/b> économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q169",
+      "questId": "q1109",
       "itemId": 16168,
       "itemImg": "https://api.dofusdb.fr/img/items/119013.png",
       "itemName": "Lamelle de Champa Vert",
@@ -16841,7 +16841,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone du <b>Bord de la Forêt Maléfique<\/b>."
     },
     {
-      "questId": "q170",
+      "questId": "q1110",
       "itemId": 303,
       "itemImg": "https://api.dofusdb.fr/img/items/38017.png",
       "itemName": "Bois de Frêne",
@@ -16853,7 +16853,7 @@
       "effectDesc": "Les quantités de <b>Bois de Frêne<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q171",
+      "questId": "q1111",
       "itemId": 15041,
       "itemImg": "https://api.dofusdb.fr/img/items/54699.png",
       "itemName": "Tignasse de Kanihilan",
@@ -16865,7 +16865,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la <b>Grotte de Kanigroula<\/b>."
     },
     {
-      "questId": "q172",
+      "questId": "q1112",
       "itemId": 14280,
       "itemImg": "https://api.dofusdb.fr/img/items/47598.png",
       "itemName": "Pic de Dragodinde Dorée",
@@ -16877,7 +16877,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos dorés<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q173",
+      "questId": "q1113",
       "itemId": 1779,
       "itemImg": "https://api.dofusdb.fr/img/items/41290.png",
       "itemName": "Bar Rikain",
@@ -16889,7 +16889,7 @@
       "effectDesc": "Les quantités de <b>Bar Rikain<\/b> et de <b>Tanche<\/b> récupérées par les Pêcheurs sont augmentées de 125 %."
     },
     {
-      "questId": "q174",
+      "questId": "q1114",
       "itemId": 291,
       "itemImg": "https://api.dofusdb.fr/img/items/54008.png",
       "itemName": "Poils de Mulounoké",
@@ -16901,7 +16901,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Mulous<\/b>."
     },
     {
-      "questId": "q192",
+      "questId": "q1132",
       "itemId": 15100,
       "itemImg": "https://api.dofusdb.fr/img/items/11256.png",
       "itemName": "Bottes Karnaval",
@@ -16913,7 +16913,7 @@
       "effectDesc": "Des <b>Pochettes-Surprises<\/b> ont été ajoutées aux butins des monstres. Lorsqu'elles sont utilisées, elles permettent d'obtenir des <b>Beignets de Karnaval<\/b> ou bien de se retrouver déguisé en monstre <b>Tout-Fou<\/b>."
     },
     {
-      "questId": "q176",
+      "questId": "q1116",
       "itemId": 9472,
       "itemImg": "https://api.dofusdb.fr/img/items/42004.png",
       "itemName": "Shigekax Passion",
@@ -16925,7 +16925,7 @@
       "effectDesc": "Tous les personnages atteints par la <b>Malédiction du Ballotin<\/b> voient leurs gains d'expérience augmentés de 100 % lors des combats contre les monstres."
     },
     {
-      "questId": "q177",
+      "questId": "q1117",
       "itemId": 17060,
       "itemImg": "https://api.dofusdb.fr/img/items/12002.png",
       "itemName": "Potion de Vieillesse",
@@ -16937,7 +16937,7 @@
       "effectDesc": "Des <b>Coffres de Güss<\/b> peuvent être gagnés à la fin des chasses aux trésors."
     },
     {
-      "questId": "q178",
+      "questId": "q1118",
       "itemId": 17169,
       "itemImg": "https://api.dofusdb.fr/img/items/69115.png",
       "itemName": "Beignet Astrubien",
@@ -16949,7 +16949,7 @@
       "effectDesc": "Les <b>Chasseurs<\/b> économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q179",
+      "questId": "q1119",
       "itemId": 9263,
       "itemImg": "https://api.dofusdb.fr/img/items/96109.png",
       "itemName": "Écorce de Champaknyde",
@@ -16961,7 +16961,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Fungus<\/b>."
     },
     {
-      "questId": "q180",
+      "questId": "q1120",
       "itemId": 16154,
       "itemImg": "https://api.dofusdb.fr/img/items/96670.png",
       "itemName": "Écorce d'Abrakne Sombre",
@@ -16973,7 +16973,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Abraknydiens Sombres<\/b>."
     },
     {
-      "questId": "q181",
+      "questId": "q1121",
       "itemId": 1794,
       "itemImg": "https://api.dofusdb.fr/img/items/41305.png",
       "itemName": "Carpe d'Iem",
@@ -16985,7 +16985,7 @@
       "effectDesc": "Les quantités de <b>Poisson-Chaton<\/b> et de <b>Carpe d'Iem<\/b> récupérées par les Pêcheurs sont augmentées de 125 %."
     },
     {
-      "questId": "q182",
+      "questId": "q1122",
       "itemId": 8788,
       "itemImg": "https://api.dofusdb.fr/img/items/15022.png",
       "itemName": "Croupion du Bitouf aérien",
@@ -16997,7 +16997,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans les zones du <b>Feuillage<\/b> et du <b>Tronc de l'arbre Hakam<\/b>."
     },
     {
-      "questId": "q183",
+      "questId": "q1123",
       "itemId": 8145,
       "itemImg": "https://api.dofusdb.fr/img/items/37001.png",
       "itemName": "Bière bwork",
@@ -17009,7 +17009,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans les zones du <b>Village des Bworks<\/b> et du <b>Campement des Bworks<\/b>."
     },
     {
-      "questId": "q184",
+      "questId": "q1124",
       "itemId": 8356,
       "itemImg": "https://api.dofusdb.fr/img/items/59609.png",
       "itemName": "Peau de Dragueuse",
@@ -17021,7 +17021,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone du <b>Sanctuaire des Dragoeufs<\/b>."
     },
     {
-      "questId": "q185",
+      "questId": "q1125",
       "itemId": 26321,
       "itemImg": "https://api.dofusdb.fr/img/items/47877.png",
       "itemName": "Corne de Malbois",
@@ -17033,7 +17033,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du <b>Tertre du long sommeil<\/b>."
     },
     {
-      "questId": "q186",
+      "questId": "q1126",
       "itemId": 14860,
       "itemImg": "https://api.dofusdb.fr/img/items/56670.png",
       "itemName": "Cuir d'Eskoglyphe",
@@ -17045,7 +17045,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans les salles de la <b>Base Abyssale<\/b>."
     },
     {
-      "questId": "q187",
+      "questId": "q1127",
       "itemId": 19074,
       "itemImg": "https://api.dofusdb.fr/img/items/164139.png",
       "itemName": "Goulobule rouge",
@@ -17057,7 +17057,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon du <b>Manoir de Katrepat<\/b>."
     },
     {
-      "questId": "q188",
+      "questId": "q1128",
       "itemId": 27434,
       "itemImg": "https://api.dofusdb.fr/img/items/165058.png",
       "itemName": "Armure de Blindur",
@@ -17069,7 +17069,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Marteaux-Aigris<\/b>."
     },
     {
-      "questId": "q189",
+      "questId": "q1129",
       "itemId": 17191,
       "itemImg": "https://api.dofusdb.fr/img/items/69789.png",
       "itemName": "Marinade Sucrée-Salée",
@@ -17081,7 +17081,7 @@
       "effectDesc": "Les quantités de <b>Viande Saignante<\/b> et de <b>Viande Persillée<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q190",
+      "questId": "q1130",
       "itemId": 2602,
       "itemImg": "https://api.dofusdb.fr/img/items/53663.png",
       "itemName": "Plume de Domoizelle",
@@ -17093,7 +17093,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon de l'<b>Arbre de Moon<\/b>."
     },
     {
-      "questId": "q191",
+      "questId": "q1131",
       "itemId": 13494,
       "itemImg": "https://api.dofusdb.fr/img/items/15096.png",
       "itemName": "Nageoire de Compétition",
@@ -17105,7 +17105,7 @@
       "effectDesc": "Les gains d'expérience et les chances d'obtenir du butin sont augmentés de 75 % lors des combats contre les monstres. De plus, les gains d'expérience sont augmentés de 50 % pour tous les métiers."
     },
     {
-      "questId": "q193",
+      "questId": "q1133",
       "itemId": 1490,
       "itemImg": "https://api.dofusdb.fr/img/items/1012.png",
       "itemName": "La Chaîne Nhanor Kibrill",
@@ -17117,7 +17117,7 @@
       "effectDesc": "Les <b>Bijoutiers<\/b> économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q194",
+      "questId": "q1134",
       "itemId": 13495,
       "itemImg": "https://api.dofusdb.fr/img/items/47031.png",
       "itemName": "Crâne d'Aventurier",
@@ -17129,7 +17129,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans la zone de la <b>Vallée de la Morh'Kitu<\/b>."
     },
     {
-      "questId": "q195",
+      "questId": "q1135",
       "itemId": 472,
       "itemImg": "https://api.dofusdb.fr/img/items/38138.png",
       "itemName": "Bois de Charme",
@@ -17141,7 +17141,7 @@
       "effectDesc": "Les quantités de <b>Bois de Charme<\/b> et de <b>Bois de Bambou Sombre<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q196",
+      "questId": "q1136",
       "itemId": 11888,
       "itemImg": "https://api.dofusdb.fr/img/items/119002.png",
       "itemName": "Volve de Fistulor",
@@ -17153,7 +17153,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Sylvesprits<\/b>."
     },
     {
-      "questId": "q197",
+      "questId": "q1137",
       "itemId": 1894,
       "itemImg": "https://api.dofusdb.fr/img/items/54364.png",
       "itemName": "Poil de Gliglitch",
@@ -17165,7 +17165,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone des <b>Landes de Cania<\/b>."
     },
     {
-      "questId": "q198",
+      "questId": "q1138",
       "itemId": 165,
       "itemImg": "https://api.dofusdb.fr/img/items/3002.png",
       "itemName": "Baguette de Glace",
@@ -17177,7 +17177,7 @@
       "effectDesc": "La qualité des objets fabriqués dans la ville de la <b>Bourgade<\/b> est augmentée."
     },
     {
-      "questId": "q199",
+      "questId": "q1139",
       "itemId": 7300,
       "itemImg": "https://api.dofusdb.fr/img/items/164676.png",
       "itemName": "Tête de lance de Fangshu",
@@ -17189,7 +17189,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Kozaru<\/b>."
     },
     {
-      "questId": "q200",
+      "questId": "q1140",
       "itemId": 2288,
       "itemImg": "https://api.dofusdb.fr/img/items/103440.png",
       "itemName": "Patte de Wabbit",
@@ -17201,7 +17201,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Wabbits<\/b>, <b>Wabbits mutants<\/b> et <b>Gawde du Wa<\/b>."
     },
     {
-      "questId": "q201",
+      "questId": "q1141",
       "itemId": 401,
       "itemImg": "https://api.dofusdb.fr/img/items/34080.png",
       "itemName": "Houblon",
@@ -17213,7 +17213,7 @@
       "effectDesc": "Les quantités de <b>Houblon<\/b> récupérées par les Paysans sont augmentées de 125 %."
     },
     {
-      "questId": "q202",
+      "questId": "q1142",
       "itemId": 7775,
       "itemImg": "https://api.dofusdb.fr/img/items/93004.png",
       "itemName": "Foudroyeur en Frêne",
@@ -17225,7 +17225,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos indigo<\/b> ainsi que de <b>volkornes saphir<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q203",
+      "questId": "q1143",
       "itemId": 1664,
       "itemImg": "https://api.dofusdb.fr/img/items/47234.png",
       "itemName": "Dent de Crocodaille",
@@ -17237,7 +17237,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans les zones des <b>Marécages d'Amakna<\/b>, des <b>Marécages nauséabonds<\/b> et des <b>Marécages sans fond<\/b>."
     },
     {
-      "questId": "q204",
+      "questId": "q1144",
       "itemId": 1752,
       "itemImg": "https://api.dofusdb.fr/img/items/49071.png",
       "itemName": "Poisson Pané Frit",
@@ -17249,7 +17249,7 @@
       "effectDesc": "Les <b>Pêcheurs<\/b> économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q205",
+      "questId": "q1145",
       "itemId": 13913,
       "itemImg": "https://api.dofusdb.fr/img/items/109602.png",
       "itemName": "Œil de Harrogant",
@@ -17261,7 +17261,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % sur tous les <b>gardiens de donjon<\/b>."
     },
     {
-      "questId": "q206",
+      "questId": "q1146",
       "itemId": 395,
       "itemImg": "https://api.dofusdb.fr/img/items/36067.png",
       "itemName": "Trèfle à 5 feuilles",
@@ -17273,7 +17273,7 @@
       "effectDesc": "Les quantités de <b>Trèfles à 5 Feuilles<\/b> récupérées par les Alchimistes sont augmentées de 125 %."
     },
     {
-      "questId": "q207",
+      "questId": "q1147",
       "itemId": 18209,
       "itemImg": "https://api.dofusdb.fr/img/items/60001.png",
       "itemName": "Gratrooll",
@@ -17285,7 +17285,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les créatures de type <b>Troolls de Litneg<\/b>."
     },
     {
-      "questId": "q208",
+      "questId": "q1148",
       "itemId": 13499,
       "itemImg": "https://api.dofusdb.fr/img/items/15099.png",
       "itemName": "Jouet de Gamine Zoth",
@@ -17297,7 +17297,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Zoths<\/b>."
     },
     {
-      "questId": "q209",
+      "questId": "q1149",
       "itemId": 8233,
       "itemImg": "https://api.dofusdb.fr/img/items/17105.png",
       "itemName": "Cape du Piou Vert",
@@ -17309,7 +17309,7 @@
       "effectDesc": "Les aventuriers en quête de binouzetons peuvent récupérer deux fois plus de <b>pièces<\/b> sur les <b>Leprechauns<\/b>."
     },
     {
-      "questId": "q210",
+      "questId": "q1150",
       "itemId": 11637,
       "itemImg": "https://api.dofusdb.fr/img/items/78076.png",
       "itemName": "Rune Fui",
@@ -17321,7 +17321,7 @@
       "effectDesc": "Les <b>Façomages<\/b> ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer un objet."
     },
     {
-      "questId": "q211",
+      "questId": "q1151",
       "itemId": 445,
       "itemImg": "https://api.dofusdb.fr/img/items/39397.png",
       "itemName": "Manganèse",
@@ -17333,7 +17333,7 @@
       "effectDesc": "Les quantités de <b>Manganèse<\/b> récupérées par les Mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q212",
+      "questId": "q1152",
       "itemId": 17973,
       "itemImg": "https://api.dofusdb.fr/img/items/65769.png",
       "itemName": "Queue de Mantaze",
@@ -17345,7 +17345,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le <b>Vaisseau du Capitaine Meno<\/b>."
     },
     {
-      "questId": "q213",
+      "questId": "q1153",
       "itemId": 19231,
       "itemImg": "https://api.dofusdb.fr/img/items/15988.png",
       "itemName": "Œil de Feutôme",
@@ -17357,7 +17357,7 @@
       "effectDesc": "Le butin généré par les Percepteurs est augmenté de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la <b>Caserne du  Jour sans fin<\/b>."
     },
     {
-      "questId": "q214",
+      "questId": "q1154",
       "itemId": 13931,
       "itemImg": "https://api.dofusdb.fr/img/items/47809.png",
       "itemName": "Incus de Verglasseur",
@@ -17369,7 +17369,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans la <b>Forgefroide de Missiz Frizz<\/b>."
     },
     {
-      "questId": "q215",
+      "questId": "q1155",
       "itemId": 26355,
       "itemImg": "https://api.dofusdb.fr/img/items/15211.png",
       "itemName": "Gravure de Crachin",
@@ -17381,7 +17381,7 @@
       "effectDesc": "La vitesse d'apparition des <b>bois<\/b> de tous types est augmentée de 100 %."
     },
     {
-      "questId": "q216",
+      "questId": "q1156",
       "itemId": 1456,
       "itemImg": "https://api.dofusdb.fr/img/items/104213.png",
       "itemName": "Ailes de Scarafeuille Blanc",
@@ -17393,7 +17393,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Scarafeuilles<\/b>."
     },
     {
-      "questId": "q217",
+      "questId": "q1157",
       "itemId": 15686,
       "itemImg": "https://api.dofusdb.fr/img/items/164046.png",
       "itemName": "Antenne de Bacterrib",
@@ -17405,7 +17405,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Krobes<\/b>."
     },
     {
-      "questId": "q218",
+      "questId": "q1158",
       "itemId": 11939,
       "itemImg": "https://api.dofusdb.fr/img/items/47686.png",
       "itemName": "Incisive de Glourmand",
@@ -17417,7 +17417,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Gloursons<\/b>."
     },
     {
-      "questId": "q219",
+      "questId": "q1159",
       "itemId": 17173,
       "itemImg": "https://api.dofusdb.fr/img/items/69744.png",
       "itemName": "Papillote au Citron",
@@ -17429,7 +17429,7 @@
       "effectDesc": "Les quantités de <b>Viande Minérale<\/b> et de <b>Viande Frelatée<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q220",
+      "questId": "q1160",
       "itemId": 13949,
       "itemImg": "https://api.dofusdb.fr/img/items/47814.png",
       "itemName": "Canine de Kanimate",
@@ -17441,7 +17441,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le <b>Transporteur de Sylargh<\/b>."
     },
     {
-      "questId": "q221",
+      "questId": "q1161",
       "itemId": 13746,
       "itemImg": "https://api.dofusdb.fr/img/items/15820.png",
       "itemName": "Boulon de Cybwork",
@@ -17453,7 +17453,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans la <b>Grotte du Bworker<\/b>."
     },
     {
-      "questId": "q222",
+      "questId": "q1162",
       "itemId": 18370,
       "itemImg": "https://api.dofusdb.fr/img/items/65771.png",
       "itemName": "Queue de Fennex",
@@ -17465,7 +17465,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Animaux du désert<\/b>."
     },
     {
-      "questId": "q224",
+      "questId": "q1164",
       "itemId": 847,
       "itemImg": "https://api.dofusdb.fr/img/items/105648.png",
       "itemName": "Œuf de Dragoeuf Calcaire",
@@ -17477,7 +17477,7 @@
       "effectDesc": "Une quête répétable spéciale est disponible aujourd'hui près du <b>sanctuaire des Zobals<\/b>. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 30 % dans toutes les zones de l'<b>Île de Pwâk<\/b>."
     },
     {
-      "questId": "q225",
+      "questId": "q1165",
       "itemId": 13502,
       "itemImg": "https://api.dofusdb.fr/img/items/15100.png",
       "itemName": "Fluide Glacial",
@@ -17489,7 +17489,7 @@
       "effectDesc": "Les gains d'expérience et les chances d'obtenir du butin sont augmentés de 50 % sur tous les monstres considérés comme des <b>créatures marines<\/b> (pichons, monstres des plages, corailleurs, crustorails, tortues de Moon, crabe Hijacob, gélikan, Kralamoure Géant, monstres des abysses de Sufokia, Mercemers, Submergés, Crocodailles de Crocuzko)."
     },
     {
-      "questId": "q226",
+      "questId": "q1166",
       "itemId": 7590,
       "itemImg": "https://api.dofusdb.fr/img/items/93001.png",
       "itemName": "Abreuvoir en Frêne",
@@ -17501,7 +17501,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone du <b>Territoire Cacterre<\/b>."
     },
     {
-      "questId": "q227",
+      "questId": "q1167",
       "itemId": 7410,
       "itemImg": "https://api.dofusdb.fr/img/items/164738.png",
       "itemName": "Lanterne usée",
@@ -17513,7 +17513,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone du <b>Mont des Tombeaux<\/b>."
     },
     {
-      "questId": "q228",
+      "questId": "q1168",
       "itemId": 734,
       "itemImg": "https://api.dofusdb.fr/img/items/10007.png",
       "itemName": "Ceinture de Sécurité",
@@ -17525,7 +17525,7 @@
       "effectDesc": "La qualité des objets fabriqués dans la ville de <b>Sufokia<\/b> est augmentée."
     },
     {
-      "questId": "q229",
+      "questId": "q1169",
       "itemId": 594,
       "itemImg": "https://api.dofusdb.fr/img/items/35191.png",
       "itemName": "Edelweiss",
@@ -17537,7 +17537,7 @@
       "effectDesc": "Les quantités d'<b>Edelweiss<\/b> récupérées par les Alchimistes sont augmentées de 125 %."
     },
     {
-      "questId": "q230",
+      "questId": "q1170",
       "itemId": 439,
       "itemImg": "https://api.dofusdb.fr/img/items/47106.png",
       "itemName": "Canine de Mergranlou",
@@ -17549,7 +17549,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans la zone des <b>Hauts des Hurlements<\/b>."
     },
     {
-      "questId": "q231",
+      "questId": "q1171",
       "itemId": 400,
       "itemImg": "https://api.dofusdb.fr/img/items/34082.png",
       "itemName": "Orge",
@@ -17561,7 +17561,7 @@
       "effectDesc": "Les quantités d'<b>Orge<\/b> récupérées par les Paysans sont augmentées de 125 %."
     },
     {
-      "questId": "q232",
+      "questId": "q1172",
       "itemId": 2609,
       "itemImg": "https://api.dofusdb.fr/img/items/24018.png",
       "itemName": "Carapace Verte",
@@ -17573,7 +17573,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone de la <b>Plage de la Tortue<\/b>."
     },
     {
-      "questId": "q233",
+      "questId": "q1173",
       "itemId": 14512,
       "itemImg": "https://api.dofusdb.fr/img/items/53658.png",
       "itemName": "Plume de Gobvious",
@@ -17585,7 +17585,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du <b>Théâtre de Dramak<\/b>."
     },
     {
-      "questId": "q234",
+      "questId": "q1174",
       "itemId": 785,
       "itemImg": "https://api.dofusdb.fr/img/items/9029.png",
       "itemName": "Anneau Fortifiant",
@@ -17597,7 +17597,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos pourpres<\/b> ainsi que de <b>volkornes jade<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q235",
+      "questId": "q1175",
       "itemId": 1770,
       "itemImg": "https://api.dofusdb.fr/img/items/15281.png",
       "itemName": "Bout de Blop Coco",
@@ -17609,7 +17609,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone du <b>Lac de Cania<\/b>."
     },
     {
-      "questId": "q236",
+      "questId": "q1176",
       "itemId": 7404,
       "itemImg": "https://api.dofusdb.fr/img/items/164767.png",
       "itemName": "Os de Jiangshi-Nobi",
@@ -17621,7 +17621,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Armée de Brume<\/b>."
     },
     {
-      "questId": "q237",
+      "questId": "q1177",
       "itemId": 7925,
       "itemImg": "https://api.dofusdb.fr/img/items/38001.png",
       "itemName": "Bois de Kaliptus",
@@ -17633,7 +17633,7 @@
       "effectDesc": "Les quantités de <b>Bois d'Ébène<\/b> et de <b>Bois de Kaliptus<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q238",
+      "questId": "q1178",
       "itemId": 416,
       "itemImg": "https://api.dofusdb.fr/img/items/53113.png",
       "itemName": "Plume du Kwak de Vent",
@@ -17645,7 +17645,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le <b>Nid du Kwakwa<\/b>."
     },
     {
-      "questId": "q239",
+      "questId": "q1179",
       "itemId": 7759,
       "itemImg": "https://api.dofusdb.fr/img/items/93005.png",
       "itemName": "Baffeur en Frêne",
@@ -17657,7 +17657,7 @@
       "effectDesc": "Pour chaque objet fabriqué, les <b>Bricoleurs<\/b> ont 25 % de chances de créer un second objet."
     },
     {
-      "questId": "q240",
+      "questId": "q1180",
       "itemId": 598,
       "itemImg": "https://api.dofusdb.fr/img/items/41292.png",
       "itemName": "Greuvette",
@@ -17669,7 +17669,7 @@
       "effectDesc": "Les quantités de <b>Greuvette<\/b> et de <b>Crabe Sourimi<\/b> récupérées par les Pêcheurs sont augmentées de 125 %."
     },
     {
-      "questId": "q241",
+      "questId": "q1181",
       "itemId": 996,
       "itemImg": "https://api.dofusdb.fr/img/items/42026.png",
       "itemName": "Multygely",
@@ -17681,7 +17681,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans la zone de la <b>péninsule des Gelées<\/b>."
     },
     {
-      "questId": "q242",
+      "questId": "q1182",
       "itemId": 13921,
       "itemImg": "https://api.dofusdb.fr/img/items/56668.png",
       "itemName": "Cuir de Cuirboule",
@@ -17693,7 +17693,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon des <b>Salons privés de Klime<\/b>."
     },
     {
-      "questId": "q243",
+      "questId": "q1183",
       "itemId": 313,
       "itemImg": "https://api.dofusdb.fr/img/items/39022.png",
       "itemName": "Or",
@@ -17705,7 +17705,7 @@
       "effectDesc": "Les quantités d'<b>Or<\/b> récupérées par les Mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q244",
+      "questId": "q1184",
       "itemId": 7291,
       "itemImg": "https://api.dofusdb.fr/img/items/164658.png",
       "itemName": "Nectar de l'Orient",
@@ -17717,7 +17717,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Plantalas<\/b>."
     },
     {
-      "questId": "q245",
+      "questId": "q1185",
       "itemId": 8737,
       "itemImg": "https://api.dofusdb.fr/img/items/51008.png",
       "itemName": "Boule polie",
@@ -17729,7 +17729,7 @@
       "effectDesc": "Des <b>Coffres de Scheik<\/b> peuvent être gagnés à la fin des chasses aux trésors."
     },
     {
-      "questId": "q246",
+      "questId": "q1186",
       "itemId": 17990,
       "itemImg": "https://api.dofusdb.fr/img/items/47851.png",
       "itemName": "Dent de Tilamproie",
@@ -17741,7 +17741,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Monstres des ruines sous-marines<\/b>."
     },
     {
-      "questId": "q247",
+      "questId": "q1187",
       "itemId": 13490,
       "itemImg": "https://api.dofusdb.fr/img/items/15093.png",
       "itemName": "Bave de Ouassingue",
@@ -17753,7 +17753,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Monstres des Tourbières<\/b>."
     },
     {
-      "questId": "q248",
+      "questId": "q1188",
       "itemId": 431,
       "itemImg": "https://api.dofusdb.fr/img/items/51127.png",
       "itemName": "Pierre du Craqueleur",
@@ -17765,7 +17765,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone de la <b>Montagne des Craqueleurs<\/b>."
     },
     {
-      "questId": "q249",
+      "questId": "q1189",
       "itemId": 17138,
       "itemImg": "https://api.dofusdb.fr/img/items/63473.png",
       "itemName": "Viande Rassie",
@@ -17777,7 +17777,7 @@
       "effectDesc": "Les quantités de <b>Viande Rassie<\/b> et de <b>Viande Exsudative<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q250",
+      "questId": "q1190",
       "itemId": 15182,
       "itemImg": "https://api.dofusdb.fr/img/items/15881.png",
       "itemName": "Kamatrix",
@@ -17789,7 +17789,7 @@
       "effectDesc": "Les gains de <b>kamas<\/b> sont augmentés de 100 % pour toutes les quêtes."
     },
     {
-      "questId": "q251",
+      "questId": "q1191",
       "itemId": 2551,
       "itemImg": "https://api.dofusdb.fr/img/items/106562.png",
       "itemName": "Oreille de Foufayteur",
@@ -17801,7 +17801,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Ruffians de Cania<\/b>."
     },
     {
-      "questId": "q252",
+      "questId": "q1192",
       "itemId": 465,
       "itemImg": "https://api.dofusdb.fr/img/items/50098.png",
       "itemName": "Cristal",
@@ -17813,7 +17813,7 @@
       "effectDesc": "Les quantités de minerai récupérées par les <b>Mineurs<\/b> de tous niveaux sont augmentées de 100 %."
     },
     {
-      "questId": "q253",
+      "questId": "q1193",
       "itemId": 301,
       "itemImg": "https://api.dofusdb.fr/img/items/53014.png",
       "itemName": "Plume de Tofu",
@@ -17825,7 +17825,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Tofus<\/b>."
     },
     {
-      "questId": "q254",
+      "questId": "q1194",
       "itemId": 7059,
       "itemImg": "https://api.dofusdb.fr/img/items/58067.png",
       "itemName": "Graine de Pandouille",
@@ -17837,7 +17837,7 @@
       "effectDesc": "Les quantités de <b>Plantes<\/b> récupérées par les Alchimistes de tous niveaux sont augmentées de 100 %."
     },
     {
-      "questId": "q256",
+      "questId": "q1203",
       "itemId": 2330,
       "itemImg": "https://api.dofusdb.fr/img/items/15711.png",
       "itemName": "Capsule Explosive",
@@ -17849,7 +17849,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % pour tous les métiers. De plus, pour chaque <b>Fée d'Artifice<\/b> fabriquée, les personnages ont 25 % de chances de créer une seconde Fée et 15 % de chances d'économiser des ingrédients. Ils peuvent aussi récupérer 2 fois plus de <b>Capsules Explosives<\/b> en combattant des Bworks Mages."
     },
     {
-      "questId": "q257",
+      "questId": "q1204",
       "itemId": 9269,
       "itemImg": "https://api.dofusdb.fr/img/items/15765.png",
       "itemName": "Langue de Champodonte",
@@ -17861,7 +17861,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon du <b>Temple du Grand Ougah<\/b>."
     },
     {
-      "questId": "q258",
+      "questId": "q1205",
       "itemId": 15069,
       "itemImg": "https://api.dofusdb.fr/img/items/164039.png",
       "itemName": "Croupion de Truchmuche",
@@ -17873,7 +17873,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 75 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone du <b>Cirque de Cania<\/b>."
     },
     {
-      "questId": "q259",
+      "questId": "q1206",
       "itemId": 382,
       "itemImg": "https://api.dofusdb.fr/img/items/24286.png",
       "itemName": "Longue-vue de Gob-Trotteur",
@@ -17885,7 +17885,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Gobelins d'Amakna<\/b>."
     },
     {
-      "questId": "q260",
+      "questId": "q1207",
       "itemId": 2305,
       "itemImg": "https://api.dofusdb.fr/img/items/51455.png",
       "itemName": "Fragment de Pierre Pointue",
@@ -17897,7 +17897,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone des <b>Plaines Rocheuses<\/b>."
     },
     {
-      "questId": "q261",
+      "questId": "q1208",
       "itemId": 471,
       "itemImg": "https://api.dofusdb.fr/img/items/38153.png",
       "itemName": "Bois d'Érable",
@@ -17909,7 +17909,7 @@
       "effectDesc": "Les quantités de <b>Bombu<\/b> et d'<b>Érable<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q262",
+      "questId": "q1209",
       "itemId": 19399,
       "itemImg": "https://api.dofusdb.fr/img/items/40713.png",
       "itemName": "Dent de Klémort",
@@ -17921,7 +17921,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans les donjons de la <b>Tour de Solar<\/b> et de la <b>Tour de Bethel<\/b>."
     },
     {
-      "questId": "q263",
+      "questId": "q1210",
       "itemId": 537,
       "itemImg": "https://api.dofusdb.fr/img/items/68135.png",
       "itemName": "Pomme de Terre",
@@ -17933,7 +17933,7 @@
       "effectDesc": "Une quête répétable spéciale est disponible aujourd'hui près du <b>château d'Amakna<\/b>. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande."
     },
     {
-      "questId": "q287",
+      "questId": "q1234",
       "itemId": 1698,
       "itemImg": "https://api.dofusdb.fr/img/items/81026.png",
       "itemName": "Sac du Petit Récolteur",
@@ -17945,7 +17945,7 @@
       "effectDesc": "La vitesse d'apparition des <b>ressources<\/b> de tous types est augmentée de 100 %. De plus, les récolteurs peuvent récupérer des <b>Fleurs de Rosal<\/b> ou des <b>Fringales de Silouate<\/b> en affrontant les Protecteurs de ressources."
     },
     {
-      "questId": "q265",
+      "questId": "q1212",
       "itemId": 2599,
       "itemImg": "https://api.dofusdb.fr/img/items/47597.png",
       "itemName": "Pic de Dragodinde",
@@ -17957,7 +17957,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos turquoise<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q266",
+      "questId": "q1213",
       "itemId": 1463,
       "itemImg": "https://api.dofusdb.fr/img/items/71057.png",
       "itemName": "Fiole à élément",
@@ -17969,7 +17969,7 @@
       "effectDesc": "Les chances de transformer une arme via une potion de forgemagie élémentaire sont doublées."
     },
     {
-      "questId": "q267",
+      "questId": "q1214",
       "itemId": 405,
       "itemImg": "https://api.dofusdb.fr/img/items/34083.png",
       "itemName": "Malt",
@@ -17981,7 +17981,7 @@
       "effectDesc": "Les quantités de <b>Malt<\/b> récupérées par les Paysans sont augmentées de 125 %."
     },
     {
-      "questId": "q268",
+      "questId": "q1215",
       "itemId": 13702,
       "itemImg": "https://api.dofusdb.fr/img/items/15804.png",
       "itemName": "Dédicace de Skeunk pour Émeraude",
@@ -17993,7 +17993,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du <b>Repaire de Skeunk<\/b>."
     },
     {
-      "questId": "q269",
+      "questId": "q1216",
       "itemId": 18665,
       "itemImg": "https://api.dofusdb.fr/img/items/82021.png",
       "itemName": "Bouclier de Bowisse",
@@ -18005,7 +18005,7 @@
       "effectDesc": "La qualité des objets fabriqués dans le <b>village et la forêt d'Amakna<\/b> est augmentée."
     },
     {
-      "questId": "q270",
+      "questId": "q1217",
       "itemId": 17487,
       "itemImg": "https://api.dofusdb.fr/img/items/1273.png",
       "itemName": "Collier de Khan Karkass",
@@ -18017,7 +18017,7 @@
       "effectDesc": "Des <b>Boufballes Surprises<\/b> ont été ajoutées aux butins des monstres. Lorsqu'elles sont utilisées, elles permettent d'obtenir des <b>Bouf'gommes<\/b> de différents parfums."
     },
     {
-      "questId": "q271",
+      "questId": "q1218",
       "itemId": 16387,
       "itemImg": "https://api.dofusdb.fr/img/items/35638.png",
       "itemName": "Belladone",
@@ -18029,7 +18029,7 @@
       "effectDesc": "La vitesse d'apparition des <b>fleurs<\/b> et des <b>plantes<\/b> cueillies par les Alchimistes est augmentée de 100 %."
     },
     {
-      "questId": "q272",
+      "questId": "q1219",
       "itemId": 8808,
       "itemImg": "https://api.dofusdb.fr/img/items/55019.png",
       "itemName": "Étoffe du Roissingue",
@@ -18041,7 +18041,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Monstres des Tourbières<\/b>."
     },
     {
-      "questId": "q273",
+      "questId": "q1220",
       "itemId": 7269,
       "itemImg": "https://api.dofusdb.fr/img/items/164668.png",
       "itemName": "Pollen de Bulbiflore",
@@ -18053,7 +18053,7 @@
       "effectDesc": "Le butin généré par les Percepteurs est augmenté de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de <b>Plantala<\/b>."
     },
     {
-      "questId": "q274",
+      "questId": "q1221",
       "itemId": 444,
       "itemImg": "https://api.dofusdb.fr/img/items/39078.png",
       "itemName": "Étain",
@@ -18065,7 +18065,7 @@
       "effectDesc": "Les quantités d'<b>Étain<\/b> et de <b>Silicate<\/b> récupérées par les Mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q288",
+      "questId": "q1235",
       "itemId": 361,
       "itemImg": "https://api.dofusdb.fr/img/items/68031.png",
       "itemName": "Cawotte",
@@ -18077,7 +18077,7 @@
       "effectDesc": "Une quête répétable spéciale est disponible aujourd'hui à l'est de l'atelier des bûcherons de la <b>forêt d'Amakna<\/b>. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande."
     },
     {
-      "questId": "q276",
+      "questId": "q1223",
       "itemId": 6795,
       "itemImg": "https://api.dofusdb.fr/img/items/17065.png",
       "itemName": "Capouze des Champs",
@@ -18089,7 +18089,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % pour les métiers de fabrication de vêtements et de parures (Bijoutier, Cordonnier et Tailleur)."
     },
     {
-      "questId": "q277",
+      "questId": "q1224",
       "itemId": 1699,
       "itemImg": "https://api.dofusdb.fr/img/items/81027.png",
       "itemName": "Sac du Petit Aventurier",
@@ -18101,7 +18101,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % pour toutes les quêtes."
     },
     {
-      "questId": "q278",
+      "questId": "q1225",
       "itemId": 1847,
       "itemImg": "https://api.dofusdb.fr/img/items/41400.png",
       "itemName": "Brochet",
@@ -18113,7 +18113,7 @@
       "effectDesc": "Les quantités de <b>Brochet<\/b>, de <b>Perche<\/b> et de <b>Lotte<\/b> récupérées par les Pêcheurs sont augmentées de 125 %."
     },
     {
-      "questId": "q279",
+      "questId": "q1226",
       "itemId": 532,
       "itemImg": "https://api.dofusdb.fr/img/items/34561.png",
       "itemName": "Seigle",
@@ -18125,7 +18125,7 @@
       "effectDesc": "La vitesse d'apparition des ressources est augmentée de 150 % dans la zone des <b>Champs de Cania<\/b>."
     },
     {
-      "questId": "q280",
+      "questId": "q1227",
       "itemId": 8756,
       "itemImg": "https://api.dofusdb.fr/img/items/54012.png",
       "itemName": "Duvet du Kilibriss",
@@ -18137,7 +18137,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone des <b>Plaines Herbeuses<\/b>."
     },
     {
-      "questId": "q281",
+      "questId": "q1228",
       "itemId": 13504,
       "itemImg": "https://api.dofusdb.fr/img/items/47699.png",
       "itemName": "Corne de Gamino",
@@ -18149,7 +18149,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone du <b>Labyrinthe du Minotoror<\/b>."
     },
     {
-      "questId": "q282",
+      "questId": "q1229",
       "itemId": 16483,
       "itemImg": "https://api.dofusdb.fr/img/items/49151.png",
       "itemName": "Tanche en Matelote",
@@ -18161,7 +18161,7 @@
       "effectDesc": "Pour chaque objet fabriqué, les <b>Pêcheurs<\/b> ont 25 % de chances de créer un second objet."
     },
     {
-      "questId": "q283",
+      "questId": "q1230",
       "itemId": 17136,
       "itemImg": "https://api.dofusdb.fr/img/items/63464.png",
       "itemName": "Viande Sanguinolente",
@@ -18173,7 +18173,7 @@
       "effectDesc": "Les quantités de <b>Viande Sanguinolente<\/b> récupérées par les Chasseurs sont augmentées de 125%."
     },
     {
-      "questId": "q284",
+      "questId": "q1231",
       "itemId": 429,
       "itemImg": "https://api.dofusdb.fr/img/items/164183.png",
       "itemName": "Miséricorde du Chafer d'Élite",
@@ -18185,7 +18185,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans les zones du <b>Cimetière des Torturés<\/b> et du <b>Cimetière des Héros<\/b>."
     },
     {
-      "questId": "q285",
+      "questId": "q1232",
       "itemId": 7436,
       "itemImg": "https://api.dofusdb.fr/img/items/78016.png",
       "itemName": "Rune Pui",
@@ -18197,7 +18197,7 @@
       "effectDesc": "Les <b>Forgemages<\/b> ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer une arme."
     },
     {
-      "questId": "q286",
+      "questId": "q1233",
       "itemId": 11885,
       "itemImg": "https://api.dofusdb.fr/img/items/119001.png",
       "itemName": "Lamelle de Dramanite",
@@ -18209,7 +18209,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon de l'<b>Antre du Korriandre<\/b>."
     },
     {
-      "questId": "q289",
+      "questId": "q1236",
       "itemId": 379,
       "itemImg": "https://api.dofusdb.fr/img/items/47051.png",
       "itemName": "Pince de Crabe",
@@ -18221,7 +18221,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les créatures de type <b>Monstres des plages<\/b>."
     },
     {
-      "questId": "q290",
+      "questId": "q1237",
       "itemId": 522,
       "itemImg": "https://api.dofusdb.fr/img/items/33012.png",
       "itemName": "Biscotte",
@@ -18233,7 +18233,7 @@
       "effectDesc": "Des <b>Sébiles d'Elgero<\/b> ont été ajoutées aux butins des monstres des donjons. Lorsqu'elles sont utilisées, elles font disparaître les kamas... et permettent de bénéficier d'un effet aléatoire de charité bien ordonnée."
     },
     {
-      "questId": "q291",
+      "questId": "q1238",
       "itemId": 13730,
       "itemImg": "https://api.dofusdb.fr/img/items/58472.png",
       "itemName": "Graine de la Discorde",
@@ -18245,7 +18245,7 @@
       "effectDesc": "Le butin généré par les Percepteurs est augmenté de 200 % dans les donjons de niveau 40 à 70."
     },
     {
-      "questId": "q292",
+      "questId": "q1239",
       "itemId": 18666,
       "itemImg": "https://api.dofusdb.fr/img/items/82020.png",
       "itemName": "Bouclier du Bouftou",
@@ -18257,7 +18257,7 @@
       "effectDesc": "Les <b>protecteurs de ressources<\/b> ont 5 fois plus de chances d'apparaître pendant les activités de récolte. De plus, la vitesse d'apparition des <b>Archimonstres<\/b> est augmentée de 200 %."
     },
     {
-      "questId": "q293",
+      "questId": "q1240",
       "itemId": 15687,
       "itemImg": "https://api.dofusdb.fr/img/items/111753.png",
       "itemName": "Coquille de Virustine",
@@ -18269,7 +18269,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Krobes<\/b>."
     },
     {
-      "questId": "q294",
+      "questId": "q1241",
       "itemId": 13988,
       "itemImg": "https://api.dofusdb.fr/img/items/109603.png",
       "itemName": "Œil de Cycloïde",
@@ -18281,7 +18281,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le <b>Donjon du Comte Harebourg<\/b>."
     },
     {
-      "questId": "q295",
+      "questId": "q1242",
       "itemId": 11923,
       "itemImg": "https://api.dofusdb.fr/img/items/47680.png",
       "itemName": "Griffe de Blérauve",
@@ -18293,7 +18293,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Bléros<\/b>."
     },
     {
-      "questId": "q296",
+      "questId": "q1243",
       "itemId": 1610,
       "itemImg": "https://api.dofusdb.fr/img/items/15977.png",
       "itemName": "Roue de Tivelo",
@@ -18305,7 +18305,7 @@
       "effectDesc": "Les gains d'expérience des montures sont augmentés de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la <b>Route des Roulottes<\/b>."
     },
     {
-      "questId": "q297",
+      "questId": "q1244",
       "itemId": 593,
       "itemImg": "https://api.dofusdb.fr/img/items/35192.png",
       "itemName": "Orchidée Freyesque",
@@ -18317,7 +18317,7 @@
       "effectDesc": "Les quantités d'<b>Orchidée Freyesque<\/b> récupérées par les Alchimistes sont augmentées de 125 %."
     },
     {
-      "questId": "q298",
+      "questId": "q1245",
       "itemId": 2596,
       "itemImg": "https://api.dofusdb.fr/img/items/15424.png",
       "itemName": "Lait de Dragodinde",
@@ -18329,7 +18329,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos amande<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q299",
+      "questId": "q1246",
       "itemId": 18735,
       "itemImg": "https://api.dofusdb.fr/img/items/15962.png",
       "itemName": "Bouteille de Bouchonnois",
@@ -18341,7 +18341,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le <b>Camp du Comte Razof<\/b>."
     },
     {
-      "questId": "q300",
+      "questId": "q1247",
       "itemId": 14859,
       "itemImg": "https://api.dofusdb.fr/img/items/15840.png",
       "itemName": "Sang de Harpo",
@@ -18353,7 +18353,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de l'<b>Aquadôme de Merkator<\/b>."
     },
     {
-      "questId": "q301",
+      "questId": "q1248",
       "itemId": 7013,
       "itemImg": "https://api.dofusdb.fr/img/items/38673.png",
       "itemName": "Bois de Bambou",
@@ -18365,7 +18365,7 @@
       "effectDesc": "Les quantités de <b>Bambou<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q302",
+      "questId": "q1249",
       "itemId": 8143,
       "itemImg": "https://api.dofusdb.fr/img/items/84013.png",
       "itemName": "Clef des Champs",
@@ -18377,7 +18377,7 @@
       "effectDesc": "Les <b>Bricoleurs<\/b> ont 15 % de chances d'économiser des ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q303",
+      "questId": "q1250",
       "itemId": 8730,
       "itemImg": "https://api.dofusdb.fr/img/items/47012.png",
       "itemName": "Coccyx du Corailleur",
@@ -18389,7 +18389,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans la<b>Grotte Hesque<\/b>."
     },
     {
-      "questId": "q304",
+      "questId": "q1251",
       "itemId": 1129,
       "itemImg": "https://api.dofusdb.fr/img/items/111211.png",
       "itemName": "Coquille de Dragoeuf Ardoise",
@@ -18401,7 +18401,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans les zones de la <b>Presqu'île des Dragoeufs<\/b>."
     },
     {
-      "questId": "q305",
+      "questId": "q1252",
       "itemId": 435,
       "itemImg": "https://api.dofusdb.fr/img/items/98102.png",
       "itemName": "Racine d'Abraknyde",
@@ -18413,7 +18413,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Abraknydiens<\/b>."
     },
     {
-      "questId": "q306",
+      "questId": "q1253",
       "itemId": 27621,
       "itemImg": "https://api.dofusdb.fr/img/items/39403.png",
       "itemName": "Cendrepierre",
@@ -18425,7 +18425,7 @@
       "effectDesc": "Les quantités de <b>Cendrepierre<\/b> récupérées par les Mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q307",
+      "questId": "q1254",
       "itemId": 7299,
       "itemImg": "https://api.dofusdb.fr/img/items/59038.png",
       "itemName": "Peau de Crachefoux",
@@ -18437,7 +18437,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans la zone de <b>Feudala<\/b>."
     },
     {
-      "questId": "q308",
+      "questId": "q1255",
       "itemId": 289,
       "itemImg": "https://api.dofusdb.fr/img/items/34009.png",
       "itemName": "Blé",
@@ -18449,7 +18449,7 @@
       "effectDesc": "Les quantités de <b>Blé<\/b> récupérées par les Paysans sont augmentées de 125 %."
     },
     {
-      "questId": "q309",
+      "questId": "q1256",
       "itemId": 302,
       "itemImg": "https://api.dofusdb.fr/img/items/24287.png",
       "itemName": "Tambour de Gobaladée",
@@ -18461,7 +18461,7 @@
       "effectDesc": "Les amateurs de musique peuvent récupérer deux fois plus de <b>pollenectar<\/b> sur les créatures du Monde des Douze (hors dimensions, zones sous-marines et intérieurs)."
     },
     {
-      "questId": "q310",
+      "questId": "q1257",
       "itemId": 8744,
       "itemImg": "https://api.dofusdb.fr/img/items/47017.png",
       "itemName": "Pince de Crustorail",
@@ -18473,7 +18473,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans les zones de la <b>Plage de Corail<\/b>."
     },
     {
-      "questId": "q311",
+      "questId": "q1258",
       "itemId": 25182,
       "itemImg": "https://api.dofusdb.fr/img/items/176029.png",
       "itemName": "Appendice Démoniaque",
@@ -18485,7 +18485,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Possédés<\/b>."
     },
     {
-      "questId": "q312",
+      "questId": "q1259",
       "itemId": 2507,
       "itemImg": "https://api.dofusdb.fr/img/items/59652.png",
       "itemName": "Peau de Larve Champêtre",
@@ -18497,7 +18497,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Animaux des champs<\/b>."
     },
     {
-      "questId": "q313",
+      "questId": "q1260",
       "itemId": 27413,
       "itemImg": "https://api.dofusdb.fr/img/items/39404.png",
       "itemName": "Eau Ferrugineuse",
@@ -18509,7 +18509,7 @@
       "effectDesc": "La vitesse d'apparition des ressources est augmentée de 150 % dans la zone de la <b>Mine Istairameur<\/b>."
     },
     {
-      "questId": "q314",
+      "questId": "q1261",
       "itemId": 18668,
       "itemImg": "https://api.dofusdb.fr/img/items/82017.png",
       "itemName": "Bouclier Volant",
@@ -18521,7 +18521,7 @@
       "effectDesc": "La qualité des objets fabriqués sur l'île de <b>Pandala<\/b> est augmentée."
     },
     {
-      "questId": "q315",
+      "questId": "q1262",
       "itemId": 17983,
       "itemImg": "https://api.dofusdb.fr/img/items/103729.png",
       "itemName": "Tentacule de Grofond",
@@ -18533,7 +18533,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le <b>Temple de Koutoulou<\/b>."
     },
     {
-      "questId": "q316",
+      "questId": "q1263",
       "itemId": 18539,
       "itemImg": "https://api.dofusdb.fr/img/items/50727.png",
       "itemName": "Grenat de Momistik",
@@ -18545,7 +18545,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 75 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la <b>Pyramide Maudite<\/b>."
     },
     {
-      "questId": "q317",
+      "questId": "q1264",
       "itemId": 17158,
       "itemImg": "https://api.dofusdb.fr/img/items/63439.png",
       "itemName": "Viande Noire",
@@ -18557,7 +18557,7 @@
       "effectDesc": "Les quantités de <b>Viande Gâtée<\/b> et de <b>Viande Noire<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q318",
+      "questId": "q1265",
       "itemId": 2674,
       "itemImg": "https://api.dofusdb.fr/img/items/24288.png",
       "itemName": "Bonnet de Gobaliste",
@@ -18569,7 +18569,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans l'<b>Akadémie des Gobs<\/b>."
     },
     {
-      "questId": "q319",
+      "questId": "q1358",
       "itemId": 8352,
       "itemImg": "https://api.dofusdb.fr/img/items/59606.png",
       "itemName": "Écaille de Dragoss Charbon",
@@ -18581,7 +18581,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Dragoss<\/b>."
     },
     {
-      "questId": "q320",
+      "questId": "q1359",
       "itemId": 13723,
       "itemImg": "https://api.dofusdb.fr/img/items/105646.png",
       "itemName": "Œuf de Tofubine",
@@ -18593,7 +18593,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du <b>Tofulailler Royal<\/b>."
     },
     {
-      "questId": "q321",
+      "questId": "q1360",
       "itemId": 16404,
       "itemImg": "https://api.dofusdb.fr/img/items/12750.png",
       "itemName": "Potion Raide Dite",
@@ -18605,7 +18605,7 @@
       "effectDesc": "Les <b>Alchimistes<\/b> ont 15 % de chances d'économiser des ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q322",
+      "questId": "q1357",
       "itemId": 17177,
       "itemImg": "https://api.dofusdb.fr/img/items/69752.png",
       "itemName": "Friture Amaknéenne",
@@ -18617,7 +18617,7 @@
       "effectDesc": "Les gains d'expérience et les chances d'obtenir du butin sont augmentés de 50 % sur tous les monstres présents dans les zones du royaume d'<b>Amakna<\/b>. De plus, les quantités de <b>Points de rêve<\/b> obtenus dans les Songes infinis sont augmentées de 100 %."
     },
     {
-      "questId": "q323",
+      "questId": "q1361",
       "itemId": 7305,
       "itemImg": "https://api.dofusdb.fr/img/items/164678.png",
       "itemName": "Poils magiques de Tanuki",
@@ -18629,7 +18629,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon de l'<b>Atelier du Tanukouï San<\/b>."
     },
     {
-      "questId": "q324",
+      "questId": "q1362",
       "itemId": 1844,
       "itemImg": "https://api.dofusdb.fr/img/items/41394.png",
       "itemName": "Truite",
@@ -18641,7 +18641,7 @@
       "effectDesc": "Les quantités de <b>Goujon<\/b> et de <b>Truite<\/b> récupérées par les Pêcheurs sont augmentées de 125 %."
     },
     {
-      "questId": "q325",
+      "questId": "q1363",
       "itemId": 16454,
       "itemImg": "https://api.dofusdb.fr/img/items/34554.png",
       "itemName": "Maïs",
@@ -18653,7 +18653,7 @@
       "effectDesc": "Les quantités de <b>Maïs<\/b> et de <b>Millet<\/b> récupérées par les Paysans sont augmentées de 125 %."
     },
     {
-      "questId": "q326",
+      "questId": "q1364",
       "itemId": 13343,
       "itemImg": "https://api.dofusdb.fr/img/items/15129.png",
       "itemName": "Nœud de Marin",
@@ -18665,7 +18665,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Pirates de Moon<\/b>."
     },
     {
-      "questId": "q327",
+      "questId": "q1365",
       "itemId": 7443,
       "itemImg": "https://api.dofusdb.fr/img/items/78020.png",
       "itemName": "Rune Pod",
@@ -18677,7 +18677,7 @@
       "effectDesc": "Les <b>Cordomages<\/b> ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer un objet."
     },
     {
-      "questId": "q328",
+      "questId": "q1366",
       "itemId": 828,
       "itemImg": "https://api.dofusdb.fr/img/items/2015.png",
       "itemName": "Arc Sifflant",
@@ -18689,7 +18689,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos prune<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q329",
+      "questId": "q1367",
       "itemId": 446,
       "itemImg": "https://api.dofusdb.fr/img/items/39076.png",
       "itemName": "Bauxite",
@@ -18701,7 +18701,7 @@
       "effectDesc": "Les quantités de <b>Bauxite<\/b> récupérées par les Mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q330",
+      "questId": "q1368",
       "itemId": 19972,
       "itemImg": "https://api.dofusdb.fr/img/items/54713.png",
       "itemName": "Poils de barbe de Barbélier",
@@ -18713,7 +18713,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les créatures de type <b>Clan Martegel<\/b>."
     },
     {
-      "questId": "q331",
+      "questId": "q1369",
       "itemId": 2654,
       "itemImg": "https://api.dofusdb.fr/img/items/164651.png",
       "itemName": "Eau de Kwapa",
@@ -18725,7 +18725,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la <b>Vallée de la Dame des eaux<\/b>."
     },
     {
-      "questId": "q332",
+      "questId": "q1370",
       "itemId": 14278,
       "itemImg": "https://api.dofusdb.fr/img/items/15245.png",
       "itemName": "Chaînes Brisées",
@@ -18737,7 +18737,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % lors des combats du <b>Kolizéum<\/b>."
     },
     {
-      "questId": "q333",
+      "questId": "q1371",
       "itemId": 17160,
       "itemImg": "https://api.dofusdb.fr/img/items/63487.png",
       "itemName": "Viande Goûtue",
@@ -18749,7 +18749,7 @@
       "effectDesc": "Les quantités de <b>Viande Goûtue<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q334",
+      "questId": "q1372",
       "itemId": 12431,
       "itemImg": "https://api.dofusdb.fr/img/items/15793.png",
       "itemName": "Boue Vénérable",
@@ -18761,7 +18761,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans les zones des <b>forêts de Vulkania<\/b>."
     },
     {
-      "questId": "q335",
+      "questId": "q1373",
       "itemId": 364,
       "itemImg": "https://api.dofusdb.fr/img/items/59034.png",
       "itemName": "Peau de Larve Verte",
@@ -18773,7 +18773,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone des <b>Prairies d'Astrub<\/b>."
     },
     {
-      "questId": "q336",
+      "questId": "q1374",
       "itemId": 1439,
       "itemImg": "https://api.dofusdb.fr/img/items/21001.png",
       "itemName": "Mauvaise Pioche",
@@ -18785,7 +18785,7 @@
       "effectDesc": "Pour chaque rune obtenue en brisant des objets, les <b>concasseurs<\/b> ont 10 % de chances de créer une seconde rune."
     },
     {
-      "questId": "q337",
+      "questId": "q1375",
       "itemId": 17981,
       "itemImg": "https://api.dofusdb.fr/img/items/59651.png",
       "itemName": "Peau de Trithon",
@@ -18797,7 +18797,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon du <b>Palais de Dantinea<\/b>."
     },
     {
-      "questId": "q338",
+      "questId": "q1376",
       "itemId": 389,
       "itemImg": "https://api.dofusdb.fr/img/items/60061.png",
       "itemName": "Huile de Tournesol Sauvage",
@@ -18809,7 +18809,7 @@
       "effectDesc": "La vitesse d'apparition des <b>céréales<\/b> récoltées par les <b>Paysans<\/b> est augmentée de 100 %."
     },
     {
-      "questId": "q339",
+      "questId": "q1377",
       "itemId": 11522,
       "itemImg": "https://api.dofusdb.fr/img/items/51467.png",
       "itemName": "Fragment de pépite de Sakaï",
@@ -18821,7 +18821,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Gobelins de Sakaï<\/b>."
     },
     {
-      "questId": "q340",
+      "questId": "q1378",
       "itemId": 1825,
       "itemImg": "https://api.dofusdb.fr/img/items/49096.png",
       "itemName": "Sardine à l'Étouffée",
@@ -18833,7 +18833,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans les zones du <b>Port de givre<\/b> et de <b>La Bourgade<\/b>."
     },
     {
-      "questId": "q341",
+      "questId": "q1379",
       "itemId": 1728,
       "itemImg": "https://api.dofusdb.fr/img/items/18001.png",
       "itemName": "Chacha",
@@ -18845,7 +18845,7 @@
       "effectDesc": "Les gains d'expérience des familiers sont augmentés de 50 %."
     },
     {
-      "questId": "q342",
+      "questId": "q1380",
       "itemId": 470,
       "itemImg": "https://api.dofusdb.fr/img/items/38140.png",
       "itemName": "Bois d'Orme",
@@ -18857,7 +18857,7 @@
       "effectDesc": "Les quantités de <b>Bambou Sacré<\/b> et d'<b>Orme<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q343",
+      "questId": "q1381",
       "itemId": 13736,
       "itemImg": "https://api.dofusdb.fr/img/items/15819.png",
       "itemName": "Furoncle de la Mama Bwork",
@@ -18869,7 +18869,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans la zone de <b>Gisgoul<\/b>."
     },
     {
-      "questId": "q344",
+      "questId": "q1382",
       "itemId": 26319,
       "itemImg": "https://api.dofusdb.fr/img/items/36658.png",
       "itemName": "Pic de Malépik",
@@ -18881,7 +18881,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans les zones de l'<b>Orée enchantée<\/b> et du <b>Dédale du Dark Vlad<\/b>."
     },
     {
-      "questId": "q345",
+      "questId": "q1383",
       "itemId": 17168,
       "itemImg": "https://api.dofusdb.fr/img/items/69750.png",
       "itemName": "Boulette de Viande",
@@ -18893,7 +18893,7 @@
       "effectDesc": "Les quantités de <b>Viande Hachée<\/b> et de <b>Viande Faisandée<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q346",
+      "questId": "q1384",
       "itemId": 8347,
       "itemImg": "https://api.dofusdb.fr/img/items/164677.png",
       "itemName": "Lame brisée de Lichangoro",
@@ -18905,7 +18905,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon du <b>Dojo du Vent<\/b>."
     },
     {
-      "questId": "q347",
+      "questId": "q1385",
       "itemId": 18357,
       "itemImg": "https://api.dofusdb.fr/img/items/15948.png",
       "itemName": "Jus de Cacterre",
@@ -18917,7 +18917,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon de la<b>Caverne d'El Piko<\/b>."
     },
     {
-      "questId": "q348",
+      "questId": "q1386",
       "itemId": 883,
       "itemImg": "https://api.dofusdb.fr/img/items/56534.png",
       "itemName": "Cuir de Boostache Prépubère",
@@ -18929,7 +18929,7 @@
       "effectDesc": "Les gains d'expérience et les chances d'obtenir du butin sont augmentés de 100 % dans le donjon de la <b>Maison Fantôme<\/b>. De plus, <b>Leonzi Trool<\/b> attend les aventuriers à la Foire du Trool. Sa bénédiction permet de trooller à tout va (bonus d'initiative et coups critiques durant 15 combats)."
     },
     {
-      "questId": "q349",
+      "questId": "q1387",
       "itemId": 18733,
       "itemImg": "https://api.dofusdb.fr/img/items/15960.png",
       "itemName": "Flèche de Crâmbo",
@@ -18941,7 +18941,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Chassouilleurs<\/b>."
     },
     {
-      "questId": "q350",
+      "questId": "q1388",
       "itemId": 428,
       "itemImg": "https://api.dofusdb.fr/img/items/36643.png",
       "itemName": "Sauge",
@@ -18953,7 +18953,7 @@
       "effectDesc": "Les quantités de <b>Sauge<\/b> récupérées par les Alchimistes sont augmentées de 125 %."
     },
     {
-      "questId": "q351",
+      "questId": "q1389",
       "itemId": 15071,
       "itemImg": "https://api.dofusdb.fr/img/items/53659.png",
       "itemName": "Plume de Truchideur",
@@ -18965,7 +18965,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Truches<\/b>."
     },
     {
-      "questId": "q352",
+      "questId": "q1390",
       "itemId": 6965,
       "itemImg": "https://api.dofusdb.fr/img/items/12144.png",
       "itemName": "Potion de cité : Bonta",
@@ -18977,7 +18977,7 @@
       "effectDesc": "Une quête répétable spéciale est disponible aujourd'hui au sud des portes de Bonta. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande."
     },
     {
-      "questId": "q353",
+      "questId": "q1391",
       "itemId": 12438,
       "itemImg": "https://api.dofusdb.fr/img/items/48282.png",
       "itemName": "Cendres Matures",
@@ -18989,7 +18989,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le <b>Cratère Minus<\/b>."
     },
     {
-      "questId": "q354",
+      "questId": "q1392",
       "itemId": 11106,
       "itemImg": "https://api.dofusdb.fr/img/items/41403.png",
       "itemName": "Poisskaille",
@@ -19001,7 +19001,7 @@
       "effectDesc": "Les quantités de <b>Poisskaille<\/b> récupérées par les Pêcheurs sont augmentées de 200 %."
     },
     {
-      "questId": "q355",
+      "questId": "q1393",
       "itemId": 13727,
       "itemImg": "https://api.dofusdb.fr/img/items/15814.png",
       "itemName": "Crème à bronzer",
@@ -19013,7 +19013,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone des <b>Calanques d'Astrub<\/b>."
     },
     {
-      "questId": "q356",
+      "questId": "q1394",
       "itemId": 9383,
       "itemImg": "https://api.dofusdb.fr/img/items/98001.png",
       "itemName": "Racine de Tronkoblop",
@@ -19025,7 +19025,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de l'<b>Antre du Blop Multicolore Royal<\/b>."
     },
     {
-      "questId": "q357",
+      "questId": "q1395",
       "itemId": 747,
       "itemImg": "https://api.dofusdb.fr/img/items/40660.png",
       "itemName": "Aluminite",
@@ -19037,7 +19037,7 @@
       "effectDesc": "Les <b>Mineurs<\/b> ont 15 % de chances d'économiser des ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q358",
+      "questId": "q1396",
       "itemId": 2659,
       "itemImg": "https://api.dofusdb.fr/img/items/35632.png",
       "itemName": "Pétale de Tournesol Sauvage",
@@ -19049,7 +19049,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Plantes des champs<\/b>."
     },
     {
-      "questId": "q359",
+      "questId": "q1397",
       "itemId": 7607,
       "itemImg": "https://api.dofusdb.fr/img/items/93002.png",
       "itemName": "Mangeoire en Frêne",
@@ -19061,7 +19061,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos<\/b> capables de se reproduire donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q360",
+      "questId": "q1398",
       "itemId": 7408,
       "itemImg": "https://api.dofusdb.fr/img/items/164736.png",
       "itemName": "Kapokaza",
@@ -19073,7 +19073,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans la zone du <b>Mont des Tombeaux<\/b>."
     },
     {
-      "questId": "q361",
+      "questId": "q1399",
       "itemId": 17150,
       "itemImg": "https://api.dofusdb.fr/img/items/63372.png",
       "itemName": "Viande de Brousse",
@@ -19085,7 +19085,7 @@
       "effectDesc": "Les quantités de <b>Viande Macérée<\/b> et de <b>Viande de Brousse<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q362",
+      "questId": "q1400",
       "itemId": 12443,
       "itemImg": "https://api.dofusdb.fr/img/items/15794.png",
       "itemName": "Flaque Vénérable",
@@ -19097,7 +19097,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les créatures de type <b>Monstres de Vulkania<\/b>."
     },
     {
-      "questId": "q363",
+      "questId": "q1401",
       "itemId": 21206,
       "itemImg": "https://api.dofusdb.fr/img/items/109621.png",
       "itemName": "Œil de Crocodaille albinos",
@@ -19109,7 +19109,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Crocodailles de Crocuzko<\/b>."
     },
     {
-      "questId": "q364",
+      "questId": "q1402",
       "itemId": 13728,
       "itemImg": "https://api.dofusdb.fr/img/items/15815.png",
       "itemName": "Paupière d'Étoile",
@@ -19121,7 +19121,7 @@
       "effectDesc": "Les gains d'expérience, les chances d'obtenir du butin et le butin généré par les Percepteurs sont augmentés de 100 % dans toutes les zones influencées par une anomalie temporelle."
     },
     {
-      "questId": "q365",
+      "questId": "q1403",
       "itemId": 16385,
       "itemImg": "https://api.dofusdb.fr/img/items/36644.png",
       "itemName": "Ginseng",
@@ -19133,7 +19133,7 @@
       "effectDesc": "Les quantités de <b>Ginseng<\/b> et de <b>Graines de Pandouille<\/b> récupérées par les Alchimistes sont augmentées de 125 %."
     },
     {
-      "questId": "q366",
+      "questId": "q1404",
       "itemId": 442,
       "itemImg": "https://api.dofusdb.fr/img/items/39109.png",
       "itemName": "Bronze",
@@ -19145,7 +19145,7 @@
       "effectDesc": "Les quantités de <b>Bronze<\/b> récupérées par les Mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q367",
+      "questId": "q1405",
       "itemId": 26033,
       "itemImg": "https://api.dofusdb.fr/img/items/165041.png",
       "itemName": "Corne de Typhomet",
@@ -19157,7 +19157,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Ravageurs<\/b>."
     },
     {
-      "questId": "q368",
+      "questId": "q1406",
       "itemId": 3207,
       "itemImg": "https://api.dofusdb.fr/img/items/11038.png",
       "itemName": "Bottes de Satisfaction",
@@ -19169,7 +19169,7 @@
       "effectDesc": "La qualité des objets fabriqués dans la ville d'<b>Astrub<\/b> est augmentée."
     },
     {
-      "questId": "q369",
+      "questId": "q1407",
       "itemId": 17134,
       "itemImg": "https://api.dofusdb.fr/img/items/63426.png",
       "itemName": "Viande Avariée",
@@ -19181,7 +19181,7 @@
       "effectDesc": "Les quantités de <b>Viande Ladre<\/b> et de <b>Viande Avariée<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q370",
+      "questId": "q1408",
       "itemId": 22052,
       "itemImg": "https://api.dofusdb.fr/img/items/24276.png",
       "itemName": "Terre Stérile",
@@ -19193,7 +19193,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans les 4 donjons de l'<b>Eliocalypse<\/b> (Sentence de la Balance, Arbre de mort, Fers de la Tyrannie, Trône de sang)."
     },
     {
-      "questId": "q371",
+      "questId": "q1409",
       "itemId": 16467,
       "itemImg": "https://api.dofusdb.fr/img/items/41413.png",
       "itemName": "Morue",
@@ -19205,7 +19205,7 @@
       "effectDesc": "Les quantités de <b>Morue<\/b> et d'<b>Espadon<\/b> récupérées par les Pêcheurs sont augmentées de 125 %."
     },
     {
-      "questId": "q372",
+      "questId": "q1410",
       "itemId": 11936,
       "itemImg": "https://api.dofusdb.fr/img/items/54682.png",
       "itemName": "Poils de Boulglours",
@@ -19217,7 +19217,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans les zones du <b>Mont Torrideau<\/b> et de la <b>Ruche des Gloursons<\/b>."
     },
     {
-      "questId": "q373",
+      "questId": "q1411",
       "itemId": 13340,
       "itemImg": "https://api.dofusdb.fr/img/items/165026.png",
       "itemName": "Pustule de Rat Sio",
@@ -19229,7 +19229,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon de la <b>Sousouricière du Rat Noir<\/b>."
     },
     {
-      "questId": "q374",
+      "questId": "q1412",
       "itemId": 16456,
       "itemImg": "https://api.dofusdb.fr/img/items/34555.png",
       "itemName": "Millet",
@@ -19241,7 +19241,7 @@
       "effectDesc": "Les quantités de céréales récupérées par les Paysans de tous niveaux sont augmentées de 100 %."
     },
     {
-      "questId": "q375",
+      "questId": "q1413",
       "itemId": 22222,
       "itemImg": "https://api.dofusdb.fr/img/items/15997.png",
       "itemName": "Collier d'esclave",
@@ -19253,7 +19253,7 @@
       "effectDesc": "Le butin généré par les Percepteurs est augmenté de 200 % dans les donjons de niveau 200."
     },
     {
-      "questId": "q376",
+      "questId": "q1414",
       "itemId": 602,
       "itemImg": "https://api.dofusdb.fr/img/items/41322.png",
       "itemName": "Requin Marteau-Faucille",
@@ -19265,7 +19265,7 @@
       "effectDesc": "Les quantités de <b>Raie Bleue<\/b> et de <b>Requin Marteau-Faucille<\/b> récupérées par les Pêcheurs sont augmentées de 125 %."
     },
     {
-      "questId": "q377",
+      "questId": "q1415",
       "itemId": 476,
       "itemImg": "https://api.dofusdb.fr/img/items/38095.png",
       "itemName": "Bois de Noyer",
@@ -19277,7 +19277,7 @@
       "effectDesc": "Les quantités de <b>Noyer<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q378",
+      "questId": "q1416",
       "itemId": 9382,
       "itemImg": "https://api.dofusdb.fr/img/items/35008.png",
       "itemName": "Fleur de Blopignon",
@@ -19289,7 +19289,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon du <b>Clos des Blops<\/b>."
     },
     {
-      "questId": "q379",
+      "questId": "q1417",
       "itemId": 8391,
       "itemImg": "https://api.dofusdb.fr/img/items/59617.png",
       "itemName": "Peau de Don Dorgan",
@@ -19301,7 +19301,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Porcos<\/b>."
     },
     {
-      "questId": "q380",
+      "questId": "q1418",
       "itemId": 7454,
       "itemImg": "https://api.dofusdb.fr/img/items/78030.png",
       "itemName": "Rune Ré Eau",
@@ -19313,7 +19313,7 @@
       "effectDesc": "Les <b>Costumages<\/b> ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer un objet."
     },
     {
-      "questId": "q1",
+      "questId": "q1340",
       "itemId": 27399,
       "itemImg": "https://api.dofusdb.fr/img/items/47883.png",
       "itemName": "Épine d'Armuguet",
@@ -19325,7 +19325,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon de la <b>Chambre des maléfices<\/b>."
     },
     {
-      "questId": "q113",
+      "questId": "q1341",
       "itemId": 1183,
       "itemImg": "https://api.dofusdb.fr/img/items/12038.png",
       "itemName": "Potion de Mini Soin Supérieure",
@@ -19337,7 +19337,7 @@
       "effectDesc": "La régénération des <b>Points de Vie<\/b> est augmentée de 300 % (hors combat), et les <b>soins par consommables<\/b> (vie et énergie) sont augmentés de 100 %."
     },
     {
-      "questId": "q114",
+      "questId": "q1353",
       "itemId": 23965,
       "itemImg": "https://api.dofusdb.fr/img/items/164854.png",
       "itemName": "Pétale d'encre",
@@ -19349,7 +19349,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Yokianzhi d'encre<\/b> et <b>Yokianzhi de papier<\/b>."
     },
     {
-      "questId": "q115",
+      "questId": "q1355",
       "itemId": 16490,
       "itemImg": "https://api.dofusdb.fr/img/items/95001.png",
       "itemName": "Planche Contreplaquée",
@@ -19361,7 +19361,7 @@
       "effectDesc": "Pour chaque objet fabriqué, les <b>Bûcherons<\/b> ont 10 % de chances de créer un second objet."
     },
     {
-      "questId": "q116",
+      "questId": "q1342",
       "itemId": 8309,
       "itemImg": "https://api.dofusdb.fr/img/items/53004.png",
       "itemName": "Plume du Serpiplume",
@@ -19373,7 +19373,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans la zone et le donjon du <b>Labyrinthe du Minotoror<\/b> (et son centre)."
     },
     {
-      "questId": "q117",
+      "questId": "q1343",
       "itemId": 8250,
       "itemImg": "https://api.dofusdb.fr/img/items/54005.png",
       "itemName": "Poil de Renarbo",
@@ -19385,7 +19385,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Corbacs<\/b>."
     },
     {
-      "questId": "q118",
+      "questId": "q1354",
       "itemId": 8780,
       "itemImg": "https://api.dofusdb.fr/img/items/36010.png",
       "itemName": "Sépale de Nerbe",
@@ -19397,7 +19397,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les créatures de type <b>Florifaune obscure<\/b>."
     },
     {
-      "questId": "q119",
+      "questId": "q1344",
       "itemId": 17995,
       "itemImg": "https://api.dofusdb.fr/img/items/39399.png",
       "itemName": "Écume de mer",
@@ -19409,7 +19409,7 @@
       "effectDesc": "La vitesse d'apparition des ressources est augmentée de 150 % dans les zones des <b>Profondeurs de Sufokia<\/b>."
     },
     {
-      "questId": "q120",
+      "questId": "q1347",
       "itemId": 2484,
       "itemImg": "https://api.dofusdb.fr/img/items/15512.png",
       "itemName": "Trident Cassé",
@@ -19421,7 +19421,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone de la <b>Plaine des Porkass<\/b>."
     },
     {
-      "questId": "q121",
+      "questId": "q1345",
       "itemId": 2588,
       "itemImg": "https://api.dofusdb.fr/img/items/104593.png",
       "itemName": "Aile de Dragodinde",
@@ -19433,7 +19433,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos ébène<\/b> ainsi que de <b>volkornes améthyste<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q122",
+      "questId": "q1346",
       "itemId": 10970,
       "itemImg": "https://api.dofusdb.fr/img/items/15773.png",
       "itemName": "Sueur de dragodinde",
@@ -19445,7 +19445,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone du <b>Territoire des Dragodindes Sauvages<\/b>."
     },
     {
-      "questId": "q123",
+      "questId": "q1349",
       "itemId": 14284,
       "itemImg": "https://api.dofusdb.fr/img/items/15247.png",
       "itemName": "Flamme Spectrale",
@@ -19457,7 +19457,7 @@
       "effectDesc": "Les récompenses en points d'expérience des <b>quêtes d'alignement<\/b> sont augmentées de 100 %. De plus, une quête répétable spéciale est disponible aujourd'hui à l'intérieur des <b>milices de Bonta ou de Brâkmar<\/b>. Réalisable à partir du niveau 20 par les personnages alignés, elle est indépendante de la quête d'offrande."
     },
     {
-      "questId": "q124",
+      "questId": "q1348",
       "itemId": 423,
       "itemImg": "https://api.dofusdb.fr/img/items/34122.png",
       "itemName": "Lin",
@@ -19469,7 +19469,7 @@
       "effectDesc": "Les quantités de <b>Lin<\/b> récupérées par les Paysans sont augmentées de 125 %."
     },
     {
-      "questId": "q125",
+      "questId": "q1356",
       "itemId": 14944,
       "itemImg": "https://api.dofusdb.fr/img/items/15850.png",
       "itemName": "Sueur Froide de Fantôme",
@@ -19481,7 +19481,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la <b>Bordure de Brâkmar<\/b>."
     },
     {
-      "questId": "q126",
+      "questId": "q1350",
       "itemId": 13945,
       "itemImg": "https://api.dofusdb.fr/img/items/36639.png",
       "itemName": "Bractée de Drosérâle",
@@ -19493,7 +19493,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du <b>Laboratoire de Nileza<\/b>."
     },
     {
-      "questId": "q127",
+      "questId": "q1351",
       "itemId": 18567,
       "itemImg": "https://api.dofusdb.fr/img/items/107739.png",
       "itemName": "Carapace de Ver des Sables",
@@ -19505,7 +19505,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans les zones de la <b>Gorge des Vents Hurlants<\/b> et de la <b>Cité Oubliée<\/b>."
     },
     {
-      "questId": "q128",
+      "questId": "q1352",
       "itemId": 2539,
       "itemImg": "https://api.dofusdb.fr/img/items/26016.png",
       "itemName": "Substrat de Buisson",
@@ -19517,7 +19517,7 @@
       "effectDesc": "La vitesse d'apparition des ressources est augmentée de 150 % dans la zone de la <b>Forêt d'Amakna<\/b>."
     },
     {
-      "questId": "q3",
+      "questId": "q968",
       "itemId": 310,
       "itemImg": "https://api.dofusdb.fr/img/items/47015.png",
       "itemName": "Os de Chafer",
@@ -19529,7 +19529,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le <b>Donjon des Squelettes<\/b>."
     },
     {
-      "questId": "q4",
+      "questId": "q1007",
       "itemId": 2620,
       "itemImg": "https://api.dofusdb.fr/img/items/15177.png",
       "itemName": "Rhum de Qualité",
@@ -19541,7 +19541,7 @@
       "effectDesc": "Les gains d'expérience et les chances d'obtenir du butin sont augmentés de 50 % sur tous les monstres considérés comme des <b>pirates<\/b>."
     },
     {
-      "questId": "q5",
+      "questId": "q969",
       "itemId": 17197,
       "itemImg": "https://api.dofusdb.fr/img/items/69773.png",
       "itemName": "Mijoté Récréatif",
@@ -19553,7 +19553,7 @@
       "effectDesc": "Les quantités de <b>Viande Fraîche<\/b> et de <b>Viande Maigre<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q6",
+      "questId": "q970",
       "itemId": 62,
       "itemImg": "https://api.dofusdb.fr/img/items/6006.png",
       "itemName": "Épée d'Ha",
@@ -19565,7 +19565,7 @@
       "effectDesc": "La qualité des objets fabriqués dans la ville de <b>Brâkmar<\/b> est augmentée."
     },
     {
-      "questId": "q7",
+      "questId": "q966",
       "itemId": 18366,
       "itemImg": "https://api.dofusdb.fr/img/items/48691.png",
       "itemName": "Sable Fin",
@@ -19577,7 +19577,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone des <b>Dunes des ossements<\/b>."
     },
     {
-      "questId": "q8",
+      "questId": "q971",
       "itemId": 8753,
       "itemImg": "https://api.dofusdb.fr/img/items/36002.png",
       "itemName": "Crinière fleurie",
@@ -19589,7 +19589,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Herboricoles<\/b>."
     },
     {
-      "questId": "q9",
+      "questId": "q1011",
       "itemId": 14635,
       "itemImg": "https://api.dofusdb.fr/img/items/50718.png",
       "itemName": "Pépite",
@@ -19601,7 +19601,7 @@
       "effectDesc": "Le butin généré par les Percepteurs est augmenté de 200 % dans tous les donjons."
     },
     {
-      "questId": "q10",
+      "questId": "q1012",
       "itemId": 29378,
       "itemImg": "https://api.dofusdb.fr/img/items/49074.png",
       "itemName": "Crabe Surprise",
@@ -19613,7 +19613,7 @@
       "effectDesc": "Des <b>Présents surprenants<\/b> ont été ajoutés aux butins des monstres des donjons. Lorsqu'ils sont utilisés, ils permettent d'obtenir une bonne ou mauvaise surprise."
     },
     {
-      "questId": "q11",
+      "questId": "q965",
       "itemId": 11110,
       "itemImg": "https://api.dofusdb.fr/img/items/39112.png",
       "itemName": "Obsidienne",
@@ -19625,7 +19625,7 @@
       "effectDesc": "Les quantités de <b>Dolomite<\/b> et d'<b>Obsidienne<\/b> récupérées par les Mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q12",
+      "questId": "q1013",
       "itemId": 8786,
       "itemImg": "https://api.dofusdb.fr/img/items/15020.png",
       "itemName": "Tresse du Poolay",
@@ -19637,7 +19637,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon de la <b>Canopée du Kimbo<\/b>."
     },
     {
-      "questId": "q13",
+      "questId": "q1014",
       "itemId": 267,
       "itemImg": "https://api.dofusdb.fr/img/items/2003.png",
       "itemName": "Arc Déroutant",
@@ -19649,7 +19649,7 @@
       "effectDesc": "Des <b>Coffres de Sad<\/b> peuvent être gagnés à la fin des chasses aux trésors."
     },
     {
-      "questId": "q14",
+      "questId": "q1015",
       "itemId": 11315,
       "itemImg": "https://api.dofusdb.fr/img/items/38680.png",
       "itemName": "Mât de Fantômat",
@@ -19661,7 +19661,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les fantômes de l'<b>Équipage du Grolandais<\/b>."
     },
     {
-      "questId": "q15",
+      "questId": "q1016",
       "itemId": 2252,
       "itemImg": "https://api.dofusdb.fr/img/items/47418.png",
       "itemName": "Dent en Or de Craqueleur",
@@ -19673,7 +19673,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon des <b>Pitons rocheux des Craqueleurs<\/b>."
     },
     {
-      "questId": "q16",
+      "questId": "q955",
       "itemId": 19409,
       "itemImg": "https://api.dofusdb.fr/img/items/111754.png",
       "itemName": "Aquarakne de Crânonier",
@@ -19685,7 +19685,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les Trépamorts de la Fratrie des Oubliés : les <b>Calcinés<\/b> et les <b>Submergés<\/b>."
     },
     {
-      "questId": "q17",
+      "questId": "q956",
       "itemId": 27375,
       "itemImg": "https://api.dofusdb.fr/img/items/38686.png",
       "itemName": "Bois de Pin",
@@ -19697,7 +19697,7 @@
       "effectDesc": "Les quantités de <b>Bois de Pin<\/b> et de <b>Bois d'Oliviolet<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q18",
+      "questId": "q957",
       "itemId": 1350,
       "itemImg": "https://api.dofusdb.fr/img/items/2004.png",
       "itemName": "Arc Holic",
@@ -19709,7 +19709,7 @@
       "effectDesc": "Une quête répétable spéciale est disponible aujourd'hui près de la fontaine du <b>village d'Amakna<\/b>. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande."
     },
     {
-      "questId": "q19",
+      "questId": "q958",
       "itemId": 27362,
       "itemImg": "https://api.dofusdb.fr/img/items/36659.png",
       "itemName": "Pom de Pin",
@@ -19721,7 +19721,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone de la <b>Futaie enneigée<\/b>."
     },
     {
-      "questId": "q20",
+      "questId": "q959",
       "itemId": 600,
       "itemImg": "https://api.dofusdb.fr/img/items/41309.png",
       "itemName": "Kralamoure",
@@ -19733,7 +19733,7 @@
       "effectDesc": "Les quantités de <b>Poisson Pané<\/b>, de <b>Sardine Brillante<\/b> et de <b>Kralamoure<\/b> récupérées par les Pêcheurs sont augmentées de 125 %."
     },
     {
-      "questId": "q21",
+      "questId": "q960",
       "itemId": 8778,
       "itemImg": "https://api.dofusdb.fr/img/items/36008.png",
       "itemName": "Étamine de Floribonde",
@@ -19745,7 +19745,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon du <b>Laboratoire du Tynril<\/b>."
     },
     {
-      "questId": "q22",
+      "questId": "q961",
       "itemId": 26036,
       "itemImg": "https://api.dofusdb.fr/img/items/165038.png",
       "itemName": "Pic de Ravageur",
@@ -19757,7 +19757,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone du <b>Cauchemar des Ravageurs<\/b>."
     },
     {
-      "questId": "q23",
+      "questId": "q962",
       "itemId": 17144,
       "itemImg": "https://api.dofusdb.fr/img/items/63453.png",
       "itemName": "Viande Saignante",
@@ -19769,7 +19769,7 @@
       "effectDesc": "Les quantités de viande récupérées par les Chasseurs de tous niveaux sont augmentées de 100 %."
     },
     {
-      "questId": "q24",
+      "questId": "q963",
       "itemId": 7294,
       "itemImg": "https://api.dofusdb.fr/img/items/54204.png",
       "itemName": "Poils de Pétartifoux",
@@ -19781,7 +19781,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les créatures de type <b>Firefoux<\/b>."
     },
     {
-      "questId": "q25",
+      "questId": "q967",
       "itemId": 2179,
       "itemImg": "https://api.dofusdb.fr/img/items/47419.png",
       "itemName": "Dent de Dragodinde",
@@ -19793,7 +19793,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos ivoire<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q26",
+      "questId": "q1017",
       "itemId": 2500,
       "itemImg": "https://api.dofusdb.fr/img/items/15524.png",
       "itemName": "Kolérat Mort",
@@ -19805,7 +19805,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans la zone de la <b>Désolation de Sidimote<\/b>."
     },
     {
-      "questId": "q27",
+      "questId": "q1018",
       "itemId": 7290,
       "itemImg": "https://api.dofusdb.fr/img/items/164665.png",
       "itemName": "Tige de Bambouto",
@@ -19817,7 +19817,7 @@
       "effectDesc": "Les gains d'expérience et les chances d'obtenir du butin sont augmentés de 50 % dans toutes les zones des <b>dimensions divines<\/b>."
     },
     {
-      "questId": "q28",
+      "questId": "q1008",
       "itemId": 2287,
       "itemImg": "https://api.dofusdb.fr/img/items/164653.png",
       "itemName": "Concombre",
@@ -19829,7 +19829,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les <b>Kwapa<\/b>."
     },
     {
-      "questId": "q47",
+      "questId": "q1029",
       "itemId": 17179,
       "itemImg": "https://api.dofusdb.fr/img/items/69758.png",
       "itemName": "Parmentier à l'Oignon",
@@ -19841,7 +19841,7 @@
       "effectDesc": "Les gains d'expérience des montures sont augmentés de 200 %."
     },
     {
-      "questId": "q30",
+      "questId": "q1019",
       "itemId": 425,
       "itemImg": "https://api.dofusdb.fr/img/items/34121.png",
       "itemName": "Chanvre",
@@ -19853,7 +19853,7 @@
       "effectDesc": "Les quantités de <b>Chanvre<\/b> récupérées par les Paysans sont augmentées de 125 %."
     },
     {
-      "questId": "q31",
+      "questId": "q1020",
       "itemId": 7906,
       "itemImg": "https://api.dofusdb.fr/img/items/47009.png",
       "itemName": "Corne du Boufcoul",
@@ -19865,7 +19865,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon de la <b>Caverne du Koulosse<\/b>."
     },
     {
-      "questId": "q32",
+      "questId": "q1021",
       "itemId": 16488,
       "itemImg": "https://api.dofusdb.fr/img/items/38143.png",
       "itemName": "Bois de Noisetier",
@@ -19877,7 +19877,7 @@
       "effectDesc": "Les quantités de <b>Bois de Noisetier<\/b> et de <b>Bois de Merisier<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q33",
+      "questId": "q984",
       "itemId": 7405,
       "itemImg": "https://api.dofusdb.fr/img/items/164765.png",
       "itemName": "Plastron de Tambouraï",
@@ -19889,7 +19889,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de l'<b>Armée de brume<\/b>."
     },
     {
-      "questId": "q34",
+      "questId": "q990",
       "itemId": 1801,
       "itemImg": "https://api.dofusdb.fr/img/items/41313.png",
       "itemName": "Perche",
@@ -19901,7 +19901,7 @@
       "effectDesc": "La vitesse d'apparition des <b>poissons<\/b> de tous types est augmentée de 100 %."
     },
     {
-      "questId": "q35",
+      "questId": "q991",
       "itemId": 23957,
       "itemImg": "https://api.dofusdb.fr/img/items/164861.png",
       "itemName": "Pétale de Papier",
@@ -19913,7 +19913,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans les donjons de la <b>Mémoire d'Orukam<\/b> et du <b>Souvenir d'Imagiro<\/b>."
     },
     {
-      "questId": "q36",
+      "questId": "q992",
       "itemId": 17185,
       "itemImg": "https://api.dofusdb.fr/img/items/69804.png",
       "itemName": "Poêlée Paysanne",
@@ -19925,7 +19925,7 @@
       "effectDesc": "Les quantités d'objets fabriqués par les <b>Chasseurs<\/b> sont augmentées de 25 %."
     },
     {
-      "questId": "q37",
+      "questId": "q993",
       "itemId": 7032,
       "itemImg": "https://api.dofusdb.fr/img/items/39111.png",
       "itemName": "Silicate",
@@ -19937,7 +19937,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % pour les <b>Bûcherons<\/b>, les <b>Mineurs<\/b> et les <b>Alchimistes<\/b>."
     },
     {
-      "questId": "q38",
+      "questId": "q975",
       "itemId": 14927,
       "itemImg": "https://api.dofusdb.fr/img/items/15860.png",
       "itemName": "Symbole des Obscuranti",
@@ -19949,7 +19949,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans la zone de la <b>Dimension Obscure<\/b>."
     },
     {
-      "questId": "q39",
+      "questId": "q982",
       "itemId": 312,
       "itemImg": "https://api.dofusdb.fr/img/items/39024.png",
       "itemName": "Fer",
@@ -19961,7 +19961,7 @@
       "effectDesc": "Les quantités de <b>Fer<\/b> récupérées par les Mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q40",
+      "questId": "q1022",
       "itemId": 11241,
       "itemImg": "https://api.dofusdb.fr/img/items/54676.png",
       "itemName": "Poils de Smilomouth",
@@ -19973,7 +19973,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Faune des Pins Perdus<\/b>."
     },
     {
-      "questId": "q41",
+      "questId": "q1023",
       "itemId": 305,
       "itemImg": "https://api.dofusdb.fr/img/items/47758.png",
       "itemName": "Dent de Wabbit",
@@ -19985,7 +19985,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Wabbits<\/b>, <b>Wabbits mutants<\/b> et <b>Gawde du Wa<\/b>."
     },
     {
-      "questId": "q42",
+      "questId": "q1024",
       "itemId": 183,
       "itemImg": "https://api.dofusdb.fr/img/items/4002.png",
       "itemName": "Bâton Feuillu",
@@ -19997,7 +19997,7 @@
       "effectDesc": "Les <b>Sculpteurs<\/b> économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q43",
+      "questId": "q1025",
       "itemId": 16389,
       "itemImg": "https://api.dofusdb.fr/img/items/36645.png",
       "itemName": "Mandragore",
@@ -20009,7 +20009,7 @@
       "effectDesc": "Les quantités de <b>Mandragore<\/b> et de <b>Belladone<\/b> récupérées par les Alchimistes sont augmentées de 125 %."
     },
     {
-      "questId": "q44",
+      "questId": "q1026",
       "itemId": 11880,
       "itemImg": "https://api.dofusdb.fr/img/items/47678.png",
       "itemName": "Malléole de Yomi Givrefoux",
@@ -20021,7 +20021,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans la zone de la <b>Crevasse Perge<\/b>."
     },
     {
-      "questId": "q45",
+      "questId": "q1027",
       "itemId": 8344,
       "itemImg": "https://api.dofusdb.fr/img/items/164654.png",
       "itemName": "Akaslip d'Akakwa",
@@ -20033,7 +20033,7 @@
       "effectDesc": "Le butin généré par les Percepteurs est augmenté de 200 % dans les donjons de niveau 120 à 150."
     },
     {
-      "questId": "q46",
+      "questId": "q1028",
       "itemId": 409,
       "itemImg": "https://api.dofusdb.fr/img/items/54131.png",
       "itemName": "Poils de Barbe du Bwork Mage",
@@ -20045,7 +20045,7 @@
       "effectDesc": "Des <b>Surprises de Trikortritt<\/b> ont été ajoutées aux butins des monstres. Lorsqu'elles sont utilisées, elles permettent d'obtenir des <b>Bonbons d'Halouine<\/b> ou bien de se retrouver transformé en <b>Petite Chauffe-Soutrille<\/b>."
     },
     {
-      "questId": "q48",
+      "questId": "q976",
       "itemId": 2562,
       "itemImg": "https://api.dofusdb.fr/img/items/56572.png",
       "itemName": "Slip de Troollaraj",
@@ -20057,7 +20057,7 @@
       "effectDesc": "Les gains d'expérience lors des combats contre les monstres et les chances d'obtenir du butin sont augmentés de 50 % pour tous les aventuriers qui sont équipés d'un <b>slip<\/b>."
     },
     {
-      "questId": "q49",
+      "questId": "q981",
       "itemId": 25179,
       "itemImg": "https://api.dofusdb.fr/img/items/176033.png",
       "itemName": "Groin de Porkzebuth",
@@ -20069,7 +20069,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans les zones du <b>Port des Ravageurs<\/b> et de <b>Pandamonium<\/b>."
     },
     {
-      "questId": "q50",
+      "questId": "q1030",
       "itemId": 775,
       "itemImg": "https://api.dofusdb.fr/img/items/17181.png",
       "itemName": "Cape Abilité",
@@ -20081,7 +20081,7 @@
       "effectDesc": "Les <b>Tailleurs<\/b> ont 15 % de chances d'économiser des ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q51",
+      "questId": "q1031",
       "itemId": 424,
       "itemImg": "https://api.dofusdb.fr/img/items/55120.png",
       "itemName": "Fibre criminelle",
@@ -20093,7 +20093,7 @@
       "effectDesc": "La vitesse d'apparition des monstres d'<b>Avis de recherche<\/b> est augmentée de 200 %. ."
     },
     {
-      "questId": "q52",
+      "questId": "q977",
       "itemId": 19974,
       "itemImg": "https://api.dofusdb.fr/img/items/47863.png",
       "itemName": "Dent de Vatenbière",
@@ -20105,7 +20105,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de la <b>Brasserie du roi Dazak<\/b>."
     },
     {
-      "questId": "q53",
+      "questId": "q978",
       "itemId": 473,
       "itemImg": "https://api.dofusdb.fr/img/items/38086.png",
       "itemName": "Bois de Châtaignier",
@@ -20117,7 +20117,7 @@
       "effectDesc": "Les quantités de <b>Bois de Châtaignier<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q54",
+      "questId": "q1032",
       "itemId": 407,
       "itemImg": "https://api.dofusdb.fr/img/items/47134.png",
       "itemName": "Pic de Prespic",
@@ -20129,7 +20129,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les <b>Animaux de la forêt<\/b>."
     },
     {
-      "questId": "q55",
+      "questId": "q1033",
       "itemId": 17985,
       "itemImg": "https://api.dofusdb.fr/img/items/103727.png",
       "itemName": "Patte de Li-Fo",
@@ -20141,7 +20141,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Serviteurs de l'Indicible<\/b>."
     },
     {
-      "questId": "q56",
+      "questId": "q1034",
       "itemId": 8760,
       "itemImg": "https://api.dofusdb.fr/img/items/15014.png",
       "itemName": "Foulard du Sparo",
@@ -20153,7 +20153,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les <b>Pirates naufragés<\/b> et les <b>Pirates de l'Arche d'Otomaï<\/b>."
     },
     {
-      "questId": "q57",
+      "questId": "q1035",
       "itemId": 1782,
       "itemImg": "https://api.dofusdb.fr/img/items/41294.png",
       "itemName": "Goujon",
@@ -20165,7 +20165,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos orchidée<\/b> ainsi que de <b>volkornes rubis<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q58",
+      "questId": "q1036",
       "itemId": 1663,
       "itemImg": "https://api.dofusdb.fr/img/items/59233.png",
       "itemName": "Écaille de Crocodaille",
@@ -20177,7 +20177,7 @@
       "effectDesc": "<b>Miss Triste<\/b> attend les aventuriers qui veulent se refaire une laideur près de la fontaine du village d'Amakna. Sa bénédiction transforme temporairement en Crocodaille (effet qui disparaît quand un combat est lancé) et en Souffre-Douleur (bonus de 50 Puissance et 10 dommages fixes durant 15 combats)."
     },
     {
-      "questId": "q59",
+      "questId": "q1037",
       "itemId": 17975,
       "itemImg": "https://api.dofusdb.fr/img/items/15939.png",
       "itemName": "Lanterne de Tourthon",
@@ -20189,7 +20189,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Trithons<\/b>."
     },
     {
-      "questId": "q60",
+      "questId": "q1009",
       "itemId": 2150,
       "itemImg": "https://api.dofusdb.fr/img/items/58405.png",
       "itemName": "Graine de Scorbute",
@@ -20201,7 +20201,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon du <b>Laboratoire de Brumen Tinctorias<\/b>."
     },
     {
-      "questId": "q61",
+      "questId": "q1038",
       "itemId": 1523,
       "itemImg": "https://api.dofusdb.fr/img/items/78052.png",
       "itemName": "Rune Vi",
@@ -20213,7 +20213,7 @@
       "effectDesc": "Les <b>Joaillomages<\/b> ont 15 % de chances de ne pas consumer de rune lorsqu'ils tentent d'améliorer un objet."
     },
     {
-      "questId": "q62",
+      "questId": "q1039",
       "itemId": 340,
       "itemImg": "https://api.dofusdb.fr/img/items/5009.png",
       "itemName": "Leurnettes",
@@ -20225,7 +20225,7 @@
       "effectDesc": "Une quête répétable spéciale est disponible aujourd'hui près de la vieille chapelle d'<b>Astrub<\/b>. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande."
     },
     {
-      "questId": "q63",
+      "questId": "q1040",
       "itemId": 8483,
       "itemImg": "https://api.dofusdb.fr/img/items/59622.png",
       "itemName": "Peau de Ramane d'Égoutant",
@@ -20237,7 +20237,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les <b>Rats Strubiens<\/b> et les <b>Rats Maknéens<\/b>."
     },
     {
-      "questId": "q64",
+      "questId": "q988",
       "itemId": 17142,
       "itemImg": "https://api.dofusdb.fr/img/items/63506.png",
       "itemName": "Viande Séchée",
@@ -20249,7 +20249,7 @@
       "effectDesc": "Les quantités de <b>Viande séchée<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q65",
+      "questId": "q1041",
       "itemId": 13341,
       "itemImg": "https://api.dofusdb.fr/img/items/103034.png",
       "itemName": "Patte de la Gardienne des Égouts",
@@ -20261,7 +20261,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans les zones des <b>Canaux Méphitiques<\/b> et des <b>Entrailles de Brâkmar<\/b>."
     },
     {
-      "questId": "q66",
+      "questId": "q979",
       "itemId": 12745,
       "itemImg": "https://api.dofusdb.fr/img/items/12729.png",
       "itemName": "Substrat de Bocage",
@@ -20273,7 +20273,7 @@
       "effectDesc": "Les <b>Bûcherons<\/b> économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q67",
+      "questId": "q1042",
       "itemId": 22248,
       "itemImg": "https://api.dofusdb.fr/img/items/24278.png",
       "itemName": "Sang coagulé",
@@ -20285,7 +20285,7 @@
       "effectDesc": "Les gains d'expérience des montures sont augmentés de 100 % dans toutes les zones influencées par une anomalie temporelle. De plus, les gains d'expérience et les chances d'obtenir du butin sont augmentés de 25 % dans les zones (hors donjons) des <b>Cavaliers de l'Eliocalypse<\/b>."
     },
     {
-      "questId": "q68",
+      "questId": "q1043",
       "itemId": 307,
       "itemImg": "https://api.dofusdb.fr/img/items/104019.png",
       "itemName": "Ailes de Moskito",
@@ -20297,7 +20297,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Vermines des champs<\/b>."
     },
     {
-      "questId": "q69",
+      "questId": "q980",
       "itemId": 15045,
       "itemImg": "https://api.dofusdb.fr/img/items/47834.png",
       "itemName": "Griffe de Félygiène",
@@ -20309,7 +20309,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Kanigs des Dents de Pierre<\/b>."
     },
     {
-      "questId": "q70",
+      "questId": "q1044",
       "itemId": 19235,
       "itemImg": "https://api.dofusdb.fr/img/items/15987.png",
       "itemName": "Fragment d'Ectorche",
@@ -20321,7 +20321,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Brûlâmes<\/b>."
     },
     {
-      "questId": "q71",
+      "questId": "q985",
       "itemId": 533,
       "itemImg": "https://api.dofusdb.fr/img/items/34154.png",
       "itemName": "Avoine",
@@ -20333,7 +20333,7 @@
       "effectDesc": "Les quantités d'<b>Avoine<\/b> récupérées par les Paysans sont augmentées de 125 %."
     },
     {
-      "questId": "q72",
+      "questId": "q1045",
       "itemId": 11136,
       "itemImg": "https://api.dofusdb.fr/img/items/57212.png",
       "itemName": "Laine de Boufmouth légendaire",
@@ -20345,7 +20345,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone des <b>Champs de glace<\/b>."
     },
     {
-      "questId": "q73",
+      "questId": "q1046",
       "itemId": 16001,
       "itemImg": "https://api.dofusdb.fr/img/items/164049.png",
       "itemName": "Antennes de Vilinsekt",
@@ -20357,7 +20357,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les <b>Vilinsekts<\/b>."
     },
     {
-      "questId": "q74",
+      "questId": "q1057",
       "itemId": 461,
       "itemImg": "https://api.dofusdb.fr/img/items/38094.png",
       "itemName": "Bois d'If",
@@ -20369,7 +20369,7 @@
       "effectDesc": "Les quantités de <b>Bois d'If<\/b> récupérées par les Bûcherons sont augmentées de 125 %."
     },
     {
-      "questId": "q78",
+      "questId": "q1058",
       "itemId": 8065,
       "itemImg": "https://api.dofusdb.fr/img/items/54657.png",
       "itemName": "Poils de Barbe de Dragodinde",
@@ -20381,7 +20381,7 @@
       "effectDesc": "Les aventuriers ont 20 % de chances de générer un second butin sur tous les monstres affrontés dans les donjons."
     },
     {
-      "questId": "q76",
+      "questId": "q987",
       "itemId": 443,
       "itemImg": "https://api.dofusdb.fr/img/items/39077.png",
       "itemName": "Kobalte",
@@ -20393,7 +20393,7 @@
       "effectDesc": "Les quantités de <b>Kobalte<\/b> récupérées par les mineurs sont augmentées de 125 %."
     },
     {
-      "questId": "q77",
+      "questId": "q986",
       "itemId": 11339,
       "itemImg": "https://api.dofusdb.fr/img/items/57658.png",
       "itemName": "Laine de Yokaï Givrefoux",
@@ -20405,7 +20405,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 125 % sur les créatures de type <b>Givrefoux<\/b>."
     },
     {
-      "questId": "q79",
+      "questId": "q1059",
       "itemId": 19071,
       "itemImg": "https://api.dofusdb.fr/img/items/109617.png",
       "itemName": "Œil de Gouligane",
@@ -20417,7 +20417,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Goules<\/b>."
     },
     {
-      "questId": "q80",
+      "questId": "q1060",
       "itemId": 18714,
       "itemImg": "https://api.dofusdb.fr/img/items/82155.png",
       "itemName": "Bouclier du tournesol sauvage",
@@ -20429,7 +20429,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % pour les Bricoleurs, les Forgerons, les Sculpteurs  et les Façonneurs."
     },
     {
-      "questId": "q81",
+      "questId": "q973",
       "itemId": 11225,
       "itemImg": "https://api.dofusdb.fr/img/items/59049.png",
       "itemName": "Peau de Mansobèse",
@@ -20441,7 +20441,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans la zone du <b>Lac Gelé<\/b>."
     },
     {
-      "questId": "q82",
+      "questId": "q974",
       "itemId": 2357,
       "itemImg": "https://api.dofusdb.fr/img/items/38481.png",
       "itemName": "Bois d'Oliviolet",
@@ -20453,7 +20453,7 @@
       "effectDesc": "Les quantités de Bois récupérées par les <b>Bûcherons<\/b> de tous niveaux sont augmentées de 100 %."
     },
     {
-      "questId": "q83",
+      "questId": "q994",
       "itemId": 6845,
       "itemImg": "https://api.dofusdb.fr/img/items/25149.png",
       "itemName": "Casque de Martoa",
@@ -20465,7 +20465,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 75 % dans la zone de la <b>Carrière d'Astrub<\/b>."
     },
     {
-      "questId": "q84",
+      "questId": "q995",
       "itemId": 447,
       "itemImg": "https://api.dofusdb.fr/img/items/39075.png",
       "itemName": "Charbon",
@@ -20477,7 +20477,7 @@
       "effectDesc": "La quantité de jetons gagnée en Kolizéum est augmentée de 100 %."
     },
     {
-      "questId": "q85",
+      "questId": "q989",
       "itemId": 8002,
       "itemImg": "https://api.dofusdb.fr/img/items/55720.png",
       "itemName": "Étoffe de Dok Alako",
@@ -20489,7 +20489,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les <b>Koalaks<\/b> et les <b>Koalaks sauvages<\/b>."
     },
     {
-      "questId": "q86",
+      "questId": "q996",
       "itemId": 11102,
       "itemImg": "https://api.dofusdb.fr/img/items/35635.png",
       "itemName": "Perce-Neige",
@@ -20501,7 +20501,7 @@
       "effectDesc": "Les quantités de <b>Perce-Neige<\/b> récupérées par les Alchimistes sont augmentées de 200 %."
     },
     {
-      "questId": "q87",
+      "questId": "q983",
       "itemId": 8570,
       "itemImg": "https://api.dofusdb.fr/img/items/165035.png",
       "itemName": "Poil de Rat Bontarien",
@@ -20513,7 +20513,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 100 % dans le donjon du <b>Garde-manger du Rat Blanc<\/b>."
     },
     {
-      "questId": "q88",
+      "questId": "q1047",
       "itemId": 2594,
       "itemImg": "https://api.dofusdb.fr/img/items/65595.png",
       "itemName": "Queue de Dragodinde",
@@ -20525,7 +20525,7 @@
       "effectDesc": "Toutes les variétés de <b>dragodindes, volkornes et muldos émeraude<\/b> donnent naissance à un bébé supplémentaire."
     },
     {
-      "questId": "q89",
+      "questId": "q1005",
       "itemId": 12757,
       "itemImg": "https://api.dofusdb.fr/img/items/11206.png",
       "itemName": "Pacmabottes",
@@ -20537,7 +20537,7 @@
       "effectDesc": "Les <b>Cordonniers<\/b> économisent 15 % de leurs ingrédients lorsqu'ils fabriquent des objets."
     },
     {
-      "questId": "q90",
+      "questId": "q997",
       "itemId": 6964,
       "itemImg": "https://api.dofusdb.fr/img/items/12145.png",
       "itemName": "Potion de cité : Brâkmar",
@@ -20549,7 +20549,7 @@
       "effectDesc": "Une quête répétable spéciale est disponible aujourd'hui près des portes de <b>Brâkmar<\/b>. Réalisable à partir du niveau 20, elle est indépendante de la quête d'offrande."
     },
     {
-      "questId": "q91",
+      "questId": "q998",
       "itemId": 7033,
       "itemImg": "https://api.dofusdb.fr/img/items/39110.png",
       "itemName": "Dolomite",
@@ -20561,7 +20561,7 @@
       "effectDesc": "La vitesse d'apparition des <b>minerais<\/b> de tous types est augmentée de 100 %."
     },
     {
-      "questId": "q92",
+      "questId": "q1003",
       "itemId": 18540,
       "itemImg": "https://api.dofusdb.fr/img/items/15953.png",
       "itemName": "Paupière Dorée de Rykaon",
@@ -20573,7 +20573,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans le donjon de la <b>Chambre de Tal Kasha<\/b>."
     },
     {
-      "questId": "q93",
+      "questId": "q999",
       "itemId": 2275,
       "itemImg": "https://api.dofusdb.fr/img/items/56429.png",
       "itemName": "Cuir de Porkass",
@@ -20585,7 +20585,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 75 % dans la zone de la <b>plaine des Porkass<\/b>."
     },
     {
-      "questId": "q94",
+      "questId": "q1000",
       "itemId": 12898,
       "itemImg": "https://api.dofusdb.fr/img/items/154000.png",
       "itemName": "Emballage de Nowel Écarlate",
@@ -20597,7 +20597,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les <b>monstres de Nowel<\/b>."
     },
     {
-      "questId": "q95",
+      "questId": "q1001",
       "itemId": 16461,
       "itemImg": "https://api.dofusdb.fr/img/items/41407.png",
       "itemName": "Anguille",
@@ -20609,7 +20609,7 @@
       "effectDesc": "Les quantités  d'<b>Anguille<\/b> et de <b>Dorade Grise<\/b> récupérées par les Pêcheurs sont augmentées de 125 %."
     },
     {
-      "questId": "q96",
+      "questId": "q1002",
       "itemId": 1496,
       "itemImg": "https://api.dofusdb.fr/img/items/9032.png",
       "itemName": "Chance d'Ecaflip",
@@ -20621,7 +20621,7 @@
       "effectDesc": "Les bonus apportés par les challenges réussis sont augmentés de 150 % dans tous les donjons."
     },
     {
-      "questId": "q97",
+      "questId": "q1010",
       "itemId": 12845,
       "itemImg": "https://api.dofusdb.fr/img/items/153007.png",
       "itemName": "Flocon de Neige",
@@ -20633,7 +20633,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les <b>monstres de Nowel<\/b>."
     },
     {
-      "questId": "q98",
+      "questId": "q1048",
       "itemId": 746,
       "itemImg": "https://api.dofusdb.fr/img/items/40658.png",
       "itemName": "Ébonite",
@@ -20645,7 +20645,7 @@
       "effectDesc": "Pour chaque objet fabriqué, les <b>Mineurs<\/b> ont 10 % de chances de créer un second objet."
     },
     {
-      "questId": "q99",
+      "questId": "q1049",
       "itemId": 2279,
       "itemImg": "https://api.dofusdb.fr/img/items/47432.png",
       "itemName": "Canine Vampiresque",
@@ -20657,7 +20657,7 @@
       "effectDesc": "Un challenge supplémentaire est généré contre les monstres présents dans les zones du <b>Cimetière d'Amakna<\/b> et des <b>Cryptes du Cimetière<\/b>."
     },
     {
-      "questId": "q100",
+      "questId": "q1050",
       "itemId": 1750,
       "itemImg": "https://api.dofusdb.fr/img/items/41269.png",
       "itemName": "Poisson Pané",
@@ -20669,7 +20669,7 @@
       "effectDesc": "La vitesse d'apparition des ressources est augmentée de 150 % dans la zone du <b>Port de Madrestam<\/b>."
     },
     {
-      "questId": "q101",
+      "questId": "q1051",
       "itemId": 17130,
       "itemImg": "https://api.dofusdb.fr/img/items/63483.png",
       "itemName": "Viande Tendre",
@@ -20681,7 +20681,7 @@
       "effectDesc": "Les quantités de <b>Viande Tendre<\/b> récupérées par les Chasseurs sont augmentées de 125 %."
     },
     {
-      "questId": "q102",
+      "questId": "q1006",
       "itemId": 29386,
       "itemImg": "https://api.dofusdb.fr/img/items/42248.png",
       "itemName": "Médaille en Chocolat",
@@ -20693,7 +20693,7 @@
       "effectDesc": "Des <b>Coffres de Milivar<\/b> peuvent être gagnés à la fin des chasses aux trésors."
     },
     {
-      "questId": "q103",
+      "questId": "q1004",
       "itemId": 27734,
       "itemImg": "https://api.dofusdb.fr/img/items/89060.png",
       "itemName": "Joli cadeau de Nowel",
@@ -20705,7 +20705,7 @@
       "effectDesc": "Des <b>Petits plaisirs de Nowel<\/b> ont été ajoutés aux butins des monstres. Lorsqu'ils sont utilisés, ils permettent d'obtenir des ressources ou d'autres objets aléatoires."
     },
     {
-      "questId": "q104",
+      "questId": "q1061",
       "itemId": 11229,
       "itemImg": "https://api.dofusdb.fr/img/items/54674.png",
       "itemName": "Poil de barbe du Shamansot",
@@ -20717,7 +20717,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 100 % dans le donjon de <b>l'Excavation du Mansot Royal<\/b>."
     },
     {
-      "questId": "q105",
+      "questId": "q1052",
       "itemId": 27437,
       "itemImg": "https://api.dofusdb.fr/img/items/165061.png",
       "itemName": "Fronde de Boufronde",
@@ -20729,7 +20729,7 @@
       "effectDesc": "Les gains d'expérience sont augmentés de 50 % sur les créatures de type <b>Marteaux-Aigris<\/b>."
     },
     {
-      "questId": "q106",
+      "questId": "q1053",
       "itemId": 7381,
       "itemImg": "https://api.dofusdb.fr/img/items/164737.png",
       "itemName": "Kaokurimono",
@@ -20741,7 +20741,7 @@
       "effectDesc": "Le butin généré par les Percepteurs est augmenté de 200 % dans les donjons de niveau 160 à 190."
     },
     {
-      "questId": "q107",
+      "questId": "q1054",
       "itemId": 7018,
       "itemImg": "https://api.dofusdb.fr/img/items/34010.png",
       "itemName": "Riz",
@@ -20753,7 +20753,7 @@
       "effectDesc": "Les quantités de <b>Seigle<\/b> et de <b>Riz<\/b> récupérées par les Paysans sont augmentées de 125 %."
     },
     {
-      "questId": "q108",
+      "questId": "q1055",
       "itemId": 2483,
       "itemImg": "https://api.dofusdb.fr/img/items/156005.png",
       "itemName": "Bidule inutile",
@@ -20765,7 +20765,7 @@
       "effectDesc": "Les chances d'obtenir du butin sont augmentées de 50 % sur les créatures de type <b>Automates des Brigandins<\/b>."
     },
     {
-      "questId": "q109",
+      "questId": "q1056",
       "itemId": 17132,
       "itemImg": "https://api.dofusdb.fr/img/items/63420.png",
       "itemName": "Viande Ladre",

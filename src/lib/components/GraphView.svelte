@@ -121,22 +121,10 @@
                       .map((n: any) => n.id())
                       .concat(event.target.id())
                 : [event.target.id()]
-            let newCompleted = Array.from(ownCompleted)
-            if (toCompleted) {
-                nodes.forEach((node) => {
-                    if (!newCompleted.includes(node)) {
-                        newCompleted.push(node)
-                    }
-                })
-            } else {
-                nodes.forEach((node) => {
-                    const idx = newCompleted.indexOf(node)
-                    if (idx !== -1) {
-                        newCompleted.splice(idx, 1)
-                    }
-                })
-            }
-            completed.update((v) => ({ ...v, completed: newCompleted }))
+            let newCompleted = new Set(ownCompleted)
+            if (toCompleted) nodes.forEach(newCompleted.add)
+            else nodes.forEach(newCompleted.delete)
+            completed.update((v) => ({ completed: Array.from(newCompleted) }))
         })
     })
 

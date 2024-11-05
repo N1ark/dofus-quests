@@ -24,8 +24,8 @@
     let searchText = $state('')
     let ownAlmanax: Set<string> = $state(new Set())
 
-    completed.subscribe(({ almanax }) => {
-        ownAlmanax = new Set(almanax)
+    completed.subscribe(({ completed }) => {
+        ownAlmanax = new Set(completed)
     })
 
     const toggleDay = (key: string) => {
@@ -92,14 +92,16 @@
                             date.getFullYear(),
                             date.getMonth(),
                             j + 1
-                        ).toLocaleDateString('en-US')}
+                        )
+                            .toLocaleDateString('en-US')
+                            .slice(0, -5)}
                         {@const alma = data.almanax.find(
                             ({ day, month }) =>
                                 day === j + 1 && month === date.getMonth() + 1
                         )!}
                         <button
                             class="day"
-                            class:completed={ownAlmanax.has(day)}
+                            class:completed={ownAlmanax.has(alma.questId)}
                             class:notSearched={searchText.trim() &&
                                 !alma.questName
                                     .toLowerCase()

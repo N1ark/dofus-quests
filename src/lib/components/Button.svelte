@@ -3,10 +3,12 @@
         Icon,
         classes,
         onclick,
+        href,
         title,
     }: {
         Icon: any
         classes?: string
+        href?: string
         onclick?: () => any | Promise<any>
         title?: string
     } = $props()
@@ -26,13 +28,35 @@
     }
 </script>
 
-<button class={classes} onclick={clickHandler} {title} {disabled}>
-    <Icon />
-    <span>{title}</span>
-</button>
+{#if href}
+    <a class={classes} {href} {title} target="_blank" rel="noopener noreferrer">
+        <Icon />
+        <span>{title}</span>
+    </a>
+{:else}
+    <button class={classes} onclick={clickHandler} {title} {disabled}>
+        <Icon />
+        <span>{title}</span>
+    </button>
+{/if}
 
 <style>
-    button {
+    button,
+    a {
+        background-color: #181818;
+        border: 1px solid rgba(128, 128, 128, 0.4);
+        border-radius: 4px;
+        padding: 6px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        color: white;
+        transition: background-color 0.1s;
+        cursor: pointer;
+        pointer-events: auto;
+        &:hover {
+            background-color: #333;
+        }
+
+        display: block;
         aspect-ratio: 1;
         line-height: 0;
         font-size: 1.2em;
@@ -44,7 +68,7 @@
 
         span {
             position: absolute;
-            bottom: -1px;
+            bottom: -3px;
             left: calc(100% + 8px);
             font-size: 0.8em;
             opacity: 0;
@@ -54,6 +78,9 @@
             line-height: 1;
             background-color: #070809;
             text-align: left;
+            width: max-content;
+            max-width: 100px;
+            padding: 2px;
         }
     }
 </style>

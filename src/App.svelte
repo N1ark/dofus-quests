@@ -1,10 +1,14 @@
 <script lang="ts">
     import Archive from 'lucide-svelte/icons/archive'
     import Backpack from 'lucide-svelte/icons/backpack'
+    import BadgeHelp from 'lucide-svelte/icons/badge-help'
     import Calendar from 'lucide-svelte/icons/calendar'
+    import Compass from 'lucide-svelte/icons/compass'
+    import Database from 'lucide-svelte/icons/database'
     import Eye from 'lucide-svelte/icons/eye'
     import EyeClosed from 'lucide-svelte/icons/eye-closed'
     import Reload from 'lucide-svelte/icons/refresh-cw'
+    import Swords from 'lucide-svelte/icons/swords'
     import Trophy from 'lucide-svelte/icons/trophy'
 
     import { onMount } from 'svelte'
@@ -72,6 +76,27 @@
                 Icon={Archive}
                 title="Backup"
                 onclick={navigateOrLeave('backup')}
+            />
+            <div style:flex-grow="100" style:flex-shrink="0"></div>
+            <Button
+                Icon={Compass}
+                title="Dofus Map"
+                href="https://dofus-map.com/"
+            />
+            <Button
+                Icon={BadgeHelp}
+                title="Dofus pour les Noobs"
+                href="https://www.dofuspourlesnoobs.com/"
+            />
+            <Button
+                Icon={Swords}
+                title="dofusbook"
+                href="https://www.dofusbook.net/"
+            />
+            <Button
+                Icon={Database}
+                title="DofusDB"
+                href="https://dofusdb.fr/"
             />
         </Column>
         <SelectedQuestView />

@@ -5,24 +5,20 @@
     import Container from './Container.svelte'
     import Row from './Row.svelte'
 
-    const { close }: { close?: () => any } = $props()
-
     let backup: string = $state('')
+    let copied = $state(false)
     let visible = $state(false)
     const data = $derived(visible ? getRawCompleted() : '')
 
-    $effect(() => {
-        if (!visible) backup = ''
-    })
-
     const addToClipboard = () => {
         navigator.clipboard.writeText(data)
+        copied = true
     }
 
     const importBackup = () => {
         try {
             setRawCompleted(backup)
-            close?.()
+            window.location.hash = ''
         } catch (e) {
             console.error(e)
             alert('Invalid data')
@@ -33,6 +29,10 @@
         const hashCheck = () => {
             const hash = window.location.hash.slice(1)
             visible = hash === 'backup'
+            if (!visible) {
+                backup = ''
+                copied = false
+            }
         }
 
         hashCheck()
@@ -54,7 +54,9 @@
                 onclick={(e) => e.currentTarget.select()}
                 spellcheck="false"
             ></textarea>
-            <button onclick={addToClipboard}>Copy to clipboard</button>
+            <button onclick={addToClipboard}
+                >{copied ? 'Copied!' : 'Copy to clipboard'}</button
+            >
         </Column>
         <Column classes="modal-col">
             <h3>Import</h3>
@@ -85,7 +87,7 @@
         color: white;
 
         width: 100%;
-        height: 200px;
+        height: 300px;
         resize: none;
         box-sizing: border-box;
         font-family: monospace;

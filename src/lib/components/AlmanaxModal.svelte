@@ -49,7 +49,14 @@
 
 <Container classes={`almanax-modal ${visible ? '' : 'hidden'}`}>
     <div class="title">
-        <h2>Almanax <Progress total={366} amount={ownAlmanax.size} /></h2>
+        <h2>
+            Almanax <Progress
+                total={366}
+                amount={data.almanax.filter(({ questId }) =>
+                    ownAlmanax.has(questId)
+                ).length}
+            />
+        </h2>
         <input type="text" placeholder="Search" bind:value={searchText} />
     </div>
 

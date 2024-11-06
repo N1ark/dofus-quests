@@ -2,18 +2,22 @@
     const { amount, total }: { amount: number; total: number } = $props()
 </script>
 
-<span class:completed={amount === total}>
-    {amount} / {total}
+<span class="base" class:completed={amount === total}>
+    {Math.floor((amount / total) * 100)}%
+    <span class="detail">({amount} / {total})</span>
 </span>
 
 <style>
-    span {
+    .base {
         font-size: 0.7em;
         opacity: 0.7;
         margin: 0 8px;
         &.completed {
             color: #fae089;
             opacity: 0.9;
+        }
+        & .detail {
+            font-size: 0.8em;
         }
     }
 </style>

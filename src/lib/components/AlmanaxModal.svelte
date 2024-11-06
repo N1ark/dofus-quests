@@ -161,6 +161,7 @@
         gap: 8px;
         position: sticky;
         top: 0;
+        z-index: 1;
         background: linear-gradient(
             to bottom,
             rgba(24, 24, 24, 0) 0%,

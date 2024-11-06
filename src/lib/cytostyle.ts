@@ -1,3 +1,8 @@
+export const QUEST_COLOR = `#256FD1`
+export const QUEST_COLOR_FINISHED = `#3DD17D`
+export const ACHIEVEMENT_COLOR = `#E0961F`
+export const ACHIEVEMENT_COLOR_FINISHED = `#A0D13D`
+
 export const style = `
 edge {
   curve-style: bezier;
@@ -25,23 +30,23 @@ node {
 }
 
 node[type = "quest"] {
-  background-color: #256FD1;
-  text-outline-color: #256FD1;
+  background-color: ${QUEST_COLOR};
+  text-outline-color: ${QUEST_COLOR};
 }
 
 node[type = "quest"].finished {
-  background-color: #3DD17D;
-  text-outline-color: #3DD17D;
+  background-color: ${QUEST_COLOR_FINISHED};
+  text-outline-color: ${QUEST_COLOR_FINISHED};
 }
 
 node[type = "achievement"] {
-  background-color: #E0961F;
-  text-outline-color: #E0961F;
+  background-color: ${ACHIEVEMENT_COLOR};
+  text-outline-color: ${ACHIEVEMENT_COLOR};
 }
 
 node[type = "achievement"].finished {
-  background-color: #A0D13D;
-  text-outline-color: #A0D13D;
+  background-color: ${ACHIEVEMENT_COLOR_FINISHED};
+  text-outline-color: ${ACHIEVEMENT_COLOR_FINISHED};
 }
 
 node.highlighted {
@@ -76,16 +81,35 @@ edge.highlighted {
 	z-index: 9999;
 }
 
-.faded {
-  events: no;
-}
-
 node.faded {
-  opacity: 0.08;
+  background-opacity: 0.6;
+  opacity: 0.6;
 }
 
 edge.faded {
-  opacity: 0.06;
+  opacity: 0.3;
+}
+
+node.outlined {
+    outline-width: 2;
+    border-width: 8;
+    border-opacity: 0;
+}
+
+node[type = "quest"].outlined {
+    outline-color: ${QUEST_COLOR};
+}
+
+node[type = "quest"].outlined.finished {
+    outline-color: ${QUEST_COLOR_FINISHED};
+}
+
+node[type = "achievement"].outlined {
+    outline-color: ${ACHIEVEMENT_COLOR};
+}
+
+node[type = "achievement"].outlined.finished {
+    outline-color: ${ACHIEVEMENT_COLOR_FINISHED};
 }
 
 .hidden {

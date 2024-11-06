@@ -10,10 +10,12 @@
     let { classes }: { classes?: string } = $props()
 
     let node: Data['nodes'][number] | null = $state(null)
-    let predecessors: Pick<Data, 'nodes' | 'edges'> = $state({
+    let currData: Pick<Data, 'nodes' | 'edges'> = $state({
         nodes: [],
         edges: [],
     })
+    let childElements: string[] = $state([])
+    let targetNode = $state<string>()
 
     onMount(() => {
         const hashCheck = () => {
@@ -23,11 +25,25 @@
                 : (data.nodes.find((node) => node.id === hash) ?? null)
             if (tempNode) {
                 node = tempNode
-                predecessors = onlyPredecessors(data, node.id)
+                currData = onlyPredecessors(data, node.id)
+                const extraEdges = data.edges.filter(
+                    ({ from }) => from === tempNode.id
+                )
+                const extraNodes = data.nodes.filter(({ id }) =>
+                    extraEdges.some(({ to }) => to === id)
+                )
+                currData = {
+                    nodes: [...currData.nodes, ...extraNodes],
+                    edges: [...currData.edges, ...extraEdges],
+                }
+                childElements = extraNodes
+                    .map(({ id }) => id)
+                    .concat(extraEdges.map(({ from, to }) => `${to}-${from}`))
+                targetNode = tempNode.id
             } else {
                 if (node === null) return
                 node = null
-                predecessors = { nodes: [], edges: [] }
+                currData = { nodes: [], edges: [] }
             }
         }
 
@@ -42,7 +58,11 @@
     classes={classNames(!node && 'hidden', 'selectedQuestView', classes)}
 >
     <div class="back">
-        <GraphView data={predecessors} />
+        <GraphView
+            data={currData}
+            faded={childElements}
+            outlined={targetNode ? [targetNode] : undefined}
+        />
     </div>
     {#if node !== null}
         <QuestInfo {node} />

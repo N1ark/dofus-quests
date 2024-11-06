@@ -105,6 +105,7 @@
         pointer-events: all;
         max-height: 100%;
         overflow-y: auto !important;
+        scrollbar-gutter: stable;
 
         &:global(.hidden) {
             display: none;

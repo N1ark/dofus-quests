@@ -6,6 +6,7 @@
 </script>
 
 <script lang="ts">
+    import { type SingularElementArgument as CytoElement } from 'cytoscape'
     import { onMount, untrack } from 'svelte'
     import { completed, showCompleted } from '../../state.svelte'
     import { style } from '../cytostyle'
@@ -13,8 +14,15 @@
 
     let {
         data,
+        faded,
+        outlined,
         refresh,
-    }: { data: Pick<Data, 'nodes' | 'edges'>; refresh?: any } = $props()
+    }: {
+        data: Pick<Data, 'nodes' | 'edges'>
+        faded?: string[]
+        outlined?: string[]
+        refresh?: any
+    } = $props()
 
     let containerDiv: HTMLElement
 
@@ -86,13 +94,25 @@
         if (!ownShowCompleted) cyInstance?.nodes('.finished').addClass('hidden')
     }
 
-    $effect(() => {
-        const _unused1 = ownCompleted
-        const _unused2 = ownShowCompleted
+    const updateFaded = () => {
+        cyInstance?.elements('.faded').removeClass('faded')
+        if (faded)
+            cyInstance?.elements().forEach((e) => {
+                if (faded.includes(e.id())) {
+                    e.addClass('faded')
+                }
+            })
+    }
 
-        updateCompleted()
-        updateVisible()
-    })
+    const updateOutlined = () => {
+        cyInstance?.elements('.outlined').removeClass('outlined')
+        if (outlined)
+            cyInstance?.elements().forEach((e) => {
+                if (outlined.includes(e.id())) {
+                    e.addClass('outlined')
+                }
+            })
+    }
 
     onMount(() => {
         cyInstance = cytoscape({
@@ -128,18 +148,72 @@
         })
     })
 
+    // Update completed and visible nodes
+    $effect(() => {
+        const _unused1 = ownCompleted
+        const _unused2 = ownShowCompleted
+
+        updateCompleted()
+        updateVisible()
+    })
+
+    // Update faded nodes
+    $effect(() => {
+        const _unused = faded
+        updateFaded()
+    })
+
+    // Update outlined nodes
+    $effect(() => {
+        const _unused = outlined
+        updateOutlined()
+    })
+
+    // Update graph when data changes
     $effect(() => {
         const _unused = data
         if (!cyInstance) return
-        cyInstance.remove(cyInstance.elements())
-        cyInstance.add(toCyto(data))
+
+        const nodes = cyInstance.nodes()
+        const overlap = nodes.some((e) =>
+            data.nodes.some((n) => n.id === (e as CytoElement).id())
+        )
+        if (!overlap) {
+            cyInstance.remove(cyInstance.elements())
+            cyInstance.add(toCyto(data))
+        } else {
+            const edges = cyInstance.edges()
+            const nodesRemoveFromCyto = nodes.filter(
+                (e) => !data.nodes.some((n) => n.id === e.id())
+            )
+            const edgesRemoveFromCyto = edges.filter(
+                (e) => !data.edges.some((n) => e.id() === `${n.from}-${n.to}`)
+            )
+            const nodesAddToCyto = data.nodes.filter(
+                (n) => !nodes.some((e) => (e as CytoElement).id() === n.id)
+            )
+            const edgesAddToCyto = data.edges.filter(
+                (n) =>
+                    !edges.some(
+                        (e) => (e as CytoElement).id() === `${n.from}-${n.to}`
+                    )
+            )
+            cyInstance.remove(nodesRemoveFromCyto)
+            cyInstance.remove(edgesRemoveFromCyto)
+            cyInstance.add(
+                toCyto({ nodes: nodesAddToCyto, edges: edgesAddToCyto })
+            )
+        }
         untrack(() => {
             updateCompleted()
             updateVisible()
-            layout()
+            updateFaded()
+            updateOutlined()
+            layout(overlap)
         })
     })
 
+    // Update graph when refresh changes (animating)
     $effect(() => {
         if (!refresh) return
         if (!cyInstance) return
@@ -148,6 +222,7 @@
         })
     })
 
+    // Update graph when showCompleted changes and not refreshable (animating)
     $effect(() => {
         if (refresh !== undefined) return
         const _unused1 = ownShowCompleted

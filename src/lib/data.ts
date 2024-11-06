@@ -69,6 +69,7 @@ export const toCyto = (data: Pick<Data, 'nodes' | 'edges'>): CytoData => ({
         data: { id, name, type },
     })),
     edges: data.edges.map(({ from, to, type }) => ({
+        id: `${from}-${to}`,
         data: { source: from, target: to, type: type },
     })),
 })

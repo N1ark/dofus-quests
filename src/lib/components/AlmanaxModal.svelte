@@ -29,14 +29,12 @@
     })
 
     const toggleDay = (key: string) => {
-        if (ownAlmanax.has(key)) {
-            ownAlmanax.delete(key)
-        } else {
-            ownAlmanax.add(key)
-        }
+        if (ownAlmanax.has(key)) ownAlmanax.delete(key)
+        else ownAlmanax.add(key)
+
         completed.update((state) => ({
             ...state,
-            almanax: Array.from(ownAlmanax),
+            completed: Array.from(ownAlmanax),
         }))
     }
 
@@ -112,15 +110,19 @@
                                 !alma.effectName
                                     .toLowerCase()
                                     .includes(searchText.toLowerCase())}
+                            class:current={today.getDate() === j + 1 &&
+                                today.getMonth() === date.getMonth()}
                             onmouseenter={() =>
                                 (today = new Date(
                                     date.getFullYear(),
                                     date.getMonth(),
                                     j + 1
                                 ))}
-                            onclick={() => toggleDay(day)}
+                            onclick={() => toggleDay(alma.questId)}
                         >
-                            {j + 1}
+                            <span>
+                                {j + 1}
+                            </span>
                         </button>
                     {/each}
                 </div>
@@ -183,17 +185,20 @@
         gap: 4px;
 
         & .day {
+            --color: #256fd1;
+            position: relative;
             box-sizing: border-box;
-            border: none;
             padding: 4px;
             border-radius: 99px;
             width: 26px;
             height: 26px;
             font-size: 0.8em;
+            line-height: 0;
             text-align: center;
             vertical-align: middle;
             font-weight: bold;
-            background-color: #256fd1;
+            background-color: var(--color);
+            border: 3px solid var(--color);
             color: white;
             opacity: 1;
             transition: opacity 0.1s;
@@ -204,7 +209,17 @@
                 opacity: 0.8;
             }
             &.completed {
-                background-color: #3dd17d;
+                --color: #3dd17d;
+            }
+            &.current {
+                color: var(--color);
+                background-color: white;
+            }
+            & > span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }

@@ -122,8 +122,8 @@
                       .concat(event.target.id())
                 : [event.target.id()]
             let newCompleted = new Set(ownCompleted)
-            if (toCompleted) nodes.forEach(newCompleted.add)
-            else nodes.forEach(newCompleted.delete)
+            if (toCompleted) nodes.forEach((n) => newCompleted.add(n))
+            else nodes.forEach((n) => newCompleted.delete(n))
             completed.update((v) => ({ completed: Array.from(newCompleted) }))
         })
     })

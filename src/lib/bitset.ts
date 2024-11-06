@@ -55,7 +55,6 @@ export default class BitSet {
             last = +idx
         }
         const txt = seq.join('/')
-        console.log(txt)
         return txt
     }
 

@@ -3865,8 +3865,7 @@
     {
       "requirements": [
         "Succes [Mais où qu'ils sont les Frigostiens ?](a923) fini",
-        "Succes [La glace répare, la glace remplace](a924) fini",
-        "Succes [Noblesse oblige](a925) fini"
+        "Succes [La glace répare, la glace remplace](a924) fini"
       ],
       "name": "Un songe en hiver",
       "description": "Obtenir les succès suivants.",
@@ -4046,7 +4045,10 @@
       "categoryId": 6
     },
     {
-      "requirements": ["[Crise d'ex-Emma](q1324) finie"],
+      "requirements": [
+        "[La vie de château](q1334) finie",
+        "[Crise d'ex-Emma](q1324) finie"
+      ],
       "name": "Mais où qu'ils sont les Frigostiens ?",
       "description": "Terminer les quêtes suivantes.",
       "id": "a923",
@@ -12981,7 +12983,7 @@
         "Succes [Les survivants de Frigost](a606) fini",
         "Niveau >179",
         "Succes [Halte au péage](a553) fini",
-        "[Au-delà du mur](q1323) finie"
+        "[Crise d'ex-Emma](q1324) finie"
       ],
       "name": "Les derniers rescapés",
       "description": "",
@@ -22514,11 +22516,6 @@
       "type": "FINISHED"
     },
     {
-      "from": "a925",
-      "to": "a926",
-      "type": "FINISHED"
-    },
-    {
       "from": "q2090",
       "to": "a2197",
       "type": "FINISHED"
@@ -22630,6 +22627,11 @@
     },
     {
       "from": "q1324",
+      "to": "a923",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q1334",
       "to": "a923",
       "type": "FINISHED"
     },
@@ -28389,12 +28391,12 @@
       "type": "FINISHED"
     },
     {
-      "from": "q1323",
+      "from": "a553",
       "to": "q1325",
       "type": "FINISHED"
     },
     {
-      "from": "a553",
+      "from": "q1324",
       "to": "q1325",
       "type": "FINISHED"
     },

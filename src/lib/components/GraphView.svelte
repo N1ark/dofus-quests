@@ -10,7 +10,7 @@
     import { onMount, untrack } from 'svelte'
     import { completed, showCompleted } from '../../state.svelte'
     import { style } from '../cytostyle'
-    import { type Data, toCyto } from '../data'
+    import { type Data, id, toCyto } from '../data'
 
     let {
         data,
@@ -187,16 +187,13 @@
                 (e) => !data.nodes.some((n) => n.id === e.id())
             )
             const edgesRemoveFromCyto = edges.filter(
-                (e) => !data.edges.some((n) => e.id() === `${n.from}-${n.to}`)
+                (e) => !data.edges.some((e2) => e.id() === id(e2))
             )
             const nodesAddToCyto = data.nodes.filter(
                 (n) => !nodes.some((e) => (e as CytoElement).id() === n.id)
             )
             const edgesAddToCyto = data.edges.filter(
-                (n) =>
-                    !edges.some(
-                        (e) => (e as CytoElement).id() === `${n.from}-${n.to}`
-                    )
+                (e2) => !edges.some((e) => (e as CytoElement).id() === id(e2))
             )
             cyInstance.remove(nodesRemoveFromCyto)
             cyInstance.remove(edgesRemoveFromCyto)

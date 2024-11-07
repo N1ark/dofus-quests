@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import type { Data } from '../data'
-    import { data, onlyPredecessors } from '../data'
+    import { data, id, onlyPredecessors } from '../data'
     import { classNames } from '../util'
     import Container from './Container.svelte'
     import GraphView from './GraphView.svelte'
@@ -26,19 +26,24 @@
             if (tempNode) {
                 node = tempNode
                 currData = onlyPredecessors(data, node.id)
-                const extraEdges = data.edges.filter(
+                const rawExtraEdges = data.edges.filter(
                     ({ from }) => from === tempNode.id
                 )
-                const extraNodes = data.nodes.filter(({ id }) =>
-                    extraEdges.some(({ to }) => to === id)
+                const extraNodes = data.nodes
+                    .filter(({ id }) =>
+                        rawExtraEdges.some(({ to }) => to === id)
+                    )
+                    .filter(
+                        ({ id }) => !currData.nodes.some((n) => n.id === id)
+                    ) // remove predecessors
+                const extraEdges = rawExtraEdges.filter(({ to }) =>
+                    extraNodes.some(({ id }) => id === to)
                 )
                 currData = {
                     nodes: [...currData.nodes, ...extraNodes],
                     edges: [...currData.edges, ...extraEdges],
                 }
-                childElements = extraNodes
-                    .map(({ id }) => id)
-                    .concat(extraEdges.map(({ from, to }) => `${to}-${from}`))
+                childElements = [...extraNodes, ...extraEdges].map(id)
                 targetNode = tempNode.id
             } else {
                 if (node === null) return

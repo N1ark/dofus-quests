@@ -99,6 +99,8 @@ export const onlyPredecessors = (data: Data, id: string): Data => {
     }
 }
 
+export const id = (node: Quest | Achievement | Edge): string =>
+    'id' in node ? node.id : `${node.from}-${node.to}-${node.type}`
 export const isAlmanaxQuest = (id: string): boolean =>
     data.almanax.some((a) => a.questId === id)
 export const isAchievementQuest = (id: string): boolean =>

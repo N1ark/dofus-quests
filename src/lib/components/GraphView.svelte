@@ -8,9 +8,10 @@
 <script lang="ts">
     import { type SingularElementArgument as CytoElement } from 'cytoscape'
     import { onMount, untrack } from 'svelte'
-    import { completed, showCompleted } from '../../state.svelte'
     import { style } from '../cytostyle'
     import { type Data, id, toCyto } from '../data'
+    import { get, language } from '../localisation.svelte'
+    import { completed, showCompleted } from '../state.svelte'
 
     let {
         data,
@@ -145,6 +146,18 @@
             if (toCompleted) nodes.forEach((n) => newCompleted.add(n))
             else nodes.forEach((n) => newCompleted.delete(n))
             completed.update((v) => ({ completed: Array.from(newCompleted) }))
+        })
+    })
+
+    language.subscribe((lang) => {
+        if (!cyInstance) return
+        cyInstance.nodes().forEach((node) => {
+            const data = node.data()
+            const label = data.label
+            const newLabel = get(data.id, 'name')
+            if (newLabel && label !== newLabel) {
+                node.data({ ...data, name: newLabel })
+            }
         })
     })
 

@@ -1,10 +1,12 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { completed, showCompleted } from '../../state.svelte'
     import { data } from '../data'
+    import { get } from '../localisation.svelte'
+    import { completed, showCompleted } from '../state.svelte'
     import { normalize } from '../util'
     import Container from './Container.svelte'
     import Progress from './Progress.svelte'
+    import Text from './Text.svelte'
 
     const { mode }: { mode: 'quest' | 'achievement' } = $props()
 
@@ -24,7 +26,7 @@
                   .sort((a, b) => a.order - b.order)
     )
     const hash = $derived(`${mode}s` as const)
-    const title = $derived(mode === 'quest' ? 'Quests' : 'Achievements')
+    const title = $derived(mode === 'quest' ? 'quests' : 'achievements')
 
     let ownCompleted = $state(new Set<string>())
     let ownShowCompleted = $state(false)
@@ -68,7 +70,7 @@
 
 <Container classes={`categories ${visible ? '' : 'hidden'}`}>
     <h2>
-        {title}
+        <Text key={title} />
         <Progress
             total={elements.length}
             amount={elements.filter(({ id }) => ownCompleted.has(id)).length}
@@ -80,17 +82,19 @@
         {@const completed = elems.filter(({ id }) => ownCompleted.has(id))}
         {@const displayed = elems
             .filter((node) => ownShowCompleted || !ownCompleted.has(node.id))
-            .filter((node) => normalize(node.name).includes(searchNormalized))}
+            .filter((node) =>
+                normalize(get(node.id, 'name')).includes(searchNormalized)
+            )}
         {#if displayed.length !== 0}
             <h3 id={`${mode}category-${category.id}`}>
-                {category.name}
+                <Text key={mode[0] + 'C' + category.id} name="name" />
                 <Progress total={elems.length} amount={completed.length} />
             </h3>
             <ul class={mode}>
                 {#each displayed as elem}
                     <li class:completed={ownCompleted.has(elem.id)}>
                         <a href={`#${elem.id}`}>
-                            {elem.name}
+                            <Text key={elem.id} name="name" />
                         </a>
                     </li>
                 {/each}

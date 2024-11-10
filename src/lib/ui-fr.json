@@ -1,0 +1,17 @@
+{
+    "and": "et",
+    "or": "ou",
+    "loading": "Chargement...",
+    "reorganise": "Réorganiser",
+    "showcompleted": "Afficher les tâches finies",
+    "quests": "Quêtes",
+    "achievements": "Succès",
+    "almanax": "Almanax",
+    "backup": "Backup",
+    "language": "Langue",
+    "export": "Exporter",
+    "import": "Importer",
+    "export-info": "Enregistre ceci pour sauvegarder tes données et les importer plus tard.",
+    "import-info": "Colle ici les données que tu as exportées pour les importer.",
+    "copy": "Copier dans le presse-papier"
+}

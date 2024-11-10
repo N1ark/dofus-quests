@@ -1,9 +1,11 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { completed } from '../../state.svelte'
     import { data } from '../data'
+    import { get } from '../localisation.svelte'
+    import { completed } from '../state.svelte'
     import Container from './Container.svelte'
     import Progress from './Progress.svelte'
+    import Text from './Text.svelte'
 
     let currentHeight = $state(0)
     let largestHeight = $state(0)
@@ -39,8 +41,10 @@
     }
 
     onMount(() => {
-        const hashCheck = () =>
-            (visible = window.location.hash.slice(1) === 'almanax')
+        const hashCheck = () => {
+            visible = window.location.hash.slice(1) === 'almanax'
+            if (!visible) searchText = ''
+        }
         hashCheck()
         window.addEventListener('hashchange', hashCheck)
         return () => window.removeEventListener('hashchange', hashCheck)
@@ -52,9 +56,8 @@
         <h2>
             Almanax <Progress
                 total={366}
-                amount={data.almanax.filter(({ questId }) =>
-                    ownAlmanax.has(questId)
-                ).length}
+                amount={data.almanax.filter(({ id }) => ownAlmanax.has(id))
+                    .length}
             />
         </h2>
         <input type="text" placeholder="Search" bind:value={searchText} />
@@ -68,18 +71,21 @@
         <div class="col">
             <div class="date">{today.toLocaleDateString()}</div>
             <h3>
-                {almanax.questName}
+                <Text key={almanax.id} name="name" />
             </h3>
             <div class="item">
-                <img src={almanax.itemImg} alt={almanax.itemName} />
+                <img src={almanax.itemImg} alt={''} />
                 <div>
-                    {almanax.itemQuantity} × {almanax.itemName}
+                    {almanax.itemQuantity} × <Text
+                        key={almanax.id}
+                        name="item"
+                    />
                 </div>
             </div>
         </div>
         <div class="col">
-            <h3>{almanax.effectName}</h3>
-            <p>{@html almanax.effectDesc}</p>
+            <h3><Text key={almanax.id} name="effectName" /></h3>
+            <p><Text key={almanax.id} name="effectDesc" raw /></p>
         </div>
     </div>
     <div class="months">
@@ -106,15 +112,15 @@
                         )!}
                         <button
                             class="day"
-                            class:completed={ownAlmanax.has(alma.questId)}
+                            class:completed={ownAlmanax.has(alma.id)}
                             class:notSearched={searchText.trim() &&
-                                !alma.questName
+                                !get(alma.id, 'name')
                                     .toLowerCase()
                                     .includes(searchText.toLowerCase()) &&
-                                !alma.itemName
+                                !get(alma.id, 'item')
                                     .toLowerCase()
                                     .includes(searchText.toLowerCase()) &&
-                                !alma.effectName
+                                !get(alma.id, 'effectName')
                                     .toLowerCase()
                                     .includes(searchText.toLowerCase())}
                             class:current={today.getDate() === j + 1 &&
@@ -125,7 +131,7 @@
                                     date.getMonth(),
                                     j + 1
                                 ))}
-                            onclick={() => toggleDay(alma.questId)}
+                            onclick={() => toggleDay(alma.id)}
                         >
                             <span>
                                 {j + 1}

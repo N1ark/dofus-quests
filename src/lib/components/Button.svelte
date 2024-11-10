@@ -1,4 +1,6 @@
 <script lang="ts">
+    import Text from './Text.svelte'
+
     const {
         Icon,
         classes,
@@ -31,12 +33,20 @@
 {#if href}
     <a class={classes} {href} {title} target="_blank" rel="noopener noreferrer">
         <Icon />
-        <span>{title}</span>
+        {#if title}
+            <span><Text key={title} /></span>
+        {/if}
     </a>
 {:else}
     <button class={classes} onclick={clickHandler} {title} {disabled}>
-        <Icon />
-        <span>{title}</span>
+        {#if typeof Icon === 'string'}
+            {Icon}
+        {:else}
+            <Icon />
+        {/if}
+        {#if title}
+            <span><Text key={title} /></span>
+        {/if}
     </button>
 {/if}
 

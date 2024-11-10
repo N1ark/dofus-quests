@@ -1,0 +1,17 @@
+{
+    "and": "and",
+    "or": "or",
+    "loading": "Loading...",
+    "reorganise": "Reorganise",
+    "showcompleted": "Show completed",
+    "quests": "Quests",
+    "achievements": "Achievements",
+    "almanax": "Almanax",
+    "backup": "Backup",
+    "language": "Language",
+    "export": "Export",
+    "import": "Import",
+    "export-info": "Store this somewhere to import it later.",
+    "import-info": "Paste your backed up data to restore it.",
+    "copy": "Copy to clipboard"
+}

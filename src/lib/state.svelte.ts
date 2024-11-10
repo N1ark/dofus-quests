@@ -1,7 +1,7 @@
 import { compressToBase64, decompressFromBase64 } from 'lz-string'
 import { writable } from 'svelte/store'
-import BitSet from './lib/bitset'
-import { data } from './lib/data'
+import BitSet from '../lib/bitset'
+import { data } from '../lib/data'
 
 export const showCompleted = writable(
     (localStorage.getItem('showCompleted') ?? 'true') === 'true'

@@ -1,9 +1,10 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { getRawCompleted, setRawCompleted } from '../../state.svelte'
+    import { getRawCompleted, setRawCompleted } from '../state.svelte'
     import Column from './Column.svelte'
     import Container from './Container.svelte'
     import Row from './Row.svelte'
+    import Text from './Text.svelte'
 
     let backup: string = $state('')
     let copied = $state(false)
@@ -43,26 +44,28 @@
 </script>
 
 <Container classes={`modal ${visible ? '' : 'hidden'}`}>
-    <h2>Backup</h2>
+    <h2><Text key="backup" /></h2>
     <Row>
         <Column classes="modal-col">
-            <h3>Export</h3>
-            <p>Store this somewhere to import it later.</p>
+            <h3><Text key="export" /></h3>
+            <p><Text key="export-info" /></p>
             <textarea
                 readonly
                 value={data}
                 onclick={(e) => e.currentTarget.select()}
                 spellcheck="false"
             ></textarea>
-            <button onclick={addToClipboard}
-                >{copied ? 'Copied!' : 'Copy to clipboard'}</button
-            >
+            <button onclick={addToClipboard}>
+                <Text key="copy" />
+            </button>
         </Column>
         <Column classes="modal-col">
-            <h3>Import</h3>
-            <p>Paste your backed up data to import it.</p>
+            <h3><Text key="import" /></h3>
+            <p><Text key="import-info" /></p>
             <textarea bind:value={backup} spellcheck="false"></textarea>
-            <button onclick={importBackup}>Import</button>
+            <button onclick={importBackup}>
+                <Text key="import" />
+            </button>
         </Column>
     </Row>
 </Container>

@@ -1,20 +1,17 @@
 import dataRaw from './data.json'
+import { get } from './localisation.svelte'
 
 export type Quest = {
     id: string
-    name: string
     type: 'quest'
-    description: string
-    requirements: string[]
+    requirements: string
     categoryId: number
 }
 
 export type Achievement = {
     id: string
-    name: string
     type: 'achievement'
-    description: string
-    requirements: string[]
+    requirements: string
     categoryId: number
     order: number
 }
@@ -22,14 +19,10 @@ export type Achievement = {
 export type Almanax = {
     day: number
     month: number
-    questId: string
+    id: string
     itemId: number
     itemImg: string
-    itemName: string
     itemQuantity: number
-    questName: string
-    effectName: string
-    effectDesc: string
 }
 
 export type Edge = {
@@ -45,7 +38,6 @@ export type Edge = {
 
 export type Category = {
     id: number
-    name: string
     order: number
 }
 
@@ -60,13 +52,13 @@ export type Data = {
 export const data = dataRaw as Data
 
 export type CytoData = {
-    nodes: { data: { id: string; name: string; type: string } }[]
+    nodes: { data: { id: string; type: string } }[]
     edges: { data: { source: string; target: string; type: string } }[]
 }
 
 export const toCyto = (data: Pick<Data, 'nodes' | 'edges'>): CytoData => ({
-    nodes: data.nodes.map(({ id, name, type }) => ({
-        data: { id, name, type },
+    nodes: data.nodes.map(({ id, type }) => ({
+        data: { id, type, name: get(id, 'name') },
     })),
     edges: data.edges.map(({ from, to, type }) => ({
         id: `${from}-${to}`,

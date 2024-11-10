@@ -21,13 +21,14 @@
     import Row from './lib/components/Row.svelte'
     import SelectedQuestView from './lib/components/SelectedQuestView.svelte'
     import { data } from './lib/data'
-    import { showCompleted } from './state.svelte'
+    import { language, type Lang } from './lib/localisation.svelte'
+    import { showCompleted } from './lib/state.svelte'
 
     let refreshIdx = $state(0)
     let ownShowCompleted = $state(false)
-    showCompleted.subscribe((value) => {
-        ownShowCompleted = value
-    })
+    showCompleted.subscribe((value) => (ownShowCompleted = value))
+    let ownLanguage = $state<Lang>('en')
+    language.subscribe((value) => (ownLanguage = value))
 
     onMount(() => {
         const keyListener = (event: KeyboardEvent) => {
@@ -49,35 +50,44 @@
         <Column classes="column">
             <Button
                 Icon={Reload}
-                title="Reorganise"
+                title="reorganise"
                 onclick={() => ++refreshIdx}
             />
             <Button
                 Icon={ownShowCompleted ? Eye : EyeClosed}
-                title="Show completed"
+                title="showcompleted"
                 onclick={() => showCompleted.update((value) => !value)}
             />
             <Button
                 Icon={Backpack}
-                title="Quests"
+                title="quests"
                 onclick={navigateOrLeave('quests')}
             />
             <Button
                 Icon={Trophy}
-                title="Achievements"
+                title="achievements"
                 onclick={navigateOrLeave('achievements')}
             />
             <Button
                 Icon={Calendar}
-                title="Almanax"
+                title="almanax"
                 onclick={navigateOrLeave('almanax')}
             />
             <Button
                 Icon={Archive}
-                title="Backup"
+                title="backup"
                 onclick={navigateOrLeave('backup')}
             />
             <div style:flex-grow="100" style:flex-shrink="0"></div>
+            <Button
+                Icon={{
+                    en: '🇬🇧',
+                    fr: '🇫🇷',
+                }[ownLanguage]}
+                title="language"
+                onclick={() =>
+                    language.update((l) => (l === 'en' ? 'fr' : 'en'))}
+            />
             <Button
                 Icon={Compass}
                 title="Dofus Map"

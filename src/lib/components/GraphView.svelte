@@ -17,7 +17,6 @@
     import { GROUP_COLORS, style } from '../cytostyle'
     import { type Data, id, toCyto } from '../data'
     import { get, language } from '../localisation.svelte'
-    import { applyPositions } from '../positions'
     import { completed, showCompleted } from '../state.svelte'
 
     let {

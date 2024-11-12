@@ -3,6 +3,7 @@
     import { data } from '../data'
     import { get } from '../localisation.svelte'
     import { completed } from '../state.svelte'
+    import { normalize } from '../util'
     import Container from './Container.svelte'
     import Progress from './Progress.svelte'
     import Text from './Text.svelte'
@@ -24,6 +25,7 @@
         )!
     )
     let searchText = $state('')
+    const searchNormalized = $derived(normalize(searchText))
     let ownAlmanax: Set<string> = $state(new Set())
 
     completed.subscribe(({ completed }) => {
@@ -114,15 +116,15 @@
                             class="day"
                             class:completed={ownAlmanax.has(alma.id)}
                             class:notSearched={searchText.trim() &&
-                                !get(alma.id, 'name')
-                                    .toLowerCase()
-                                    .includes(searchText.toLowerCase()) &&
-                                !get(alma.id, 'item')
-                                    .toLowerCase()
-                                    .includes(searchText.toLowerCase()) &&
-                                !get(alma.id, 'effectName')
-                                    .toLowerCase()
-                                    .includes(searchText.toLowerCase())}
+                                !normalize((alma.id, 'name')).includes(
+                                    searchNormalized
+                                ) &&
+                                !normalize(get(alma.id, 'item')).includes(
+                                    searchNormalized
+                                ) &&
+                                !normalize(get(alma.id, 'effectName')).includes(
+                                    searchNormalized
+                                )}
                             class:current={today.getDate() === j + 1 &&
                                 today.getMonth() === date.getMonth()}
                             onmouseenter={() =>

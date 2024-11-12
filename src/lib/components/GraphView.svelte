@@ -6,11 +6,18 @@
 </script>
 
 <script lang="ts">
-    import { type SingularElementArgument as CytoElement } from 'cytoscape'
+    import {
+        type SingularElementArgument as CytoElement,
+        type Position,
+    } from 'cytoscape'
+    import AlignY from 'lucide-svelte/icons/align-center-horizontal'
+    import AlignX from 'lucide-svelte/icons/align-center-vertical'
+    import Export from 'lucide-svelte/icons/hard-drive-upload'
     import { onMount, untrack } from 'svelte'
-    import { style } from '../cytostyle'
+    import { GROUP_COLORS, style } from '../cytostyle'
     import { type Data, id, toCyto } from '../data'
     import { get, language } from '../localisation.svelte'
+    import { applyPositions } from '../positions'
     import { completed, showCompleted } from '../state.svelte'
 
     let {
@@ -18,14 +25,18 @@
         faded,
         outlined,
         refresh,
+        showGroups,
     }: {
         data: Pick<Data, 'nodes' | 'edges'>
         faded?: string[]
         outlined?: string[]
         refresh?: any
+        showGroups?: boolean
     } = $props()
 
     let containerDiv: HTMLElement
+    let canvasDiv: HTMLCanvasElement
+    let offscreenCanvas: OffscreenCanvas
 
     let cyInstance: cytoscape.Core | null = $state(null)
     let ownCompleted: Set<string> = $state(new Set())
@@ -116,13 +127,15 @@
     }
 
     onMount(() => {
+        const cytoData = toCyto(data)
         cyInstance = cytoscape({
             container: containerDiv,
-            // @ts-ignore-next-line
-            style,
-            elements: toCyto(data),
+            elements: cytoData,
             maxZoom: 3.5,
             minZoom: 0.04,
+            layout: { name: 'preset' },
+            // @ts-ignore-next-line
+            style,
         })
 
         cyInstance.on('tap', 'node', (event) => {
@@ -146,6 +159,10 @@
             if (toCompleted) nodes.forEach((n) => newCompleted.add(n))
             else nodes.forEach((n) => newCompleted.delete(n))
             completed.update((v) => ({ completed: Array.from(newCompleted) }))
+        })
+        cyInstance.on('drag', (e) => {
+            const { x, y } = e.target.position()
+            e.target.position({ x: Math.round(x), y: Math.round(y) })
         })
     })
 
@@ -244,14 +261,170 @@
             requestAnimationFrame(() => layout(true))
         })
     })
+
+    onMount(() => {
+        if (!showGroups) return
+        const hexToRgb = (hex: string) => {
+            const match = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i)
+            if (!match) return null
+            return {
+                r: parseInt(match[1], 16),
+                g: parseInt(match[2], 16),
+                b: parseInt(match[3], 16),
+            }
+        }
+        const groupColors = Object.entries(GROUP_COLORS).map(([id, color]) => {
+            const rgb = hexToRgb(color)!
+            return {
+                id,
+                color: `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.5)`,
+            }
+        })
+        const canvsaW = canvasDiv.offsetWidth
+        const canvasH = canvasDiv.offsetHeight
+        const offscreenCanvas = new OffscreenCanvas(canvsaW, canvasH)
+        cyInstance?.on('render', () => {
+            if (!canvasDiv) return
+            const cy = cyInstance!
+
+            const offCtx = offscreenCanvas.getContext('2d')
+            const ctx = canvasDiv.getContext('2d')
+            if (!ctx || !offCtx) return
+            const width = (canvasDiv.width = canvasDiv.offsetWidth)
+            const height = (canvasDiv.height = canvasDiv.offsetHeight)
+            ctx.clearRect(0, 0, width, height)
+
+            const { x1, y1, w, h } = cy.extent()
+            const zoom = cy.zoom()
+            groupColors.forEach(({ id, color }) => {
+                const nodes = cy.nodes(`[group = ${id}]:visible`)
+                if (!nodes) return
+
+                offCtx.beginPath()
+                nodes.forEach((node) => {
+                    const pos = node.position()
+                    const canvasPos = {
+                        x: ((pos.x - x1) / w) * width,
+                        y: ((pos.y - y1) / h) * height,
+                    }
+                    const size = Math.min(node.width() * 15 * zoom, 300)
+                    if (
+                        canvasPos.x + size / 2 < 0 ||
+                        canvasPos.x - size / 2 > width ||
+                        canvasPos.y + size / 2 < 0 ||
+                        canvasPos.y - size / 2 > height
+                    )
+                        return
+                    offCtx.moveTo(canvasPos.x + size / 2, canvasPos.y)
+                    offCtx.arc(
+                        canvasPos.x,
+                        canvasPos.y,
+                        size / 2,
+                        0,
+                        Math.PI * 2
+                    )
+                })
+                offCtx.strokeStyle = color
+                offCtx.fillStyle = color
+                offCtx.lineWidth = 10
+                // offCtx.stroke()
+                // var prev = offCtx.globalCompositeOperation
+                // offCtx.globalCompositeOperation = 'destination-out'
+                offCtx.fill()
+                // offCtx.globalCompositeOperation = prev
+
+                // copy offscreen canvas to visible canvas
+                ctx.drawImage(offscreenCanvas, 0, 0)
+
+                offCtx.clearRect(0, 0, canvsaW, canvasH)
+            })
+        })
+    })
+
+    const exportPos = () => {
+        const nodes = cyInstance?.nodes()
+        if (!nodes) return
+        const positions = nodes.map((node) => {
+            const pos = node.position()
+            return {
+                id: node.id(),
+                x: pos.x,
+                y: pos.y,
+            }
+        })
+        console.log(JSON.stringify(positions))
+    }
+
+    const align = (dim: 'x' | 'y') => () => {
+        if (!cyInstance) return
+        const otherDim = dim === 'x' ? 'y' : 'x'
+        const nodes = cyInstance.nodes(':selected')
+        if (nodes.length < 2) return
+        const newDim =
+            nodes.reduce((acc, node) => acc + node.position()[dim], 0) /
+            nodes.length
+        nodes.positions((node) => {
+            const pos = node.position()
+            return {
+                [dim]: newDim,
+                [otherDim]: pos[otherDim],
+            } as any as Position
+        })
+        nodes.unselect()
+    }
 </script>
 
-<div bind:this={containerDiv} class="container" onresize={center}></div>
+<div bind:this={containerDiv} class="container" onresize={center}>
+    <canvas class="bg" bind:this={canvasDiv}></canvas>
+</div>
+<div class:visible={import.meta.env.DEV} class="tools">
+    <button onclick={align('x')}><AlignX /></button>
+    <button onclick={align('y')}><AlignY /></button>
+    <button onclick={exportPos}>
+        <Export />
+    </button>
+</div>
 
 <style>
     .container {
         width: 100%;
         height: 100%;
         pointer-events: auto;
+    }
+
+    .bg {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tools {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        flex-direction: column;
+        gap: 8px;
+        display: none;
+
+        &.visible {
+            display: flex;
+            z-index: 1;
+        }
+    }
+
+    button {
+        aspect-ratio: 1;
+        line-height: 0;
+        font-size: 1.2em;
+        border-color: rgba(219, 149, 20, 0.6);
+        background-color: #211f1b;
+        pointer-events: all;
+        z-index: 10;
+
+        &:hover {
+            background-color: #4d412c;
+        }
     }
 </style>

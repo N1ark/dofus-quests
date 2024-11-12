@@ -2,6 +2,70 @@ export const QUEST_COLOR = `#256FD1`
 export const QUEST_COLOR_FINISHED = `#3DD17D`
 export const ACHIEVEMENT_COLOR = `#E0961F`
 export const ACHIEVEMENT_COLOR_FINISHED = `#A0D13D`
+export const GROUP_COLORS = {
+    // Atoll des Possédés:
+    123: '#1A5152',
+    // Alignement:
+    43: '#FFDE4F',
+    // Île d'Otomaï:
+    50: '#1E3719',
+    // Incarnam:
+    53: '#49617B',
+    // Archipel des Écailles:
+    99: '#ABE4C9',
+    // Bonta et Brâkmar:
+    46: '#912B30',
+    // Archipel de Valonia:
+    140: '#3B493C',
+    // Camps des Bworks et des Gobelins:
+    47: '#ABB0DB',
+    // Saharach:
+    74: '#E3C371',
+    // Montagne des Koalaks:
+    54: '#B19741',
+    // Justiciers:
+    61: '#7E3123',
+    // Général:
+    118: '#E4C721',
+    // Avis de recherche:
+    42: '#F1E8C5',
+    // Nimotopia:
+    55: '#FC9FA5',
+    // Cauchemar des Ravageurs:
+    125: '#6B6F6E',
+    // Royaume d'Amakna:
+    146: '#D0812E',
+    // Krosmoz:
+    44: '#B727CE',
+    // Cania:
+    48: '#CBB937',
+    // Almanax:
+    26: '#FF6F5B',
+    // Île de Moon:
+    70: '#262B05',
+    // Île de Pandala:
+    114: '#686E2C',
+    // Sidimote:
+    76: '#8E3E0C',
+    // Quêtes principales:
+    40: '#FFFE31',
+    // Dimensions Divines:
+    65: '#C8678E',
+    // Astrub:
+    45: '#AD8030',
+    // Sufokia:
+    58: '#102C3A',
+    // Île de Frigost:
+    51: '#B5FFEF',
+    // Eliocalypse:
+    102: '#D282E9',
+    // Île des Wabbits:
+    52: '#F99A39',
+    // Tours de la Fratrie:
+    77: '#FF7E16',
+    // Forêt Maléfique:
+    128: '#2C370C',
+}
 
 export const style = `
 edge {
@@ -90,7 +154,7 @@ edge.faded {
   opacity: 0.3;
 }
 
-node.outlined {
+node.outlined, node:selected {
     outline-width: 2;
     border-width: 8;
     border-opacity: 0;
@@ -110,6 +174,10 @@ node[type = "achievement"].outlined {
 
 node[type = "achievement"].outlined.finished {
     outline-color: ${ACHIEVEMENT_COLOR_FINISHED};
+}
+
+node:selected {
+    outline-color: #fff;
 }
 
 .hidden {

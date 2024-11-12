@@ -1,3 +1,4 @@
+import type { ElementsDefinition } from 'cytoscape'
 import dataRaw from './data.json'
 import { get } from './localisation.svelte'
 
@@ -6,6 +7,7 @@ export type Quest = {
     type: 'quest'
     requirements: string
     categoryId: number
+    achCatId: number
 }
 
 export type Achievement = {
@@ -13,6 +15,7 @@ export type Achievement = {
     type: 'achievement'
     requirements: string
     categoryId: number
+    dispCatId: number
     order: number
 }
 
@@ -56,9 +59,16 @@ export type CytoData = {
     edges: { data: { source: string; target: string; type: string } }[]
 }
 
-export const toCyto = (data: Pick<Data, 'nodes' | 'edges'>): CytoData => ({
-    nodes: data.nodes.map(({ id, type }) => ({
-        data: { id, type, name: get(id, 'name') },
+export const toCyto = (
+    data: Pick<Data, 'nodes' | 'edges'>
+): ElementsDefinition => ({
+    nodes: data.nodes.map((n) => ({
+        data: {
+            id: n.id,
+            type: n.type,
+            name: get(n.id, 'name'),
+            group: n.type === 'quest' ? n.achCatId : n.dispCatId,
+        },
     })),
     edges: data.edges.map(({ from, to, type }) => ({
         id: `${from}-${to}`,
@@ -93,7 +103,3 @@ export const onlyPredecessors = (data: Data, id: string): Data => {
 
 export const id = (node: Quest | Achievement | Edge): string =>
     'id' in node ? node.id : `${node.from}-${node.to}-${node.type}`
-export const isAlmanaxQuest = (id: string): boolean =>
-    data.almanax.some((a) => a.questId === id)
-export const isAchievementQuest = (id: string): boolean =>
-    data.nodes.some((n) => n.id === id)

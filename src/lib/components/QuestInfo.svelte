@@ -19,6 +19,7 @@
         | Obj<'alignments', { name: Translated }>
         | Obj<'alignment-ranks', { name: Translated }>
         | Obj<'items', { name: Translated }>
+        | Obj<'monsters', { name: Translated }>
         // fallback for unknown criterion types:
         | Obj<'unknown', { type: string }>
 
@@ -89,6 +90,8 @@
         {:else if criterion.type === 'alignments'}
             {criterion.name[ownLang]}
         {:else if criterion.type === 'alignment-ranks'}
+            {criterion.name[ownLang]}
+        {:else if criterion.type === 'monsters'}
             {criterion.name[ownLang]}
         {:else if criterion.type === 'items'}
             <a

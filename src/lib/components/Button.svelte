@@ -62,15 +62,16 @@
         transition: background-color 0.1s;
         cursor: pointer;
         pointer-events: auto;
-        &:hover {
-            background-color: #333;
-        }
 
         display: block;
         aspect-ratio: 1;
         line-height: 0;
         font-size: 1.2em;
         position: relative;
+
+        &:hover {
+            background-color: #333;
+        }
 
         &:hover span {
             opacity: 1;

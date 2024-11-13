@@ -3,6 +3,18 @@
     // @ts-ignore-next-line
     import elk from 'cytoscape-elk'
     cytoscape.use(elk)
+
+    const groupColors = Object.entries(GROUP_COLORS).map(([id, color]) => {
+        const match = color.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i)!
+        const r = parseInt(match[1], 16)
+        const g = parseInt(match[2], 16)
+        const b = parseInt(match[3], 16)
+        return {
+            id,
+            stroke: `rgb(${r}, ${g}, ${b})`,
+            fill: `rgba(${r}, ${g}, ${b}, 0.2)`,
+        }
+    })
 </script>
 
 <script lang="ts">
@@ -269,22 +281,6 @@
 
     onMount(() => {
         if (!showGroups) return
-        const hexToRgb = (hex: string) => {
-            const match = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i)
-            if (!match) return null
-            return {
-                r: parseInt(match[1], 16),
-                g: parseInt(match[2], 16),
-                b: parseInt(match[3], 16),
-            }
-        }
-        const groupColors = Object.entries(GROUP_COLORS).map(([id, color]) => {
-            const rgb = hexToRgb(color)!
-            return {
-                id,
-                color: `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.5)`,
-            }
-        })
         const canvsaW = canvasDiv.offsetWidth
         const canvasH = canvasDiv.offsetHeight
         let offscreenCanvas = new OffscreenCanvas(canvsaW, canvasH)
@@ -304,7 +300,7 @@
 
             ctx.clearRect(0, 0, width, height)
 
-            for (const { id, color } of groupColors) {
+            for (const { id, fill, stroke } of groupColors) {
                 const nodes = cy.nodes(`[group = ${id}]:visible`)
                 if (!nodes) return
 
@@ -322,14 +318,16 @@
                     offCtx.moveTo(pos.x + size / 2, pos.y)
                     offCtx.arc(pos.x, pos.y, size / 2, 0, Math.PI * 2)
                 }
-                offCtx.strokeStyle = color
-                offCtx.fillStyle = color
-                offCtx.lineWidth = 10
-                // offCtx.stroke()
-                // var prev = offCtx.globalCompositeOperation
-                // offCtx.globalCompositeOperation = 'destination-out'
+                offCtx.strokeStyle = stroke
+                offCtx.fillStyle = stroke
+                offCtx.lineWidth = 3
+                offCtx.stroke()
+                var prev = offCtx.globalCompositeOperation
+                offCtx.globalCompositeOperation = 'destination-out'
                 offCtx.fill()
-                // offCtx.globalCompositeOperation = prev
+                offCtx.globalCompositeOperation = prev
+                offCtx.fillStyle = fill
+                offCtx.fill()
 
                 // copy offscreen canvas to visible canvas
                 ctx.drawImage(offscreenCanvas, 0, 0)
@@ -364,7 +362,7 @@
         nodes.positions((node) => {
             const pos = node.position()
             return {
-                [dim]: newDim,
+                [dim]: Math.round(newDim),
                 [otherDim]: pos[otherDim],
             } as any as Position
         })

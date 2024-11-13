@@ -20,6 +20,7 @@
         | Obj<'alignment-ranks', { name: Translated }>
         | Obj<'items', { name: Translated }>
         | Obj<'monsters', { name: Translated }>
+        | Obj<'jobs', { name: Translated }>
         // fallback for unknown criterion types:
         | Obj<'unknown', { type: string }>
 
@@ -85,13 +86,7 @@
             {criterion.shortName[ownLang]}
         {:else if criterion.type === 'positions'}
             [{criterion.posX}, {criterion.posY}]
-        {:else if criterion.type === 'npcs'}
-            {criterion.name[ownLang]}
-        {:else if criterion.type === 'alignments'}
-            {criterion.name[ownLang]}
-        {:else if criterion.type === 'alignment-ranks'}
-            {criterion.name[ownLang]}
-        {:else if criterion.type === 'monsters'}
+        {:else if criterion.type === 'npcs' || criterion.type === 'alignments' || criterion.type === 'alignment-ranks' || criterion.type === 'monsters' || criterion.type === 'jobs'}
             {criterion.name[ownLang]}
         {:else if criterion.type === 'items'}
             <a

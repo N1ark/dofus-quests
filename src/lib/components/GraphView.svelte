@@ -17,6 +17,7 @@
     import { GROUP_COLORS, style } from '../cytostyle'
     import { type Data, id, toCyto } from '../data'
     import { get, language } from '../localisation.svelte'
+    import { applyPositions } from '../positions'
     import { completed, showCompleted } from '../state.svelte'
 
     let {
@@ -25,12 +26,14 @@
         outlined,
         refresh,
         showGroups,
+        usePresetPositions,
     }: {
         data: Pick<Data, 'nodes' | 'edges'>
         faded?: string[]
         outlined?: string[]
         refresh?: any
         showGroups?: boolean
+        usePresetPositions?: boolean
     } = $props()
 
     let containerDiv: HTMLElement
@@ -127,6 +130,9 @@
 
     onMount(() => {
         const cytoData = toCyto(data)
+        if (usePresetPositions) {
+            applyPositions(cytoData)
+        }
         cyInstance = cytoscape({
             container: containerDiv,
             elements: cytoData,
@@ -201,7 +207,7 @@
     // Update graph when data changes
     $effect(() => {
         const _unused = data
-        if (!cyInstance) return
+        if (!cyInstance || usePresetPositions) return
 
         const nodes = cyInstance.nodes()
         const overlap = nodes.some((e) =>
@@ -281,16 +287,21 @@
         })
         const canvsaW = canvasDiv.offsetWidth
         const canvasH = canvasDiv.offsetHeight
-        const offscreenCanvas = new OffscreenCanvas(canvsaW, canvasH)
+        let offscreenCanvas = new OffscreenCanvas(canvsaW, canvasH)
         cyInstance?.on('render', () => {
             if (!canvasDiv) return
             const cy = cyInstance!
 
-            const offCtx = offscreenCanvas.getContext('2d')
+            let offCtx = offscreenCanvas.getContext('2d')
             const ctx = canvasDiv.getContext('2d')
             if (!ctx || !offCtx) return
             const width = (canvasDiv.width = canvasDiv.offsetWidth)
             const height = (canvasDiv.height = canvasDiv.offsetHeight)
+            if (width !== canvsaW || height !== canvasH) {
+                offscreenCanvas = new OffscreenCanvas(width, height)
+                offCtx = offscreenCanvas.getContext('2d')
+            }
+
             ctx.clearRect(0, 0, width, height)
 
             const { x1, y1, w, h } = cy.extent()

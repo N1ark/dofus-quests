@@ -67,6 +67,16 @@ export const GROUP_COLORS = {
     128: '#2C370C',
 }
 
+// ${Object.entries(GROUP_COLORS)
+//     .map(
+//         ([id, color]) => `
+// node[group = ${id}] {
+//     background-color: ${color};
+// }
+// `
+//     )
+//     .join('')}
+
 export const style = `
 edge {
   curve-style: bezier;

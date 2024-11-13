@@ -45,7 +45,7 @@
 </script>
 
 <main>
-    <GraphView {data} refresh={refreshIdx} />
+    <GraphView {data} refresh={refreshIdx} showGroups usePresetPositions />
     <Row classes="mainContainer">
         <Column classes="column">
             <Button

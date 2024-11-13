@@ -1884,7 +1884,7 @@
       "type": "achievement",
       "categoryId": 40,
       "order": 35,
-      "dispCatId": 40
+      "dispCatId": 77
     },
     {
       "requirements": "(Qf=1938)&Wo=0&(Qf=1939)&Wo=0&(Qf=1954)&Wo=0&(Qf=1940)&Wo=0&(Qf=1955)&Wo=0&(Qf=1956)&Wo=0",
@@ -7307,7 +7307,7 @@
     {
       "requirements": "PL>29",
       "id": "q1607",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
@@ -8847,7 +8847,7 @@
     {
       "requirements": "Qf=1607&PL>29",
       "id": "q1845",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
@@ -8903,7 +8903,7 @@
     {
       "requirements": "Qf=1845",
       "id": "q1853",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
@@ -9001,21 +9001,21 @@
     {
       "requirements": "Qf=1853",
       "id": "q1867",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
     {
       "requirements": "Qf=1867",
       "id": "q1868",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
     {
       "requirements": "Qf=1868",
       "id": "q1869",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
@@ -9449,28 +9449,28 @@
     {
       "requirements": "Qf=1869&PL>49",
       "id": "q1934",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
     {
       "requirements": "Qf=1934",
       "id": "q1935",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
     {
       "requirements": "Qf=1935",
       "id": "q1936",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
     {
       "requirements": "Qf=1936",
       "id": "q1937",
-      "achCatId": 40,
+      "achCatId": 77,
       "type": "quest",
       "categoryId": 4
     },
@@ -10660,14 +10660,14 @@
     {
       "requirements": "Qf=1962&PZ=1",
       "id": "q2192",
-      "achCatId": 52,
+      "achCatId": 40,
       "type": "quest",
       "categoryId": 4
     },
     {
       "requirements": "Qf=2192",
       "id": "q2193",
-      "achCatId": 52,
+      "achCatId": 40,
       "type": "quest",
       "categoryId": 4
     },
@@ -14827,31 +14827,6 @@
     },
     {
       "from": "a553",
-      "to": "q1289",
-      "type": "FINISHED"
-    },
-    {
-      "from": "a553",
-      "to": "q1290",
-      "type": "FINISHED"
-    },
-    {
-      "from": "a553",
-      "to": "q1291",
-      "type": "FINISHED"
-    },
-    {
-      "from": "a553",
-      "to": "q1292",
-      "type": "FINISHED"
-    },
-    {
-      "from": "a553",
-      "to": "q1293",
-      "type": "FINISHED"
-    },
-    {
-      "from": "a553",
       "to": "q1309",
       "type": "FINISHED"
     },
@@ -14873,11 +14848,6 @@
     {
       "from": "a553",
       "to": "q2014",
-      "type": "FINISHED"
-    },
-    {
-      "from": "a553",
-      "to": "q630",
       "type": "FINISHED"
     },
     {
@@ -15232,7 +15202,7 @@
     },
     {
       "from": "a7760",
-      "to": "q2489",
+      "to": "a7761",
       "type": "FINISHED"
     },
     {
@@ -16462,23 +16432,8 @@
     },
     {
       "from": "q1484",
-      "to": "q1487",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1484",
-      "to": "q1488",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1484",
       "to": "q1488",
       "type": "IN_PROGRESS"
-    },
-    {
-      "from": "q1484",
-      "to": "q1489",
-      "type": "FINISHED"
     },
     {
       "from": "q1484",
@@ -16488,17 +16443,7 @@
     {
       "from": "q1484",
       "to": "q1490",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1484",
-      "to": "q1490",
       "type": "IN_PROGRESS"
-    },
-    {
-      "from": "q1484",
-      "to": "q1491",
-      "type": "FINISHED"
     },
     {
       "from": "q1484",
@@ -16508,17 +16453,7 @@
     {
       "from": "q1484",
       "to": "q1533",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1484",
-      "to": "q1533",
       "type": "IN_PROGRESS"
-    },
-    {
-      "from": "q1484",
-      "to": "q1534",
-      "type": "FINISHED"
     },
     {
       "from": "q1484",
@@ -16528,22 +16463,7 @@
     {
       "from": "q1484",
       "to": "q1535",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1484",
-      "to": "q1535",
       "type": "IN_PROGRESS"
-    },
-    {
-      "from": "q1484",
-      "to": "q1536",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1484",
-      "to": "q1537",
-      "type": "FINISHED"
     },
     {
       "from": "q1484",
@@ -16553,22 +16473,7 @@
     {
       "from": "q1484",
       "to": "q1575",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1484",
-      "to": "q1575",
       "type": "IN_PROGRESS"
-    },
-    {
-      "from": "q1484",
-      "to": "q1577",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1484",
-      "to": "q1692",
-      "type": "FINISHED"
     },
     {
       "from": "q1484",
@@ -16578,11 +16483,6 @@
     {
       "from": "q1484",
       "to": "q1693",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1484",
-      "to": "q1699",
       "type": "FINISHED"
     },
     {
@@ -17598,11 +17498,6 @@
     {
       "from": "q1656",
       "to": "q1665",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1656",
-      "to": "q1665",
       "type": "IN_PROGRESS"
     },
     {
@@ -18321,26 +18216,6 @@
       "type": "FINISHED"
     },
     {
-      "from": "q1785",
-      "to": "q1787",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1785",
-      "to": "q1788",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1785",
-      "to": "q1789",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1785",
-      "to": "q1791",
-      "type": "FINISHED"
-    },
-    {
       "from": "q1786",
       "to": "q1787",
       "type": "IN_PROGRESS"
@@ -18453,17 +18328,7 @@
     {
       "from": "q1804",
       "to": "q1814",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1804",
-      "to": "q1814",
       "type": "IN_PROGRESS"
-    },
-    {
-      "from": "q1804",
-      "to": "q1816",
-      "type": "FINISHED"
     },
     {
       "from": "q1804",
@@ -19318,11 +19183,6 @@
     {
       "from": "q1959",
       "to": "q1978",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1959",
-      "to": "q1978",
       "type": "IN_PROGRESS"
     },
     {
@@ -19338,17 +19198,7 @@
     {
       "from": "q1960",
       "to": "q1984",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1960",
-      "to": "q1984",
       "type": "IN_PROGRESS"
-    },
-    {
-      "from": "q1960",
-      "to": "q1988",
-      "type": "FINISHED"
     },
     {
       "from": "q1960",
@@ -20083,7 +19933,7 @@
     {
       "from": "q2136",
       "to": "q2137",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q2137",
@@ -20093,7 +19943,7 @@
     {
       "from": "q2137",
       "to": "q2136",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q2138",
@@ -20222,6 +20072,11 @@
     },
     {
       "from": "q2149",
+      "to": "q2199",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2149",
       "to": "q2204",
       "type": "FINISHED"
     },
@@ -20237,11 +20092,6 @@
     },
     {
       "from": "q215",
-      "to": "q216",
-      "type": "IN_PROGRESS"
-    },
-    {
-      "from": "q215",
       "to": "q221",
       "type": "FINISHED"
     },
@@ -20253,11 +20103,6 @@
     {
       "from": "q2150",
       "to": "q2156",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q2150",
-      "to": "q2157",
       "type": "FINISHED"
     },
     {
@@ -20283,11 +20128,6 @@
     {
       "from": "q2154",
       "to": "q2155",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q2154",
-      "to": "q2199",
       "type": "FINISHED"
     },
     {
@@ -20329,11 +20169,6 @@
       "from": "q216",
       "to": "q215",
       "type": "NOT_FINISHED"
-    },
-    {
-      "from": "q216",
-      "to": "q215",
-      "type": "IN_PROGRESS"
     },
     {
       "from": "q216",
@@ -20753,7 +20588,7 @@
     {
       "from": "q2409",
       "to": "q2411",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q2409",
@@ -20833,11 +20668,6 @@
     {
       "from": "q2421",
       "to": "q2422",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q2422",
-      "to": "q2420",
       "type": "FINISHED"
     },
     {
@@ -21169,6 +20999,11 @@
       "from": "q2488",
       "to": "a7760",
       "type": "FINISHED"
+    },
+    {
+      "from": "q2488",
+      "to": "q2489",
+      "type": "IN_PROGRESS"
     },
     {
       "from": "q2489",
@@ -22168,12 +22003,12 @@
     {
       "from": "q536",
       "to": "q537",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q536",
       "to": "q538",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q537",
@@ -22183,12 +22018,12 @@
     {
       "from": "q537",
       "to": "q536",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q537",
       "to": "q538",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q538",
@@ -22198,12 +22033,12 @@
     {
       "from": "q538",
       "to": "q536",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q538",
       "to": "q537",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q539",
@@ -22213,12 +22048,12 @@
     {
       "from": "q539",
       "to": "q540",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q539",
       "to": "q541",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q540",
@@ -22228,12 +22063,12 @@
     {
       "from": "q540",
       "to": "q539",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q540",
       "to": "q541",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q541",
@@ -22243,12 +22078,12 @@
     {
       "from": "q541",
       "to": "q539",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q541",
       "to": "q540",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q542",
@@ -22518,17 +22353,17 @@
     {
       "from": "q585",
       "to": "q586",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q585",
       "to": "q587",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q585",
       "to": "q588",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q586",
@@ -22538,17 +22373,17 @@
     {
       "from": "q586",
       "to": "q585",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q586",
       "to": "q587",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q586",
       "to": "q588",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q587",
@@ -22558,17 +22393,17 @@
     {
       "from": "q587",
       "to": "q585",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q587",
       "to": "q586",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q587",
       "to": "q588",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q588",
@@ -22578,17 +22413,17 @@
     {
       "from": "q588",
       "to": "q585",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q588",
       "to": "q586",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q588",
       "to": "q587",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q589",
@@ -22903,7 +22738,7 @@
     {
       "from": "q631",
       "to": "q543",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q631",
@@ -22938,12 +22773,12 @@
     {
       "from": "q636",
       "to": "q637",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q636",
       "to": "q638",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q637",
@@ -22953,12 +22788,12 @@
     {
       "from": "q637",
       "to": "q636",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q637",
       "to": "q638",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q638",
@@ -22968,12 +22803,12 @@
     {
       "from": "q638",
       "to": "q636",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q638",
       "to": "q637",
-      "type": "IN_PROGRESS"
+      "type": "NOT_FINISHED"
     },
     {
       "from": "q64",

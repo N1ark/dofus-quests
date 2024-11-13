@@ -299,41 +299,29 @@
             const height = (canvasDiv.height = canvasDiv.offsetHeight)
             if (width !== canvsaW || height !== canvasH) {
                 offscreenCanvas = new OffscreenCanvas(width, height)
-                offCtx = offscreenCanvas.getContext('2d')
+                offCtx = offscreenCanvas.getContext('2d')!
             }
 
             ctx.clearRect(0, 0, width, height)
 
-            const { x1, y1, w, h } = cy.extent()
-            const zoom = cy.zoom()
-            groupColors.forEach(({ id, color }) => {
+            for (const { id, color } of groupColors) {
                 const nodes = cy.nodes(`[group = ${id}]:visible`)
                 if (!nodes) return
 
                 offCtx.beginPath()
-                nodes.forEach((node) => {
-                    const pos = node.position()
-                    const canvasPos = {
-                        x: ((pos.x - x1) / w) * width,
-                        y: ((pos.y - y1) / h) * height,
-                    }
-                    const size = Math.min(node.width() * 15 * zoom, 300)
+                for (const node of nodes) {
+                    const pos = node.renderedPosition()
+                    const size = Math.min(node.renderedWidth() * 15, 300)
                     if (
-                        canvasPos.x + size / 2 < 0 ||
-                        canvasPos.x - size / 2 > width ||
-                        canvasPos.y + size / 2 < 0 ||
-                        canvasPos.y - size / 2 > height
+                        pos.x + size / 2 < 0 ||
+                        pos.x - size / 2 > width ||
+                        pos.y + size / 2 < 0 ||
+                        pos.y - size / 2 > height
                     )
-                        return
-                    offCtx.moveTo(canvasPos.x + size / 2, canvasPos.y)
-                    offCtx.arc(
-                        canvasPos.x,
-                        canvasPos.y,
-                        size / 2,
-                        0,
-                        Math.PI * 2
-                    )
-                })
+                        continue
+                    offCtx.moveTo(pos.x + size / 2, pos.y)
+                    offCtx.arc(pos.x, pos.y, size / 2, 0, Math.PI * 2)
+                }
                 offCtx.strokeStyle = color
                 offCtx.fillStyle = color
                 offCtx.lineWidth = 10
@@ -347,7 +335,7 @@
                 ctx.drawImage(offscreenCanvas, 0, 0)
 
                 offCtx.clearRect(0, 0, canvsaW, canvasH)
-            })
+            }
         })
     })
 

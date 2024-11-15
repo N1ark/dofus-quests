@@ -34,3 +34,42 @@ export const base64ToInt = (digitsStr: string): number => {
     }
     return result
 }
+
+export const splitText = (
+    txt: string,
+    maxWidth: number,
+    ctx: CanvasRenderingContext2D
+): string[] => {
+    const lines: string[] = []
+    let size = ctx.measureText(txt)
+    if (size.width <= maxWidth) return [txt]
+
+    const words = txt.split(' ')
+    let line = words[0]
+    for (const word of words.slice(1)) {
+        const testLine = line + ' ' + word
+        size = ctx.measureText(testLine)
+        if (size.width > maxWidth) {
+            lines.push(line)
+            line = word
+        } else {
+            line = testLine
+        }
+    }
+    lines.push(line)
+    return lines
+}
+
+export const fillMultilineTextBot = (
+    lines: string[],
+    x: number,
+    y: number,
+    lineHeight: number,
+    ctx: CanvasRenderingContext2D
+) => {
+    y -= (lines.length - 1) * lineHeight
+    for (const line of lines) {
+        ctx.fillText(line, x, y)
+        y += lineHeight
+    }
+}

@@ -65,6 +65,12 @@ export const GROUP_COLORS = {
     77: '#FF7E16',
     // Forêt Maléfique:
     128: '#2C370C',
+
+    // CUSTOM:
+    // Dofus:
+    1001: '#C9FF30',
+    // Tour du monde:
+    1002: '#86D9ED',
 }
 
 // ${Object.entries(GROUP_COLORS)

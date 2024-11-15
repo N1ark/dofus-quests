@@ -10,7 +10,7 @@
         const g = parseInt(match[2], 16)
         const b = parseInt(match[3], 16)
         return {
-            id,
+            id: +id,
             stroke: `rgb(${r}, ${g}, ${b})`,
             fill: `rgba(${r}, ${g}, ${b}, 0.2)`,
         }
@@ -19,6 +19,8 @@
 
 <script lang="ts">
     import {
+        type BoundingBox12,
+        type BoundingBoxWH,
         type SingularElementArgument as CytoElement,
         type Position,
     } from 'cytoscape'
@@ -31,6 +33,7 @@
     import { get, language } from '../localisation.svelte'
     import { applyPositions } from '../positions'
     import { completed, showCompleted } from '../state.svelte'
+    import { fillMultilineTextBot, splitText } from '../util'
 
     let {
         data,
@@ -50,7 +53,6 @@
 
     let containerDiv: HTMLElement
     let canvasDiv: HTMLCanvasElement
-    let offscreenCanvas: OffscreenCanvas
 
     let cyInstance: cytoscape.Core | null = $state(null)
     let ownCompleted: Set<string> = $state(new Set())
@@ -279,75 +281,116 @@
         })
     })
 
-    onMount(() => {
-        if (!showGroups) return
-        const canvsaW = canvasDiv.offsetWidth
-        const canvasH = canvasDiv.offsetHeight
-        let offscreenCanvas = new OffscreenCanvas(canvsaW, canvasH)
+    $effect(() => {
+        if (!showGroups) {
+            cyInstance!.forceRender()
+            return
+        }
+
+        if (!cyInstance) return
+        let canvasW = canvasDiv.offsetWidth * window.devicePixelRatio
+        let canvasH = canvasDiv.offsetHeight * window.devicePixelRatio
+
         cyInstance?.on('render', () => {
             if (!canvasDiv) return
             const cy = cyInstance!
 
-            let offCtx = offscreenCanvas.getContext('2d')
             const ctx = canvasDiv.getContext('2d')
-            if (!ctx || !offCtx) return
-            const width = (canvasDiv.width = canvasDiv.offsetWidth)
-            const height = (canvasDiv.height = canvasDiv.offsetHeight)
-            if (width !== canvsaW || height !== canvasH) {
-                offscreenCanvas = new OffscreenCanvas(width, height)
-                offCtx = offscreenCanvas.getContext('2d')!
+
+            if (!showGroups) {
+                ctx?.clearRect(0, 0, canvasW, canvasH)
+                cyInstance?.off('render')
+                return
             }
+
+            if (!ctx) return
+            const width = (canvasDiv.width =
+                canvasDiv.offsetWidth * window.devicePixelRatio)
+            const height = (canvasDiv.height =
+                canvasDiv.offsetHeight * window.devicePixelRatio)
+            if (width === 0 || height === 0) return
 
             ctx.clearRect(0, 0, width, height)
-
+            ctx.transform(
+                window.devicePixelRatio,
+                0,
+                0,
+                window.devicePixelRatio,
+                0,
+                0
+            )
+            const pad = cy.zoom() * 50
+            const nodeByGroup: Record<string, BoundingBox12 & BoundingBoxWH> =
+                {}
+            const nodesAll = cy.nodes()
             for (const { id, fill, stroke } of groupColors) {
-                const nodes = cy.nodes(`[group = ${id}]:visible`)
-                if (!nodes) return
+                const nodes = nodesAll.filter(
+                    (n) => n.data('group') === id && n.visible()
+                )
+                if (!nodes || nodes.length === 0) continue
 
-                offCtx.beginPath()
-                for (const node of nodes) {
-                    const pos = node.renderedPosition()
-                    const size = Math.min(node.renderedWidth() * 15, 300)
-                    if (
-                        pos.x + size / 2 < 0 ||
-                        pos.x - size / 2 > width ||
-                        pos.y + size / 2 < 0 ||
-                        pos.y - size / 2 > height
-                    )
-                        continue
-                    offCtx.moveTo(pos.x + size / 2, pos.y)
-                    offCtx.arc(pos.x, pos.y, size / 2, 0, Math.PI * 2)
-                }
-                offCtx.strokeStyle = stroke
-                offCtx.fillStyle = stroke
-                offCtx.lineWidth = 3
-                offCtx.stroke()
-                var prev = offCtx.globalCompositeOperation
-                offCtx.globalCompositeOperation = 'destination-out'
-                offCtx.fill()
-                offCtx.globalCompositeOperation = prev
-                offCtx.fillStyle = fill
-                offCtx.fill()
+                // Rectangle mode
+                const bb = nodes.renderedBoundingBox()
+                nodeByGroup[id] = bb
+                const rectW = bb.w + pad * 2
+                ctx.beginPath()
+                ctx.roundRect(
+                    bb.x1 - pad,
+                    bb.y1 - pad,
+                    rectW,
+                    bb.h + pad * 2,
+                    Math.min(8, 50 * cy.zoom())
+                )
+                ctx.fillStyle = fill
+                ctx.fill()
+                ctx.strokeStyle = stroke
+                ctx.lineWidth = 1
+                ctx.stroke()
+            }
 
-                // copy offscreen canvas to visible canvas
-                ctx.drawImage(offscreenCanvas, 0, 0)
+            ctx.font = '12px Inter'
+            ctx.textAlign = 'left'
+            ctx.textBaseline = 'bottom'
 
-                offCtx.clearRect(0, 0, canvsaW, canvasH)
+            for (const { id } of groupColors) {
+                const bb = nodeByGroup[id]
+                if (!bb) continue
+
+                const rectW = bb.w + pad * 2
+
+                const name = get('aC' + id, 'name')
+                const lines = splitText(name, Math.max(100, bb.w), ctx)
+                const maxW = Math.max(
+                    ...lines.map((l) => ctx.measureText(l).width)
+                )
+                const textX = bb.x1 - pad + Math.min(0, (rectW - maxW) / 2)
+                const textY = bb.y1 - pad - 1
+
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.5)'
+                ctx.fillRect(
+                    textX - 5,
+                    textY - 15 * lines.length,
+                    maxW + 10,
+                    15 * lines.length
+                )
+
+                ctx.fillStyle = 'white'
+                fillMultilineTextBot(lines, textX, textY, 15, ctx)
             }
         })
+        cyInstance!.forceRender()
     })
 
     const exportPos = () => {
         const nodes = cyInstance?.nodes()
         if (!nodes) return
-        const positions = nodes.map((node) => {
-            const pos = node.position()
-            return {
-                id: node.id(),
-                x: pos.x,
-                y: pos.y,
-            }
-        })
+        const positions = nodes.reduce(
+            (pos, node) => {
+                pos[node.id()] = node.position()
+                return pos
+            },
+            {} as Record<string, Position>
+        )
         console.log(JSON.stringify(positions))
     }
 

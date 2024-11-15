@@ -3,6 +3,8 @@
     import Backpack from 'lucide-svelte/icons/backpack'
     import BadgeHelp from 'lucide-svelte/icons/badge-help'
     import Calendar from 'lucide-svelte/icons/calendar'
+    import Circle from 'lucide-svelte/icons/circle'
+    import CircleOff from 'lucide-svelte/icons/circle-off'
     import Compass from 'lucide-svelte/icons/compass'
     import Database from 'lucide-svelte/icons/database'
     import Eye from 'lucide-svelte/icons/eye'
@@ -30,6 +32,8 @@
     let ownLanguage = $state<Lang>('en')
     language.subscribe((value) => (ownLanguage = value))
 
+    let showGroups = $state(true)
+
     onMount(() => {
         const keyListener = (event: KeyboardEvent) => {
             if (event.key === 'Escape') {
@@ -45,7 +49,7 @@
 </script>
 
 <main>
-    <GraphView {data} refresh={refreshIdx} showGroups usePresetPositions />
+    <GraphView {data} refresh={refreshIdx} {showGroups} usePresetPositions />
     <Row classes="mainContainer">
         <Column classes="column">
             <Button
@@ -57,6 +61,11 @@
                 Icon={ownShowCompleted ? Eye : EyeClosed}
                 title="showcompleted"
                 onclick={() => showCompleted.update((value) => !value)}
+            />
+            <Button
+                Icon={showGroups ? Circle : CircleOff}
+                title="showgroups"
+                onclick={() => (showGroups = !showGroups)}
             />
             <Button
                 Icon={Backpack}

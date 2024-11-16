@@ -53,21 +53,6 @@
     <Row classes="mainContainer">
         <Column classes="column">
             <Button
-                Icon={Reload}
-                title="reorganise"
-                onclick={() => ++refreshIdx}
-            />
-            <Button
-                Icon={ownShowCompleted ? Eye : EyeClosed}
-                title="showcompleted"
-                onclick={() => showCompleted.update((value) => !value)}
-            />
-            <Button
-                Icon={showGroups ? Circle : CircleOff}
-                title="showgroups"
-                onclick={() => (showGroups = !showGroups)}
-            />
-            <Button
                 Icon={Backpack}
                 title="quests"
                 onclick={navigateOrLeave('quests')}
@@ -86,6 +71,22 @@
                 Icon={Archive}
                 title="backup"
                 onclick={navigateOrLeave('backup')}
+            />
+            <div style:margin-top="8px"></div>
+            <Button
+                Icon={Reload}
+                title="reorganise"
+                onclick={() => ++refreshIdx}
+            />
+            <Button
+                Icon={ownShowCompleted ? Eye : EyeClosed}
+                title="showcompleted"
+                onclick={() => showCompleted.update((value) => !value)}
+            />
+            <Button
+                Icon={showGroups ? Circle : CircleOff}
+                title="showgroups"
+                onclick={() => (showGroups = !showGroups)}
             />
             <div style:flex-grow="100" style:flex-shrink="0"></div>
             <Button

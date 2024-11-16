@@ -31,8 +31,13 @@
     import { GROUP_COLORS, style } from '../cytostyle'
     import { type Data, id, toCyto } from '../data'
     import { get, language } from '../localisation.svelte'
-    import { applyPositions } from '../positions'
-    import { completed, showCompleted } from '../state.svelte'
+    import { applyPositions, positions as basePositions } from '../positions'
+    import {
+        completed,
+        getPreferredPositions,
+        setPreferredPositions,
+        showCompleted,
+    } from '../state.svelte'
     import { fillMultilineTextBot, splitText } from '../util'
 
     let {
@@ -91,10 +96,20 @@
         }
         elements
             .layout({
-                name: 'elk',
-                // @ts-ignore-next-line
-                nodeDimensionsIncludeLabels: true,
-                elk: { algorithm: 'layered', 'elk.direction': 'DOWN' },
+                ...(usePresetPositions
+                    ? {
+                          name: 'preset',
+                          positions: basePositions,
+                      }
+                    : {
+                          name: 'elk',
+                          // @ts-ignore-next-line
+                          nodeDimensionsIncludeLabels: true,
+                          elk: {
+                              algorithm: 'layered',
+                              'elk.direction': 'DOWN',
+                          },
+                      }),
                 ...(animated
                     ? {
                           animate: true,
@@ -105,6 +120,10 @@
             })
             .run()
             .on('layoutstop', animated ? () => {} : center)
+
+        if (usePresetPositions) {
+            setPreferredPositions(basePositions)
+        }
     }
 
     const updateCompleted = () => {
@@ -145,7 +164,8 @@
     onMount(() => {
         const cytoData = toCyto(data)
         if (usePresetPositions) {
-            applyPositions(cytoData)
+            const pos = getPreferredPositions()
+            applyPositions(cytoData, pos)
         }
         cyInstance = cytoscape({
             container: containerDiv,
@@ -182,8 +202,20 @@
         cyInstance.on('drag', (e) => {
             const { x, y } = e.target.position()
             e.target.position({ x: Math.round(x), y: Math.round(y) })
+
+            savePreferredPosition()
         })
     })
+
+    const saveFn = () => {
+        const newPos = toPositions()
+        setPreferredPositions(newPos)
+    }
+    let timeout: number
+    const savePreferredPosition = () => {
+        clearTimeout(timeout)
+        timeout = setTimeout(saveFn, 500)
+    }
 
     language.subscribe((lang) => {
         if (!cyInstance) return
@@ -259,7 +291,7 @@
         })
     })
 
-    // Update graph when refresh changes (animating)
+    // Reset graph positions when refresh changes (animating)
     $effect(() => {
         if (!refresh) return
         if (!cyInstance) return
@@ -381,9 +413,9 @@
         cyInstance!.forceRender()
     })
 
-    const exportPos = () => {
+    const toPositions = (): Record<string, Position> => {
         const nodes = cyInstance?.nodes()
-        if (!nodes) return
+        if (!nodes) return {}
         const positions = nodes.reduce(
             (pos, node) => {
                 pos[node.id()] = node.position()
@@ -391,8 +423,9 @@
             },
             {} as Record<string, Position>
         )
-        console.log(JSON.stringify(positions))
+        return positions
     }
+    const exportPos = () => console.log(toPositions())
 
     const align = (dim: 'x' | 'y') => () => {
         if (!cyInstance) return

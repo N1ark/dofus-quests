@@ -1,7 +1,9 @@
+import type { Position } from 'cytoscape'
 import { compressToBase64, decompressFromBase64 } from 'lz-string'
 import { writable } from 'svelte/store'
 import BitSet from '../lib/bitset'
 import { data } from '../lib/data'
+import { positions } from './positions'
 
 export const showCompleted = writable(
     (localStorage.getItem('showCompleted') ?? 'true') === 'true'
@@ -9,6 +11,19 @@ export const showCompleted = writable(
 showCompleted.subscribe((value) => {
     localStorage.setItem('showCompleted', value.toString())
 })
+
+export const getPreferredPositions = (): Record<string, Position> => {
+    const stored = localStorage.getItem('preferredPositions')
+    if (!stored) return positions
+    const storedStr = decompressFromBase64(stored)
+    return JSON.parse(storedStr)
+}
+
+export const setPreferredPositions = (preferred: Record<string, Position>) => {
+    const preferredStr = JSON.stringify(preferred)
+    const b64 = compressToBase64(preferredStr)
+    localStorage.setItem('preferredPositions', b64)
+}
 
 type DataV2 = {
     completed: string[] // quest + achievement IDs with 'q' or 'a' prefix
@@ -43,8 +58,7 @@ const v1_to_v2 = (v1: StorageDataV1): DataV2 => {
         .map((day) => {
             const d = +day.split('/')[1]
             const m = +day.split('/')[0]
-            return data.almanax.find((a) => a.day === d && a.month === m)
-                ?.questId
+            return data.almanax.find((a) => a.day === d && a.month === m)?.id
         })
         .filter((q): q is string => q !== undefined)
     return {

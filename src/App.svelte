@@ -1,16 +1,12 @@
 <script lang="ts">
     import Archive from 'lucide-svelte/icons/archive'
     import Backpack from 'lucide-svelte/icons/backpack'
-    import BadgeHelp from 'lucide-svelte/icons/badge-help'
     import Calendar from 'lucide-svelte/icons/calendar'
     import Circle from 'lucide-svelte/icons/circle'
     import CircleOff from 'lucide-svelte/icons/circle-off'
-    import Compass from 'lucide-svelte/icons/compass'
-    import Database from 'lucide-svelte/icons/database'
     import Eye from 'lucide-svelte/icons/eye'
     import EyeClosed from 'lucide-svelte/icons/eye-closed'
     import Reload from 'lucide-svelte/icons/refresh-cw'
-    import Swords from 'lucide-svelte/icons/swords'
     import Trophy from 'lucide-svelte/icons/trophy'
 
     import AlmanaxModal from './lib/components/AlmanaxModal.svelte'
@@ -35,6 +31,10 @@
 
     const navigateOrLeave = (id: string) => () => swapWindowVisibility(id)
 </script>
+
+{#snippet imageIcon(name: string)}
+    <img src={`assets/${name}.png`} alt={name} />
+{/snippet}
 
 <main>
     <GraphView
@@ -93,22 +93,22 @@
                     language.update((l) => (l === 'en' ? 'fr' : 'en'))}
             />
             <Button
-                Icon={Compass}
+                Icon={{ src: '/assets/dofusmap.png' }}
                 title="Dofus Map"
                 href="https://dofus-map.com/"
             />
             <Button
-                Icon={BadgeHelp}
+                Icon={{ src: '/assets/dofusprlesnoobs.png' }}
                 title="Dofus pour les Noobs"
                 href="https://www.dofuspourlesnoobs.com/"
             />
             <Button
-                Icon={Swords}
+                Icon={{ src: '/assets/dofusbook.png' }}
                 title="dofusbook"
                 href="https://www.dofusbook.net/"
             />
             <Button
-                Icon={Database}
+                Icon={{ src: '/assets/dofusdb.png' }}
                 title="DofusDB"
                 href="https://dofusdb.fr/"
             />

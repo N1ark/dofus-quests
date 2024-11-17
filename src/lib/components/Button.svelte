@@ -1,4 +1,5 @@
 <script lang="ts">
+    import type { Component } from 'svelte'
     import Text from './Text.svelte'
 
     const {
@@ -8,7 +9,7 @@
         href,
         title,
     }: {
-        Icon: any
+        Icon: Component<any, any, any> | string | { src: string }
         classes?: string
         href?: string
         onclick?: () => any | Promise<any>
@@ -28,25 +29,29 @@
             }
         }
     }
+    console.log(Icon, typeof Icon)
 </script>
+
+{#snippet content()}
+    {#if typeof Icon === 'string'}
+        {Icon}
+    {:else if 'src' in Icon}
+        <img src={Icon.src} alt={title} />
+    {:else}
+        <Icon />
+    {/if}
+    {#if title}
+        <span><Text key={title} /></span>
+    {/if}
+{/snippet}
 
 {#if href}
     <a class={classes} {href} {title} target="_blank" rel="noopener noreferrer">
-        <Icon />
-        {#if title}
-            <span><Text key={title} /></span>
-        {/if}
+        {@render content()}
     </a>
 {:else}
     <button class={classes} onclick={clickHandler} {title} {disabled}>
-        {#if typeof Icon === 'string'}
-            {Icon}
-        {:else}
-            <Icon />
-        {/if}
-        {#if title}
-            <span><Text key={title} /></span>
-        {/if}
+        {@render content()}
     </button>
 {/if}
 
@@ -94,5 +99,11 @@
             max-width: 100px;
             padding: 2px;
         }
+    }
+
+    img {
+        width: 1em;
+        height: 1em;
+        object-fit: contain;
     }
 </style>

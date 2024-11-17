@@ -11,7 +11,6 @@
 
     let backup: string = $state('')
     let copied = $state(false)
-    let visible = $state(false)
     let data = $state(getRawCompleted())
 
     completed.subscribe(() => (data = getRawCompleted()))
@@ -25,7 +24,6 @@
     const importBackup = () => {
         try {
             setRawCompleted(backup)
-            window.location.hash = ''
         } catch (e) {
             console.error(e)
             alert('Invalid data')
@@ -78,7 +76,6 @@
         font-family: monospace;
     }
 
-    h2,
     h3 {
         margin-bottom: 0;
     }

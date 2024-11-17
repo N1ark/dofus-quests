@@ -25,52 +25,6 @@ export const setPreferredPositions = (preferred: Record<string, Position>) => {
     localStorage.setItem('preferredPositions', b64)
 }
 
-type WindowInfo = {
-    x: number
-    y: number
-    width: number
-    height: number
-    visible: boolean
-}
-
-export const getWindowInfo = (id: string): WindowInfo => {
-    const stored = localStorage.getItem('window.' + id)
-    if (!stored)
-        return { x: 64, y: 64, width: 300, height: 300, visible: false }
-    const storedStr = decompressFromBase64(stored)
-    return JSON.parse(storedStr)
-}
-
-export const setWindowInfo = (id: string, info: WindowInfo) => {
-    const infoStr = JSON.stringify(info)
-    const b64 = compressToBase64(infoStr)
-    localStorage.setItem('window.' + id, b64)
-}
-
-const windowListeners: [string, (visible: boolean) => void][] = []
-
-export const subscribeToWindowVisibility = (
-    id: string,
-    callback: (visible: boolean) => void
-) => {
-    windowListeners.push([id, callback])
-}
-
-export const setWindowVisibility = (id: string, visible: boolean) => {
-    const info = getWindowInfo(id)
-    if (info.visible === visible) return
-    info.visible = visible
-    setWindowInfo(id, info)
-    windowListeners
-        .filter(([windowId]) => windowId === id)
-        .forEach(([, callback]) => callback(visible))
-}
-
-export const swapWindowVisibility = (id: string) => {
-    const info = getWindowInfo(id)
-    setWindowVisibility(id, !info.visible)
-}
-
 type DataV2 = {
     completed: string[] // quest + achievement IDs with 'q' or 'a' prefix
 }

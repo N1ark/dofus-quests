@@ -8,14 +8,6 @@
     import Text from './Text.svelte'
     import Window from './Window.svelte'
 
-    let currentHeight = $state(0)
-    let largestHeight = $state(0)
-    $effect(() => {
-        if (currentHeight > largestHeight) {
-            largestHeight = currentHeight
-        }
-    })
-
     let visible = $state(false)
     let today = $state(new Date())
     let almanax = $derived(
@@ -43,13 +35,9 @@
     }
 
     onMount(() => {
-        const hashCheck = () => {
-            visible = window.location.hash.slice(1) === 'almanax'
-            if (!visible) searchText = ''
-        }
-        hashCheck()
-        window.addEventListener('hashchange', hashCheck)
-        return () => window.removeEventListener('hashchange', hashCheck)
+        const monthToday = new Date().getMonth()
+        const month = document.getElementById(`month-${monthToday}`)
+        if (month) month.scrollIntoView()
     })
 </script>
 
@@ -62,34 +50,14 @@
     )}
 >
     <div class="content">
-        <input type="text" placeholder="Search" bind:value={searchText} />
-
-        <div
-            class="header"
-            bind:clientHeight={currentHeight}
-            style="min-height: {largestHeight}px"
-        >
-            <div class="col">
-                <div class="date">{today.toLocaleDateString()}</div>
-                <h3>
-                    <Text key={almanax.id} name="name" />
-                </h3>
-                <div class="item">
-                    <img src={almanax.itemImg} alt={''} />
-                    <div>
-                        {almanax.itemQuantity} × <Text
-                            key={almanax.id}
-                            name="item"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <h3><Text key={almanax.id} name="effectName" /></h3>
-                <p><Text key={almanax.id} name="effectDesc" raw /></p>
-            </div>
-        </div>
         <div class="months">
+            <div class="search">
+                <input
+                    type="text"
+                    placeholder="Search"
+                    bind:value={searchText}
+                />
+            </div>
             {#each [...new Array(12)] as _, i}
                 {@const date = new Date(2024, i, 1)}
                 {@const nDays =
@@ -101,7 +69,9 @@
                     date.getDate() +
                     1}
                 <div class="month">
-                    <h3>{date.toLocaleString('default', { month: 'long' })}</h3>
+                    <h3 id={`month-${i}`}>
+                        {date.toLocaleString('default', { month: 'long' })}
+                    </h3>
                     <div class="days">
                         {#each [...new Array(nDays)] as _, j}
                             {@const day = new Date(
@@ -148,43 +118,64 @@
                 </div>
             {/each}
         </div>
+        <div class="info">
+            <div>
+                <div class="date">{today.toLocaleDateString()}</div>
+                <h3>
+                    <Text key={almanax.id} name="name" />
+                </h3>
+                <div class="item">
+                    <img src={almanax.itemImg} alt={''} />
+                    <div>
+                        {almanax.itemQuantity} × <Text
+                            key={almanax.id}
+                            name="item"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3><Text key={almanax.id} name="effectName" /></h3>
+                <p><Text key={almanax.id} name="effectDesc" raw /></p>
+            </div>
+        </div>
     </div>
 </Window>
 
 <style>
     .content {
-        width: 100%;
         height: 100%;
+        min-height: 100px;
         overflow-y: auto;
-        pointer-events: all;
+        display: flex;
+        flex-direction: column;
+        margin: -4px -12px 0 -12px;
     }
 
-    .header {
+    .search {
         display: flex;
-        flex-direction: row;
-        gap: 8px;
+        flex-direction: row-reverse;
         position: sticky;
-        top: 0;
+        top: 4px;
         z-index: 1;
-        background: linear-gradient(
-            to bottom,
-            rgba(24, 24, 24, 0) 0%,
-            rgba(24, 24, 24, 1) 7%,
-            rgba(24, 24, 24, 1) 7%,
-            rgba(24, 24, 24, 1) 93%,
-            rgba(24, 24, 24, 0) 100%
-        );
+        margin-right: 0px;
+        width: 100%;
     }
 
     .months {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-bottom: 32px;
+        padding-bottom: 16px;
         gap: 8px;
+        height: 100%;
+        overflow-y: auto;
+        flex-shrink: 10;
+        padding: 0 8px 58px 8px;
+        justify-content: space-evenly;
 
         & .month {
-            max-width: 250px;
+            max-width: 230px;
             & h3 {
                 margin-bottom: 4px;
             }
@@ -194,7 +185,7 @@
     .days {
         display: flex;
         flex-wrap: wrap;
-        gap: 4px;
+        gap: 3px;
 
         & .day {
             --color: #256fd1;
@@ -210,7 +201,7 @@
             vertical-align: middle;
             font-weight: bold;
             background-color: var(--color);
-            border: 3px solid var(--color);
+            border: 2px solid var(--color);
             color: white;
             opacity: 1;
             transition: opacity 0.1s;
@@ -236,16 +227,43 @@
         }
     }
 
-    .col {
-        width: 50%;
+    .info {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+        min-height: 100px;
+        border-top: 1px solid rgba(128, 128, 128, 0.3);
+        padding: 8px 12px 0 12px;
+        flex-shrink: 0;
+        height: fit-content;
+        transition: height 0.2s;
+
+        & > div {
+            overflow: hidden;
+            &:first-child {
+                width: 35%;
+            }
+            &:last-child {
+                width: 65%;
+            }
+        }
+
+        & h3 {
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        & p {
+            margin-top: 0;
+        }
     }
     .date {
         margin-bottom: 0;
         font-size: 0.7em;
         font-weight: bold;
-    }
-    .date + h3 {
-        margin-top: 0;
     }
     .item {
         display: grid;

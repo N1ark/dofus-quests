@@ -1,7 +1,13 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <script lang="ts" module>
-    const windowOrder: string[] = []
+    // Ordering, for z-index
+    const windowOrder: string[] =
+        localStorage.getItem('windowOrder')?.split(',') ?? []
+
     const listeners: [string, (order: number) => void][] = []
+    const save = () => {
+        localStorage.setItem('windowOrder', windowOrder.join(','))
+    }
     const subscribeWindowOrder = (
         id: string,
         callback: (order: number) => void
@@ -10,36 +16,91 @@
     }
     export const pushWindowToFront = (id: string) => {
         const index = windowOrder.indexOf(id)
-        if (index === -1) {
-            windowOrder.push(id)
-        } else {
+        if (index === -1) windowOrder.push(id)
+        else {
             windowOrder.splice(index, 1)
             windowOrder.push(id)
         }
         listeners.forEach(([id, callback]) => {
             callback(windowOrder.indexOf(id))
         })
+        save()
     }
     const popWindow = (id: string) => {
         const index = windowOrder.indexOf(id)
-        if (index !== -1) {
-            windowOrder.splice(index, 1)
-        }
+        if (index !== -1) windowOrder.splice(index, 1)
         listeners.forEach(([id, callback]) => {
             callback(windowOrder.indexOf(id))
         })
+        save()
+    }
+
+    // Storing window positions and visibility
+    type WindowInfo = {
+        x: number
+        y: number
+        width: number
+        height: number
+        visible: boolean
+    }
+
+    const getWindowInfo = (id: string): WindowInfo => {
+        const stored = localStorage.getItem('window.' + id)
+        try {
+            if (!stored)
+                return { x: 64, y: 64, width: 300, height: 300, visible: false }
+            const [x, y, width, height, visible] = stored.split(',').map(Number)
+            if (
+                isNaN(x) ||
+                isNaN(y) ||
+                isNaN(width) ||
+                isNaN(height) ||
+                isNaN(visible) ||
+                width < 100 ||
+                height < 100 ||
+                width > 2000 ||
+                height > 2000
+            )
+                throw new Error('Invalid window info')
+            return { x, y, width, height, visible: !!visible }
+        } catch (e) {
+            return { x: 64, y: 64, width: 300, height: 300, visible: false }
+        }
+    }
+
+    const setWindowInfo = (id: string, info: WindowInfo) => {
+        const str = `${info.x},${info.y},${info.width},${info.height},${info.visible ? 1 : 0}`
+        localStorage.setItem('window.' + id, str)
+    }
+
+    const windowListeners: [string, (visible: boolean) => void][] = []
+
+    export const subscribeToWindowVisibility = (
+        id: string,
+        callback: (visible: boolean) => void
+    ) => {
+        windowListeners.push([id, callback])
+    }
+
+    export const setWindowVisibility = (id: string, visible: boolean) => {
+        const info = getWindowInfo(id)
+        if (info.visible === visible) return
+        info.visible = visible
+        setWindowInfo(id, info)
+        windowListeners
+            .filter(([windowId]) => windowId === id)
+            .forEach(([, callback]) => callback(visible))
+    }
+
+    export const swapWindowVisibility = (id: string) => {
+        const info = getWindowInfo(id)
+        setWindowVisibility(id, !info.visible)
     }
 </script>
 
 <script lang="ts">
     import Close from 'lucide-svelte/icons/x'
     import type { Snippet } from 'svelte'
-    import {
-        getWindowInfo,
-        setWindowInfo,
-        setWindowVisibility,
-        subscribeToWindowVisibility,
-    } from '../state.svelte'
     import Text from './Text.svelte'
 
     type Translatable =
@@ -65,39 +126,43 @@
 
     let dimensions = $state(getWindowInfo(id))
     let fullyHidden = $state(!dimensions.visible)
-    let zIndex = $state(3)
+    let zIndex = $state(windowOrder.indexOf(id))
 
     $effect(() => {
         subscribeToWindowVisibility(id, (visible) => {
             if (visible === dimensions.visible) return
             if (visible) {
                 fullyHidden = false
-                setTimeout(() => (dimensions.visible = true), 20)
+                requestAnimationFrame(() => (dimensions.visible = true)) // allows for transition
             } else {
                 dimensions.visible = visible
             }
         })
         subscribeWindowOrder(id, (order) => {
-            zIndex = order + 3
+            zIndex = order
         })
     })
 
-    let saveInterval: number
-    let hiddenInterval: number
+    let saveTimeout: number
+    let hiddenTimeout: number
+    let firstTick = true
     $effect(() => {
-        const _unused = dimensions
-
+        const _unused = { ...dimensions }
+        if (firstTick) {
+            firstTick = false
+            return
+        }
         if (!dimensions.visible) {
             popWindow(id)
-            hiddenInterval = setTimeout(() => (fullyHidden = true), 200)
+            hiddenTimeout = setTimeout(() => (fullyHidden = true), 200)
         } else {
             pushWindowToFront(id)
-            clearInterval(hiddenInterval)
+            clearTimeout(hiddenTimeout)
             fullyHidden = false
         }
 
-        saveInterval = setTimeout(() => setWindowInfo(id, dimensions), 100)
-        return () => clearInterval(saveInterval)
+        saveTimeout = setTimeout(() => setWindowInfo(id, dimensions), 100)
+        return () => clearTimeout(saveTimeout)
     })
 
     const onMove = (e: MouseEvent) => {
@@ -206,7 +271,7 @@
     class:visible={dimensions.visible}
     class:fully-hidden={fullyHidden}
     style="top: {dimensions.y}px; left: {dimensions.x}px; width: {dimensions.width}px; height: {dimensions.height}px"
-    style:z-index={zIndex}
+    style:z-index={zIndex + 3}
     onmousedown={() => pushWindowToFront(id)}
 >
     <div class="topbar" onmousedown={onMove}>
@@ -244,7 +309,7 @@
         class="resizer bottomright"
         onmousedown={onResize('bottomright')}
     ></div>
-    <div class="content">
+    <div class="content" {id}>
         {@render children()}
     </div>
 </div>
@@ -289,7 +354,7 @@
         box-sizing: border-box;
         height: 100%;
         overflow: auto;
-        scrollbar-gutter: stable;
+        /* scrollbar-gutter: stable; */
         pointer-events: auto;
         padding: 4px 12px 12px 12px;
     }
@@ -341,7 +406,7 @@
 
         & .close {
             box-sizing: border-box;
-            height: 20px;
+            height: 19px;
             width: 20px;
             padding: 2px 0px 0 0;
             margin: 0 0 0 8px;

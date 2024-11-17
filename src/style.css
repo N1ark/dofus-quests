@@ -56,6 +56,7 @@ button {
     text-decoration: underline;
     color: #ccc;
     transition: color 0.1s;
+    box-shadow: none;
     &:hover {
         background: none;
         color: #fff;

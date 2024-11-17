@@ -1,4 +1,19 @@
+<script lang="ts" module>
+    type Category = 'quest' | 'achievement'
+    type Callback = (mode: Category, id: number) => void
+    const listeners: Callback[] = []
+
+    const subscribeToSelect = (callback: Callback) => {
+        listeners.push(callback)
+    }
+    export const selectCategory = (mode: Category, id: number) => {
+        listeners.forEach((callback) => callback(mode, id))
+    }
+</script>
+
 <script lang="ts">
+    import { onMount } from 'svelte'
+
     import { data } from '../data'
     import { get } from '../localisation.svelte'
     import { completed, showCompleted } from '../state.svelte'
@@ -6,9 +21,12 @@
     import Progress, { progressText } from './Progress.svelte'
     import { selectNode } from './SelectedQuestView.svelte'
     import Text from './Text.svelte'
-    import Window from './Window.svelte'
+    import Window, {
+        pushWindowToFront,
+        setWindowVisibility,
+    } from './Window.svelte'
 
-    const { mode }: { mode: 'quest' | 'achievement' } = $props()
+    const { mode }: { mode: Category } = $props()
 
     const categories = $derived(
         (mode === 'quest'
@@ -37,6 +55,26 @@
     })
     showCompleted.subscribe((value) => {
         ownShowCompleted = value
+    })
+    onMount(() => {
+        subscribeToSelect((targetMode, id) => {
+            if (targetMode === mode) {
+                setWindowVisibility(mode + 's', true)
+                pushWindowToFront(mode + 's')
+
+                requestAnimationFrame(() => {
+                    const elemid = `${mode}category-${id}`
+                    const element = document.getElementById(elemid)
+                    const container = document.getElementById(mode + 's')
+                    if (element && container) {
+                        container.scrollTo({
+                            top: element.offsetTop - container.offsetTop,
+                            behavior: 'smooth',
+                        })
+                    }
+                })
+            }
+        })
     })
 </script>
 

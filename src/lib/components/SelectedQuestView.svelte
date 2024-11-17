@@ -5,10 +5,10 @@
     ) => {
         nodeSelectListeners.push(callback)
     }
-    export const selectNode = (nodeId: string | null) => {
+    export const selectNode = (nodeId: string | null, push: boolean = true) => {
         localStorage.setItem('selected-quest', nodeId ?? '')
         nodeSelectListeners.forEach((callback) => callback(nodeId))
-        if (nodeId) pushWindowToFront('selected-quest')
+        if (nodeId && push) pushWindowToFront('selected-quest')
     }
 </script>
 
@@ -17,13 +17,13 @@
 
     import type { Data } from '../data'
     import { data, id, onlyPredecessors } from '../data'
-    import {
-        setWindowVisibility,
-        subscribeToWindowVisibility,
-    } from '../state.svelte'
     import GraphView from './GraphView.svelte'
     import QuestInfo from './QuestInfo.svelte'
-    import Window, { pushWindowToFront } from './Window.svelte'
+    import Window, {
+        pushWindowToFront,
+        setWindowVisibility,
+        subscribeToWindowVisibility,
+    } from './Window.svelte'
 
     let node: Data['nodes'][number] | null = $state(null)
     let currData: Pick<Data, 'nodes' | 'edges'> = $state({
@@ -71,7 +71,7 @@
 
     onMount(() => {
         const stored = localStorage.getItem('selected-quest') ?? null
-        selectNode(stored)
+        selectNode(stored, false)
     })
 </script>
 

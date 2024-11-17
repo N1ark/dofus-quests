@@ -3,6 +3,7 @@
     import type { Achievement, Quest } from '../data'
     import { data } from '../data'
     import { language, type Lang } from '../localisation.svelte'
+    import { selectCategory } from './Categories.svelte'
     import { selectNode } from './SelectedQuestView.svelte'
     import Text from './Text.svelte'
 
@@ -36,11 +37,6 @@
             ? data.achievementCategories
             : data.questCategories
         ).find((c) => c.id === node.categoryId)!
-    )
-    const categoryUrl = $derived(
-        (node.type === 'achievement' ? '#achievements' : '#quests') +
-            '-' +
-            category?.id
     )
     const url = $derived(
         (node.type === 'quest'
@@ -144,9 +140,12 @@
 
 {#if category}
     <div class="category">
-        <a href={categoryUrl}>
+        <button
+            class="button-link"
+            onclick={() => selectCategory(node.type, category.id)}
+        >
             <Text key={node.id[0] + 'C' + category.id} name="name" />
-        </a>
+        </button>
     </div>
 {/if}
 <h2>

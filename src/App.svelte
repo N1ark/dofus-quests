@@ -21,9 +21,10 @@
     import GraphView from './lib/components/GraphView.svelte'
     import Row from './lib/components/Row.svelte'
     import SelectedQuestView from './lib/components/SelectedQuestView.svelte'
+    import { swapWindowVisibility } from './lib/components/Window.svelte'
     import { data } from './lib/data'
     import { language, type Lang } from './lib/localisation.svelte'
-    import { showCompleted, swapWindowVisibility } from './lib/state.svelte'
+    import { showCompleted } from './lib/state.svelte'
 
     let refreshIdx = $state(0)
     let showGroups = $state(true)
@@ -129,19 +130,15 @@
         overflow: hidden;
     }
 
-    :global(.column) {
-        z-index: 1;
-    }
-
     :global(.mainContainer) {
         position: absolute;
         inset: 16px;
-        z-index: 1;
+        z-index: 50;
         pointer-events: none;
     }
 
     .windows {
-        position: absolute;
+        position: fixed;
         inset: 0;
         overflow: hidden;
         pointer-events: none;

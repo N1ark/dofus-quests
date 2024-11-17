@@ -38,7 +38,7 @@ export const GROUP_COLORS = {
     // Krosmoz:
     44: '#B727CE',
     // Cania:
-    48: '#CBB937',
+    48: '#73be28',
     // Almanax:
     26: '#FF6F5B',
     // Île de Moon:

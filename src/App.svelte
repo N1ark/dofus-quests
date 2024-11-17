@@ -13,7 +13,6 @@
     import Swords from 'lucide-svelte/icons/swords'
     import Trophy from 'lucide-svelte/icons/trophy'
 
-    import { onMount } from 'svelte'
     import AlmanaxModal from './lib/components/AlmanaxModal.svelte'
     import BackupPopup from './lib/components/BackupPopup.svelte'
     import Button from './lib/components/Button.svelte'
@@ -27,28 +26,23 @@
     import { showCompleted, swapWindowVisibility } from './lib/state.svelte'
 
     let refreshIdx = $state(0)
+    let showGroups = $state(true)
     let ownShowCompleted = $state(false)
     showCompleted.subscribe((value) => (ownShowCompleted = value))
     let ownLanguage = $state<Lang>('en')
     language.subscribe((value) => (ownLanguage = value))
 
-    let showGroups = $state(true)
-
-    onMount(() => {
-        const keyListener = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') {
-                window.location.hash = ''
-            }
-        }
-        window.addEventListener('keydown', keyListener)
-        return () => window.removeEventListener('keydown', keyListener)
-    })
-
     const navigateOrLeave = (id: string) => () => swapWindowVisibility(id)
 </script>
 
 <main>
-    <GraphView {data} refresh={refreshIdx} {showGroups} usePresetPositions />
+    <GraphView
+        {data}
+        refresh={refreshIdx}
+        {showGroups}
+        usePresetPositions
+        debugAllowed
+    />
     <Row classes="mainContainer">
         <Column classes="column">
             <Button

@@ -4,6 +4,7 @@
     import { completed, showCompleted } from '../state.svelte'
     import { normalize } from '../util'
     import Progress, { progressText } from './Progress.svelte'
+    import { selectNode } from './SelectedQuestView.svelte'
     import Text from './Text.svelte'
     import Window from './Window.svelte'
 
@@ -41,7 +42,7 @@
 
 <Window
     id={mode + 's'}
-    name={title}
+    name={{ key: title }}
     nameSecondary={progressText(
         elements.filter(({ id }) => ownCompleted.has(id)).length,
         elements.length
@@ -55,8 +56,10 @@
         {@const completed = elems.filter(({ id }) => ownCompleted.has(id))}
         {@const displayed = elems
             .filter((node) => ownShowCompleted || !ownCompleted.has(node.id))
-            .filter((node) =>
-                normalize(get(node.id, 'name')).includes(searchNormalized)
+            .filter(
+                (node) =>
+                    node.id === search ||
+                    normalize(get(node.id, 'name')).includes(searchNormalized)
             )}
         {#if displayed.length !== 0}
             <h3 id={`${mode}category-${category.id}`}>
@@ -66,9 +69,12 @@
             <ul class={mode}>
                 {#each displayed as elem}
                     <li class:completed={ownCompleted.has(elem.id)}>
-                        <a href={`#${elem.id}`}>
+                        <button
+                            class="button-link"
+                            onclick={() => selectNode(elem.id)}
+                        >
                             <Text key={elem.id} name="name" />
-                        </a>
+                        </button>
                     </li>
                 {/each}
             </ul>
@@ -88,6 +94,9 @@
     h3 {
         margin-bottom: 4px;
         scroll-margin-top: 1em;
+        &:first-of-type {
+            margin-top: 0;
+        }
     }
     ul {
         margin-top: 0;

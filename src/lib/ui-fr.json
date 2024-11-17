@@ -15,5 +15,7 @@
     "import-info": "Colle ici les données que tu as exportées pour les importer.",
     "copy": "Copier dans le presse-papier",
     "copied": "Copié !",
-    "showgroups": "Afficher les catégories"
+    "showgroups": "Afficher les catégories",
+    "selected-quest": "Quête sélectionnée",
+    "selected-achievement": "Succès sélectionné"
 }

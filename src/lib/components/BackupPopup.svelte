@@ -33,7 +33,7 @@
     }
 </script>
 
-<Window id="backup" name="backup">
+<Window id="backup" name={{ key: 'backup' }}>
     <Row>
         <Column classes="modal-col">
             <h3><Text key="export" /></h3>

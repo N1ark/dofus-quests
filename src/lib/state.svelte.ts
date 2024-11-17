@@ -47,14 +47,13 @@ export const setWindowInfo = (id: string, info: WindowInfo) => {
     localStorage.setItem('window.' + id, b64)
 }
 
-const windowListeners = new Map<string, ((visible: boolean) => void)[]>()
+const windowListeners: [string, (visible: boolean) => void][] = []
 
 export const subscribeToWindowVisibility = (
     id: string,
     callback: (visible: boolean) => void
 ) => {
-    if (!windowListeners.has(id)) windowListeners.set(id, [])
-    windowListeners.get(id)!.push(callback)
+    windowListeners.push([id, callback])
 }
 
 export const setWindowVisibility = (id: string, visible: boolean) => {
@@ -62,7 +61,9 @@ export const setWindowVisibility = (id: string, visible: boolean) => {
     if (info.visible === visible) return
     info.visible = visible
     setWindowInfo(id, info)
-    windowListeners.get(id)?.forEach((cb) => cb(visible))
+    windowListeners
+        .filter(([windowId]) => windowId === id)
+        .forEach(([, callback]) => callback(visible))
 }
 
 export const swapWindowVisibility = (id: string) => {

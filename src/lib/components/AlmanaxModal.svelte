@@ -55,7 +55,7 @@
 
 <Window
     id="almanax"
-    name="almanax"
+    name={{ key: 'almanax' }}
     nameSecondary={progressText(
         data.almanax.filter(({ id }) => ownAlmanax.has(id)).length,
         366

@@ -3,6 +3,7 @@
     import type { Achievement, Quest } from '../data'
     import { data } from '../data'
     import { language, type Lang } from '../localisation.svelte'
+    import { selectNode } from './SelectedQuestView.svelte'
     import Text from './Text.svelte'
 
     type Translated = Record<string, string>
@@ -79,15 +80,25 @@
                 {@render criterionAtom(text)}
             {/each}
         {:else if criterion.type === 'quests'}
-            <a href={`#q${criterion.id}`}>{criterion.name[ownLang]}</a>
+            <button
+                class="button-link"
+                onclick={() => selectNode('q' + criterion.id)}
+            >
+                {criterion.name[ownLang]}
+            </button>
         {:else if criterion.type === 'achievements'}
-            <a href={`#a${criterion.id}`}>{criterion.name[ownLang]}</a>
+            <button
+                class="button-link"
+                onclick={() => selectNode('a' + criterion.id)}
+            >
+                {criterion.name[ownLang]}
+            </button>
         {:else if criterion.type === 'breeds'}
-            {criterion.shortName[ownLang]}
+            <it>{criterion.shortName[ownLang]}</it>
         {:else if criterion.type === 'positions'}
-            [{criterion.posX}, {criterion.posY}]
+            <it>[{criterion.posX}, {criterion.posY}]</it>
         {:else if criterion.type === 'npcs' || criterion.type === 'alignments' || criterion.type === 'alignment-ranks' || criterion.type === 'monsters' || criterion.type === 'jobs'}
-            {criterion.name[ownLang]}
+            <it>{criterion.name[ownLang]}</it>
         {:else if criterion.type === 'items'}
             <a
                 href={`https://dofusdb.fr/fr/database/object/${criterion.id}`}
@@ -131,40 +142,38 @@
     {/if}
 {/snippet}
 
-<div class="content">
-    {#if category}
-        <div class="category">
-            <a href={categoryUrl}>
-                <Text key={node.id[0] + 'C' + category.id} name="name" />
-            </a>
-        </div>
-    {/if}
-    <h2>
-        <Text key={node.id} name="name" />
-        <a
-            class="link"
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="DofusDB"
-        >
-            <Link />
+{#if category}
+    <div class="category">
+        <a href={categoryUrl}>
+            <Text key={node.id[0] + 'C' + category.id} name="name" />
         </a>
-    </h2>
-    {#if node.type === 'achievement'}
-        <p>
-            <Text key={node.id} name="description" />
-        </p>
-    {/if}
-    <div class="requirements">
-        {#if requirements}
-            {@render criterionBlock(requirements)}
-        {:else}
-            <span class="loading">
-                <Text key="loading" />
-            </span>
-        {/if}
     </div>
+{/if}
+<h2>
+    <Text key={node.id} name="name" />
+    <a
+        class="link"
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="DofusDB"
+    >
+        <Link />
+    </a>
+</h2>
+{#if node.type === 'achievement'}
+    <p>
+        <Text key={node.id} name="description" />
+    </p>
+{/if}
+<div class="requirements">
+    {#if requirements}
+        {@render criterionBlock(requirements)}
+    {:else}
+        <span class="loading">
+            <Text key="loading" />
+        </span>
+    {/if}
 </div>
 
 <style>
@@ -179,6 +188,10 @@
     .loading {
         font-style: italic;
         opacity: 0.5;
+    }
+
+    .requirements {
+        pointer-events: none;
     }
 
     p {
@@ -224,13 +237,5 @@
     }
     .category + h2 {
         margin-top: 0;
-    }
-
-    .content {
-        height: fit-content;
-        max-height: 100%;
-        overflow-y: auto !important;
-        margin: -16px;
-        padding: 16px;
     }
 </style>

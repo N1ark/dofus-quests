@@ -1,12 +1,29 @@
+<script lang="ts" module>
+    const nodeSelectListeners: ((nodeId: string | null) => void)[] = []
+    const subscribeToNodeSelect = (
+        callback: (nodeId: string | null) => void
+    ) => {
+        nodeSelectListeners.push(callback)
+    }
+    export const selectNode = (nodeId: string | null) => {
+        localStorage.setItem('selected-quest', nodeId ?? '')
+        nodeSelectListeners.forEach((callback) => callback(nodeId))
+        if (nodeId) pushWindowToFront('selected-quest')
+    }
+</script>
+
 <script lang="ts">
     import { onMount } from 'svelte'
+
     import type { Data } from '../data'
     import { data, id, onlyPredecessors } from '../data'
+    import {
+        setWindowVisibility,
+        subscribeToWindowVisibility,
+    } from '../state.svelte'
     import GraphView from './GraphView.svelte'
     import QuestInfo from './QuestInfo.svelte'
-    import Window from './Window.svelte'
-
-    let { classes }: { classes?: string } = $props()
+    import Window, { pushWindowToFront } from './Window.svelte'
 
     let node: Data['nodes'][number] | null = $state(null)
     let currData: Pick<Data, 'nodes' | 'edges'> = $state({
@@ -16,49 +33,60 @@
     let childElements: string[] = $state([])
     let targetNode = $state<string>()
 
-    onMount(() => {
-        const hashCheck = () => {
-            const hash = window.location.hash.slice(1)
-            const tempNode = !hash
-                ? null
-                : (data.nodes.find((node) => node.id === hash) ?? null)
-            if (tempNode) {
-                node = tempNode
-                currData = onlyPredecessors(data, node.id)
-                const rawExtraEdges = data.edges.filter(
-                    ({ from }) => from === tempNode.id
-                )
-                const extraNodes = data.nodes
-                    .filter(({ id }) =>
-                        rawExtraEdges.some(({ to }) => to === id)
-                    )
-                    .filter(
-                        ({ id }) => !currData.nodes.some((n) => n.id === id)
-                    ) // remove predecessors
-                const extraEdges = rawExtraEdges.filter(({ to }) =>
-                    extraNodes.some(({ id }) => id === to)
-                )
-                currData = {
-                    nodes: [...currData.nodes, ...extraNodes],
-                    edges: [...currData.edges, ...extraEdges],
-                }
-                childElements = [...extraNodes, ...extraEdges].map(id)
-                targetNode = tempNode.id
-            } else {
-                if (node === null) return
+    $effect(() => {
+        subscribeToWindowVisibility('selected-quest', (visible) => {
+            if (!visible) {
+                selectNode(null)
+            }
+        })
+        subscribeToNodeSelect((nodeId) => {
+            const tempNode =
+                nodeId && data.nodes.find(({ id }) => id === nodeId)
+            if (!tempNode) {
                 node = null
                 currData = { nodes: [], edges: [] }
+                setWindowVisibility('selected-quest', false)
+                return
             }
-        }
+            setWindowVisibility('selected-quest', true)
+            node = tempNode
+            currData = onlyPredecessors(data, node.id)
+            const rawExtraEdges = data.edges.filter(
+                ({ from }) => from === tempNode.id
+            )
+            const extraNodes = data.nodes
+                .filter(({ id }) => rawExtraEdges.some(({ to }) => to === id))
+                .filter(({ id }) => !currData.nodes.some((n) => n.id === id)) // remove predecessors
+            const extraEdges = rawExtraEdges.filter(({ to }) =>
+                extraNodes.some(({ id }) => id === to)
+            )
+            currData = {
+                nodes: [...currData.nodes, ...extraNodes],
+                edges: [...currData.edges, ...extraEdges],
+            }
+            childElements = [...extraNodes, ...extraEdges].map(id)
+            targetNode = tempNode.id
+        })
+    })
 
-        hashCheck()
-
-        window.addEventListener('hashchange', hashCheck)
-        return () => window.removeEventListener('hashchange', hashCheck)
+    onMount(() => {
+        const stored = localStorage.getItem('selected-quest') ?? null
+        selectNode(stored)
     })
 </script>
 
-<Window id="selected-quest">
+<Window
+    id="selected-quest"
+    name={{
+        key: 'selected-' + (node?.type ?? 'quest'),
+    }}
+    nameSecondary={node
+        ? {
+              key: node.id,
+              name: 'name',
+          }
+        : undefined}
+>
     <div class="back">
         <GraphView
             data={currData}
@@ -67,15 +95,23 @@
         />
     </div>
     {#if node !== null}
-        <QuestInfo {node} />
+        <div class="front">
+            <QuestInfo {node} />
+        </div>
     {/if}
 </Window>
 
 <style>
     .back {
-        position: absolute;
+        position: fixed;
         inset: 0;
-        z-index: -1;
+        top: 20px;
+        overflow: hidden;
+    }
+    .front {
+        position: relative;
+        z-index: 1;
+        pointer-events: none;
     }
 
     :global(.selectedQuestView) {

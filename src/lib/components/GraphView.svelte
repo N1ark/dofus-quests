@@ -39,6 +39,7 @@
         showCompleted,
     } from '../state.svelte'
     import { fillMultilineTextBot, splitText } from '../util'
+    import { selectNode } from './SelectedQuestView.svelte'
 
     let {
         data,
@@ -47,6 +48,7 @@
         refresh,
         showGroups,
         usePresetPositions,
+        debugAllowed,
     }: {
         data: Pick<Data, 'nodes' | 'edges'>
         faded?: string[]
@@ -54,6 +56,7 @@
         refresh?: any
         showGroups?: boolean
         usePresetPositions?: boolean
+        debugAllowed?: boolean
     } = $props()
 
     let containerDiv: HTMLElement
@@ -178,12 +181,7 @@
         })
 
         cyInstance.on('tap', 'node', (event) => {
-            window.location.hash = event.target.id()
-        })
-        cyInstance.on('tap', (event) => {
-            if (event.target === cyInstance) {
-                window.location.hash = ''
-            }
+            selectNode(event.target.id())
         })
         cyInstance.on('resize', center)
         cyInstance.on('cxttap', 'node', (event) => {
@@ -283,6 +281,7 @@
             )
         }
         untrack(() => {
+            cyInstance?.elements().unselect()
             updateCompleted()
             updateVisible()
             updateFaded()
@@ -449,13 +448,15 @@
 <div bind:this={containerDiv} class="container" onresize={center}>
     <canvas class="bg" bind:this={canvasDiv}></canvas>
 </div>
-<div class:visible={import.meta.env.DEV} class="tools">
-    <button onclick={align('x')}><AlignX /></button>
-    <button onclick={align('y')}><AlignY /></button>
-    <button onclick={exportPos}>
-        <Export />
-    </button>
-</div>
+{#if debugAllowed}
+    <div class:visible={import.meta.env.DEV} class="tools">
+        <button onclick={align('x')}><AlignX /></button>
+        <button onclick={align('y')}><AlignY /></button>
+        <button onclick={exportPos}>
+            <Export />
+        </button>
+    </div>
+{/if}
 
 <style>
     .container {

@@ -15,5 +15,7 @@
     "import-info": "Paste your backed up data to restore it.",
     "copy": "Copy to clipboard",
     "copied": "Copied!",
-    "showgroups": "Show categories"
+    "showgroups": "Show categories",
+    "selected-quest": "Selected quest",
+    "selected-achievement": "Selected achievement"
 }

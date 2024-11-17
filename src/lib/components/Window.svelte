@@ -8,7 +8,7 @@
     ) => {
         listeners.push([id, callback])
     }
-    const pushWindowToFront = (id: string) => {
+    export const pushWindowToFront = (id: string) => {
         const index = windowOrder.indexOf(id)
         if (index === -1) {
             windowOrder.push(id)
@@ -32,13 +32,23 @@
 </script>
 
 <script lang="ts">
+    import Close from 'lucide-svelte/icons/x'
     import type { Snippet } from 'svelte'
     import {
         getWindowInfo,
         setWindowInfo,
+        setWindowVisibility,
         subscribeToWindowVisibility,
     } from '../state.svelte'
     import Text from './Text.svelte'
+
+    type Translatable =
+        | string
+        | {
+              key: string
+              name?: string
+          }
+
     const {
         id,
         name,
@@ -47,8 +57,8 @@
         classes,
     }: {
         id: string
-        name?: string
-        nameSecondary?: string
+        name?: Translatable
+        nameSecondary?: Translatable
         children: Snippet
         classes?: string
     } = $props()
@@ -175,7 +185,7 @@
                 e.key === 'Escape' &&
                 windowOrder[windowOrder.length - 1] === id
             ) {
-                dimensions.visible = false
+                setWindowVisibility(id, false)
                 e.preventDefault()
                 e.stopImmediatePropagation()
             }
@@ -183,6 +193,12 @@
         window.addEventListener('keydown', handler)
         return () => window.removeEventListener('keydown', handler)
     })
+
+    const onClose = (e: MouseEvent) => {
+        e.stopPropagation()
+        e.preventDefault()
+        setWindowVisibility(id, false)
+    }
 </script>
 
 <div
@@ -195,13 +211,30 @@
 >
     <div class="topbar" onmousedown={onMove}>
         {#if name}
-            <span>
-                <Text key={name} />
+            <span class="primary">
+                {#if typeof name === 'string'}
+                    {name}
+                {:else}
+                    <Text {...name} />
+                {/if}
             </span>
         {/if}
         {#if nameSecondary}
-            <span class="secondary">{nameSecondary}</span>
+            <span class="secondary">
+                {#if typeof nameSecondary === 'string'}
+                    {nameSecondary}
+                {:else}
+                    <Text {...nameSecondary} />
+                {/if}
+            </span>
         {/if}
+        <button
+            class="close"
+            onmousedown={(e) => e.stopImmediatePropagation()}
+            onmouseup={onClose}
+        >
+            <Close />
+        </button>
     </div>
     <div class="resizer left" onmousedown={onResize('left')}></div>
     <div class="resizer right" onmousedown={onResize('right')}></div>
@@ -252,6 +285,7 @@
     }
 
     .content {
+        position: relative;
         box-sizing: border-box;
         height: 100%;
         overflow: auto;
@@ -274,7 +308,7 @@
         border-top-right-radius: 4px;
         border-bottom: 1px solid rgba(128, 128, 128, 0.3);
         user-select: none;
-        padding: 4px;
+        padding: 4px 0 4px 4px;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
@@ -285,11 +319,43 @@
             font-weight: 700;
             color: #ddd;
             font-variant: frac;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &.primary {
+                flex-grow: 10;
+                flex-shrink: 0;
+                margin-right: 6px;
+            }
 
             &.secondary {
                 margin-left: auto;
                 opacity: 0.5;
                 font-weight: 500;
+                flex-shrink: 10;
+                flex-grow: 1;
+                text-align: right;
+            }
+        }
+
+        & .close {
+            box-sizing: border-box;
+            height: 20px;
+            width: 20px;
+            padding: 2px 0px 0 0;
+            margin: 0 0 0 8px;
+            border-radius: 0;
+            border: none;
+            border-left: 1px solid rgba(128, 128, 128, 0.3);
+            background: none;
+            color: #fff;
+            line-height: 1;
+            opacity: 1;
+            transition: color 0.1s;
+            cursor: pointer;
+            &:hover {
+                color: rgba(255, 255, 255, 0.5);
             }
         }
     }

@@ -24,7 +24,7 @@
     import SelectedQuestView from './lib/components/SelectedQuestView.svelte'
     import { data } from './lib/data'
     import { language, type Lang } from './lib/localisation.svelte'
-    import { showCompleted } from './lib/state.svelte'
+    import { showCompleted, swapWindowVisibility } from './lib/state.svelte'
 
     let refreshIdx = $state(0)
     let ownShowCompleted = $state(false)
@@ -44,8 +44,7 @@
         return () => window.removeEventListener('keydown', keyListener)
     })
 
-    const navigateOrLeave = (hash: string) => () =>
-        (window.location.hash = window.location.hash === '#' + hash ? '' : hash)
+    const navigateOrLeave = (id: string) => () => swapWindowVisibility(id)
 </script>
 
 <main>
@@ -119,12 +118,14 @@
                 href="https://dofusdb.fr/"
             />
         </Column>
+    </Row>
+    <div class="windows">
         <SelectedQuestView />
         <BackupPopup />
         <AlmanaxModal />
         <Categories mode="quest" />
         <Categories mode="achievement" />
-    </Row>
+    </div>
 </main>
 
 <style>
@@ -135,13 +136,20 @@
     }
 
     :global(.column) {
-        z-index: 10;
+        z-index: 1;
     }
 
     :global(.mainContainer) {
         position: absolute;
         inset: 16px;
         z-index: 1;
+        pointer-events: none;
+    }
+
+    .windows {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
         pointer-events: none;
     }
 </style>

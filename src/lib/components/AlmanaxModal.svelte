@@ -4,9 +4,9 @@
     import { get } from '../localisation.svelte'
     import { completed } from '../state.svelte'
     import { normalize } from '../util'
-    import Container from './Container.svelte'
-    import Progress from './Progress.svelte'
+    import { progressText } from './Progress.svelte'
     import Text from './Text.svelte'
+    import Window from './Window.svelte'
 
     let currentHeight = $state(0)
     let largestHeight = $state(0)
@@ -53,114 +53,110 @@
     })
 </script>
 
-<Container classes={`almanax-modal ${visible ? '' : 'hidden'}`}>
-    <div class="title">
-        <h2>
-            Almanax <Progress
-                total={366}
-                amount={data.almanax.filter(({ id }) => ownAlmanax.has(id))
-                    .length}
-            />
-        </h2>
+<Window
+    id="almanax"
+    name="almanax"
+    nameSecondary={progressText(
+        data.almanax.filter(({ id }) => ownAlmanax.has(id)).length,
+        366
+    )}
+>
+    <div class="content">
         <input type="text" placeholder="Search" bind:value={searchText} />
-    </div>
 
-    <div
-        class="header"
-        bind:clientHeight={currentHeight}
-        style="min-height: {largestHeight}px"
-    >
-        <div class="col">
-            <div class="date">{today.toLocaleDateString()}</div>
-            <h3>
-                <Text key={almanax.id} name="name" />
-            </h3>
-            <div class="item">
-                <img src={almanax.itemImg} alt={''} />
-                <div>
-                    {almanax.itemQuantity} × <Text
-                        key={almanax.id}
-                        name="item"
-                    />
+        <div
+            class="header"
+            bind:clientHeight={currentHeight}
+            style="min-height: {largestHeight}px"
+        >
+            <div class="col">
+                <div class="date">{today.toLocaleDateString()}</div>
+                <h3>
+                    <Text key={almanax.id} name="name" />
+                </h3>
+                <div class="item">
+                    <img src={almanax.itemImg} alt={''} />
+                    <div>
+                        {almanax.itemQuantity} × <Text
+                            key={almanax.id}
+                            name="item"
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <h3><Text key={almanax.id} name="effectName" /></h3>
-            <p><Text key={almanax.id} name="effectDesc" raw /></p>
-        </div>
-    </div>
-    <div class="months">
-        {#each [...new Array(12)] as _, i}
-            {@const date = new Date(2024, i, 1)}
-            {@const nDays =
-                new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate() -
-                date.getDate() +
-                1}
-            <div class="month">
-                <h3>{date.toLocaleString('default', { month: 'long' })}</h3>
-                <div class="days">
-                    {#each [...new Array(nDays)] as _, j}
-                        {@const day = new Date(
-                            date.getFullYear(),
-                            date.getMonth(),
-                            j + 1
-                        )
-                            .toLocaleDateString('en-US')
-                            .slice(0, -5)}
-                        {@const alma = data.almanax.find(
-                            ({ day, month }) =>
-                                day === j + 1 && month === date.getMonth() + 1
-                        )!}
-                        <button
-                            class="day"
-                            class:completed={ownAlmanax.has(alma.id)}
-                            class:notSearched={searchText.trim() &&
-                                !normalize((alma.id, 'name')).includes(
-                                    searchNormalized
-                                ) &&
-                                !normalize(get(alma.id, 'item')).includes(
-                                    searchNormalized
-                                ) &&
-                                !normalize(get(alma.id, 'effectName')).includes(
-                                    searchNormalized
-                                )}
-                            class:current={today.getDate() === j + 1 &&
-                                today.getMonth() === date.getMonth()}
-                            onmouseenter={() =>
-                                (today = new Date(
-                                    date.getFullYear(),
-                                    date.getMonth(),
-                                    j + 1
-                                ))}
-                            onclick={() => toggleDay(alma.id)}
-                        >
-                            <span>
-                                {j + 1}
-                            </span>
-                        </button>
-                    {/each}
-                </div>
+            <div class="col">
+                <h3><Text key={almanax.id} name="effectName" /></h3>
+                <p><Text key={almanax.id} name="effectDesc" raw /></p>
             </div>
-        {/each}
+        </div>
+        <div class="months">
+            {#each [...new Array(12)] as _, i}
+                {@const date = new Date(2024, i, 1)}
+                {@const nDays =
+                    new Date(
+                        date.getFullYear(),
+                        date.getMonth() + 1,
+                        0
+                    ).getDate() -
+                    date.getDate() +
+                    1}
+                <div class="month">
+                    <h3>{date.toLocaleString('default', { month: 'long' })}</h3>
+                    <div class="days">
+                        {#each [...new Array(nDays)] as _, j}
+                            {@const day = new Date(
+                                date.getFullYear(),
+                                date.getMonth(),
+                                j + 1
+                            )
+                                .toLocaleDateString('en-US')
+                                .slice(0, -5)}
+                            {@const alma = data.almanax.find(
+                                ({ day, month }) =>
+                                    day === j + 1 &&
+                                    month === date.getMonth() + 1
+                            )!}
+                            <button
+                                class="day"
+                                class:completed={ownAlmanax.has(alma.id)}
+                                class:notSearched={searchText.trim() &&
+                                    !normalize((alma.id, 'name')).includes(
+                                        searchNormalized
+                                    ) &&
+                                    !normalize(get(alma.id, 'item')).includes(
+                                        searchNormalized
+                                    ) &&
+                                    !normalize(
+                                        get(alma.id, 'effectName')
+                                    ).includes(searchNormalized)}
+                                class:current={today.getDate() === j + 1 &&
+                                    today.getMonth() === date.getMonth()}
+                                onmouseenter={() =>
+                                    (today = new Date(
+                                        date.getFullYear(),
+                                        date.getMonth(),
+                                        j + 1
+                                    ))}
+                                onclick={() => toggleDay(alma.id)}
+                            >
+                                <span>
+                                    {j + 1}
+                                </span>
+                            </button>
+                        {/each}
+                    </div>
+                </div>
+            {/each}
+        </div>
     </div>
-</Container>
+</Window>
 
 <style>
-    :global(.almanax-modal) {
+    .content {
         width: 100%;
         height: 100%;
+        overflow-y: auto;
         pointer-events: all;
-        overflow-y: auto !important;
-        &:global(.hidden) {
-            display: none;
-        }
-    }
-
-    .title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .header {

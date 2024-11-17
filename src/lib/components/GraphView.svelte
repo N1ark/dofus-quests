@@ -371,7 +371,7 @@
                     bb.y1 - pad,
                     rectW,
                     bb.h + pad * 2,
-                    Math.min(8, 50 * cy.zoom())
+                    4
                 )
                 ctx.fillStyle = fill
                 ctx.fill()

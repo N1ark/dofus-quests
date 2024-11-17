@@ -62,6 +62,7 @@
         transition: background-color 0.1s;
         cursor: pointer;
         pointer-events: auto;
+        user-select: none;
 
         display: block;
         aspect-ratio: 1;

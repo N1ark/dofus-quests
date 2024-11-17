@@ -14,5 +14,6 @@
     "export-info": "Store this somewhere to import it later.",
     "import-info": "Paste your backed up data to restore it.",
     "copy": "Copy to clipboard",
+    "copied": "Copied!",
     "showgroups": "Show categories"
 }

@@ -2,10 +2,9 @@
     import { onMount } from 'svelte'
     import type { Data } from '../data'
     import { data, id, onlyPredecessors } from '../data'
-    import { classNames } from '../util'
-    import Container from './Container.svelte'
     import GraphView from './GraphView.svelte'
     import QuestInfo from './QuestInfo.svelte'
+    import Window from './Window.svelte'
 
     let { classes }: { classes?: string } = $props()
 
@@ -59,9 +58,7 @@
     })
 </script>
 
-<Container
-    classes={classNames(!node && 'hidden', 'selectedQuestView', classes)}
->
+<Window id="selected-quest">
     <div class="back">
         <GraphView
             data={currData}
@@ -72,14 +69,9 @@
     {#if node !== null}
         <QuestInfo {node} />
     {/if}
-</Container>
+</Window>
 
 <style>
-    :global(.hidden) {
-        display: none;
-        pointer-events: none;
-    }
-
     .back {
         position: absolute;
         inset: 0;

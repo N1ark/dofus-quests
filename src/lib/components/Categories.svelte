@@ -1,12 +1,11 @@
 <script lang="ts">
-    import { onMount } from 'svelte'
     import { data } from '../data'
     import { get } from '../localisation.svelte'
     import { completed, showCompleted } from '../state.svelte'
     import { normalize } from '../util'
-    import Container from './Container.svelte'
-    import Progress from './Progress.svelte'
+    import Progress, { progressText } from './Progress.svelte'
     import Text from './Text.svelte'
+    import Window from './Window.svelte'
 
     const { mode }: { mode: 'quest' | 'achievement' } = $props()
 
@@ -25,12 +24,10 @@
                   .filter((node) => node.type === mode)
                   .sort((a, b) => a.order - b.order)
     )
-    const hash = $derived(`${mode}s` as const)
     const title = $derived(mode === 'quest' ? 'quests' : 'achievements')
 
     let ownCompleted = $state(new Set<string>())
     let ownShowCompleted = $state(false)
-    let visible = $state(false)
     let search = $state('')
     const searchNormalized = $derived(normalize(search))
 
@@ -40,43 +37,19 @@
     showCompleted.subscribe((value) => {
         ownShowCompleted = value
     })
-
-    onMount(() => {
-        const hashCheck = () => {
-            visible = window.location.hash.startsWith(`#${hash}`)
-            if (!visible) {
-                search = ''
-                return
-            }
-            const target = parseInt(
-                window.location.hash.slice(`#${hash}-`.length)
-            )
-            if (isNaN(target)) return
-            window.location.hash = hash
-            const targetElement = document.getElementById(
-                `${mode}category-${target}`
-            )
-            if (!targetElement) return
-            setTimeout(() => {
-                targetElement.scrollIntoView({ behavior: 'smooth' })
-            }, 100)
-        }
-
-        hashCheck()
-        window.addEventListener('hashchange', hashCheck)
-        return () => window.removeEventListener('hashchange', hashCheck)
-    })
 </script>
 
-<Container classes={`categories ${visible ? '' : 'hidden'}`}>
-    <h2>
-        <Text key={title} />
-        <Progress
-            total={elements.length}
-            amount={elements.filter(({ id }) => ownCompleted.has(id)).length}
-        />
-    </h2>
-    <input type="text" placeholder="Search" bind:value={search} />
+<Window
+    id={mode + 's'}
+    name={title}
+    nameSecondary={progressText(
+        elements.filter(({ id }) => ownCompleted.has(id)).length,
+        elements.length
+    )}
+>
+    <div class="search">
+        <input type="text" placeholder="Search" bind:value={search} />
+    </div>
     {#each categories as category}
         {@const elems = elements.filter((n) => n.categoryId === category.id)}
         {@const completed = elems.filter(({ id }) => ownCompleted.has(id))}
@@ -101,19 +74,16 @@
             </ul>
         {/if}
     {/each}
-</Container>
+</Window>
 
 <style>
-    :global(.categories) {
-        height: fit-content;
-        pointer-events: all;
-        max-height: 100%;
-        overflow-y: auto !important;
-        scrollbar-gutter: stable;
-
-        &:global(.hidden) {
-            display: none;
-        }
+    .search {
+        display: flex;
+        flex-direction: row-reverse;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        margin-right: -4px;
     }
     h3 {
         margin-bottom: 4px;

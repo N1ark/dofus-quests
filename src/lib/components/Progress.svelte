@@ -1,3 +1,8 @@
+<script lang="ts" module>
+    export const progressText = (amount: number, total: number) =>
+        `${Math.floor((amount / total) * 100)}% (${amount}/${total})`
+</script>
+
 <script lang="ts">
     const { amount, total }: { amount: number; total: number } = $props()
 </script>

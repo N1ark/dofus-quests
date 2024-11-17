@@ -14,5 +14,6 @@
     "export-info": "Enregistre ceci pour sauvegarder tes données et les importer plus tard.",
     "import-info": "Colle ici les données que tu as exportées pour les importer.",
     "copy": "Copier dans le presse-papier",
+    "copied": "Copié !",
     "showgroups": "Afficher les catégories"
 }

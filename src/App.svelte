@@ -9,6 +9,11 @@
     import Reload from 'lucide-svelte/icons/refresh-cw'
     import Trophy from 'lucide-svelte/icons/trophy'
 
+    import DofusBook from './lib/images/dofusbook.png'
+    import DofusDB from './lib/images/dofusdb.png'
+    import DofusMap from './lib/images/dofusmap.png'
+    import DofusPourLesNoobs from './lib/images/dofusprlesnoobs.png'
+
     import AlmanaxModal from './lib/components/AlmanaxModal.svelte'
     import BackupPopup from './lib/components/BackupPopup.svelte'
     import Button from './lib/components/Button.svelte'
@@ -93,22 +98,22 @@
                     language.update((l) => (l === 'en' ? 'fr' : 'en'))}
             />
             <Button
-                Icon={{ src: '/assets/dofusmap.png' }}
+                Icon={{ src: DofusMap }}
                 title="Dofus Map"
                 href="https://dofus-map.com/"
             />
             <Button
-                Icon={{ src: '/assets/dofusprlesnoobs.png' }}
+                Icon={{ src: DofusPourLesNoobs }}
                 title="Dofus pour les Noobs"
                 href="https://www.dofuspourlesnoobs.com/"
             />
             <Button
-                Icon={{ src: '/assets/dofusbook.png' }}
+                Icon={{ src: DofusBook }}
                 title="dofusbook"
                 href="https://www.dofusbook.net/"
             />
             <Button
-                Icon={{ src: '/assets/dofusdb.png' }}
+                Icon={{ src: DofusDB }}
                 title="DofusDB"
                 href="https://dofusdb.fr/"
             />

@@ -1,5 +1,4 @@
 <script lang="ts">
-    import type { Component } from 'svelte'
     import Text from './Text.svelte'
 
     const {
@@ -9,7 +8,7 @@
         href,
         title,
     }: {
-        Icon: Component<any, any, any> | string | { src: string }
+        Icon: any
         classes?: string
         href?: string
         onclick?: () => any | Promise<any>

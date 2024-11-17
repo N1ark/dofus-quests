@@ -48,7 +48,7 @@
         const stored = localStorage.getItem('window.' + id)
         try {
             if (!stored)
-                return { x: 64, y: 64, width: 300, height: 300, visible: false }
+                throw new Error('No stored window info for window ' + id)
             const [x, y, width, height, visible] = stored.split(',').map(Number)
             if (
                 isNaN(x) ||
@@ -64,7 +64,13 @@
                 throw new Error('Invalid window info')
             return { x, y, width, height, visible: !!visible }
         } catch (e) {
-            return { x: 64, y: 64, width: 300, height: 300, visible: false }
+            return {
+                x: 64,
+                y: 64,
+                width: window.innerWidth - 128,
+                height: window.innerHeight - 128,
+                visible: true,
+            }
         }
     }
 

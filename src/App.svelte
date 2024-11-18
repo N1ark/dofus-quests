@@ -22,7 +22,6 @@
     import Column from './lib/components/Column.svelte'
     import GraphView from './lib/components/GraphView.svelte'
     import HelpView from './lib/components/HelpView.svelte'
-    import Row from './lib/components/Row.svelte'
     import SelectedQuestView from './lib/components/SelectedQuestView.svelte'
     import { swapWindowVisibility } from './lib/components/Window.svelte'
     import { data } from './lib/data'
@@ -51,8 +50,8 @@
         usePresetPositions
         debugAllowed
     />
-    <Row classes="mainContainer">
-        <Column classes="column">
+    <div class="buttonColumn">
+        <Column classes="wrap">
             <Button
                 Icon={Backpack}
                 title="quests"
@@ -73,7 +72,8 @@
                 title="backup"
                 onclick={navigateOrLeave('backup')}
             />
-            <div style:margin-top="8px"></div>
+        </Column>
+        <Column classes="wrap">
             <Button
                 Icon={Reload}
                 title="reorganise"
@@ -89,13 +89,14 @@
                 title="showgroups"
                 onclick={() => (showGroups = !showGroups)}
             />
-            <div style:margin-top="8px"></div>
-            <Button
-                Icon={BadgeHelp}
-                title="help"
-                onclick={navigateOrLeave('help')}
-            />
-            <div style:flex-grow="100" style:flex-shrink="0"></div>
+        </Column>
+        <Button
+            Icon={BadgeHelp}
+            title="help"
+            onclick={navigateOrLeave('help')}
+        />
+        <Column classes="wrap last">
+            <div style:flex-grow="1" style:flex-shrink="0"></div>
             <Button
                 Icon={{
                     en: '🇬🇧',
@@ -126,7 +127,7 @@
                 href="https://dofusdb.fr/"
             />
         </Column>
-    </Row>
+    </div>
     <div class="windows">
         <SelectedQuestView />
         <BackupPopup />
@@ -144,11 +145,25 @@
         overflow: hidden;
     }
 
-    :global(.mainContainer) {
+    .buttonColumn {
         position: absolute;
         inset: 16px;
         z-index: 50;
         pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        gap: 16px;
+
+        & > :global(*) {
+            width: min-content;
+        }
+    }
+
+    :global(.last) {
+        flex-grow: 1;
     }
 
     .windows {

@@ -57,6 +57,10 @@
 <style>
     button,
     a {
+        width: 33px;
+        height: 33px;
+        box-sizing: border-box;
+
         background-color: #181818;
         border: 1px solid rgba(128, 128, 128, 0.4);
         border-radius: 4px;

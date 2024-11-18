@@ -1,4 +1,5 @@
 <script lang="ts">
+    import twemoji from '@twemoji/api'
     import Text from './Text.svelte'
 
     const {
@@ -28,12 +29,11 @@
             }
         }
     }
-    console.log(Icon, typeof Icon)
 </script>
 
 {#snippet content()}
     {#if typeof Icon === 'string'}
-        {Icon}
+        {@html twemoji.parse(Icon)}
     {:else if 'src' in Icon}
         <img src={Icon.src} alt={title} />
     {:else}
@@ -49,7 +49,7 @@
         {@render content()}
     </a>
 {:else}
-    <button class={classes} onclick={clickHandler} {title} {disabled}>
+    <button class={classes} onclick={clickHandler} {disabled}>
         {@render content()}
     </button>
 {/if}
@@ -100,7 +100,7 @@
         }
     }
 
-    img {
+    :global(img) {
         width: 1em;
         height: 1em;
         object-fit: contain;

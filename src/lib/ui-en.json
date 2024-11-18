@@ -17,5 +17,7 @@
     "copied": "Copied!",
     "showgroups": "Show categories",
     "selected-quest": "Selected quest",
-    "selected-achievement": "Selected achievement"
+    "selected-achievement": "Selected achievement",
+    "help": "Help",
+    "help-full": "Dofus Quests is a tool allowing you to track your progression through the quests and achievements of Dofus. Its main feature is a visualisation of the dependencies between the various quests, allowing you to easily understand in which order to complete them to reach a certain objective. Achievements are grouped by categories, making it easier to read.<br/><br/>Controls:<ul><li><em>Mark a quest/achievement as completed</em>: right click.</li><li><em>Mark a quest/achievement and its prerequisites</em>: shift + right click</li><li><em>Details of a quest/achievement</em>: left click</li></ul>Dofus Quests also has its <em>Almanax tracker</em>, where you can mark the days when the offering has been made.<br/><br/>This site does not store any cookies or tracking; your progression is saved locally. You can <em>export</em> your data via the left menu to keep it aside and to re-import it later or on another device.<br/><br/>If you have any questions, suggestions or bugs to report, feel free to contact me via <a href='https://twitter.com/N1ark_' target='_blank'>Twitter</a>! Thank you for using Dofus Quests :)<br/><br/><i>- N1ark</i>"
 }

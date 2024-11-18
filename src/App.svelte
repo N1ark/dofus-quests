@@ -1,6 +1,7 @@
 <script lang="ts">
     import Archive from 'lucide-svelte/icons/archive'
     import Backpack from 'lucide-svelte/icons/backpack'
+    import BadgeHelp from 'lucide-svelte/icons/badge-help'
     import Calendar from 'lucide-svelte/icons/calendar'
     import Circle from 'lucide-svelte/icons/circle'
     import CircleOff from 'lucide-svelte/icons/circle-off'
@@ -20,6 +21,7 @@
     import Categories from './lib/components/Categories.svelte'
     import Column from './lib/components/Column.svelte'
     import GraphView from './lib/components/GraphView.svelte'
+    import HelpView from './lib/components/HelpView.svelte'
     import Row from './lib/components/Row.svelte'
     import SelectedQuestView from './lib/components/SelectedQuestView.svelte'
     import { swapWindowVisibility } from './lib/components/Window.svelte'
@@ -87,6 +89,12 @@
                 title="showgroups"
                 onclick={() => (showGroups = !showGroups)}
             />
+            <div style:margin-top="8px"></div>
+            <Button
+                Icon={BadgeHelp}
+                title="help"
+                onclick={navigateOrLeave('help')}
+            />
             <div style:flex-grow="100" style:flex-shrink="0"></div>
             <Button
                 Icon={{
@@ -125,6 +133,7 @@
         <AlmanaxModal />
         <Categories mode="quest" />
         <Categories mode="achievement" />
+        <HelpView />
     </div>
 </main>
 

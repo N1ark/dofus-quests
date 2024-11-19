@@ -1,5 +1,8 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <script lang="ts" module>
+    const MIN_WIDTH = 350
+    const MIN_HEIGHT = 250
+
     // Ordering, for z-index
     const windowOrder: string[] =
         localStorage.getItem('windowOrder')?.split(',') ?? []
@@ -56,8 +59,8 @@
                 isNaN(width) ||
                 isNaN(height) ||
                 isNaN(visible) ||
-                width < 100 ||
-                height < 100 ||
+                width < MIN_WIDTH ||
+                height < MIN_HEIGHT ||
                 width > 2000 ||
                 height > 2000
             )
@@ -202,20 +205,20 @@
             const onMouseMove = (e: MouseEvent) => {
                 const left = () => {
                     dimensions.width = Math.max(
-                        200,
+                        MIN_WIDTH,
                         og.width - (e.clientX - startX)
                     )
                     dimensions.x = og.x + og.width - dimensions.width
                 }
                 const right = () => {
                     dimensions.width = Math.max(
-                        200,
+                        MIN_WIDTH,
                         og.width + (e.clientX - startX)
                     )
                 }
                 const bottom = () => {
                     dimensions.height = Math.max(
-                        200,
+                        MIN_HEIGHT,
                         og.height + (e.clientY - startY)
                     )
                 }

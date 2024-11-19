@@ -8,6 +8,7 @@ export type Quest = {
     requirements: string
     categoryId: number
     achCatId: number
+    noob?: string
 }
 
 export type Achievement = {
@@ -17,6 +18,7 @@ export type Achievement = {
     categoryId: number
     dispCatId: number
     order: number
+    noob?: string
 }
 
 export type Almanax = {

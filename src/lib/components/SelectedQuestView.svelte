@@ -13,10 +13,17 @@
 </script>
 
 <script lang="ts">
-    import { onMount } from 'svelte'
+    import Check from 'lucide-svelte/icons/check'
+    import CheckList from 'lucide-svelte/icons/list-checks'
+    import ListX from 'lucide-svelte/icons/list-x'
+    import X from 'lucide-svelte/icons/x'
 
+    import { onMount } from 'svelte'
     import type { Data } from '../data'
     import { data, id, onlyPredecessors } from '../data'
+    import DofusPourLesNoobs from '../images/dofusprlesnoobs.png'
+    import { completed } from '../state.svelte'
+    import Button from './Button.svelte'
     import GraphView from './GraphView.svelte'
     import QuestInfo from './QuestInfo.svelte'
     import Window, {
@@ -32,6 +39,12 @@
     })
     let childElements: string[] = $state([])
     let targetNode = $state<string>()
+    let ownCompleted = $state(new Set<string>())
+    let isCompleted = $derived(targetNode && ownCompleted.has(targetNode))
+
+    completed.subscribe(({ completed }) => {
+        ownCompleted = new Set(completed)
+    })
 
     $effect(() => {
         subscribeToWindowVisibility('selected-quest', (visible) => {
@@ -73,6 +86,21 @@
         const stored = localStorage.getItem('selected-quest') ?? null
         selectNode(stored, false)
     })
+
+    const handleMarkCompleted = (id: string, parents: boolean) => () => {
+        const nodes: string[] = parents
+            ? currData.nodes
+                  .map((n) => n.id)
+                  .filter((n) => !childElements.includes(n))
+            : [id]
+        completed.update((data) => {
+            const toCompleted = !data.completed.includes(id)
+            const newCompleted = new Set(data.completed)
+            if (toCompleted) nodes.forEach((n) => newCompleted.add(n))
+            else nodes.forEach((n) => newCompleted.delete(n))
+            return { completed: Array.from(newCompleted) }
+        })
+    }
 </script>
 
 <Window
@@ -98,6 +126,27 @@
         <div class="front">
             <QuestInfo {node} />
         </div>
+        <div class="buttons">
+            {#if node.noob}
+                <Button
+                    Icon={{ src: DofusPourLesNoobs }}
+                    href={node.noob}
+                    title="Dofus pour les noobs"
+                />
+            {/if}
+            <Button
+                Icon={isCompleted ? X : Check}
+                title={isCompleted ? 'mark-uncompleted' : 'mark-completed'}
+                onclick={handleMarkCompleted(node.id, false)}
+            />
+            <Button
+                Icon={isCompleted ? ListX : CheckList}
+                title={isCompleted
+                    ? 'mark-all-uncompleted'
+                    : 'mark-all-completed'}
+                onclick={handleMarkCompleted(node.id, true)}
+            />
+        </div>
     {/if}
 </Window>
 
@@ -112,6 +161,15 @@
         position: relative;
         z-index: 1;
         pointer-events: none;
+    }
+    .buttons {
+        position: absolute;
+        z-index: 2;
+        bottom: 8px;
+        left: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     :global(.selectedQuestView) {

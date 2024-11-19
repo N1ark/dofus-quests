@@ -17,6 +17,7 @@
         font-size: 0.7em;
         opacity: 0.7;
         margin: 0 8px;
+        white-space: nowrap;
         &.completed {
             color: #fae089;
             opacity: 0.9;

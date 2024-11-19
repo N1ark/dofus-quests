@@ -69,7 +69,7 @@
                 y: 64,
                 width: window.innerWidth - 128,
                 height: window.innerHeight - 128,
-                visible: true,
+                visible: false,
             }
         }
     }

@@ -8,12 +8,14 @@
         onclick,
         href,
         title,
+        leftSided,
     }: {
         Icon: any
         classes?: string
         href?: string
         onclick?: () => any | Promise<any>
         title?: string
+        leftSided?: boolean
     } = $props()
     let disabled = $state(false)
 
@@ -45,11 +47,23 @@
 {/snippet}
 
 {#if href}
-    <a class={classes} {href} {title} target="_blank" rel="noopener noreferrer">
+    <a
+        class={classes}
+        class:left={leftSided}
+        {href}
+        {title}
+        target="_blank"
+        rel="noopener noreferrer"
+    >
         {@render content()}
     </a>
 {:else}
-    <button class={classes} onclick={clickHandler} {disabled}>
+    <button
+        class={classes}
+        class:left={leftSided}
+        onclick={clickHandler}
+        {disabled}
+    >
         {@render content()}
     </button>
 {/if}
@@ -101,6 +115,11 @@
             width: max-content;
             max-width: 130px;
             padding: 2px;
+        }
+        &.left span {
+            left: auto;
+            right: calc(100% + 8px);
+            text-align: right;
         }
     }
 

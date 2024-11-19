@@ -231,7 +231,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=896)&Wo=0&(Qf=2003)&Wo=0&(Qf=897)&Wo=0&(Qf=898)&Wo=0&(Qf=899)&Wo=0",
+      "requirements": "(Qf=896)&Wo=0&(Qf=2003)&Wo=0&(Qf=897)&Wo=0&(Qf=2504)&Wo=0&(Qf=898)&Wo=0&(Qf=899)&Wo=0",
       "noob": "https://www.dofuspourlesnoobs.com/premiegravere-eacutedition-de-donjons.html",
       "id": "a560",
       "type": "achievement",
@@ -240,7 +240,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=900)&Wo=0&(Qf=901)&Wo=0&(Qf=902)&Wo=0&(Qf=903)&Wo=0&(Qf=904)&Wo=0&(Qf=905)&Wo=0",
+      "requirements": "(Qf=2505)&Wo=0&(Qf=904)&Wo=0&(Qf=905)&Wo=0&(Qf=907)&Wo=0&(Qf=2506)&Wo=0&(Qf=907)&Wo=0",
       "noob": "https://www.dofuspourlesnoobs.com/donjons-avanceacutes.html",
       "id": "a561",
       "type": "achievement",
@@ -249,7 +249,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=906)&Wo=0&(Qf=907)&Wo=0&(Qf=908)&Wo=0&(Qf=909)&Wo=0&(Qf=1431)&Wo=0",
+      "requirements": "(Qf=908)&Wo=0&(Qf=909)&Wo=0&(Qf=1431)&Wo=0&(Qf=2507)&Wo=0&(Qf=2508)&Wo=0",
       "noob": "https://www.dofuspourlesnoobs.com/donjons-trois-point-cinq.html",
       "id": "a562",
       "type": "achievement",
@@ -258,7 +258,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=1432)&Wo=0&(Qf=910)&Wo=0&(Qf=911)&Wo=0&(Qf=912)&Wo=0&(Qf=913)&Wo=0",
+      "requirements": "(Qf=2509)&Wo=0&(Qf=2510)&Wo=0&(Qf=1432)&Wo=0&(Qf=910)&Wo=0&(Qf=911)&Wo=0&(Qf=912)&Wo=0",
       "noob": "https://www.dofuspourlesnoobs.com/le-siegravege-des-donjons.html",
       "id": "a563",
       "type": "achievement",
@@ -267,7 +267,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=914)&Wo=0&(Qf=915)&Wo=0&(Qf=916)&Wo=0&(Qf=917)&Wo=0&(Qf=918)&Wo=0",
+      "requirements": "(Qf=913)&Wo=0&(Qf=914)&Wo=0&(Qf=915)&Wo=0&(Qf=916)&Wo=0&(Qf=917)&Wo=0&(Qf=918)&Wo=0",
       "noob": "https://www.dofuspourlesnoobs.com/la-tornade-des-donjons.html",
       "id": "a564",
       "type": "achievement",
@@ -669,7 +669,7 @@
       "dispCatId": 53
     },
     {
-      "requirements": "(Qf=1649)&Wo=0&(Qf=1650)&Wo=0&(Qf=1651)&Wo=0&(Qf=1652)&Wo=0",
+      "requirements": "(Qf=1649)&Wo=0&(Qf=1650)&Wo=0&(Qf=1651)&Wo=0&(Qf=2512)&Wo=0&(Qf=2513)&Wo=0",
       "noob": "https://www.dofuspourlesnoobs.com/cest-le-meacutetier-qui-rentre.html",
       "id": "a649",
       "type": "achievement",
@@ -709,7 +709,7 @@
       "id": "a813",
       "type": "achievement",
       "categoryId": 118,
-      "order": 6,
+      "order": 9,
       "dispCatId": 118
     },
     {
@@ -717,7 +717,7 @@
       "id": "a815",
       "type": "achievement",
       "categoryId": 118,
-      "order": 7,
+      "order": 10,
       "dispCatId": 118
     },
     {
@@ -725,7 +725,7 @@
       "id": "a816",
       "type": "achievement",
       "categoryId": 118,
-      "order": 8,
+      "order": 11,
       "dispCatId": 118
     },
     {
@@ -733,7 +733,7 @@
       "id": "a817",
       "type": "achievement",
       "categoryId": 118,
-      "order": 9,
+      "order": 12,
       "dispCatId": 118
     },
     {
@@ -741,7 +741,7 @@
       "id": "a818",
       "type": "achievement",
       "categoryId": 118,
-      "order": 10,
+      "order": 13,
       "dispCatId": 118
     },
     {
@@ -749,7 +749,7 @@
       "id": "a819",
       "type": "achievement",
       "categoryId": 118,
-      "order": 11,
+      "order": 14,
       "dispCatId": 118
     },
     {
@@ -757,7 +757,7 @@
       "id": "a820",
       "type": "achievement",
       "categoryId": 118,
-      "order": 12,
+      "order": 15,
       "dispCatId": 118
     },
     {
@@ -827,7 +827,7 @@
       "id": "a918",
       "type": "achievement",
       "categoryId": 118,
-      "order": 13,
+      "order": 16,
       "dispCatId": 118
     },
     {
@@ -835,7 +835,7 @@
       "id": "a919",
       "type": "achievement",
       "categoryId": 118,
-      "order": 14,
+      "order": 17,
       "dispCatId": 118
     },
     {
@@ -1218,7 +1218,7 @@
       "id": "a1049",
       "type": "achievement",
       "categoryId": 118,
-      "order": 15,
+      "order": 18,
       "dispCatId": 118
     },
     {
@@ -1226,7 +1226,7 @@
       "id": "a1050",
       "type": "achievement",
       "categoryId": 118,
-      "order": 16,
+      "order": 19,
       "dispCatId": 118
     },
     {
@@ -1234,7 +1234,7 @@
       "id": "a1051",
       "type": "achievement",
       "categoryId": 118,
-      "order": 17,
+      "order": 20,
       "dispCatId": 118
     },
     {
@@ -1628,7 +1628,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Qf=1629)&Wo=0&(Qf=1630)&Wo=0&(Qf=1631)&Wo=0&(Qf=1632)&Wo=0&(Qf=1634)&Wo=0&(Qf=1635)&Wo=0&(Qf=2004)&Wo=0",
+      "requirements": "(Qf=1631)&Wo=0&(Qf=1632)&Wo=0&(Qf=1634)&Wo=0&(Qf=1635)&Wo=0&(Qf=2004)&Wo=0",
       "noob": "https://www.dofuspourlesnoobs.com/en-route-pour-laventure.html",
       "id": "a1378",
       "type": "achievement",
@@ -1791,7 +1791,7 @@
       "id": "a1444",
       "type": "achievement",
       "categoryId": 118,
-      "order": 19,
+      "order": 22,
       "dispCatId": 118
     },
     {
@@ -1968,7 +1968,7 @@
       "id": "a1592",
       "type": "achievement",
       "categoryId": 118,
-      "order": 20,
+      "order": 23,
       "dispCatId": 118
     },
     {
@@ -2029,7 +2029,7 @@
       "id": "a1620",
       "type": "achievement",
       "categoryId": 118,
-      "order": 18,
+      "order": 21,
       "dispCatId": 118
     },
     {
@@ -2336,7 +2336,7 @@
       "id": "a2305",
       "type": "achievement",
       "categoryId": 118,
-      "order": 21,
+      "order": 24,
       "dispCatId": 118
     },
     {
@@ -2546,7 +2546,7 @@
       "id": "a5174",
       "type": "achievement",
       "categoryId": 118,
-      "order": 23,
+      "order": 26,
       "dispCatId": 118
     },
     {
@@ -2554,7 +2554,7 @@
       "id": "a5175",
       "type": "achievement",
       "categoryId": 118,
-      "order": 22,
+      "order": 25,
       "dispCatId": 118
     },
     {
@@ -2663,6 +2663,30 @@
       "categoryId": 40,
       "order": 44,
       "dispCatId": 1001
+    },
+    {
+      "requirements": "(Qf=2511)&Wo=0&(BI=1)&Wo=0",
+      "id": "a8518",
+      "type": "achievement",
+      "categoryId": 118,
+      "order": 6,
+      "dispCatId": 118
+    },
+    {
+      "requirements": "(Qf=2502)&Wo=0",
+      "id": "a8519",
+      "type": "achievement",
+      "categoryId": 118,
+      "order": 7,
+      "dispCatId": 118
+    },
+    {
+      "requirements": "(OA=8518)&Wo=0&(OA=8519)&Wo=0",
+      "id": "a8520",
+      "type": "achievement",
+      "categoryId": 118,
+      "order": 8,
+      "dispCatId": 118
     },
     {
       "requirements": "PL>109",
@@ -6069,7 +6093,7 @@
       "categoryId": 4
     },
     {
-      "requirements": "Qf=897&PL>29",
+      "requirements": "Qf=2504&PL>29",
       "noob": "https://www.dofuspourlesnoobs.com/donjon-douillet.html",
       "id": "q898",
       "achCatId": 1002,
@@ -6085,39 +6109,7 @@
       "categoryId": 4
     },
     {
-      "requirements": "Qf=899&PL>39",
-      "noob": "https://www.dofuspourlesnoobs.com/tas-le-blop-coco.html",
-      "id": "q900",
-      "achCatId": 1002,
-      "type": "quest",
-      "categoryId": 4
-    },
-    {
-      "requirements": "Qf=900&PL>39",
-      "noob": "https://www.dofuspourlesnoobs.com/blop-indigo-go-go.html",
-      "id": "q901",
-      "achCatId": 1002,
-      "type": "quest",
-      "categoryId": 4
-    },
-    {
-      "requirements": "Qf=901&PL>39",
-      "noob": "https://www.dofuspourlesnoobs.com/le-blop-griotte-entre-les-repas.html",
-      "id": "q902",
-      "achCatId": 1002,
-      "type": "quest",
-      "categoryId": 4
-    },
-    {
-      "requirements": "Qf=902&PL>39",
-      "noob": "https://www.dofuspourlesnoobs.com/blop-de-reinette-sans-blop-dapi.html",
-      "id": "q903",
-      "achCatId": 1002,
-      "type": "quest",
-      "categoryId": 4
-    },
-    {
-      "requirements": "Qf=903&PL>39",
+      "requirements": "Qf=2505&PL>39",
       "noob": "https://www.dofuspourlesnoobs.com/un-kanniboul-verseacute.html",
       "id": "q904",
       "achCatId": 1002,
@@ -6141,7 +6133,7 @@
       "categoryId": 4
     },
     {
-      "requirements": "Qf=906&PL>49",
+      "requirements": "Qf=2506&PL>49",
       "noob": "https://www.dofuspourlesnoobs.com/cheacuteri-fais-moi-peur.html",
       "id": "q907",
       "achCatId": 1002,
@@ -6892,7 +6884,7 @@
       "categoryId": 4
     },
     {
-      "requirements": "Qf=1431&PL>79",
+      "requirements": "Qf=2510&PL>79",
       "noob": "https://www.dofuspourlesnoobs.com/tour-de-marionnettes.html",
       "id": "q1432",
       "achCatId": 1002,
@@ -8329,22 +8321,6 @@
     },
     {
       "requirements": "BT=1",
-      "noob": "https://www.dofuspourlesnoobs.com/l-anneau-de-tous-les-dangers.html",
-      "id": "q1629",
-      "achCatId": 45,
-      "type": "quest",
-      "categoryId": 4
-    },
-    {
-      "requirements": "Qf=1629",
-      "noob": "https://www.dofuspourlesnoobs.com/sous-le-regard-des-dieux.html",
-      "id": "q1630",
-      "achCatId": 45,
-      "type": "quest",
-      "categoryId": 4
-    },
-    {
-      "requirements": "Qf=1630",
       "noob": "https://www.dofuspourlesnoobs.com/reacuteponses-agrave-tout.html",
       "id": "q1631",
       "achCatId": 45,
@@ -8488,7 +8464,7 @@
       "categoryId": 19
     },
     {
-      "requirements": "Qf=1649",
+      "requirements": "Qf=2512",
       "noob": "https://www.dofuspourlesnoobs.com/la-hache-et-la-pioche.html",
       "id": "q1650",
       "achCatId": 53,
@@ -8499,14 +8475,6 @@
       "requirements": "Qf=1650",
       "noob": "https://www.dofuspourlesnoobs.com/boune-un-jour-boune-toujours.html",
       "id": "q1651",
-      "achCatId": 53,
-      "type": "quest",
-      "categoryId": 19
-    },
-    {
-      "requirements": "Qf=1651",
-      "noob": "https://www.dofuspourlesnoobs.com/le-choix-des-armes.html",
-      "id": "q1652",
       "achCatId": 53,
       "type": "quest",
       "categoryId": 19
@@ -12613,6 +12581,83 @@
       "achCatId": 1001,
       "type": "quest",
       "categoryId": 4
+    },
+    {
+      "requirements": "BT=1",
+      "id": "q2502",
+      "achCatId": 118,
+      "type": "quest",
+      "categoryId": 24
+    },
+    {
+      "requirements": "Qf=897&PL>29",
+      "id": "q2504",
+      "achCatId": 1002,
+      "type": "quest",
+      "categoryId": 4
+    },
+    {
+      "requirements": "Qf=899&PL>39",
+      "id": "q2505",
+      "achCatId": 1002,
+      "type": "quest",
+      "categoryId": 4
+    },
+    {
+      "requirements": "Qf=906&PL>49",
+      "id": "q2506",
+      "achCatId": 1002,
+      "type": "quest",
+      "categoryId": 4
+    },
+    {
+      "requirements": "Qf=1431&PL>69",
+      "id": "q2507",
+      "achCatId": 1002,
+      "type": "quest",
+      "categoryId": 4
+    },
+    {
+      "requirements": "Qf=2507&PL>69",
+      "id": "q2508",
+      "achCatId": 1002,
+      "type": "quest",
+      "categoryId": 4
+    },
+    {
+      "requirements": "Qf=2508&PL>69",
+      "id": "q2509",
+      "achCatId": 1002,
+      "type": "quest",
+      "categoryId": 4
+    },
+    {
+      "requirements": "Qf=2509&PL>79",
+      "id": "q2510",
+      "achCatId": 1002,
+      "type": "quest",
+      "categoryId": 4
+    },
+    {
+      "requirements": "BT=1",
+      "id": "q2511",
+      "achCatId": 118,
+      "type": "quest",
+      "categoryId": 24
+    },
+    {
+      "requirements": "Qf=1649",
+      "id": "q2512",
+      "achCatId": 53,
+      "type": "quest",
+      "categoryId": 19
+    },
+    {
+      "requirements": "Qf=1651",
+      "id": "q2513",
+      "achCatId": 53,
+      "type": "quest",
+      "categoryId": 19
     }
   ],
   "almanax": [
@@ -16283,22 +16328,22 @@
     },
     {
       "from": "a560",
-      "to": "q900",
+      "to": "q2505",
       "type": "FINISHED"
     },
     {
       "from": "a561",
-      "to": "q906",
+      "to": "q908",
       "type": "FINISHED"
     },
     {
       "from": "a562",
-      "to": "q1432",
+      "to": "q2509",
       "type": "FINISHED"
     },
     {
       "from": "a563",
-      "to": "q914",
+      "to": "q913",
       "type": "FINISHED"
     },
     {
@@ -16649,6 +16694,16 @@
     {
       "from": "a820",
       "to": "a918",
+      "type": "FINISHED"
+    },
+    {
+      "from": "a8518",
+      "to": "a8520",
+      "type": "FINISHED"
+    },
+    {
+      "from": "a8519",
+      "to": "a8520",
       "type": "FINISHED"
     },
     {
@@ -17533,7 +17588,7 @@
     },
     {
       "from": "q1431",
-      "to": "a562",
+      "to": "q2507",
       "type": "FINISHED"
     },
     {
@@ -18757,18 +18812,8 @@
       "type": "FINISHED"
     },
     {
-      "from": "q1629",
-      "to": "q1630",
-      "type": "FINISHED"
-    },
-    {
       "from": "q163",
       "to": "a595",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1630",
-      "to": "q1631",
       "type": "FINISHED"
     },
     {
@@ -18863,7 +18908,7 @@
     },
     {
       "from": "q1649",
-      "to": "q1650",
+      "to": "q2512",
       "type": "FINISHED"
     },
     {
@@ -18878,12 +18923,7 @@
     },
     {
       "from": "q1651",
-      "to": "q1652",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q1652",
-      "to": "a649",
+      "to": "q2513",
       "type": "FINISHED"
     },
     {
@@ -22427,8 +22467,63 @@
       "type": "FINISHED"
     },
     {
+      "from": "q2502",
+      "to": "a8519",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2504",
+      "to": "q898",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2505",
+      "to": "q904",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2506",
+      "to": "q907",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2507",
+      "to": "q2508",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2508",
+      "to": "a562",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2509",
+      "to": "q2510",
+      "type": "FINISHED"
+    },
+    {
       "from": "q251",
       "to": "q252",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2510",
+      "to": "q1432",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2511",
+      "to": "a8518",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2512",
+      "to": "q1650",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2513",
+      "to": "a649",
       "type": "FINISHED"
     },
     {
@@ -24798,7 +24893,7 @@
     },
     {
       "from": "q897",
-      "to": "q898",
+      "to": "q2504",
       "type": "FINISHED"
     },
     {
@@ -24817,43 +24912,23 @@
       "type": "FINISHED"
     },
     {
-      "from": "q900",
-      "to": "q901",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q901",
-      "to": "q902",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q902",
-      "to": "q903",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q903",
-      "to": "q904",
-      "type": "FINISHED"
-    },
-    {
       "from": "q904",
       "to": "q905",
       "type": "FINISHED"
     },
     {
       "from": "q905",
-      "to": "a561",
+      "to": "q906",
       "type": "FINISHED"
     },
     {
       "from": "q906",
-      "to": "q907",
+      "to": "q2506",
       "type": "FINISHED"
     },
     {
       "from": "q907",
-      "to": "q908",
+      "to": "a561",
       "type": "FINISHED"
     },
     {
@@ -24883,12 +24958,12 @@
     },
     {
       "from": "q912",
-      "to": "q913",
+      "to": "a563",
       "type": "FINISHED"
     },
     {
       "from": "q913",
-      "to": "a563",
+      "to": "q914",
       "type": "FINISHED"
     },
     {
@@ -25180,6 +25255,10 @@
     {
       "id": 55,
       "order": 38
+    },
+    {
+      "id": 56,
+      "order": 53
     }
   ]
 }

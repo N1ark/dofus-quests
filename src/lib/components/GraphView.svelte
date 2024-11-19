@@ -18,15 +18,17 @@
 </script>
 
 <script lang="ts">
+    import AlignY from 'lucide-svelte/icons/align-center-horizontal'
+    import AlignX from 'lucide-svelte/icons/align-center-vertical'
+    import Export from 'lucide-svelte/icons/hard-drive-upload'
+    import PencilRuler from 'lucide-svelte/icons/pencil-ruler'
+
     import {
         type BoundingBox12,
         type BoundingBoxWH,
         type SingularElementArgument as CytoElement,
         type Position,
     } from 'cytoscape'
-    import AlignY from 'lucide-svelte/icons/align-center-horizontal'
-    import AlignX from 'lucide-svelte/icons/align-center-vertical'
-    import Export from 'lucide-svelte/icons/hard-drive-upload'
     import { onMount, untrack } from 'svelte'
     import { GROUP_COLORS, style } from '../cytostyle'
     import { type Data, id, toCyto } from '../data'
@@ -39,6 +41,7 @@
         showCompleted,
     } from '../state.svelte'
     import { fillMultilineTextBot, splitText } from '../util'
+    import Button from './Button.svelte'
     import { selectNode } from './SelectedQuestView.svelte'
 
     let {
@@ -424,7 +427,7 @@
         )
         return positions
     }
-    const exportPos = () => console.log(toPositions())
+    const exportPos = () => console.log(JSON.stringify(toPositions()))
 
     const align = (dim: 'x' | 'y') => () => {
         if (!cyInstance) return
@@ -443,6 +446,30 @@
         })
         nodes.unselect()
     }
+
+    const autolayout = () => {
+        if (!cyInstance) return
+        const nodes = cyInstance.elements(':selected')
+        if (nodes.length < 2) return
+        nodes.unselect()
+        nodes
+            .layout({
+                name: 'elk',
+                // @ts-ignore-next-line
+                nodeDimensionsIncludeLabels: true,
+                elk: {
+                    algorithm: 'layered',
+                    'elk.direction': 'DOWN',
+                },
+                animate: true,
+                animationDuration: 500,
+                animationEasing: 'ease',
+            })
+            .run()
+            .on('layoutstop', () => {
+                nodes.select()
+            })
+    }
 </script>
 
 <div bind:this={containerDiv} class="container" onresize={center}>
@@ -450,11 +477,34 @@
 </div>
 {#if debugAllowed}
     <div class:visible={import.meta.env.DEV} class="tools">
-        <button onclick={align('x')}><AlignX /></button>
-        <button onclick={align('y')}><AlignY /></button>
-        <button onclick={exportPos}>
-            <Export />
-        </button>
+        <Button
+            Icon={AlignX}
+            title="Align X"
+            onclick={align('x')}
+            classes="debug"
+            leftSided
+        />
+        <Button
+            Icon={AlignY}
+            title="Align Y"
+            onclick={align('y')}
+            classes="debug"
+            leftSided
+        />
+        <Button
+            Icon={PencilRuler}
+            title="Auto-layout"
+            onclick={autolayout}
+            classes="debug"
+            leftSided
+        />
+        <Button
+            Icon={Export}
+            title="Export positions"
+            onclick={exportPos}
+            classes="debug"
+            leftSided
+        />
     </div>
 {/if}
 
@@ -480,6 +530,7 @@
         flex-direction: column;
         gap: 8px;
         display: none;
+        z-index: 10;
 
         &.visible {
             display: flex;
@@ -487,17 +538,11 @@
         }
     }
 
-    button {
-        aspect-ratio: 1;
-        line-height: 0;
-        font-size: 1.2em;
-        border-color: rgba(219, 149, 20, 0.6);
-        background-color: #211f1b;
-        pointer-events: all;
-        z-index: 10;
-
+    :global(.debug) {
+        border-color: rgba(219, 149, 20, 0.6) !important;
+        background-color: #211f1b !important;
         &:hover {
-            background-color: #4d412c;
+            background-color: #4d412c !important;
         }
     }
 </style>

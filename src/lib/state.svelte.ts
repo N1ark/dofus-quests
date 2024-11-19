@@ -16,7 +16,8 @@ export const getPreferredPositions = (): Record<string, Position> => {
     const stored = localStorage.getItem('preferredPositions')
     if (!stored) return positions
     const storedStr = decompressFromBase64(stored)
-    return JSON.parse(storedStr)
+    const preferred = JSON.parse(storedStr)
+    return { ...positions, ...preferred }
 }
 
 export const setPreferredPositions = (preferred: Record<string, Position>) => {

@@ -99,7 +99,7 @@
             background-color: #070809;
             text-align: left;
             width: max-content;
-            max-width: 100px;
+            max-width: 130px;
             padding: 2px;
         }
     }

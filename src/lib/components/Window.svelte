@@ -332,7 +332,7 @@
         backdrop-filter: blur(2px);
         box-sizing: border-box;
         position: absolute;
-        padding-top: 20px;
+        padding-top: 30px;
         max-width: 100%;
         max-height: 100%;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -373,7 +373,7 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 20px;
+        height: 30px;
         pointer-events: all;
         cursor: move;
         background-color: #090909;
@@ -382,14 +382,14 @@
         border-top-right-radius: 4px;
         border-bottom: 1px solid rgba(128, 128, 128, 0.3);
         user-select: none;
-        padding: 4px 0 4px 4px;
+        padding: 4px 0 4px 12px;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         & > span {
-            font-size: 10px;
+            font-size: 12px;
             font-weight: 700;
             color: #ddd;
             font-variant: frac;
@@ -415,15 +415,16 @@
 
         & .close {
             box-sizing: border-box;
-            height: 19px;
-            width: 20px;
+            height: 29px;
+            width: 30px;
             padding: 2px 0px 0 0;
-            margin: 0 0 0 8px;
+            margin: 0 0 0 12px;
             border-radius: 0;
             border: none;
             border-left: 1px solid rgba(128, 128, 128, 0.3);
             background: none;
             color: #fff;
+            font-size: 20px;
             line-height: 1;
             opacity: 1;
             transition: color 0.1s;

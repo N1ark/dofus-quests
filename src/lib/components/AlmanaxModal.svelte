@@ -245,6 +245,7 @@
             overflow: hidden;
             &:first-child {
                 width: 35%;
+                padding-right: 8px;
             }
             &:last-child {
                 width: 65%;
@@ -258,6 +259,7 @@
 
         & p {
             margin-top: 0;
+            margin-bottom: 0;
         }
     }
     .date {

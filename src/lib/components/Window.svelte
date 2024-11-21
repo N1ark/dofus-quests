@@ -125,7 +125,6 @@
         nameSecondary,
         children,
         classes,
-        stableGutter,
     }: {
         id: string
         name?: Translatable
@@ -195,9 +194,8 @@
         window.addEventListener('pointerup', onPointerUp)
     }
 
-    const onResize =
-        (dim: 'left' | 'right' | 'bottom' | 'bottomleft' | 'bottomright') =>
-        (e: PointerEvent) => {
+    const resize =
+        (x: 'l' | 'r' | null, y: 'b' | 't' | null) => (e: PointerEvent) => {
             e.preventDefault()
             const startX = e.clientX
             const startY = e.clientY
@@ -223,26 +221,19 @@
                         og.height + (e.clientY - startY)
                     )
                 }
-
-                switch (dim) {
-                    case 'left':
-                        left()
-                        break
-                    case 'right':
-                        right()
-                        break
-                    case 'bottom':
-                        bottom()
-                        break
-                    case 'bottomleft':
-                        left()
-                        bottom()
-                        break
-                    case 'bottomright':
-                        right()
-                        bottom()
-                        break
+                const top = () => {
+                    dimensions.height = Math.max(
+                        MIN_HEIGHT,
+                        og.height - (e.clientY - startY)
+                    )
+                    dimensions.y = og.y + og.height - dimensions.height
                 }
+
+                if (x === 'l') left()
+                else if (x === 'r') right()
+
+                if (y === 't') top()
+                else if (y === 'b') bottom()
             }
 
             const onPointerUp = () => {
@@ -311,17 +302,16 @@
             <Close />
         </button>
     </div>
-    <div class="resizer left" onpointerdown={onResize('left')}></div>
-    <div class="resizer right" onpointerdown={onResize('right')}></div>
-    <div class="resizer bottom" onpointerdown={onResize('bottom')}></div>
-    <div
-        class="resizer bottomleft"
-        onpointerdown={onResize('bottomleft')}
-    ></div>
-    <div
-        class="resizer bottomright"
-        onpointerdown={onResize('bottomright')}
-    ></div>
+
+    <div class="resizer left" onpointerdown={resize('l', null)}></div>
+    <div class="resizer right" onpointerdown={resize('r', null)}></div>
+    <div class="resizer bottom" onpointerdown={resize(null, 'b')}></div>
+    <div class="resizer top" onpointerdown={resize(null, 't')}></div>
+    <div class="resizer left bottom" onpointerdown={resize('l', 'b')}></div>
+    <div class="resizer right bottom" onpointerdown={resize('r', 'b')}></div>
+    <div class="resizer left top" onpointerdown={resize('l', 't')}></div>
+    <div class="resizer right top" onpointerdown={resize('r', 't')}></div>
+
     <div class="content" {id}>
         {@render children()}
     </div>
@@ -443,49 +433,49 @@
 
     .resizer {
         position: absolute;
-        width: 8px;
-        height: 8px;
+        height: 100%;
+        width: 100%;
         pointer-events: all;
-        /* border: 1px solid red; */
         box-sizing: content-box;
-        &.left {
-            top: 0;
-            left: -6px;
-            height: 100%;
+        z-index: 1;
+
+        &.left,
+        &.right {
+            width: 8px;
             cursor: ew-resize;
-            z-index: 1;
+            top: 0;
+        }
+
+        &.top,
+        &.bottom {
+            height: 8px;
+            cursor: ns-resize;
+        }
+
+        &.left {
+            left: -6px;
+            &.top {
+                cursor: nwse-resize;
+            }
+            &.bottom {
+                cursor: nesw-resize;
+            }
         }
         &.right {
-            top: 0;
             right: -6px;
-            height: 100%;
-            cursor: ew-resize;
-            z-index: 1;
+            &.top {
+                cursor: nesw-resize;
+            }
+            &.bottom {
+                cursor: nwse-resize;
+            }
         }
         &.bottom {
+            top: unset;
             bottom: -6px;
-            left: 0;
-            width: 100%;
-            cursor: ns-resize;
-            z-index: 1;
         }
-        &.bottomleft {
-            width: 12px;
-            height: 12px;
-            bottom: -6px;
-            left: -6px;
-            cursor: nesw-resize;
-            z-index: 3;
-            border-color: green;
-        }
-        &.bottomright {
-            width: 12px;
-            height: 12px;
-            bottom: -6px;
-            right: -6px;
-            cursor: nwse-resize;
-            z-index: 3;
-            border-color: green;
+        &.top {
+            top: -6px;
         }
     }
 </style>

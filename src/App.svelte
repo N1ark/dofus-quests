@@ -38,10 +38,6 @@
     const navigateOrLeave = (id: string) => () => swapWindowVisibility(id)
 </script>
 
-{#snippet imageIcon(name: string)}
-    <img src={`assets/${name}.png`} alt={name} />
-{/snippet}
-
 <main>
     <GraphView
         {data}
@@ -81,12 +77,12 @@
             />
             <Button
                 Icon={ownShowCompleted ? Eye : EyeClosed}
-                title="showcompleted"
+                title={ownShowCompleted ? 'hide-completed' : 'show-completed'}
                 onclick={() => showCompleted.update((value) => !value)}
             />
             <Button
                 Icon={showGroups ? Circle : CircleOff}
-                title="showgroups"
+                title={showGroups ? 'hide-groups' : 'show-groups'}
                 onclick={() => (showGroups = !showGroups)}
             />
         </Column>

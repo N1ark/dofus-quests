@@ -125,6 +125,7 @@
         nameSecondary,
         children,
         classes,
+        stableGutter,
     }: {
         id: string
         name?: Translatable
@@ -174,35 +175,35 @@
         return () => clearTimeout(saveTimeout)
     })
 
-    const onMove = (e: MouseEvent) => {
+    const onMove = (e: PointerEvent) => {
         const startX = e.clientX
         const startY = e.clientY
         const startLeft = dimensions.x
         const startTop = dimensions.y
 
-        const onMouseMove = (e: MouseEvent) => {
+        const onPointerMove = (e: PointerEvent) => {
             dimensions.x = startLeft + e.clientX - startX
             dimensions.y = Math.max(0, startTop + e.clientY - startY)
         }
 
-        const onMouseUp = () => {
-            window.removeEventListener('mousemove', onMouseMove)
-            window.removeEventListener('mouseup', onMouseUp)
+        const onPointerUp = () => {
+            window.removeEventListener('pointermove', onPointerMove)
+            window.removeEventListener('pointerup', onPointerUp)
         }
 
-        window.addEventListener('mousemove', onMouseMove)
-        window.addEventListener('mouseup', onMouseUp)
+        window.addEventListener('pointermove', onPointerMove)
+        window.addEventListener('pointerup', onPointerUp)
     }
 
     const onResize =
         (dim: 'left' | 'right' | 'bottom' | 'bottomleft' | 'bottomright') =>
-        (e: MouseEvent) => {
+        (e: PointerEvent) => {
             e.preventDefault()
             const startX = e.clientX
             const startY = e.clientY
             const og = { ...dimensions }
 
-            const onMouseMove = (e: MouseEvent) => {
+            const onPointerMove = (e: PointerEvent) => {
                 const left = () => {
                     dimensions.width = Math.max(
                         MIN_WIDTH,
@@ -244,13 +245,13 @@
                 }
             }
 
-            const onMouseUp = () => {
-                window.removeEventListener('mousemove', onMouseMove)
-                window.removeEventListener('mouseup', onMouseUp)
+            const onPointerUp = () => {
+                window.removeEventListener('pointermove', onPointerMove)
+                window.removeEventListener('pointerup', onPointerUp)
             }
 
-            window.addEventListener('mousemove', onMouseMove)
-            window.addEventListener('mouseup', onMouseUp)
+            window.addEventListener('pointermove', onPointerMove)
+            window.addEventListener('pointerup', onPointerUp)
         }
 
     $effect(() => {
@@ -268,7 +269,7 @@
         return () => window.removeEventListener('keydown', handler)
     })
 
-    const onClose = (e: MouseEvent) => {
+    const onClose = (e: PointerEvent) => {
         e.stopPropagation()
         e.preventDefault()
         setWindowVisibility(id, false)
@@ -281,9 +282,9 @@
     class:fully-hidden={fullyHidden}
     style="top: {dimensions.y}px; left: {dimensions.x}px; width: {dimensions.width}px; height: {dimensions.height}px"
     style:z-index={zIndex + 3}
-    onmousedown={() => pushWindowToFront(id)}
+    onpointerdown={() => pushWindowToFront(id)}
 >
-    <div class="topbar" onmousedown={onMove}>
+    <div class="topbar" onpointerdown={onMove}>
         {#if name}
             <span class="primary">
                 {#if typeof name === 'string'}
@@ -304,19 +305,22 @@
         {/if}
         <button
             class="close"
-            onmousedown={(e) => e.stopImmediatePropagation()}
-            onmouseup={onClose}
+            onpointerdown={(e) => e.stopImmediatePropagation()}
+            onpointerup={onClose}
         >
             <Close />
         </button>
     </div>
-    <div class="resizer left" onmousedown={onResize('left')}></div>
-    <div class="resizer right" onmousedown={onResize('right')}></div>
-    <div class="resizer bottom" onmousedown={onResize('bottom')}></div>
-    <div class="resizer bottomleft" onmousedown={onResize('bottomleft')}></div>
+    <div class="resizer left" onpointerdown={onResize('left')}></div>
+    <div class="resizer right" onpointerdown={onResize('right')}></div>
+    <div class="resizer bottom" onpointerdown={onResize('bottom')}></div>
+    <div
+        class="resizer bottomleft"
+        onpointerdown={onResize('bottomleft')}
+    ></div>
     <div
         class="resizer bottomright"
-        onmousedown={onResize('bottomright')}
+        onpointerdown={onResize('bottomright')}
     ></div>
     <div class="content" {id}>
         {@render children()}
@@ -327,7 +331,7 @@
     .container {
         z-index: 2;
         background-color: #181818e0;
-        border: 1px solid rgba(128, 128, 128, 0.4);
+        border: 1px solid #2d2d2d;
         border-radius: 4px;
         backdrop-filter: blur(2px);
         box-sizing: border-box;
@@ -378,15 +382,16 @@
         cursor: move;
         background-color: #090909;
         z-index: 2;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom: 1px solid #2d2d2d;
         user-select: none;
         padding: 4px 0 4px 12px;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        overflow: hidden;
 
         & > span {
             font-size: 12px;
@@ -415,22 +420,23 @@
 
         & .close {
             box-sizing: border-box;
-            height: 29px;
+            height: 30px;
             width: 30px;
             padding: 2px 0px 0 0;
             margin: 0 0 0 12px;
             border-radius: 0;
             border: none;
-            border-left: 1px solid rgba(128, 128, 128, 0.3);
+            border-left: 1px solid #2d2d2d;
             background: none;
             color: #fff;
             font-size: 20px;
             line-height: 1;
             opacity: 1;
-            transition: color 0.1s;
+            transition: background-color 0.1s;
             cursor: pointer;
-            &:hover {
-                color: rgba(255, 255, 255, 0.5);
+            &:hover,
+            &:target {
+                background-color: #333;
             }
         }
     }

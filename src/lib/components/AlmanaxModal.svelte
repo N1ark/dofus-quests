@@ -146,7 +146,6 @@
     .content {
         height: 100%;
         min-height: 100px;
-        overflow-y: auto;
         display: flex;
         flex-direction: column;
         margin: -4px -12px 0 -12px;
@@ -166,13 +165,14 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding-bottom: 16px;
         gap: 8px;
         height: 100%;
         overflow-y: auto;
         flex-shrink: 10;
-        padding: 0 8px 58px 8px;
+        padding: 0 8px 28px 8px;
         justify-content: space-evenly;
+        align-content: flex-start;
+        scrollbar-gutter: stable;
 
         & .month {
             max-width: 230px;

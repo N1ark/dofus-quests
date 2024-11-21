@@ -48,7 +48,7 @@
 
 {#if href}
     <a
-        class={classes}
+        class={(classes ?? '') + ' button'}
         class:left={leftSided}
         {href}
         {title}
@@ -59,7 +59,7 @@
     </a>
 {:else}
     <button
-        class={classes}
+        class={(classes ?? '') + ' button'}
         class:left={leftSided}
         onclick={clickHandler}
         {disabled}
@@ -74,15 +74,6 @@
         width: 33px;
         height: 33px;
         box-sizing: border-box;
-
-        background-color: #181818;
-        border: 1px solid rgba(128, 128, 128, 0.4);
-        border-radius: 4px;
-        padding: 6px;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-        color: white;
-        transition: background-color 0.1s;
-        cursor: pointer;
         pointer-events: auto;
         user-select: none;
 
@@ -92,11 +83,8 @@
         font-size: 1.2em;
         position: relative;
 
-        &:hover {
-            background-color: #333;
-        }
-
-        &:hover span {
+        &:hover span,
+        &:focus span {
             opacity: 1;
         }
 

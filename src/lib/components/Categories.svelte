@@ -18,6 +18,7 @@
     import { get } from '../localisation.svelte'
     import { completed, showCompleted } from '../state.svelte'
     import { normalize } from '../util'
+    import Accordion from './Accordion.svelte'
     import Progress, { progressText } from './Progress.svelte'
     import { selectNode } from './SelectedQuestView.svelte'
     import Text from './Text.svelte'
@@ -100,22 +101,30 @@
                     normalize(get(node.id, 'name')).includes(searchNormalized)
             )}
         {#if displayed.length !== 0}
-            <h3 id={`${mode}category-${category.id}`}>
-                <Text key={mode[0] + 'C' + category.id} name="name" />
-                <Progress total={elems.length} amount={completed.length} />
-            </h3>
-            <ul class={mode}>
-                {#each displayed as elem}
-                    <li class:completed={ownCompleted.has(elem.id)}>
-                        <button
-                            class="button-link"
-                            onclick={() => selectNode(elem.id)}
-                        >
-                            <Text key={elem.id} name="name" />
-                        </button>
-                    </li>
-                {/each}
-            </ul>
+            {#snippet title()}
+                <h3>
+                    <Text key={mode[0] + 'C' + category.id} name="name" />
+                    <Progress total={elems.length} amount={completed.length} />
+                </h3>
+            {/snippet}
+            <Accordion
+                {title}
+                id={`${mode}category-${category.id}`}
+                forceOpen={search !== '' ? true : undefined}
+            >
+                <ul class={mode}>
+                    {#each displayed as elem}
+                        <li class:completed={ownCompleted.has(elem.id)}>
+                            <button
+                                class="link"
+                                onclick={() => selectNode(elem.id)}
+                            >
+                                <Text key={elem.id} name="name" />
+                            </button>
+                        </li>
+                    {/each}
+                </ul>
+            </Accordion>
         {/if}
     {/each}
 </Window>
@@ -127,14 +136,13 @@
         position: sticky;
         top: 0;
         z-index: 1;
-        margin-right: -4px;
+        margin-right: 0;
+        margin-bottom: 1em;
     }
     h3 {
-        margin-bottom: 4px;
+        margin: 0;
         scroll-margin-top: 1em;
-        &:first-of-type {
-            margin-top: 0;
-        }
+        font-size: 1em;
     }
     ul {
         margin-top: 0;

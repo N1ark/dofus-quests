@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { Link } from 'lucide-svelte'
     import type { Achievement, Quest } from '../data'
     import { data } from '../data'
     import { language, type Lang } from '../localisation.svelte'
@@ -76,17 +75,11 @@
                 {@render criterionAtom(text)}
             {/each}
         {:else if criterion.type === 'quests'}
-            <button
-                class="button-link"
-                onclick={() => selectNode('q' + criterion.id)}
-            >
+            <button class="link" onclick={() => selectNode('q' + criterion.id)}>
                 {criterion.name[ownLang]}
             </button>
         {:else if criterion.type === 'achievements'}
-            <button
-                class="button-link"
-                onclick={() => selectNode('a' + criterion.id)}
-            >
+            <button class="link" onclick={() => selectNode('a' + criterion.id)}>
                 {criterion.name[ownLang]}
             </button>
         {:else if criterion.type === 'breeds'}
@@ -141,7 +134,7 @@
 {#if category}
     <div class="category">
         <button
-            class="button-link"
+            class="link"
             onclick={() => selectCategory(node.type, category.id)}
         >
             <Text key={node.id[0] + 'C' + category.id} name="name" />
@@ -150,15 +143,6 @@
 {/if}
 <h2>
     <Text key={node.id} name="name" />
-    <a
-        class="link"
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        title="DofusDB"
-    >
-        <Link />
-    </a>
 </h2>
 {#if node.type === 'achievement'}
     <p>
@@ -216,18 +200,6 @@
                     }
                 }
             }
-        }
-    }
-
-    .link {
-        font-size: 0.7em;
-        margin: -8px;
-        margin-left: 0;
-        padding: 8px;
-        opacity: 0.7;
-        transition: opacity 0.1s;
-        &:hover {
-            opacity: 1;
         }
     }
 

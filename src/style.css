@@ -15,13 +15,27 @@ em {
     color: #a9d94b;
 }
 
-a {
+a,
+.link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: inherit;
+    margin: 0;
+    font-size: 1em;
+    text-decoration: underline;
     color: #ccc;
     transition: color 0.1s;
-}
-
-a:hover {
-    color: #fff;
+    box-shadow: none;
+    &:hover {
+        background: none;
+        color: #fff;
+    }
+    &:active,
+    &:focus {
+        color: #fff;
+    }
 }
 
 svg {
@@ -29,7 +43,8 @@ svg {
     height: 1em;
 }
 
-button {
+button,
+.button {
     font-family: inherit;
     background-color: #181818;
     border: 1px solid rgba(128, 128, 128, 0.4);
@@ -50,20 +65,13 @@ button {
     }
 }
 
-.button-link {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    text-align: left;
-    margin: 0;
-    font-size: 1em;
-    text-decoration: underline;
-    color: #ccc;
-    transition: color 0.1s;
-    box-shadow: none;
+button.link {
     &:hover {
         background: none;
+        color: #fff;
+    }
+    &:active,
+    &:focus {
         color: #fff;
     }
 }

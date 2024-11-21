@@ -25,5 +25,6 @@
     "mark-completed": "Marquer comme fini (clic droit)",
     "mark-uncompleted": "Marquer comme non fini (clic droit)",
     "mark-all-completed": "Marquer avec prérequis (shift + clic droit)",
-    "mark-all-uncompleted": "Marquer avec prérequis (shift + clic droit)"
+    "mark-all-uncompleted": "Marquer avec prérequis (shift + clic droit)",
+    "error-occurred": "Une erreur a eu lieu, réessayez plus tard."
 }

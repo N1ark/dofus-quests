@@ -1,14 +1,13 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { data } from '../data'
-    import { get } from '../localisation.svelte'
-    import { completed } from '../state.svelte'
+    import { progressText } from '../components/Progress.svelte'
+    import Text from '../components/Text.svelte'
+    import Window from '../components/Window.svelte'
+    import { data } from '../data/data'
+    import { completed } from '../data/state.svelte'
+    import { get } from '../locale/localisation.svelte'
     import { normalize } from '../util'
-    import { progressText } from './Progress.svelte'
-    import Text from './Text.svelte'
-    import Window from './Window.svelte'
 
-    let visible = $state(false)
     let today = $state(new Date())
     let almanax = $derived(
         data.almanax.find(

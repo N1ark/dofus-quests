@@ -15,18 +15,19 @@
     import DofusMap from './lib/images/dofusmap.png'
     import DofusPourLesNoobs from './lib/images/dofusprlesnoobs.png'
 
-    import AlmanaxModal from './lib/components/AlmanaxModal.svelte'
-    import BackupPopup from './lib/components/BackupPopup.svelte'
+    import AlmanaxView from './lib/views/AlmanaxView.svelte'
+    import BackupView from './lib/views/BackupView.svelte'
+    import CategoryView from './lib/views/CategoryView.svelte'
+    import HelpView from './lib/views/HelpView.svelte'
+    import SelectedQuestView from './lib/views/SelectedQuestView.svelte'
+
     import Button from './lib/components/Button.svelte'
-    import Categories from './lib/components/Categories.svelte'
     import Column from './lib/components/Column.svelte'
     import GraphView from './lib/components/GraphView.svelte'
-    import HelpView from './lib/components/HelpView.svelte'
-    import SelectedQuestView from './lib/components/SelectedQuestView.svelte'
     import { swapWindowVisibility } from './lib/components/Window.svelte'
-    import { data } from './lib/data'
-    import { language, type Lang } from './lib/localisation.svelte'
-    import { showCompleted } from './lib/state.svelte'
+    import { data } from './lib/data/data'
+    import { showCompleted } from './lib/data/state.svelte'
+    import { language, type Lang } from './lib/locale/localisation.svelte'
 
     let refreshIdx = $state(0)
     let showGroups = $state(true)
@@ -126,10 +127,10 @@
     </div>
     <div class="windows">
         <SelectedQuestView />
-        <BackupPopup />
-        <AlmanaxModal />
-        <Categories mode="quest" />
-        <Categories mode="achievement" />
+        <BackupView />
+        <AlmanaxView />
+        <CategoryView mode="quest" />
+        <CategoryView mode="achievement" />
         <HelpView />
     </div>
 </main>

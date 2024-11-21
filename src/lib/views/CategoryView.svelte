@@ -14,18 +14,18 @@
 <script lang="ts">
     import { onMount } from 'svelte'
 
-    import { data } from '../data'
-    import { get } from '../localisation.svelte'
-    import { completed, showCompleted } from '../state.svelte'
-    import { normalize } from '../util'
-    import Accordion from './Accordion.svelte'
-    import Progress, { progressText } from './Progress.svelte'
-    import { selectNode } from './SelectedQuestView.svelte'
-    import Text from './Text.svelte'
+    import Accordion from '../components/Accordion.svelte'
+    import Progress, { progressText } from '../components/Progress.svelte'
+    import Text from '../components/Text.svelte'
     import Window, {
         pushWindowToFront,
         setWindowVisibility,
-    } from './Window.svelte'
+    } from '../components/Window.svelte'
+    import { data } from '../data/data'
+    import { completed, showCompleted } from '../data/state.svelte'
+    import { get } from '../locale/localisation.svelte'
+    import { normalize } from '../util'
+    import { selectNode } from './SelectedQuestView.svelte'
 
     const { mode }: { mode: Category } = $props()
 

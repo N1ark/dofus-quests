@@ -1,4 +1,4 @@
-import { base64ToInt, intToBase64 } from './util'
+import { base64ToInt, intToBase64 } from '../util'
 
 export default class BitSet {
     private data: Partial<Record<number, number>> = {}

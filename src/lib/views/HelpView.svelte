@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Text from './Text.svelte'
-    import Window from './Window.svelte'
+    import Text from '../components/Text.svelte'
+    import Window from '../components/Window.svelte'
 </script>
 
 <Window id="help" name={{ key: 'help' }}>

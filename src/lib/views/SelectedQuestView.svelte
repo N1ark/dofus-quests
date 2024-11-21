@@ -18,19 +18,20 @@
     import ListX from 'lucide-svelte/icons/list-x'
     import X from 'lucide-svelte/icons/x'
 
-    import { onMount } from 'svelte'
-    import type { Data } from '../data'
-    import { data, id, onlyPredecessors } from '../data'
+    import DofusDB from '../images/dofusdb.png'
     import DofusPourLesNoobs from '../images/dofusprlesnoobs.png'
-    import { completed } from '../state.svelte'
-    import Button from './Button.svelte'
-    import GraphView from './GraphView.svelte'
-    import QuestInfo from './QuestInfo.svelte'
+
+    import { onMount } from 'svelte'
+    import Button from '../components/Button.svelte'
+    import GraphView from '../components/GraphView.svelte'
+    import QuestInfo from '../components/QuestInfo.svelte'
     import Window, {
         pushWindowToFront,
         setWindowVisibility,
         subscribeToWindowVisibility,
-    } from './Window.svelte'
+    } from '../components/Window.svelte'
+    import { data, id, onlyPredecessors, type Data } from '../data/data'
+    import { completed } from '../data/state.svelte'
 
     let node: Data['nodes'][number] | null = $state(null)
     let currData: Pick<Data, 'nodes' | 'edges'> = $state({
@@ -134,6 +135,14 @@
                     title="Dofus pour les noobs"
                 />
             {/if}
+            <Button
+                Icon={{ src: DofusDB }}
+                href={(node.type === 'quest'
+                    ? 'https://dofusdb.fr/fr/database/quest/'
+                    : 'https://dofusdb.fr/fr/database/achievements/') +
+                    node.id.slice(1)}
+                title="DofusDB"
+            />
             <Button
                 Icon={isCompleted ? X : Check}
                 title={isCompleted ? 'mark-uncompleted' : 'mark-completed'}

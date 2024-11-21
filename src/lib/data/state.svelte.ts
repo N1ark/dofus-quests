@@ -1,8 +1,8 @@
 import type { Position } from 'cytoscape'
 import { compressToBase64, decompressFromBase64 } from 'lz-string'
 import { writable } from 'svelte/store'
-import BitSet from '../lib/bitset'
-import { data } from '../lib/data'
+import BitSet from './bitset'
+import { data } from './data'
 import { positions } from './positions'
 
 export const showCompleted = writable(

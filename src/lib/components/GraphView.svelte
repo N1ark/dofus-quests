@@ -30,19 +30,23 @@
         type Position,
     } from 'cytoscape'
     import { onMount, untrack } from 'svelte'
-    import { GROUP_COLORS, style } from '../cytostyle'
-    import { type Data, id, toCyto } from '../data'
-    import { get, language } from '../localisation.svelte'
-    import { applyPositions, positions as basePositions } from '../positions'
+
+    import { GROUP_COLORS, style } from '../data/cytostyle'
+    import { type Data, id, toCyto } from '../data/data'
+    import {
+        applyPositions,
+        positions as basePositions,
+    } from '../data/positions'
     import {
         completed,
         getPreferredPositions,
         setPreferredPositions,
         showCompleted,
-    } from '../state.svelte'
+    } from '../data/state.svelte'
+    import { get, language } from '../locale/localisation.svelte'
     import { fillMultilineTextBot, splitText } from '../util'
+    import { selectNode } from '../views/SelectedQuestView.svelte'
     import Button from './Button.svelte'
-    import { selectNode } from './SelectedQuestView.svelte'
 
     let {
         data,

@@ -25,5 +25,6 @@
     "mark-completed": "Mark as completed (right click)",
     "mark-uncompleted": "Mark as uncompleted (right click)",
     "mark-all-completed": "Mark with prerequisites (shift + right click)",
-    "mark-all-uncompleted": "Unmark with prerequisites (shift + right click)"
+    "mark-all-uncompleted": "Unmark with prerequisites (shift + right click)",
+    "error-occurred": "An error occurred, try again later."
 }

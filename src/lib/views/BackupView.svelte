@@ -1,13 +1,13 @@
 <script lang="ts">
+    import Column from '../components/Column.svelte'
+    import Row from '../components/Row.svelte'
+    import Text from '../components/Text.svelte'
+    import Window from '../components/Window.svelte'
     import {
         completed,
         getRawCompleted,
         setRawCompleted,
-    } from '../state.svelte'
-    import Column from './Column.svelte'
-    import Row from './Row.svelte'
-    import Text from './Text.svelte'
-    import Window from './Window.svelte'
+    } from '../data/state.svelte'
 
     let backup: string = $state('')
     let copied = $state(false)

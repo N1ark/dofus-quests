@@ -1,9 +1,8 @@
 <script lang="ts">
-    import type { Achievement, Quest } from '../data'
-    import { data } from '../data'
-    import { language, type Lang } from '../localisation.svelte'
-    import { selectCategory } from './Categories.svelte'
-    import { selectNode } from './SelectedQuestView.svelte'
+    import { data, type Achievement, type Quest } from '../data/data'
+    import { language, type Lang } from '../locale/localisation.svelte'
+    import { selectCategory } from '../views/CategoryView.svelte'
+    import { selectNode } from '../views/SelectedQuestView.svelte'
     import Text from './Text.svelte'
 
     type Translated = Record<string, string>
@@ -37,13 +36,8 @@
             : data.questCategories
         ).find((c) => c.id === node.categoryId)!
     )
-    const url = $derived(
-        (node.type === 'quest'
-            ? 'https://dofusdb.fr/fr/database/quest/'
-            : 'https://dofusdb.fr/fr/database/achievements/') + node.id.slice(1)
-    )
 
-    let requirements = $state<CriterionList | null>(null)
+    let requirements = $state<CriterionList | null | 'error'>(null)
     const fetchRequirements = () => {
         let cleanRequirements = node.requirements
             .replace(/&Qa\!\d+/g, '')
@@ -55,6 +49,7 @@
         )
             .then((response) => response.json())
             .then((data: CriterionList) => (requirements = data))
+            .catch(() => (requirements = 'error'))
     }
     $effect(() => fetchRequirements())
 
@@ -150,7 +145,11 @@
     </p>
 {/if}
 <div class="requirements">
-    {#if requirements}
+    {#if requirements === 'error'}
+        <span class="loading">
+            <Text key="error-occurred" />
+        </span>
+    {:else if requirements !== null}
         {@render criterionBlock(requirements)}
     {:else}
         <span class="loading">

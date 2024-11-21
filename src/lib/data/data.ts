@@ -1,6 +1,6 @@
 import type { ElementsDefinition } from 'cytoscape'
+import { get } from '../locale/localisation.svelte'
 import dataRaw from './data.json'
-import { get } from './localisation.svelte'
 
 export type Quest = {
     id: string

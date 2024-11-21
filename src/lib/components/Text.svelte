@@ -1,5 +1,5 @@
 <script lang="ts" module>
-    import { get, language } from '../localisation.svelte'
+    import { get, language } from '../locale/localisation.svelte'
 
     language.subscribe((lang) => {
         const elements = document.querySelectorAll('[data-translate]')

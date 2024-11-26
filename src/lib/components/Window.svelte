@@ -52,7 +52,10 @@
         try {
             if (!stored)
                 throw new Error('No stored window info for window ' + id)
-            const [x, y, width, height, visible] = stored.split(',').map(Number)
+            const [x, y, width, height, visible] = stored
+                .split(',')
+                .map(Number)
+                .map(Math.round)
             if (
                 isNaN(x) ||
                 isNaN(y) ||
@@ -80,6 +83,19 @@
     const setWindowInfo = (id: string, info: WindowInfo) => {
         const str = `${info.x},${info.y},${info.width},${info.height},${info.visible ? 1 : 0}`
         localStorage.setItem('window.' + id, str)
+    }
+
+    const resetSubscribers: [string, () => void][] = []
+
+    export const resetWindowPosition = (id: string) => {
+        console.log('Resetting window position', id)
+        resetSubscribers
+            .filter(([windowId]) => windowId === id)
+            .forEach(([, callback]) => callback())
+    }
+
+    const subscribeToWindowReset = (id: string, callback: () => void) => {
+        resetSubscribers.push([id, callback])
     }
 
     const windowListeners: [string, (visible: boolean) => void][] = []
@@ -110,6 +126,7 @@
 <script lang="ts">
     import Close from 'lucide-svelte/icons/x'
     import type { Snippet } from 'svelte'
+    import { clamp } from '../util'
     import Text from './Text.svelte'
 
     type Translatable =
@@ -125,12 +142,16 @@
         nameSecondary,
         children,
         classes,
+        maxWidth = 2000,
+        maxHeight = 2000,
     }: {
         id: string
         name?: Translatable
         nameSecondary?: Translatable
         children: Snippet
         classes?: string
+        maxWidth?: number
+        maxHeight?: number
     } = $props()
 
     let dimensions = $state(getWindowInfo(id))
@@ -149,6 +170,15 @@
         })
         subscribeWindowOrder(id, (order) => {
             zIndex = order
+        })
+        subscribeToWindowReset(id, () => {
+            dimensions = {
+                x: 64,
+                y: 64,
+                width: clamp(window.innerWidth - 128, MIN_WIDTH, maxWidth),
+                height: clamp(window.innerHeight - 128, MIN_HEIGHT, maxHeight),
+                visible: true,
+            }
         })
     })
 
@@ -174,7 +204,15 @@
         return () => clearTimeout(saveTimeout)
     })
 
+    let lastClickTopBar = 0
     const onMove = (e: PointerEvent) => {
+        const now = Date.now()
+        if (now - lastClickTopBar < 400) {
+            resetWindowPosition(id)
+            return
+        }
+        lastClickTopBar = now
+
         const startX = e.clientX
         const startY = e.clientY
         const startLeft = dimensions.x
@@ -188,6 +226,8 @@
         const onPointerUp = () => {
             window.removeEventListener('pointermove', onPointerMove)
             window.removeEventListener('pointerup', onPointerUp)
+            dimensions.x = Math.round(dimensions.x)
+            dimensions.y = Math.round(dimensions.y)
         }
 
         window.addEventListener('pointermove', onPointerMove)
@@ -203,28 +243,40 @@
 
             const onPointerMove = (e: PointerEvent) => {
                 const left = () => {
-                    dimensions.width = Math.max(
-                        MIN_WIDTH,
-                        og.width - (e.clientX - startX)
+                    dimensions.width = Math.round(
+                        clamp(
+                            og.width - (e.clientX - startX),
+                            MIN_WIDTH,
+                            maxWidth
+                        )
                     )
                     dimensions.x = og.x + og.width - dimensions.width
                 }
                 const right = () => {
-                    dimensions.width = Math.max(
-                        MIN_WIDTH,
-                        og.width + (e.clientX - startX)
+                    dimensions.width = Math.round(
+                        clamp(
+                            og.width + (e.clientX - startX),
+                            MIN_WIDTH,
+                            maxWidth
+                        )
                     )
                 }
                 const bottom = () => {
-                    dimensions.height = Math.max(
-                        MIN_HEIGHT,
-                        og.height + (e.clientY - startY)
+                    dimensions.height = Math.round(
+                        clamp(
+                            og.height + (e.clientY - startY),
+                            MIN_HEIGHT,
+                            maxHeight
+                        )
                     )
                 }
                 const top = () => {
-                    dimensions.height = Math.max(
-                        MIN_HEIGHT,
-                        og.height - (e.clientY - startY)
+                    dimensions.height = Math.round(
+                        clamp(
+                            og.height - (e.clientY - startY),
+                            MIN_HEIGHT,
+                            maxHeight
+                        )
                     )
                     dimensions.y = og.y + og.height - dimensions.height
                 }
@@ -315,12 +367,23 @@
     <div class="content" {id}>
         {@render children()}
     </div>
+    {#if import.meta.env.DEV}
+        <div class="debug">
+            {[
+                id,
+                dimensions.x,
+                dimensions.y,
+                dimensions.width,
+                dimensions.height,
+            ].join(' - ')}
+        </div>
+    {/if}
 </div>
 
 <style>
     .container {
         z-index: 2;
-        background-color: #181818e0;
+        background-color: #181818e8;
         border: 1px solid #2d2d2d;
         border-radius: 4px;
         backdrop-filter: blur(2px);
@@ -477,5 +540,14 @@
         &.top {
             top: -6px;
         }
+    }
+
+    .debug {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        font-family: monospace;
+        opacity: 0.8;
+        font-size: 0.8;
     }
 </style>

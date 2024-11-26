@@ -1,35 +1,37 @@
 <script lang="ts">
     import twemoji from '@twemoji/api'
+    import { type Icon as IconType } from 'lucide-svelte'
+    import { type Component } from 'svelte'
     import Text from './Text.svelte'
 
     const {
         Icon,
         classes,
         onclick,
+        ondblclick,
         href,
         title,
         leftSided,
+        disabled,
+        selected,
     }: {
-        Icon: any
+        Icon: typeof IconType | Component | string | { src: string }
         classes?: string
         href?: string
         onclick?: () => any | Promise<any>
+        ondblclick?: () => any | Promise<any>
         title?: string
         leftSided?: boolean
+        disabled?: boolean
+        selected?: boolean
     } = $props()
-    let disabled = $state(false)
 
+    let lastclick = 0
     const clickHandler = () => {
-        if (onclick) {
-            const ret = onclick()
-            if (ret instanceof Promise) {
-                ret.catch(console.error).finally(() => {
-                    disabled = false
-                })
-            } else {
-                disabled = false
-            }
-        }
+        const now = Date.now()
+        if (now - lastclick < 400) ondblclick?.()
+        else onclick?.()
+        lastclick = now
     }
 </script>
 
@@ -37,7 +39,7 @@
     {#if typeof Icon === 'string'}
         {@html twemoji.parse(Icon)}
     {:else if 'src' in Icon}
-        <img src={Icon.src} alt={title} />
+        <img src={Icon.src} alt="" draggable="false" />
     {:else}
         <Icon />
     {/if}
@@ -49,6 +51,7 @@
 {#if href}
     <a
         class={(classes ?? '') + ' button'}
+        class:selected
         class:left={leftSided}
         {href}
         {title}
@@ -60,8 +63,9 @@
 {:else}
     <button
         class={(classes ?? '') + ' button'}
+        class:selected
         class:left={leftSided}
-        onclick={clickHandler}
+        onclick={ondblclick ? clickHandler : onclick}
         {disabled}
     >
         {@render content()}
@@ -111,9 +115,11 @@
         }
     }
 
-    :global(img) {
-        width: 1em;
-        height: 1em;
-        object-fit: contain;
+    .button {
+        :global(img) {
+            width: 1em;
+            height: 1em;
+            object-fit: contain;
+        }
     }
 </style>

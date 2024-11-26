@@ -126,86 +126,83 @@
     {/if}
 {/snippet}
 
-{#if category}
-    <div class="category">
-        <button
-            class="link"
-            onclick={() => selectCategory(node.type, category.id)}
-        >
-            <Text key={node.id[0] + 'C' + category.id} name="name" />
-        </button>
-    </div>
-{/if}
-<h2>
-    <Text key={node.id} name="name" />
-</h2>
-{#if node.type === 'achievement'}
-    <p>
-        <Text key={node.id} name="description" />
-    </p>
-{/if}
-<div class="requirements">
-    {#if requirements === 'error'}
-        <span class="loading">
-            <Text key="error-occurred" />
-        </span>
-    {:else if requirements !== null}
-        {@render criterionBlock(requirements)}
-    {:else}
-        <span class="loading">
-            <Text key="loading" />
-        </span>
+<div class="info">
+    {#if category}
+        <div class="category">
+            <button
+                class="link"
+                onclick={() => selectCategory(node.type, category.id)}
+            >
+                <Text key={node.id[0] + 'C' + category.id} name="name" />
+            </button>
+        </div>
     {/if}
+    <Text element="h2" key={node.id} name="name" />
+    {#if node.type === 'achievement'}
+        <Text element="p" key={node.id} name="description" />
+    {/if}
+    <div class="requirements">
+        {#if requirements === 'error'}
+            <Text key="error-occurred" classes="loading" />
+        {:else if requirements !== null}
+            {@render criterionBlock(requirements)}
+        {:else}
+            <Text key="loading" classes="loading" />
+        {/if}
+    </div>
 </div>
 
 <style>
-    li:not(.isListBlock),
-    h2,
-    p,
-    a {
-        width: fit-content;
-        pointer-events: auto;
-    }
+    .info {
+        li:not(.isListBlock),
+        :global(h2),
+        :global(p),
+        a {
+            width: fit-content;
+            pointer-events: auto;
+        }
 
-    .loading {
-        font-style: italic;
-        opacity: 0.5;
-    }
+        :global(.loading) {
+            font-style: italic;
+            opacity: 0.5;
+        }
 
-    .requirements {
-        pointer-events: none;
-    }
+        .requirements {
+            pointer-events: none;
+        }
 
-    p {
-        font-style: italic;
-    }
+        :global(p) {
+            font-style: italic;
+        }
 
-    ul {
-        width: fit-content;
-        pointer-events: none;
-        list-style: none;
-        border-left: 1px solid transparent;
-        padding-left: 0;
-        & ul {
-            padding-left: 0.5em;
-            margin: 0.1em 0;
-            border-color: rgba(255, 255, 255, 1);
+        ul {
+            width: fit-content;
+            pointer-events: none;
+            list-style: none;
+            border-left: 1px solid transparent;
+            padding-left: 0;
             & ul {
-                border-color: rgba(255, 255, 255, 0.75);
+                padding-left: 0.5em;
+                margin: 0.1em 0;
+                border-color: rgba(255, 255, 255, 1);
                 & ul {
-                    border-color: rgba(255, 255, 255, 0.5);
+                    border-color: rgba(255, 255, 255, 0.75);
                     & ul {
-                        border-color: rgba(255, 255, 255, 0.25);
+                        border-color: rgba(255, 255, 255, 0.5);
+                        & ul {
+                            border-color: rgba(255, 255, 255, 0.25);
+                        }
                     }
                 }
             }
         }
-    }
 
-    .category {
-        font-size: 0.8em;
-    }
-    .category + h2 {
-        margin-top: 0;
+        .category {
+            font-size: 0.8em;
+            margin-top: 0.5em;
+        }
+        .category + :global(h2) {
+            margin-top: 0;
+        }
     }
 </style>

@@ -88,7 +88,7 @@
     )}
 >
     <div class="search">
-        <input type="text" placeholder="Search" bind:value={search} />
+        <input type="text" data-placeholder="search" bind:value={search} />
     </div>
     {#each categories as category}
         {@const elems = elements.filter((n) => n.categoryId === category.id)}

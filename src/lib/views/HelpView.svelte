@@ -3,7 +3,7 @@
     import Window from '../components/Window.svelte'
 </script>
 
-<Window id="help" name={{ key: 'help' }}>
-    <h3><Text key="help" /></h3>
-    <p><Text key="help-full" raw /></p>
+<Window id="help" name={{ key: 'help' }} maxWidth={500}>
+    <Text element="h3" key="help" />
+    <Text element="p" key="help-full" raw />
 </Window>

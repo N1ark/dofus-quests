@@ -53,7 +53,7 @@
             <div class="search">
                 <input
                     type="text"
-                    placeholder="Search"
+                    data-placeholder="search"
                     bind:value={searchText}
                 />
             </div>
@@ -120,9 +120,7 @@
         <div class="info">
             <div>
                 <div class="date">{today.toLocaleDateString()}</div>
-                <h3>
-                    <Text key={almanax.id} name="name" />
-                </h3>
+                <Text element="h3" key={almanax.id} name="name" />
                 <div class="item">
                     <img src={almanax.itemImg} alt={''} />
                     <div>
@@ -134,8 +132,8 @@
                 </div>
             </div>
             <div>
-                <h3><Text key={almanax.id} name="effectName" /></h3>
-                <p><Text key={almanax.id} name="effectDesc" raw /></p>
+                <Text element="h3" key={almanax.id} name="effectName" />
+                <Text element="p" key={almanax.id} name="effectDesc" raw />
             </div>
         </div>
     </div>
@@ -251,12 +249,12 @@
             }
         }
 
-        & h3 {
+        & :global(h3) {
             margin-top: 0;
             margin-bottom: 4px;
         }
 
-        & p {
+        & :global(p) {
             margin-top: 0;
             margin-bottom: 0;
         }

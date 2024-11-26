@@ -540,13 +540,13 @@
             display: flex;
             z-index: 1;
         }
-    }
 
-    :global(.debug) {
-        border-color: rgba(219, 149, 20, 0.6) !important;
-        background-color: #211f1b !important;
-        &:hover {
-            background-color: #4d412c !important;
+        & :global(.debug) {
+            border-color: rgba(219, 149, 20, 0.6) !important;
+            background-color: #211f1b !important;
+            &:hover {
+                background-color: #4d412c !important;
+            }
         }
     }
 </style>

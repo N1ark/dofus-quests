@@ -24,7 +24,10 @@
     import Button from './lib/components/Button.svelte'
     import Column from './lib/components/Column.svelte'
     import GraphView from './lib/components/GraphView.svelte'
-    import { swapWindowVisibility } from './lib/components/Window.svelte'
+    import {
+        resetWindowPosition,
+        swapWindowVisibility,
+    } from './lib/components/Window.svelte'
     import { data } from './lib/data/data'
     import { showCompleted } from './lib/data/state.svelte'
     import { language, type Lang } from './lib/locale/localisation.svelte'
@@ -53,21 +56,25 @@
                 Icon={Backpack}
                 title="quests"
                 onclick={navigateOrLeave('quests')}
+                ondblclick={() => resetWindowPosition('quests')}
             />
             <Button
                 Icon={Trophy}
                 title="achievements"
                 onclick={navigateOrLeave('achievements')}
+                ondblclick={() => resetWindowPosition('achievements')}
             />
             <Button
                 Icon={Calendar}
                 title="almanax"
                 onclick={navigateOrLeave('almanax')}
+                ondblclick={() => resetWindowPosition('almanax')}
             />
             <Button
                 Icon={Archive}
                 title="backup"
                 onclick={navigateOrLeave('backup')}
+                ondblclick={() => resetWindowPosition('backup')}
             />
         </Column>
         <Column classes="wrap">
@@ -91,6 +98,7 @@
             Icon={BadgeHelp}
             title="help"
             onclick={navigateOrLeave('help')}
+            ondblclick={() => resetWindowPosition('help')}
         />
         <Column classes="wrap last">
             <div style:flex-grow="1" style:flex-shrink="0"></div>

@@ -1,6 +1,5 @@
 <script lang="ts">
     import Column from '../components/Column.svelte'
-    import Row from '../components/Row.svelte'
     import Text from '../components/Text.svelte'
     import Window from '../components/Window.svelte'
     import {
@@ -32,10 +31,12 @@
 </script>
 
 <Window id="backup" name={{ key: 'backup' }}>
-    <Row>
-        <Column classes="modal-col">
-            <h3><Text key="export" /></h3>
-            <p><Text key="export-info" /></p>
+    <div class="grid">
+        <Text element="h3" key="export" />
+        <Text element="h3" key="import" />
+        <Text element="p" key="export-info" />
+        <Text element="p" key="import-info" />
+        <Column>
             <textarea
                 readonly
                 value={data}
@@ -46,20 +47,24 @@
                 <Text key={copied ? 'copied' : 'copy'} />
             </button>
         </Column>
-        <Column classes="modal-col">
-            <h3><Text key="import" /></h3>
-            <p><Text key="import-info" /></p>
+        <Column>
             <textarea bind:value={backup} spellcheck="false"></textarea>
             <button onclick={importBackup}>
                 <Text key="import" />
             </button>
         </Column>
-    </Row>
+    </div>
 </Window>
 
 <style>
-    :global(.modal-col) {
-        width: 50%;
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+
+        & :global(h3) {
+            margin-bottom: 0;
+        }
     }
 
     textarea {
@@ -74,9 +79,5 @@
         resize: none;
         box-sizing: border-box;
         font-family: monospace;
-    }
-
-    h3 {
-        margin-bottom: 0;
     }
 </style>

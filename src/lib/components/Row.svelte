@@ -13,6 +13,6 @@
     .row {
         display: flex;
         flex-direction: row;
-        gap: 8px;
+        gap: 6px;
     }
 </style>

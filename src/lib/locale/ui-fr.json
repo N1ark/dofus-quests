@@ -20,6 +20,7 @@
     "hide-groups": "Cacher les catégories",
     "selected-quest": "Quête sélectionnée",
     "selected-achievement": "Succès sélectionné",
+    "search": "Recherche",
     "help": "Aide",
     "help-full": "Dofus Quests est un outil vous permettant de suivre votre progression dans les quêtes et succès de Dofus. Son atout principal est une visualisation des liens entre les diverses quêtes, permettant de facilement comprendre dans quel ordre les accomplir pour un certain objectif. Les succès sont regroupés par catégories, facilitant la lecture.<br/><br/>Contrôles:<ul><li><em>Marquer une quête/succès comme fini</em>: clic droit.</li><li><em>Marquer une quête/succès et ses prérequis</em>: shift + clic droit</li> <li><em>Détails d'une quête/succès</em>: clic gauche</li></ul>Dofus Quests dispose aussi de son <em>traqueur d'Almanax</em>, où vous pouvez également marquer les jours où l'offrande a été effectuée.<br/><br/>Ce site ne stocke aucun cookie ou tracking; votre progression est enregistrée localement. Vous pouvez <em>exporter</em> vos données via le menu à gauche afin de les garder de côté pour les ré-importer plus tard ou sur un autre appareil.<br/><br/>Si vous avez des questions, des suggestions ou des bugs à rapporter, n'hésitez pas à me contacter via <a href='https://twitter.com/N1ark_' target='_blank'>Twitter</a> ! Merci d'utiliser Dofus Quests :)<br/><br/><i>- N1ark</i>",
     "mark-completed": "Marquer comme fini (clic droit)",

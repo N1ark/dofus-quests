@@ -3,7 +3,7 @@ import { compressToBase64, decompressFromBase64 } from 'lz-string'
 import { writable } from 'svelte/store'
 import BitSet from './bitset'
 import { data } from './data'
-import { positions } from './positions'
+import { positions as defaultPositions } from './positions'
 
 export type Profile = {
     id: string
@@ -52,23 +52,39 @@ const defaultData: Data = {
 
 // Location parsers
 
-export const getPreferredPositions = (): Record<string, Position> => {
+const getPreferredPositions = (): Record<string, Position> => {
+    console.warn(
+        'Reading preferred positions for profile',
+        localProfiles.current
+    )
+    const storedProfile = localStorage.getItem(
+        `positions-${localProfiles.current}`
+    )
+    if (storedProfile) {
+        const storedStr = decompressFromBase64(storedProfile)
+        const preferred = JSON.parse(storedStr)
+        return { ...defaultPositions, ...preferred }
+    }
     const stored = localStorage.getItem('preferredPositions')
-    if (!stored) return positions
+    if (!stored) return defaultPositions
     const storedStr = decompressFromBase64(stored)
     const preferred = JSON.parse(storedStr)
-    return { ...positions, ...preferred }
+    localStorage.setItem(`positions-${localProfiles.current}`, stored)
+    localStorage.removeItem('preferredPositions')
+    return { ...defaultPositions, ...preferred }
 }
 
-export const setPreferredPositions = (preferred: Record<string, Position>) => {
+const setPreferredPositions = (preferred: Record<string, Position>) => {
     const preferredStr = JSON.stringify(preferred)
     const b64 = compressToBase64(preferredStr)
-    localStorage.setItem('preferredPositions', b64)
+    localStorage.setItem(`positions-${localProfiles.current}`, b64)
+    console.warn('Stored positions for profile', localProfiles.current)
 }
 
 // Profile parsers
 
 const readProfiles = (): ProfileData => {
+    console.warn('Reading profiles')
     const rawData = localStorage.getItem('profiles')
     if (!rawData) {
         const profile = defaultProfile
@@ -91,7 +107,7 @@ const storeProfiles = (profiles: ProfileData) => {
     const completedJson = JSON.stringify(profiles)
     const completedStr = compressToBase64(completedJson)
     localStorage.setItem('profiles', completedStr)
-    console.debug(
+    console.warn(
         'Stored profiles:',
         profiles.profiles.map((p) => p.name)
     )
@@ -153,6 +169,7 @@ const parseUnknownVersion = (v: string): Data => {
 }
 
 const readCompleted = (): Data => {
+    console.warn('Reading completed for profile', localProfiles.current)
     const profiled = localStorage.getItem(`completed-${localProfiles.current}`)
     if (profiled) {
         const completedStr = decompressFromBase64(profiled)
@@ -219,9 +236,15 @@ export const showCompleted = writable<boolean>(
 
 let localProfiles: ProfileData = readProfiles()
 export const profiles = writable<ProfileData>(localProfiles)
+let ignoreNextProfileUpdate = true
 
 let localCompleted: Data = readCompleted()
 export const completed = writable<Data>(localCompleted)
+let ignoreNextCompletedUpdate = true
+
+let localPreferredPositions: Record<string, Position> = getPreferredPositions()
+export const positions = writable(localPreferredPositions)
+let ignoreNextPositionsUpdate = true
 
 // Subscriptions
 
@@ -230,10 +253,17 @@ showCompleted.subscribe((value) => {
 })
 
 profiles.subscribe((newProfile) => {
+    if (ignoreNextProfileUpdate) {
+        ignoreNextProfileUpdate = false
+        return
+    }
     storeProfiles(newProfile)
     localProfiles = newProfile
 
+    ignoreNextCompletedUpdate = true
+    ignoreNextPositionsUpdate = true
     completed.set(readCompleted())
+    positions.set(getPreferredPositions())
 
     const profileIds = newProfile.profiles.map((p) => p.id)
     for (const key of Object.keys(localStorage)) {
@@ -242,11 +272,29 @@ profiles.subscribe((newProfile) => {
             !profileIds.includes(key.slice('completed-'.length))
         ) {
             localStorage.removeItem(key)
+        } else if (
+            key.startsWith('positions-') &&
+            !profileIds.includes(key.slice('positions-'.length))
+        ) {
+            localStorage.removeItem(key)
         }
     }
 })
 
 completed.subscribe((value) => {
+    if (ignoreNextCompletedUpdate) {
+        ignoreNextCompletedUpdate = false
+        return
+    }
     storeCompleted(value)
     localCompleted = value
+})
+
+positions.subscribe((value) => {
+    if (ignoreNextPositionsUpdate) {
+        ignoreNextPositionsUpdate = false
+        return
+    }
+    setPreferredPositions(value)
+    localPreferredPositions = value
 })

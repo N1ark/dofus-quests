@@ -133,6 +133,7 @@
     }
 
     const selectProfile = (id: string) => {
+        if (id === ownProfiles.current) return
         profiles.update(({ ...rest }) => ({ ...rest, current: id }))
     }
 

@@ -555,6 +555,6 @@
         left: 0;
         font-family: monospace;
         opacity: 0.8;
-        font-size: 0.8;
+        font-size: 0.8em;
     }
 </style>

@@ -30,6 +30,7 @@
         type Position,
     } from 'cytoscape'
     import { onMount, untrack } from 'svelte'
+    import { get as getOfStore } from 'svelte/store'
 
     import { GROUP_COLORS, style } from '../data/cytostyle'
     import { type Data, id, toCyto } from '../data/data'
@@ -37,12 +38,7 @@
         applyPositions,
         positions as basePositions,
     } from '../data/positions'
-    import {
-        completed,
-        getPreferredPositions,
-        setPreferredPositions,
-        showCompleted,
-    } from '../data/state.svelte'
+    import { completed, positions, showCompleted } from '../data/state.svelte'
     import { get, language } from '../locale/localisation.svelte'
     import { fillMultilineTextBot, splitText } from '../util'
     import { selectNode } from '../views/SelectedQuestView.svelte'
@@ -73,6 +69,8 @@
     let ownCompleted: Set<string> = $state(new Set())
     let ownShowCompleted: boolean = $state(false)
 
+    let ignoreNextPositionUpdate: boolean = true
+
     completed.subscribe(({ completed }) => {
         ownCompleted = new Set(completed)
     })
@@ -88,7 +86,7 @@
         cyInstance.maxZoom(3.5)
     }
 
-    const layout = (animated: boolean = false) => {
+    const layout = ({ animated = false }: { animated?: boolean }) => {
         if (!cyInstance) return
         let elements = cyInstance.elements()
         if (elements.length === 0) return
@@ -104,12 +102,28 @@
                 )
             })
         }
+        let nodePositions: Record<string, cytoscape.Position> = {}
+        if (usePresetPositions) {
+            nodePositions = getOfStore(positions)
+            nodePositions = Object.fromEntries(
+                Object.entries(nodePositions).filter(([id, pos]) => {
+                    const elem = elements.getElementById(id)
+                    if (!elem) return false
+                    if (!elem.visible()) return true
+                    const currPos = elem.position()
+                    return elem && (pos.x !== currPos.x || pos.y !== currPos.y)
+                })
+            )
+            console.log(
+                `Moving ${Object.keys(nodePositions).length} preset nodes`
+            )
+        }
         elements
             .layout({
                 ...(usePresetPositions
                     ? {
                           name: 'preset',
-                          positions: basePositions,
+                          positions: nodePositions,
                       }
                     : {
                           name: 'elk',
@@ -130,10 +144,6 @@
             })
             .run()
             .on('layoutstop', animated ? () => {} : center)
-
-        if (usePresetPositions) {
-            setPreferredPositions(basePositions)
-        }
     }
 
     const updateCompleted = () => {
@@ -174,7 +184,7 @@
     onMount(() => {
         const cytoData = toCyto(data)
         if (usePresetPositions) {
-            const pos = getPreferredPositions()
+            const pos = getOfStore(positions)
             applyPositions(cytoData, pos)
         }
         cyInstance = cytoscape({
@@ -214,7 +224,8 @@
 
     const saveFn = () => {
         const newPos = toPositions()
-        setPreferredPositions(newPos)
+        ignoreNextPositionUpdate = true
+        positions.set(newPos)
     }
     let timeout: number
     const savePreferredPosition = () => {
@@ -222,7 +233,7 @@
         timeout = setTimeout(saveFn, 500)
     }
 
-    language.subscribe((lang) => {
+    language.subscribe(() => {
         if (!cyInstance) return
         cyInstance.nodes().forEach((node) => {
             const data = node.data()
@@ -232,6 +243,19 @@
                 node.data({ ...data, name: newLabel })
             }
         })
+    })
+
+    positions.subscribe(() => {
+        if (!usePresetPositions) return
+        console.log(
+            'GraphView positions update! Ignore? ',
+            ignoreNextPositionUpdate
+        )
+        if (ignoreNextPositionUpdate) {
+            ignoreNextPositionUpdate = false
+            return
+        }
+        layout({ animated: true })
     })
 
     // Update completed and visible nodes
@@ -293,7 +317,7 @@
             updateVisible()
             updateFaded()
             updateOutlined()
-            layout(overlap)
+            layout({ animated: overlap })
         })
     })
 
@@ -302,7 +326,9 @@
         if (!refresh) return
         if (!cyInstance) return
         untrack(() => {
-            layout(true)
+            ignoreNextPositionUpdate = true
+            positions.set({ ...basePositions })
+            layout({ animated: true })
         })
     })
 
@@ -315,7 +341,7 @@
         untrack(() => {
             updateCompleted()
             updateVisible()
-            requestAnimationFrame(() => layout(true))
+            requestAnimationFrame(() => layout({ animated: true }))
         })
     })
 

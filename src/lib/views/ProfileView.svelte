@@ -95,7 +95,7 @@
 
     subscribeToWindowVisibility('profile', (vis) => {
         if (vis) {
-            dummyProfile()
+            newProfile = dummyProfile()
             editedProfile = null
             confirmDelete = null
         }

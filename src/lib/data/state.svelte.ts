@@ -62,7 +62,19 @@ const getPreferredPositions = (): Record<string, Position> => {
     )
     if (storedProfile) {
         const storedStr = decompressFromBase64(storedProfile)
-        const preferred = JSON.parse(storedStr)
+        let preferred: Record<string, Position>
+        if (storedStr[0] === '{') preferred = JSON.parse(storedStr)
+        else {
+            const storedArr = storedStr.split('/')
+            preferred = {}
+            for (let i = 0; i < storedArr.length; i += 3) {
+                preferred[storedArr[i]] = {
+                    x: +storedArr[i + 1],
+                    y: +storedArr[i + 2],
+                }
+            }
+        }
+
         return { ...defaultPositions, ...preferred }
     }
     const stored = localStorage.getItem('preferredPositions')
@@ -75,7 +87,9 @@ const getPreferredPositions = (): Record<string, Position> => {
 }
 
 const setPreferredPositions = (preferred: Record<string, Position>) => {
-    const preferredStr = JSON.stringify(preferred)
+    const preferredStr = Object.entries(preferred)
+        .flatMap(([id, { x, y }]) => [id, x, y])
+        .join('/')
     const b64 = compressToBase64(preferredStr)
     localStorage.setItem(`positions-${localProfiles.current}`, b64)
     console.warn('Stored positions for profile', localProfiles.current)

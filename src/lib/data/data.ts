@@ -52,6 +52,7 @@ export type Data = {
     achievementCategories: Category[]
     questCategories: Category[]
     almanax: Almanax[]
+    titles: number[]
 }
 
 export const data = dataRaw as Data

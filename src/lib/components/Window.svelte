@@ -1,4 +1,4 @@
-<!-- svelte-ignore a11y_no_static_element_interactions -->
+<!-- svelte-ignore state_referenced_locally -->
 <script lang="ts" module>
     const MIN_WIDTH = 350
     const MIN_HEIGHT = 250

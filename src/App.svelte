@@ -29,15 +29,29 @@
         swapWindowVisibility,
     } from './lib/components/Window.svelte'
     import { data } from './lib/data/data'
-    import { showCompleted } from './lib/data/state.svelte'
+    import {
+        profiles,
+        showCompleted,
+        type Profile,
+    } from './lib/data/state.svelte'
     import { language, type Lang } from './lib/locale/localisation.svelte'
+    import ProfileView, {
+        imageRoot,
+        profilePictures,
+    } from './lib/views/ProfileView.svelte'
 
     let refreshIdx = $state(0)
     let showGroups = $state(true)
     let ownShowCompleted = $state(false)
-    showCompleted.subscribe((value) => (ownShowCompleted = value))
     let ownLanguage = $state<Lang>('en')
+    let ownProfile = $state<Profile>({ color: '#000', image: 0 } as any)
+
+    showCompleted.subscribe((value) => (ownShowCompleted = value))
     language.subscribe((value) => (ownLanguage = value))
+    profiles.subscribe(
+        ({ profiles, current }) =>
+            (ownProfile = profiles.find((p) => p.id === current)!)
+    )
 
     const navigateOrLeave = (id: string) => () => swapWindowVisibility(id)
 </script>
@@ -51,6 +65,14 @@
         debugAllowed
     />
     <div class="buttonColumn">
+        <Button
+            Icon={{ src: imageRoot + profilePictures[ownProfile.image] }}
+            title="profiles"
+            onclick={navigateOrLeave('profile')}
+            ondblclick={() => resetWindowPosition('profile')}
+            classes="profile-colored"
+            --color={ownProfile.color}
+        />
         <Column classes="wrap">
             <Button
                 Icon={Backpack}
@@ -140,6 +162,7 @@
         <CategoryView mode="quest" />
         <CategoryView mode="achievement" />
         <HelpView />
+        <ProfileView />
     </div>
 </main>
 

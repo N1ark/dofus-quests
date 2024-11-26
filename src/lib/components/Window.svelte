@@ -154,7 +154,14 @@
         maxHeight?: number
     } = $props()
 
-    let dimensions = $state(getWindowInfo(id))
+    let dimensions = $state(
+        (() => {
+            const info = getWindowInfo(id)
+            info.width = clamp(info.width, MIN_WIDTH, maxWidth)
+            info.height = clamp(info.height, MIN_HEIGHT, maxHeight)
+            return info
+        })()
+    )
     let fullyHidden = $state(!dimensions.visible)
     let zIndex = $state(windowOrder.indexOf(id))
 

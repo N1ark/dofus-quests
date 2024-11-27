@@ -5,8 +5,10 @@
     const {
         color,
         onchange,
+        classes,
     }: {
         color?: string
+        classes?: string
         onchange?: (color: string) => void
     } = $props()
 
@@ -63,7 +65,7 @@
     }
 </script>
 
-<div class="colorpicker">
+<div class={'colorpicker ' + (classes ?? '')}>
     <div class="current" style:background-color={_color}></div>
     <input
         type="text"
@@ -80,7 +82,7 @@
     .colorpicker {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         overflow: hidden;
 
         background-color: #181818;
@@ -89,9 +91,9 @@
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 
         & > .current {
-            flex-grow: 1;
+            flex-grow: 0;
             flex-shrink: 0;
-            width: 30px;
+            width: 24px;
         }
 
         & > input {
@@ -107,9 +109,9 @@
         }
 
         & > .palette {
-            min-width: 100px;
             background: linear-gradient(in hsl longer hue 90deg, red 0 0);
             cursor: crosshair;
+            flex-grow: 1;
         }
     }
 </style>

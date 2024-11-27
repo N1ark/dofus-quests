@@ -47,6 +47,7 @@
         data.almanax.filter(({ id }) => ownAlmanax.has(id)).length,
         366
     )}
+    maxWidth={1100}
 >
     <div class="content">
         <div class="months">

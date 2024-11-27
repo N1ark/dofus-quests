@@ -183,129 +183,183 @@
     </button>
 {/snippet}
 
-<Window id="profile" name={{ key: 'profiles' }} maxWidth={500}>
-    <Text
-        element="h2"
-        key={editedProfile !== null ? 'edit-profile' : 'create-profile'}
-    />
-    <Column classes="create-column">
-        <input
-            type="text"
-            bind:value={newProfile.name}
-            data-placeholder="profile-name"
-            maxlength="20"
-        />
-        <Row classes="wrap-row">
-            {#each profilePictures as img, i}
-                <Button
-                    Icon={{ src: imageRoot + img }}
-                    selected={i === newProfile.image}
-                    onclick={() => (newProfile.image = i)}
-                />
-            {/each}
-        </Row>
-        <ColorPicker
-            color={newProfile.color}
-            onchange={(c) => (newProfile.color = c)}
-        />
-        <div class="genderselect">
-            <select
-                onchange={(e) => (newProfile.title = +e.currentTarget.value)}
-            >
-                {#key ownLang}
-                    {#each titles as title}
-                        <option
-                            value={title.id}
-                            selected={newProfile.title === title.id}
-                            >{title.text}</option
+<Window id="profile" name={{ key: 'profiles' }} maxWidth={600}>
+    <div class="content-col">
+        <Text element="h3" key="pick-profile" />
+        <Column classes="profile-list">
+            {#each ownProfiles.profiles as p}
+                <Row classes="profile-row">
+                    {@render profile(p, () => selectProfile(p.id))}
+                    <Button
+                        Icon={Pencil}
+                        onclick={() => {
+                            confirmDelete = null
+                            if (editedProfile === p.id) {
+                                editedProfile = null
+                                newProfile = dummyProfile()
+                            } else {
+                                editedProfile = p.id
+                                newProfile = { ...p }
+                            }
+                        }}
+                        selected={editedProfile === p.id}
+                    />
+                    <Button
+                        Icon={Trash}
+                        onclick={() => {
+                            confirmDelete = p.id
+                            if (editedProfile !== null) {
+                                editedProfile = null
+                                newProfile = dummyProfile()
+                            }
+                        }}
+                        disabled={ownProfiles.profiles.length < 2}
+                        selected={confirmDelete === p.id}
+                    />
+                    {#if confirmDelete === p.id}
+                        <button
+                            disabled={!confirmDeleteEnabled}
+                            class="danger"
+                            onclick={() => deleteProfile(p.id)}
                         >
+                            <Text key="confirm" />
+                        </button>
+                    {/if}
+                </Row>
+            {/each}
+        </Column>
+
+        <div class="create-column">
+            <Text
+                element="h3"
+                key={editedProfile !== null ? 'edit-profile' : 'create-profile'}
+            />
+            <div class="create-form">
+                <div>
+                    <input
+                        type="text"
+                        bind:value={newProfile.name}
+                        data-placeholder="profile-name"
+                        maxlength="20"
+                    />
+                    <ColorPicker
+                        color={newProfile.color}
+                        classes="colorpick"
+                        onchange={(c) => (newProfile.color = c)}
+                    />
+                    <div class="genderselect">
+                        <select
+                            onchange={(e) =>
+                                (newProfile.title = +e.currentTarget.value)}
+                        >
+                            {#key ownLang}
+                                {#each titles as title}
+                                    <option
+                                        value={title.id}
+                                        selected={newProfile.title === title.id}
+                                        >{title.text}</option
+                                    >
+                                {/each}
+                            {/key}
+                        </select>
+                        <Button
+                            Icon={Male}
+                            selected={newProfile.gender === 'male'}
+                            onclick={() => (newProfile.gender = 'male')}
+                        />
+                        <Button
+                            Icon={Female}
+                            selected={newProfile.gender === 'female'}
+                            onclick={() => (newProfile.gender = 'female')}
+                        />
+                    </div>
+                </div>
+                <Column classes="icon-list">
+                    {#each profilePictures as img, i}
+                        <Button
+                            Icon={{ src: imageRoot + img }}
+                            selected={i === newProfile.image}
+                            onclick={() => (newProfile.image = i)}
+                        />
                     {/each}
-                {/key}
-            </select>
-            <Button
-                Icon={Male}
-                selected={newProfile.gender === 'male'}
-                onclick={() => (newProfile.gender = 'male')}
-            />
-            <Button
-                Icon={Female}
-                selected={newProfile.gender === 'female'}
-                onclick={() => (newProfile.gender = 'female')}
-            />
-        </div>
-        <Row classes="profile-row">
-            <div class="preview">
-                <Text key="preview" />
+                </Column>
             </div>
-            {@render profile(newProfile)}
-            <Button Icon={Dice} onclick={() => (newProfile = dummyProfile())} />
-        </Row>
-        <button
-            onclick={createOrEditProfile}
-            disabled={!newProfile.name || newProfile.name.trim().length < 3}
-        >
-            <Text key={editedProfile !== null ? 'edit' : 'create'} />
-        </button>
-    </Column>
-
-    <Text element="h2" key="pick-profile" />
-
-    <Column classes="profile-list">
-        {#each ownProfiles.profiles as p}
-            <Row classes="profile-row">
-                {@render profile(p, () => selectProfile(p.id))}
+            <Row classes="profile-row preview-row">
+                <div class="preview">
+                    <Text key="preview" />
+                </div>
+                {@render profile(newProfile)}
                 <Button
-                    Icon={Pencil}
-                    onclick={() => {
-                        confirmDelete = null
-                        if (editedProfile === p.id) {
-                            editedProfile = null
-                            newProfile = dummyProfile()
-                        } else {
-                            editedProfile = p.id
-                            newProfile = { ...p }
-                        }
-                    }}
-                    selected={editedProfile === p.id}
+                    Icon={Dice}
+                    onclick={() => (newProfile = dummyProfile())}
                 />
-                <Button
-                    Icon={Trash}
-                    onclick={() => {
-                        confirmDelete = p.id
-                        if (editedProfile !== null) {
-                            editedProfile = null
-                            newProfile = dummyProfile()
-                        }
-                    }}
-                    disabled={ownProfiles.profiles.length < 2}
-                    selected={confirmDelete === p.id}
-                />
-                {#if confirmDelete === p.id}
-                    <button
-                        disabled={!confirmDeleteEnabled}
-                        class="danger"
-                        onclick={() => deleteProfile(p.id)}
-                    >
-                        <Text key="confirm" />
-                    </button>
-                {/if}
+                <button
+                    onclick={createOrEditProfile}
+                    disabled={!newProfile.name ||
+                        newProfile.name.trim().length < 3}
+                >
+                    <Text key={editedProfile !== null ? 'edit' : 'create'} />
+                </button>
             </Row>
-        {/each}
-    </Column>
+        </div>
+    </div>
 </Window>
 
 <style>
-    :global(.create-column) {
-        align-items: flex-start;
+    .content-col {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
 
-        & .profile {
-            margin: 2em 0;
+        & :global(.profile-list) {
+            margin-bottom: 2em;
+            flex-grow: 1;
         }
     }
 
-    :global(.wrap-row) {
+    .create-column {
+        position: sticky;
+        bottom: 0;
+        margin-left: -12px;
+        margin-right: -12px;
+        margin-top: auto;
+        flex-shrink: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
+        border-top: 1px solid rgba(128, 128, 128, 0.3);
+        padding: 8px 12px 0 12px;
+        overflow: hidden;
+
+        & :global(h3) {
+            margin: 0.5em 0 0 0;
+        }
+    }
+
+    .create-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px !important;
+        height: 100%;
+
+        & > :first-child {
+            display: grid;
+            gap: 6px;
+            flex-shrink: 1;
+            flex-grow: 0;
+            align-items: start;
+            height: fit-content;
+        }
+    }
+
+    :global(.icon-list) {
+        max-height: 140px;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        overflow-x: auto;
+        padding-right: 12px;
+        margin-right: -12px;
     }
 
     :global(.profile-row) {
@@ -315,6 +369,27 @@
 
         & > .profile {
             margin-right: 1em;
+        }
+
+        &.preview-row {
+            margin-top: 1em;
+        }
+    }
+
+    .genderselect {
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+
+        gap: 6px;
+        align-items: center;
+        min-width: 0;
+        max-width: fit-content;
+
+        & > select {
+            text-overflow: ellipsis;
+            min-width: 0;
+            height: 33px;
         }
     }
 
@@ -348,7 +423,7 @@
         font-style: italic;
         opacity: 0.8;
         position: absolute;
-        bottom: calc(100% - 2em);
+        bottom: calc(100%);
         user-select: none;
     }
 
@@ -425,22 +500,5 @@
                 #161616 80%
             ) !important;
         }
-    }
-
-    .genderselect {
-        display: flex;
-        flex-direction: row;
-        gap: 6px;
-        align-items: center;
-
-        & > button {
-            aspect-ratio: 1/1;
-            line-height: 1;
-            height: 100%;
-        }
-    }
-
-    :global(.profile-list) {
-        margin-bottom: 2em;
     }
 </style>

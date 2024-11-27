@@ -30,7 +30,7 @@
     }
 </script>
 
-<Window id="backup" name={{ key: 'backup' }}>
+<Window id="backup" name={{ key: 'backup' }} maxWidth={800}>
     <div class="grid">
         <Text element="h3" key="export" />
         <Text element="h3" key="import" />

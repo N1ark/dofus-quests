@@ -5,14 +5,15 @@
         $props()
 </script>
 
-<div class="row {classes ?? ''}">
+<div class={classes}>
     {@render children()}
 </div>
 
 <style>
-    .row {
+    div {
         display: flex;
         flex-direction: row;
         gap: 6px;
+        width: 100%;
     }
 </style>

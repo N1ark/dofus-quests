@@ -414,6 +414,7 @@
     },
     {
       "requirements": "(Qf=161)&Wo=0&(Qf=164)&Wo=0&(Qf=165)&Wo=0&(Qf=168)&Wo=0&(Qf=169)&Wo=0",
+      "noob": "https://www.dofuspourlesnoobs.com/kaiumlra.html",
       "id": "a596",
       "type": "achievement",
       "categoryId": 47,
@@ -669,7 +670,7 @@
       "dispCatId": 53
     },
     {
-      "requirements": "(Qf=1649)&Wo=0&(Qf=1650)&Wo=0&(Qf=1651)&Wo=0&(Qf=2512)&Wo=0&(Qf=2513)&Wo=0",
+      "requirements": "(Qf=1649)&Wo=0&(Qf=2512)&Wo=0&(Qf=1650)&Wo=0&(Qf=1651)&Wo=0&(Qf=2513)&Wo=0",
       "noob": "https://www.dofuspourlesnoobs.com/cest-le-meacutetier-qui-rentre.html",
       "id": "a649",
       "type": "achievement",
@@ -866,6 +867,7 @@
     },
     {
       "requirements": "(Qf=1319)&Wo=0&(Qf=1320)&Wo=0&(Qf=1321)&Wo=0&(Qf=1322)&Wo=0&(Qf=1323)&Wo=0&(Qf=1324)&Wo=0",
+      "noob": "https://www.dofuspourlesnoobs.com/mais-ougrave-quils-sont-les-frigostiens.html",
       "id": "a923",
       "type": "achievement",
       "categoryId": 51,
@@ -1180,6 +1182,7 @@
     },
     {
       "requirements": "(Qf=2192)&Wo=0&(Qf=2193)&Wo=0&(Qf=2194)&Wo=0&(Qf=2195)&Wo=0&(Qf=1462)&Wo=0",
+      "noob": "https://www.dofuspourlesnoobs.com/mais-ougrave-sont-les-dofus.html",
       "id": "a1036",
       "type": "achievement",
       "categoryId": 40,
@@ -1408,6 +1411,7 @@
     },
     {
       "requirements": "(Qf=1579)&Wo=0&(Qf=1580)&Wo=0&(Qf=1581)&Wo=0&(Qf=1582)&Wo=0&(Qf=1601)&Wo=0",
+      "noob": "https://www.dofuspourlesnoobs.com/les-puits-du-fou.html",
       "id": "a1145",
       "type": "achievement",
       "categoryId": 65,
@@ -1710,6 +1714,7 @@
     },
     {
       "requirements": "(Pr=6|Pr=11|Pr=17|Pr=23|Pr=28|Pr=33)&Wo=0&PL>189&(BI=1)&Wo=0",
+      "noob": "https://www.dofuspourlesnoobs.com/vos-desirsfont-desordre.html",
       "id": "a1396",
       "type": "achievement",
       "categoryId": 43,
@@ -2690,6 +2695,7 @@
     },
     {
       "requirements": "PL>109",
+      "noob": "https://www.dofuspourlesnoobs.com/on-recherche-padgref-demoel.html",
       "id": "q29",
       "achCatId": 42,
       "type": "quest",
@@ -2745,6 +2751,7 @@
     },
     {
       "requirements": "Ps=1&Pa=1&PL>29&Qf=55",
+      "noob": "https://www.dofuspourlesnoobs.com/la-tenanciegravere-dame-cloude.html",
       "id": "q56",
       "achCatId": 43,
       "type": "quest",
@@ -2904,6 +2911,7 @@
     },
     {
       "requirements": "Ps=1&Pa=21&PL>69&Qf=75",
+      "noob": "https://www.dofuspourlesnoobs.com/la-fureur-du-holbaiumld.html",
       "id": "q76",
       "achCatId": 43,
       "type": "quest",
@@ -3079,6 +3087,7 @@
     },
     {
       "requirements": "Pr=19&Qf=436&Pa>39",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--surineur.html",
       "id": "q112",
       "achCatId": 43,
       "type": "quest",
@@ -3086,6 +3095,7 @@
     },
     {
       "requirements": "Pr=29&Qf=438&Pa>39",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--espion-sombre.html",
       "id": "q113",
       "achCatId": 43,
       "type": "quest",
@@ -3093,6 +3103,7 @@
     },
     {
       "requirements": "Pr=24&Qf=437&Pa>39",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--apprenti-sombre.html",
       "id": "q114",
       "achCatId": 43,
       "type": "quest",
@@ -3164,6 +3175,7 @@
     },
     {
       "requirements": "Pr=20&Qf=112&Pa>59",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--chevalier-du-deacutesespoir.html",
       "id": "q123",
       "achCatId": 43,
       "type": "quest",
@@ -3171,6 +3183,7 @@
     },
     {
       "requirements": "Pr=25&Qf=114&Pa>59",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--adepte-des-douleurs.html",
       "id": "q124",
       "achCatId": 43,
       "type": "quest",
@@ -3178,6 +3191,7 @@
     },
     {
       "requirements": "Pr=30&Qf=113&Pa>59",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--chasseur-dacircmes.html",
       "id": "q125",
       "achCatId": 43,
       "type": "quest",
@@ -3185,6 +3199,7 @@
     },
     {
       "requirements": "BT=1",
+      "noob": "https://www.dofuspourlesnoobs.com/gros-oeliguvres-au-chacircteau-dallister.html",
       "id": "q132",
       "achCatId": 146,
       "type": "quest",
@@ -3320,6 +3335,7 @@
     },
     {
       "requirements": "BT=1",
+      "noob": "https://www.dofuspourlesnoobs.com/bienvenue-au-krazybwok-saloon.html",
       "id": "q164",
       "achCatId": 47,
       "type": "quest",
@@ -3822,6 +3838,7 @@
     },
     {
       "requirements": "Ps=2&Pa=57&PL>129&Qf=276",
+      "noob": "https://www.dofuspourlesnoobs.com/paranoiumla-aiguumle.html",
       "id": "q277",
       "achCatId": 43,
       "type": "quest",
@@ -4605,6 +4622,7 @@
     },
     {
       "requirements": "Pr=26&QF>124,0&Pa>79",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--maicirctre-des-seacutevices.html",
       "id": "q424",
       "achCatId": 43,
       "type": "quest",
@@ -4620,6 +4638,7 @@
     },
     {
       "requirements": "Pr=31&QF>125,0&Pa>79",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--psychopathe.html",
       "id": "q426",
       "achCatId": 43,
       "type": "quest",
@@ -4627,6 +4646,7 @@
     },
     {
       "requirements": "Ps=1&Pr=1&Pa>19",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--disciple-de-meacutenalt.html",
       "id": "q433",
       "achCatId": 43,
       "type": "quest",
@@ -4650,6 +4670,7 @@
     },
     {
       "requirements": "Ps=2&Pr=18&Pa>19",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--disciple-de-djaul.html",
       "id": "q436",
       "achCatId": 43,
       "type": "quest",
@@ -4657,6 +4678,7 @@
     },
     {
       "requirements": "Ps=2&Pr=18&Pa>19",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--disciple-dheacutecate.html",
       "id": "q437",
       "achCatId": 43,
       "type": "quest",
@@ -4664,6 +4686,7 @@
     },
     {
       "requirements": "Ps=2&Pr=18&Pa>19",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--disciple-de-brumaire.html",
       "id": "q438",
       "achCatId": 43,
       "type": "quest",
@@ -4799,6 +4822,7 @@
     },
     {
       "requirements": "PL>139&Qa!540&Qa!541",
+      "noob": "https://www.dofuspourlesnoobs.com/-la-mort-vous-va-si-bien.html",
       "id": "q539",
       "achCatId": 51,
       "type": "quest",
@@ -5174,6 +5198,7 @@
     },
     {
       "requirements": "PL>169&Qa!585&Qa!586&Qa!588&Sc=702",
+      "noob": "https://www.dofuspourlesnoobs.com/crocs-en-jambes.html",
       "id": "q587",
       "achCatId": 51,
       "type": "quest",
@@ -5397,6 +5422,7 @@
     },
     {
       "requirements": "PL>99",
+      "noob": "https://www.dofuspourlesnoobs.com/faire-le-tas-de-pin.html",
       "id": "q616",
       "achCatId": 51,
       "type": "quest",
@@ -5943,6 +5969,7 @@
     },
     {
       "requirements": "Qf=834&Qf=843",
+      "noob": "https://www.dofuspourlesnoobs.com/lrsquooeliguf-ou-la-cawotte.html",
       "id": "q835",
       "achCatId": 52,
       "type": "quest",
@@ -6582,6 +6609,7 @@
     },
     {
       "requirements": "PL>179&Sc=703",
+      "noob": "https://www.dofuspourlesnoobs.com/voila-ougrave-ccedila-nous-megravene.html",
       "id": "q1302",
       "achCatId": 51,
       "type": "quest",
@@ -6997,6 +7025,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1447&Qa!1448&Qa!1449&Qa!1450&Qa!1451&Qa!1452&Qa!1453&Qa!1454&Qa!1455",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-premiegraveres-anneacutees.html",
       "id": "q1446",
       "achCatId": 61,
       "type": "quest",
@@ -7004,6 +7033,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1446&Qa!1448&Qa!1449&Qa!1450&Qa!1451&Qa!1452&Qa!1453&Qa!1454&Qa!1455",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-deuxiegravemes-anneacutees.html",
       "id": "q1447",
       "achCatId": 61,
       "type": "quest",
@@ -7011,6 +7041,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1446&Qa!1447&Qa!1449&Qa!1450&Qa!1451&Qa!1452&Qa!1453&Qa!1454&Qa!1455",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-troisiegravemes-anneacutees.html",
       "id": "q1448",
       "achCatId": 61,
       "type": "quest",
@@ -7018,6 +7049,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1446&Qa!1447&Qa!1448&Qa!1450&Qa!1451&Qa!1452&Qa!1453&Qa!1454&Qa!1455",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-quatriegravemes-anneacutees.html",
       "id": "q1449",
       "achCatId": 61,
       "type": "quest",
@@ -7025,6 +7057,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1446&Qa!1447&Qa!1448&Qa!1449&Qa!1451&Qa!1452&Qa!1453&Qa!1454&Qa!1455",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-cinquiegravemes-anneacutees.html",
       "id": "q1450",
       "achCatId": 61,
       "type": "quest",
@@ -7032,6 +7065,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1446&Qa!1447&Qa!1448&Qa!1449&Qa!1450&Qa!1452&Qa!1453&Qa!1454&Qa!1455",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-sixiegravemes-anneacutees.html",
       "id": "q1451",
       "achCatId": 61,
       "type": "quest",
@@ -7039,6 +7073,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1446&Qa!1447&Qa!1448&Qa!1449&Qa!1450&Qa!1451&Qa!1453&Qa!1454&Qa!1455",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-septiegravemes-anneacutees.html",
       "id": "q1452",
       "achCatId": 61,
       "type": "quest",
@@ -7046,6 +7081,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1446&Qa!1447&Qa!1448&Qa!1449&Qa!1450&Qa!1451&Qa!1452&Qa!1454&Qa!1455",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-huitiegravemes-anneacutees.html",
       "id": "q1453",
       "achCatId": 61,
       "type": "quest",
@@ -7053,6 +7089,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1446&Qa!1447&Qa!1448&Qa!1449&Qa!1450&Qa!1451&Qa!1452&Qa!1453&Qa!1455",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-neuviegravemes-anneacutees.html",
       "id": "q1454",
       "achCatId": 61,
       "type": "quest",
@@ -7060,6 +7097,7 @@
     },
     {
       "requirements": "Qc=1445&Qa!1446&Qa!1447&Qa!1448&Qa!1449&Qa!1450&Qa!1451&Qa!1452&Qa!1453&Qa!1454",
+      "noob": "https://www.dofuspourlesnoobs.com/formation-des-dixiegravemes-anneacutees.html",
       "id": "q1455",
       "achCatId": 61,
       "type": "quest",
@@ -7207,6 +7245,7 @@
     },
     {
       "requirements": "PL>134",
+      "noob": "https://www.dofuspourlesnoobs.com/ougrave-que-les-becirctes-aillent.html",
       "id": "q1476",
       "achCatId": 48,
       "type": "quest",
@@ -7446,6 +7485,7 @@
     },
     {
       "requirements": "PL>129&Qf=1507",
+      "noob": "https://www.dofuspourlesnoobs.com/un-coeligur-dor.html",
       "id": "q1508",
       "achCatId": 65,
       "type": "quest",
@@ -7501,6 +7541,7 @@
     },
     {
       "requirements": "PL>179",
+      "noob": "https://www.dofuspourlesnoobs.com/reconnaissance-de-dettes.html",
       "id": "q1515",
       "achCatId": 65,
       "type": "quest",
@@ -7948,6 +7989,7 @@
     },
     {
       "requirements": "PL>149&Qf=1484&(Qa=1485|Qf=1485)",
+      "noob": "https://www.dofuspourlesnoobs.com/terminutor--le-jugement-de-la-machine.html",
       "id": "q1577",
       "achCatId": 65,
       "type": "quest",
@@ -8107,6 +8149,7 @@
     },
     {
       "requirements": "PL>179&Qf=1598",
+      "noob": "https://www.dofuspourlesnoobs.com/leacutetendue-goumldelique.html",
       "id": "q1599",
       "achCatId": 65,
       "type": "quest",
@@ -8242,6 +8285,7 @@
     },
     {
       "requirements": "Qf=1618",
+      "noob": "https://www.dofuspourlesnoobs.com/arak-haiuml-en-pagaille.html",
       "id": "q1619",
       "achCatId": 146,
       "type": "quest",
@@ -8601,6 +8645,7 @@
     },
     {
       "requirements": "Qf=1668",
+      "noob": "https://www.dofuspourlesnoobs.com/squelettes-et-amulettes.html",
       "id": "q1669",
       "achCatId": 70,
       "type": "quest",
@@ -8800,6 +8845,7 @@
     },
     {
       "requirements": "PL>139",
+      "noob": "https://www.dofuspourlesnoobs.com/ougrave-est-charblie.html",
       "id": "q1697",
       "achCatId": 65,
       "type": "quest",
@@ -8815,6 +8861,7 @@
     },
     {
       "requirements": "PL>139&(Qf=1484|(Qa=1484&Qo>8349))",
+      "noob": "https://www.dofuspourlesnoobs.com/sanctuaire-de-famille.html",
       "id": "q1699",
       "achCatId": 65,
       "type": "quest",
@@ -9526,6 +9573,7 @@
     },
     {
       "requirements": "Qf=1785&Qa=1786&Qo>11555",
+      "noob": "https://www.dofuspourlesnoobs.com/le-dragon-des-foret.html",
       "id": "q1791",
       "achCatId": 1001,
       "type": "quest",
@@ -10460,6 +10508,7 @@
     },
     {
       "requirements": "Pr=10&Qf=423&Pa>99",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--gardien-du-savoir.html",
       "id": "q1917",
       "achCatId": 43,
       "type": "quest",
@@ -10483,6 +10532,7 @@
     },
     {
       "requirements": "Pr=27&Qf=424&Pa>99",
+      "noob": "https://www.dofuspourlesnoobs.com/apprentissage--gardien-des-tortures.html",
       "id": "q1920",
       "achCatId": 43,
       "type": "quest",
@@ -11105,6 +11155,7 @@
     },
     {
       "requirements": "PL>29",
+      "noob": "https://www.dofuspourlesnoobs.com/l-invasion-des-profanateurs-de-sepulture.html",
       "id": "q2007",
       "achCatId": 45,
       "type": "quest",
@@ -12584,6 +12635,7 @@
     },
     {
       "requirements": "BT=1",
+      "noob": "https://www.dofuspourlesnoobs.com/bien-deacutebuter.html",
       "id": "q2502",
       "achCatId": 118,
       "type": "quest",
@@ -12640,6 +12692,7 @@
     },
     {
       "requirements": "BT=1",
+      "noob": "https://www.dofuspourlesnoobs.com/vaincre-le-monstre.html",
       "id": "q2511",
       "achCatId": 118,
       "type": "quest",

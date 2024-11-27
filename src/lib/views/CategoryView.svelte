@@ -86,6 +86,7 @@
         elements.filter(({ id }) => ownCompleted.has(id)).length,
         elements.length
     )}
+    maxWidth={500}
 >
     <div class="search">
         <input type="text" data-placeholder="search" bind:value={search} />

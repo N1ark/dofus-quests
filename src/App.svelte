@@ -187,6 +187,7 @@
 
         & > :global(*) {
             width: min-content;
+            height: min-content;
         }
     }
 

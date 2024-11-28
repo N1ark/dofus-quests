@@ -80,6 +80,7 @@
 
     const center = () => {
         if (!cyInstance) return
+        console.log('Centering')
         cyInstance.maxZoom(1.6)
         cyInstance.fit(undefined, 50)
         cyInstance.center()
@@ -118,7 +119,7 @@
                 `Moving ${Object.keys(nodePositions).length} preset nodes`
             )
         }
-        elements
+        const layout = elements
             .layout({
                 ...(usePresetPositions
                     ? {
@@ -143,7 +144,12 @@
                     : {}),
             })
             .run()
-            .on('layoutstop', animated ? () => {} : center)
+
+        if (!animated) {
+            layout.one('layoutstop', () => cyInstance!.one('resize', center))
+        }
+
+        console.log('Did layout - animated?', animated)
     }
 
     const updateCompleted = () => {
@@ -197,10 +203,17 @@
             style,
         })
 
+        requestAnimationFrame(center)
+
         cyInstance.on('tap', 'node', (event) => {
             selectNode(event.target.id())
         })
-        cyInstance.on('resize', center)
+        cyInstance.on('resize', () => {
+            const width = cyInstance!.width()
+            const height = cyInstance!.height()
+            canvasDiv.style.width = `${width}px`
+            canvasDiv.style.height = `${height}px`
+        })
         cyInstance.on('cxttap', 'node', (event) => {
             const toCompleted = !ownCompleted.has(event.target.id())
             const nodes: string[] = event.originalEvent.shiftKey
@@ -247,10 +260,6 @@
 
     positions.subscribe(() => {
         if (!usePresetPositions) return
-        console.log(
-            'GraphView positions update! Ignore? ',
-            ignoreNextPositionUpdate
-        )
         if (ignoreNextPositionUpdate) {
             ignoreNextPositionUpdate = false
             return
@@ -547,10 +556,9 @@
 
     .bg {
         position: absolute;
-        inset: 0;
+        top: 0;
+        left: 0;
         z-index: -1;
-        width: 100%;
-        height: 100%;
     }
 
     .tools {

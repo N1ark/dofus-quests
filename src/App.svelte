@@ -52,8 +52,6 @@
         ({ profiles, current }) =>
             (ownProfile = profiles.find((p) => p.id === current)!)
     )
-
-    const navigateOrLeave = (id: string) => () => swapWindowVisibility(id)
 </script>
 
 <main>
@@ -68,7 +66,6 @@
         <Button
             Icon={{ src: imageRoot + profilePictures[ownProfile.image] }}
             title="profiles"
-            onclick={navigateOrLeave('profile')}
             ondblclick={() => resetWindowPosition('profile')}
             classes="profile-colored"
             --color={ownProfile.color}
@@ -77,25 +74,25 @@
             <Button
                 Icon={Backpack}
                 title="quests"
-                onclick={navigateOrLeave('quests')}
+                onclick={() => swapWindowVisibility('quests')}
                 ondblclick={() => resetWindowPosition('quests')}
             />
             <Button
                 Icon={Trophy}
                 title="achievements"
-                onclick={navigateOrLeave('achievements')}
+                onclick={() => swapWindowVisibility('achievements')}
                 ondblclick={() => resetWindowPosition('achievements')}
             />
             <Button
                 Icon={Calendar}
                 title="almanax"
-                onclick={navigateOrLeave('almanax')}
+                onclick={() => swapWindowVisibility('almanax')}
                 ondblclick={() => resetWindowPosition('almanax')}
             />
             <Button
                 Icon={Archive}
                 title="backup"
-                onclick={navigateOrLeave('backup')}
+                onclick={() => swapWindowVisibility('backup')}
                 ondblclick={() => resetWindowPosition('backup')}
             />
         </Column>
@@ -119,7 +116,7 @@
         <Button
             Icon={BadgeHelp}
             title="help"
-            onclick={navigateOrLeave('help')}
+            onclick={() => swapWindowVisibility('help')}
             ondblclick={() => resetWindowPosition('help')}
         />
         <Column classes="wrap last">

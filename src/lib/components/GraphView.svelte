@@ -3,18 +3,6 @@
     // @ts-ignore-next-line
     import elk from 'cytoscape-elk'
     cytoscape.use(elk)
-
-    const groupColors = Object.entries(GROUP_COLORS).map(([id, color]) => {
-        const match = color.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i)!
-        const r = parseInt(match[1], 16)
-        const g = parseInt(match[2], 16)
-        const b = parseInt(match[3], 16)
-        return {
-            id: +id,
-            stroke: `rgb(${r}, ${g}, ${b})`,
-            fill: `rgba(${r}, ${g}, ${b}, 0.2)`,
-        }
-    })
 </script>
 
 <script lang="ts">
@@ -24,15 +12,13 @@
     import PencilRuler from 'lucide-svelte/icons/pencil-ruler'
 
     import {
-        type BoundingBox12,
-        type BoundingBoxWH,
         type SingularElementArgument as CytoElement,
         type Position,
     } from 'cytoscape'
     import { onMount, untrack } from 'svelte'
     import { get as getOfStore } from 'svelte/store'
 
-    import { GROUP_COLORS, style } from '../data/cytostyle'
+    import { style } from '../data/cytostyle'
     import { type Data, id, toCyto } from '../data/data'
     import {
         applyPositions,
@@ -40,22 +26,20 @@
     } from '../data/positions'
     import { completed, positions, showCompleted } from '../data/state.svelte'
     import { get, language } from '../locale/localisation.svelte'
-    import { fillMultilineTextBot, splitText } from '../util'
     import { selectNode } from '../views/SelectedQuestView.svelte'
     import Button from './Button.svelte'
+    import GraphGroupsView from './GraphGroupsView.svelte'
 
     let {
         data,
-        faded,
-        outlined,
+        nodeClasses,
         refresh,
         showGroups,
         usePresetPositions,
         debugAllowed,
     }: {
         data: Pick<Data, 'nodes' | 'edges'>
-        faded?: string[]
-        outlined?: string[]
+        nodeClasses?: Partial<Record<string, string[]>>
         refresh?: any
         showGroups?: boolean
         usePresetPositions?: boolean
@@ -63,7 +47,6 @@
     } = $props()
 
     let containerDiv: HTMLElement
-    let canvasDiv: HTMLCanvasElement
 
     let cyInstance: cytoscape.Core | null = $state(null)
     let ownCompleted: Set<string> = $state(new Set())
@@ -167,24 +150,24 @@
         if (!ownShowCompleted) cyInstance?.nodes('.finished').addClass('hidden')
     }
 
-    const updateFaded = () => {
-        cyInstance?.elements('.faded').removeClass('faded')
-        if (faded)
-            cyInstance?.elements().forEach((e) => {
-                if (faded.includes(e.id())) {
-                    e.addClass('faded')
-                }
-            })
-    }
+    let oldClasses: string[] = []
 
-    const updateOutlined = () => {
-        cyInstance?.elements('.outlined').removeClass('outlined')
-        if (outlined)
+    const applyClasses = () => {
+        oldClasses.forEach((c) => {
+            if (!nodeClasses || !(c in nodeClasses)) applyClass(c, [])
+        })
+        oldClasses = nodeClasses ? Object.keys(nodeClasses) : []
+        if (!nodeClasses) return
+
+        const applyClass = (clazz: string, ids?: string[]) => {
             cyInstance?.elements().forEach((e) => {
-                if (outlined.includes(e.id())) {
-                    e.addClass('outlined')
-                }
+                if (ids && ids.includes(e.id())) e.addClass(clazz)
+                else e.removeClass(clazz)
             })
+        }
+        Object.entries(nodeClasses).forEach(([clazz, ids]) => {
+            applyClass(clazz, ids)
+        })
     }
 
     onMount(() => {
@@ -207,12 +190,6 @@
 
         cyInstance.on('tap', 'node', (event) => {
             selectNode(event.target.id())
-        })
-        cyInstance.on('resize', () => {
-            const width = cyInstance!.width()
-            const height = cyInstance!.height()
-            canvasDiv.style.width = `${width}px`
-            canvasDiv.style.height = `${height}px`
         })
         cyInstance.on('cxttap', 'node', (event) => {
             const toCompleted = !ownCompleted.has(event.target.id())
@@ -276,16 +253,10 @@
         updateVisible()
     })
 
-    // Update faded nodes
+    // Update node classes
     $effect(() => {
-        const _unused = faded
-        updateFaded()
-    })
-
-    // Update outlined nodes
-    $effect(() => {
-        const _unused = outlined
-        updateOutlined()
+        const _unuded = nodeClasses
+        applyClasses()
     })
 
     // Update graph when data changes
@@ -324,8 +295,7 @@
             cyInstance?.elements().unselect()
             updateCompleted()
             updateVisible()
-            updateFaded()
-            updateOutlined()
+            applyClasses()
             layout({ animated: overlap })
         })
     })
@@ -352,106 +322,6 @@
             updateVisible()
             requestAnimationFrame(() => layout({ animated: true }))
         })
-    })
-
-    $effect(() => {
-        if (!showGroups) {
-            cyInstance!.forceRender()
-            return
-        }
-
-        if (!cyInstance) return
-        let canvasW = canvasDiv.offsetWidth * window.devicePixelRatio
-        let canvasH = canvasDiv.offsetHeight * window.devicePixelRatio
-
-        cyInstance?.on('render', () => {
-            if (!canvasDiv) return
-            const cy = cyInstance!
-
-            const ctx = canvasDiv.getContext('2d')
-
-            if (!showGroups) {
-                ctx?.clearRect(0, 0, canvasW, canvasH)
-                cyInstance?.off('render')
-                return
-            }
-
-            if (!ctx) return
-            const width = (canvasDiv.width =
-                canvasDiv.offsetWidth * window.devicePixelRatio)
-            const height = (canvasDiv.height =
-                canvasDiv.offsetHeight * window.devicePixelRatio)
-            if (width === 0 || height === 0) return
-
-            ctx.clearRect(0, 0, width, height)
-            ctx.transform(
-                window.devicePixelRatio,
-                0,
-                0,
-                window.devicePixelRatio,
-                0,
-                0
-            )
-            const pad = cy.zoom() * 50
-            const nodeByGroup: Record<string, BoundingBox12 & BoundingBoxWH> =
-                {}
-            const nodesAll = cy.nodes()
-            for (const { id, fill, stroke } of groupColors) {
-                const nodes = nodesAll.filter(
-                    (n) => n.data('group') === id && n.visible()
-                )
-                if (!nodes || nodes.length === 0) continue
-
-                // Rectangle mode
-                const bb = nodes.renderedBoundingBox()
-                nodeByGroup[id] = bb
-                const rectW = bb.w + pad * 2
-                ctx.beginPath()
-                ctx.roundRect(
-                    bb.x1 - pad,
-                    bb.y1 - pad,
-                    rectW,
-                    bb.h + pad * 2,
-                    4
-                )
-                ctx.fillStyle = fill
-                ctx.fill()
-                ctx.strokeStyle = stroke
-                ctx.lineWidth = 1
-                ctx.stroke()
-            }
-
-            ctx.font = '12px Inter'
-            ctx.textAlign = 'left'
-            ctx.textBaseline = 'bottom'
-
-            for (const { id } of groupColors) {
-                const bb = nodeByGroup[id]
-                if (!bb) continue
-
-                const rectW = bb.w + pad * 2
-
-                const name = get('aC' + id, 'name')
-                const lines = splitText(name, Math.max(100, bb.w), ctx)
-                const maxW = Math.max(
-                    ...lines.map((l) => ctx.measureText(l).width)
-                )
-                const textX = bb.x1 - pad + Math.min(0, (rectW - maxW) / 2)
-                const textY = bb.y1 - pad - 1
-
-                ctx.fillStyle = 'rgba(0, 0, 0, 0.5)'
-                ctx.fillRect(
-                    textX - 5,
-                    textY - 15 * lines.length,
-                    maxW + 10,
-                    15 * lines.length
-                )
-
-                ctx.fillStyle = 'white'
-                fillMultilineTextBot(lines, textX, textY, 15, ctx)
-            }
-        })
-        cyInstance!.forceRender()
     })
 
     const toPositions = (): Record<string, Position> => {
@@ -512,7 +382,9 @@
 </script>
 
 <div bind:this={containerDiv} class="container" onresize={center}>
-    <canvas class="bg" bind:this={canvasDiv}></canvas>
+    {#if showGroups && cyInstance}
+        <GraphGroupsView cy={cyInstance} />
+    {/if}
 </div>
 {#if debugAllowed}
     <div class:visible={import.meta.env.DEV} class="tools">
@@ -552,13 +424,6 @@
         width: 100%;
         height: 100%;
         pointer-events: auto;
-    }
-
-    .bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
     }
 
     .tools {

@@ -47,7 +47,7 @@
         ownCompleted = new Set(completed)
     })
 
-    $effect(() => {
+    onMount(() => {
         subscribeToWindowVisibility('selected-quest', (visible) => {
             if (!visible) {
                 selectNode(null)
@@ -81,9 +81,7 @@
             childElements = [...extraNodes, ...extraEdges].map(id)
             targetNode = tempNode.id
         })
-    })
 
-    onMount(() => {
         const stored = localStorage.getItem('selected-quest') ?? null
         selectNode(stored, false)
     })
@@ -119,8 +117,10 @@
     <div class="back">
         <GraphView
             data={currData}
-            faded={childElements}
-            outlined={targetNode ? [targetNode] : undefined}
+            nodeClasses={{
+                faded: childElements,
+                outlined: targetNode ? [targetNode] : undefined,
+            }}
         />
     </div>
     {#if node !== null}

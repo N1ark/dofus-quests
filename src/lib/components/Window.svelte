@@ -163,6 +163,7 @@
         })()
     )
     let fullyHidden = $state(!dimensions.visible)
+    let animating = $state(false)
     let zIndex = $state(windowOrder.indexOf(id))
 
     $effect(() => {
@@ -215,7 +216,11 @@
     const onMove = (e: PointerEvent) => {
         const now = Date.now()
         if (now - lastClickTopBar < 400) {
-            resetWindowPosition(id)
+            animating = true
+            requestAnimationFrame(() => {
+                resetWindowPosition(id)
+                setTimeout(() => (animating = false), 100)
+            })
             return
         }
         lastClickTopBar = now
@@ -330,6 +335,7 @@
     class={(classes ?? '') + ' container'}
     class:visible={dimensions.visible}
     class:fully-hidden={fullyHidden}
+    class:animating
     style="top: {dimensions.y}px; left: {dimensions.x}px; width: {dimensions.width}px; height: {dimensions.height}px"
     style:z-index={zIndex + 3}
     onpointerdown={() => pushWindowToFront(id)}
@@ -419,6 +425,16 @@
 
         &.fully-hidden {
             display: none;
+        }
+
+        &.animating {
+            transition:
+                left 0.1s,
+                top 0.1s,
+                width 0.1s,
+                height 0.1s,
+                opacity 0.1s,
+                transform 0.1s;
         }
     }
 

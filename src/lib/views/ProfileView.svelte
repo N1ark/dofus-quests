@@ -163,7 +163,11 @@
             </div>
         {/if}
         <div class="image-box">
-            <img src={imageRoot + profilePictures[profile.image]} alt="" />
+            <img
+                src={imageRoot + profilePictures[profile.image]}
+                alt=""
+                loading="lazy"
+            />
         </div>
         <div class="info">
             <div class="name">

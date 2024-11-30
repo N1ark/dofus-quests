@@ -8,6 +8,7 @@
     import Eye from 'lucide-svelte/icons/eye'
     import EyeClosed from 'lucide-svelte/icons/eye-closed'
     import Reload from 'lucide-svelte/icons/refresh-cw'
+    import SlidersHorizontal from 'lucide-svelte/icons/sliders-horizontal'
     import Trophy from 'lucide-svelte/icons/trophy'
 
     import DofusBook from './lib/images/dofusbook.png'
@@ -35,6 +36,7 @@
         type Profile,
     } from './lib/data/state.svelte'
     import { language, type Lang } from './lib/locale/localisation.svelte'
+    import LevelFilterView from './lib/views/LevelFilterView.svelte'
     import ProfileView, {
         imageRoot,
         profilePictures,
@@ -109,6 +111,12 @@
                 onclick={() => showCompleted.update((value) => !value)}
             />
             <Button
+                Icon={SlidersHorizontal}
+                title="level-filter"
+                onclick={() => swapWindowVisibility('level-filter')}
+                ondblclick={() => resetWindowPosition('level-filter')}
+            />
+            <Button
                 Icon={showGroups ? Circle : CircleOff}
                 title={showGroups ? 'hide-groups' : 'show-groups'}
                 onclick={() => (showGroups = !showGroups)}
@@ -161,6 +169,7 @@
         <CategoryView mode="achievement" />
         <HelpView />
         <ProfileView />
+        <LevelFilterView />
     </div>
 </main>
 

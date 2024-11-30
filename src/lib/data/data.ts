@@ -8,6 +8,7 @@ export type Quest = {
     requirements: string
     categoryId: number
     achCatId: number
+    levels: [number, number]
     noob?: string
 }
 
@@ -18,6 +19,7 @@ export type Achievement = {
     categoryId: number
     dispCatId: number
     order: number
+    level: number
     noob?: string
 }
 

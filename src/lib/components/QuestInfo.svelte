@@ -127,17 +127,28 @@
 {/snippet}
 
 <div class="info">
-    {#if category}
-        <div class="category">
+    <div class="category">
+        {#if category}
             <button
                 class="link"
                 onclick={() => selectCategory(node.type, category.id)}
             >
                 <Text key={node.id[0] + 'C' + category.id} name="name" />
             </button>
-        </div>
-    {/if}
-    <Text element="h2" key={node.id} name="name" />
+        {/if}
+
+        <span class="level">
+            <Text key="level" />
+            {node.type === 'quest'
+                ? node.levels[0] === node.levels[1]
+                    ? node.levels[0]
+                    : node.levels[0] + ' - ' + node.levels[1]
+                : node.level}
+        </span>
+    </div>
+    <h2>
+        <Text key={node.id} name="name" />
+    </h2>
     {#if node.type === 'achievement'}
         <Text element="p" key={node.id} name="description" />
     {/if}
@@ -173,6 +184,13 @@
 
         :global(p) {
             font-style: italic;
+        }
+
+        .level {
+            font-style: italic;
+            font-weight: normal;
+            margin-inline-start: 1em;
+            white-space: nowrap;
         }
 
         ul {

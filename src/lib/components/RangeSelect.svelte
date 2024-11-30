@@ -23,23 +23,48 @@
 
     let barDiv: HTMLDivElement | null = null
 
+    const closestSide = (e: MouseEvent | PointerEvent): 0 | 1 => {
+        if (!barDiv) return 0
+        const rect = barDiv.getBoundingClientRect()
+        const val = clamp((e.clientX - rect.left) / rect.width, 0, 1)
+        const adapted =
+            Math.round(min + ((max - min) * val) / stepSize) * stepSize
+        if (adapted < range[0]) return 0
+        if (adapted > range[1]) return 1
+
+        if (Math.abs(adapted - range[0]) < Math.abs(adapted - range[1]))
+            return 0
+        return 1
+    }
+
+    const moveNode = (x: number, side: 0 | 1) => {
+        if (!barDiv) return
+        const rect = barDiv.getBoundingClientRect()
+        const newX = clamp((x - rect.left) / rect.width, 0, 1)
+        const val = Math.round(min + ((max - min) * newX) / stepSize) * stepSize
+        const adapted =
+            side === 0
+                ? Math.min(val, range[1] - minRange)
+                : Math.max(val, range[0] + minRange)
+        const newRange: [number, number] = [...range]
+        newRange[side] = adapted
+        onchange?.(newRange)
+    }
+
     const dragNode = (side: 0 | 1) => {
+        let moved = false
+
         const move = (e: PointerEvent) => {
-            if (!barDiv) return
             e.preventDefault()
-            const rect = barDiv.getBoundingClientRect()
-            const newX = clamp((e.clientX - rect.left) / rect.width, 0, 1)
-            const val =
-                Math.round(min + ((max - min) * newX) / stepSize) * stepSize
-            const adapted =
-                side === 0
-                    ? Math.min(val, range[1] - minRange)
-                    : Math.max(val, range[0] + minRange)
-            const newRange: [number, number] = [...range]
-            newRange[side] = adapted
-            onchange?.(newRange)
+            moved = moved || e.movementX + e.movementY > 1
+            moveNode(e.clientX, side)
         }
-        const up = () => {
+        const up = (e: PointerEvent) => {
+            if (!moved) {
+                const closest = closestSide(e)
+                moveNode(e.clientX, closest)
+            }
+
             window.removeEventListener('pointermove', move)
             window.removeEventListener('pointerup', up)
         }
@@ -68,8 +93,11 @@
             const newRange: [number, number] = [newLeft, newLeft + width]
             onchange?.(newRange)
         }
-        const up = () => {
-            if (!moved) clickBack(e)
+        const up = (e: PointerEvent) => {
+            if (!moved) {
+                const closest = closestSide(e)
+                moveNode(e.clientX, closest)
+            }
 
             window.removeEventListener('pointermove', move)
             window.removeEventListener('pointerup', up)
@@ -81,18 +109,7 @@
     const clickBack = (e: MouseEvent | PointerEvent) => {
         if (!barDiv) return
         e.preventDefault()
-        const rect = barDiv.getBoundingClientRect()
-        const val = clamp((e.clientX - rect.left) / rect.width, 0, 1)
-        const adapted =
-            Math.round(min + ((max - min) * val) / stepSize) * stepSize
-        const closest =
-            adapted <= range[0]
-                ? 0
-                : adapted >= range[1]
-                  ? 1
-                  : Math.abs(adapted - range[0]) < Math.abs(adapted - range[1])
-                    ? 0
-                    : 1
+        const closest = closestSide(e)
         dragNode(closest)
     }
 </script>
@@ -119,6 +136,7 @@
         height: 30px;
         min-width: 30px;
         max-width: 200px;
+        user-select: none;
 
         & .node {
             position: absolute;

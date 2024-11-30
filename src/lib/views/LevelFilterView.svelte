@@ -6,16 +6,20 @@
 
     let range = $state.raw<[number, number]>([0, 200])
 
+    let setFilterTimeout: number | undefined = undefined
     $effect(() => {
-        if (range[0] === 0 && range[1] === 200) {
-            setFilter('level-filter', null)
-        } else {
-            setFilter('level-filter', (n) =>
-                n.type === 'quest'
-                    ? n.levels[0] <= range[1] && n.levels[1] >= range[0]
-                    : range[0] <= n.level && n.level <= range[1]
-            )
-        }
+        const _unused = range
+        clearTimeout(setFilterTimeout)
+        setFilterTimeout = setTimeout(() => {
+            if (range[0] === 0 && range[1] === 200)
+                setFilter('level-filter', null)
+            else
+                setFilter('level-filter', (n) =>
+                    n.type === 'quest'
+                        ? n.levels[0] <= range[1] && n.levels[1] >= range[0]
+                        : range[0] <= n.level && n.level <= range[1]
+                )
+        }, 50)
     })
 </script>
 

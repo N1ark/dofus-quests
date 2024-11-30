@@ -45,11 +45,11 @@
         }
         const up = (e: PointerEvent) => {
             target.removeEventListener('pointermove', move)
-            target.removeEventListener('pointerup', up)
+            window.removeEventListener('pointerup', up)
         }
 
         target.addEventListener('pointermove', move)
-        target.addEventListener('pointerup', up)
+        window.addEventListener('pointerup', up)
     }
 
     const oninput: FormEventHandler<HTMLInputElement> = (e) => {

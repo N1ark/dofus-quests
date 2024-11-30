@@ -4,6 +4,10 @@
         callback: (nodeId: string | null) => void
     ) => {
         nodeSelectListeners.push(callback)
+        return () => {
+            const index = nodeSelectListeners.indexOf(callback)
+            if (index !== -1) nodeSelectListeners.splice(index, 1)
+        }
     }
     export const selectNode = (nodeId: string | null, push: boolean = true) => {
         localStorage.setItem('selected-quest', nodeId ?? '')
@@ -23,7 +27,7 @@
 
     import { onMount } from 'svelte'
     import Button from '../components/Button.svelte'
-    import GraphView from '../components/GraphView.svelte'
+    import GraphViewWrapper from '../components/GraphViewWrapper.svelte'
     import QuestInfo from '../components/QuestInfo.svelte'
     import Window, {
         pushWindowToFront,
@@ -47,13 +51,14 @@
         ownCompleted = new Set(completed)
     })
 
+    subscribeToWindowVisibility('selected-quest', (visible) => {
+        if (!visible) {
+            selectNode(null)
+        }
+    })
+
     onMount(() => {
-        subscribeToWindowVisibility('selected-quest', (visible) => {
-            if (!visible) {
-                selectNode(null)
-            }
-        })
-        subscribeToNodeSelect((nodeId) => {
+        const destroy = subscribeToNodeSelect((nodeId) => {
             const tempNode =
                 nodeId && data.nodes.find(({ id }) => id === nodeId)
             if (!tempNode) {
@@ -84,6 +89,8 @@
 
         const stored = localStorage.getItem('selected-quest') ?? null
         selectNode(stored, false)
+
+        return destroy
     })
 
     const handleMarkCompleted = (id: string, parents: boolean) => () => {
@@ -115,7 +122,7 @@
         : undefined}
 >
     <div class="back">
-        <GraphView
+        <GraphViewWrapper
             data={currData}
             nodeClasses={{
                 faded: childElements,

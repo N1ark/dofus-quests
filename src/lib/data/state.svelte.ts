@@ -5,6 +5,8 @@ import BitSet from './bitset'
 import { data } from './data'
 import { positions as defaultPositions } from './positions'
 
+const log = (...args: any) => {} // (...args: any) => console.warn(...args)
+
 export type Profile = {
     id: string
     name: string
@@ -53,10 +55,7 @@ const defaultData: Data = {
 // Location parsers
 
 const getPreferredPositions = (): Record<string, Position> => {
-    console.warn(
-        'Reading preferred positions for profile',
-        localProfiles.current
-    )
+    log('Reading preferred positions for profile', localProfiles.current)
     const storedProfile = localStorage.getItem(
         `positions-${localProfiles.current}`
     )
@@ -92,13 +91,13 @@ const setPreferredPositions = (preferred: Record<string, Position>) => {
         .join('/')
     const b64 = compressToBase64(preferredStr)
     localStorage.setItem(`positions-${localProfiles.current}`, b64)
-    console.warn('Stored positions for profile', localProfiles.current)
+    log('Stored positions for profile', localProfiles.current)
 }
 
 // Profile parsers
 
 const readProfiles = (): ProfileData => {
-    console.warn('Reading profiles')
+    log('Reading profiles')
     const rawData = localStorage.getItem('profiles')
     if (!rawData) {
         const profile = defaultProfile
@@ -121,7 +120,7 @@ const storeProfiles = (profiles: ProfileData) => {
     const completedJson = JSON.stringify(profiles)
     const completedStr = compressToBase64(completedJson)
     localStorage.setItem('profiles', completedStr)
-    console.warn(
+    log(
         'Stored profiles:',
         profiles.profiles.map((p) => p.name)
     )
@@ -176,20 +175,20 @@ const parseUnknownVersion = (v: string): Data => {
     type UnknownFormat = StorageDataV0 | StorageDataV1 | StorageDataV2
     const str = decompressFromBase64(v)
     const obj: UnknownFormat = JSON.parse(str)
-    console.log('Unknown format:', obj)
+    log('Unknown format:', obj)
     if ('v' in obj) return parse_v2(obj)
     else if ('completed' in obj) return v1_to_v2(obj)
     else return v1_to_v2(v0_to_v1(obj))
 }
 
 const readCompleted = (): Data => {
-    console.warn('Reading completed for profile', localProfiles.current)
+    log('Reading completed for profile', localProfiles.current)
     const profiled = localStorage.getItem(`completed-${localProfiles.current}`)
     if (profiled) {
         const completedStr = decompressFromBase64(profiled)
         const completedJson: StorageDataV2 = JSON.parse(completedStr)
         if (completedJson.v === 2) return parse_v2(completedJson)
-        else console.error('Unknown version:', completedJson)
+        else log('Unknown version:', completedJson)
     }
 
     try {
@@ -231,7 +230,7 @@ const readCompleted = (): Data => {
 const storeCompleted = (completed: Data) => {
     const completedStr = stringify_v2(completed)
     localStorage.setItem(`completed-${localProfiles.current}`, completedStr)
-    console.warn('Stored completed for profile', localProfiles.current)
+    log('Stored completed for profile', localProfiles.current)
 }
 
 export const getRawCompleted = (): string => {

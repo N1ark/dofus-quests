@@ -61,11 +61,7 @@
                 isNaN(y) ||
                 isNaN(width) ||
                 isNaN(height) ||
-                isNaN(visible) ||
-                width < MIN_WIDTH ||
-                height < MIN_HEIGHT ||
-                width > 2000 ||
-                height > 2000
+                isNaN(visible)
             )
                 throw new Error('Invalid window info')
             return { x, y, width, height, visible: !!visible }
@@ -142,6 +138,8 @@
         nameSecondary,
         children,
         classes,
+        minWidth = MIN_WIDTH,
+        minHeight = MIN_HEIGHT,
         maxWidth = 2000,
         maxHeight = 2000,
     }: {
@@ -150,6 +148,8 @@
         nameSecondary?: Translatable
         children: Snippet
         classes?: string
+        minWidth?: number
+        minHeight?: number
         maxWidth?: number
         maxHeight?: number
     } = $props()
@@ -157,8 +157,8 @@
     let dimensions = $state(
         (() => {
             const info = getWindowInfo(id)
-            info.width = clamp(info.width, MIN_WIDTH, maxWidth)
-            info.height = clamp(info.height, MIN_HEIGHT, maxHeight)
+            info.width = clamp(info.width, minWidth, maxWidth)
+            info.height = clamp(info.height, minHeight, maxHeight)
             return info
         })()
     )
@@ -183,8 +183,8 @@
             dimensions = {
                 x: 64,
                 y: 64,
-                width: clamp(window.innerWidth - 128, MIN_WIDTH, maxWidth),
-                height: clamp(window.innerHeight - 128, MIN_HEIGHT, maxHeight),
+                width: clamp(window.innerWidth - 128, minWidth, maxWidth),
+                height: clamp(window.innerHeight - 128, minHeight, maxHeight),
                 visible: true,
             }
         })
@@ -258,7 +258,7 @@
                     dimensions.width = Math.round(
                         clamp(
                             og.width - (e.clientX - startX),
-                            MIN_WIDTH,
+                            minWidth,
                             maxWidth
                         )
                     )
@@ -268,7 +268,7 @@
                     dimensions.width = Math.round(
                         clamp(
                             og.width + (e.clientX - startX),
-                            MIN_WIDTH,
+                            minWidth,
                             maxWidth
                         )
                     )
@@ -277,7 +277,7 @@
                     dimensions.height = Math.round(
                         clamp(
                             og.height + (e.clientY - startY),
-                            MIN_HEIGHT,
+                            minHeight,
                             maxHeight
                         )
                     )
@@ -286,7 +286,7 @@
                     dimensions.height = Math.round(
                         clamp(
                             og.height - (e.clientY - startY),
-                            MIN_HEIGHT,
+                            minHeight,
                             maxHeight
                         )
                     )
@@ -480,7 +480,7 @@
 
             &.primary {
                 flex-grow: 10;
-                flex-shrink: 0;
+                flex-shrink: 1;
                 margin-right: 6px;
             }
 
@@ -510,6 +510,7 @@
             opacity: 1;
             transition: background-color 0.1s;
             cursor: pointer;
+            flex-shrink: 0;
             &:hover,
             &:target {
                 background-color: #333;

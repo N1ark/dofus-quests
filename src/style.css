@@ -70,7 +70,7 @@ select {
     cursor: pointer;
     pointer-events: auto;
     user-select: none;
-    &:not(:disabled):hover {
+    &:not(:disabled):not(.link):hover {
         background-color: #333;
     }
 

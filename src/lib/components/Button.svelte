@@ -18,8 +18,8 @@
         Icon: typeof IconType | Component | string | { src: string }
         classes?: string
         href?: string
-        onclick?: () => any | Promise<any>
-        ondblclick?: () => any | Promise<any>
+        onclick?: (e: MouseEvent) => any | Promise<any>
+        ondblclick?: (e: MouseEvent) => any | Promise<any>
         title?: string
         leftSided?: boolean
         disabled?: boolean
@@ -27,10 +27,10 @@
     } = $props()
 
     let lastclick = 0
-    const clickHandler = () => {
+    const clickHandler = (e: MouseEvent) => {
         const now = Date.now()
-        if (now - lastclick < 400) ondblclick?.()
-        else onclick?.()
+        if (now - lastclick < 400) ondblclick?.(e)
+        else onclick?.(e)
         lastclick = now
     }
 </script>

@@ -23,7 +23,7 @@
 
     import Button from './lib/components/Button.svelte'
     import Column from './lib/components/Column.svelte'
-    import GraphView from './lib/components/GraphView.svelte'
+    import GraphViewWrapper from './lib/components/GraphViewWrapper.svelte'
     import {
         resetWindowPosition,
         swapWindowVisibility,
@@ -55,7 +55,7 @@
 </script>
 
 <main>
-    <GraphView
+    <GraphViewWrapper
         {data}
         refresh={refreshIdx}
         {showGroups}
@@ -66,6 +66,7 @@
         <Button
             Icon={{ src: imageRoot + profilePictures[ownProfile.image] }}
             title="profiles"
+            onclick={() => swapWindowVisibility('profile')}
             ondblclick={() => resetWindowPosition('profile')}
             classes="profile-colored"
             --color={ownProfile.color}

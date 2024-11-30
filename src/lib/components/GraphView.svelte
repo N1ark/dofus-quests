@@ -1,16 +1,74 @@
 <script lang="ts" module>
+    import {
+        data as baseData,
+        type Achievement,
+        type Quest,
+    } from '../data/data'
+
+    const fullDataMap: Record<string, Quest | Achievement> = Object.fromEntries(
+        baseData.nodes.map((node) => [node.id, node])
+    )
+
     import cytoscape from 'cytoscape'
     // @ts-ignore-next-line
     import elk from 'cytoscape-elk'
     cytoscape.use(elk)
+
+    type Filter = [string, (node: Quest | Achievement) => boolean]
+    const nodeFilters: Filter[] = []
+    const filterChangeListeners: ((filters: Filter[]) => void)[] = []
+
+    export const setFilter = (
+        id: string,
+        predicate?:
+            | null
+            | string[]
+            | Set<string>
+            | ((node: Quest | Achievement) => boolean)
+    ) => {
+        log('Updating filter', id, predicate)
+        const matchIndex = nodeFilters.findIndex(
+            ([filterId]) => filterId === id
+        )
+        if (!predicate && matchIndex !== -1) {
+            nodeFilters.splice(matchIndex, 1)
+        } else if (predicate) {
+            if (Array.isArray(predicate)) {
+                const ids = new Set(predicate)
+                predicate = (node) => ids.has(node.id)
+            } else if (predicate instanceof Set) {
+                const ids = predicate
+                predicate = (node) => ids.has(node.id)
+            }
+
+            if (matchIndex !== -1) {
+                nodeFilters[matchIndex] = [id, predicate]
+            } else {
+                nodeFilters.push([id, predicate])
+            }
+        } else {
+            // no predicate, not in list anyways -> no change
+            return
+        }
+        filterChangeListeners.forEach((listener) => listener(nodeFilters))
+    }
+
+    const subscribeToFilterChanges = (
+        listener: (filters: Filter[]) => void
+    ) => {
+        filterChangeListeners.push(listener)
+        return () => {
+            const index = filterChangeListeners.indexOf(listener)
+            if (index !== -1) {
+                filterChangeListeners.splice(index, 1)
+            }
+        }
+    }
+
+    const log = (...x: any[]) => {} // console.log(...x)
 </script>
 
 <script lang="ts">
-    import AlignY from 'lucide-svelte/icons/align-center-horizontal'
-    import AlignX from 'lucide-svelte/icons/align-center-vertical'
-    import Export from 'lucide-svelte/icons/hard-drive-upload'
-    import PencilRuler from 'lucide-svelte/icons/pencil-ruler'
-
     import {
         type SingularElementArgument as CytoElement,
         type Position,
@@ -19,27 +77,27 @@
     import { get as getOfStore } from 'svelte/store'
 
     import { style } from '../data/cytostyle'
-    import { type Data, id, toCyto } from '../data/data'
+    import { id, toCyto, type Data } from '../data/data'
     import {
         applyPositions,
         positions as basePositions,
     } from '../data/positions'
-    import { completed, positions, showCompleted } from '../data/state.svelte'
+    import { completed, positions } from '../data/state.svelte'
     import { get, language } from '../locale/localisation.svelte'
     import { selectNode } from '../views/SelectedQuestView.svelte'
-    import Button from './Button.svelte'
     import GraphGroupsView from './GraphGroupsView.svelte'
+    import GraphViewDebug from './GraphViewDebug.svelte'
 
     let {
         data,
-        nodeClasses,
+        nodeClasses = {},
         refresh,
         showGroups,
         usePresetPositions,
         debugAllowed,
     }: {
         data: Pick<Data, 'nodes' | 'edges'>
-        nodeClasses?: Partial<Record<string, string[]>>
+        nodeClasses?: Partial<Record<string, string[] | Set<string>>>
         refresh?: any
         showGroups?: boolean
         usePresetPositions?: boolean
@@ -48,22 +106,18 @@
 
     let containerDiv: HTMLElement
 
-    let cyInstance: cytoscape.Core | null = $state(null)
-    let ownCompleted: Set<string> = $state(new Set())
-    let ownShowCompleted: boolean = $state(false)
+    let cyInstance: cytoscape.Core | null = $state.raw(null)
 
     let ignoreNextPositionUpdate: boolean = true
 
+    let ownCompleted: Set<string> = $state.raw(new Set())
     completed.subscribe(({ completed }) => {
         ownCompleted = new Set(completed)
-    })
-    showCompleted.subscribe((value) => {
-        ownShowCompleted = value
     })
 
     const center = () => {
         if (!cyInstance) return
-        console.log('Centering')
+        log('Centering')
         cyInstance.maxZoom(1.6)
         cyInstance.fit(undefined, 50)
         cyInstance.center()
@@ -72,20 +126,11 @@
 
     const layout = ({ animated = false }: { animated?: boolean }) => {
         if (!cyInstance) return
-        let elements = cyInstance.elements()
-        if (elements.length === 0) return
-        if (!ownShowCompleted) {
-            elements = elements.filter((element) => {
-                if (element.isNode()) return !ownCompleted.has(element.id())
 
-                const source = element.source()
-                const target = element.target()
-                return (
-                    !ownCompleted.has(source.id()) &&
-                    !ownCompleted.has(target.id())
-                )
-            })
-        }
+        // we assume visibility has been calculated already
+        let elements = cyInstance.elements().filter((e) => e.visible())
+        if (elements.length === 0) return
+
         let nodePositions: Record<string, cytoscape.Position> = {}
         if (usePresetPositions) {
             nodePositions = getOfStore(positions)
@@ -93,14 +138,12 @@
                 Object.entries(nodePositions).filter(([id, pos]) => {
                     const elem = elements.getElementById(id)
                     if (!elem) return false
-                    if (!elem.visible()) return true
+                    if (!elem.visible()) return true // this is weird
                     const currPos = elem.position()
-                    return elem && (pos.x !== currPos.x || pos.y !== currPos.y)
+                    return pos.x !== currPos.x || pos.y !== currPos.y
                 })
             )
-            console.log(
-                `Moving ${Object.keys(nodePositions).length} preset nodes`
-            )
+            log(`Moving ${Object.keys(nodePositions).length} preset nodes`)
         }
         const layout = elements
             .layout({
@@ -132,42 +175,65 @@
             layout.one('layoutstop', () => cyInstance!.one('resize', center))
         }
 
-        console.log('Did layout - animated?', animated)
+        log('Did layout - animated?', animated)
     }
 
-    const updateCompleted = () => {
-        cyInstance?.nodes().forEach((node) => {
-            if (ownCompleted.has(node.id())) {
-                node.addClass('finished')
-            } else {
-                node.removeClass('finished')
-            }
-        })
-    }
+    const applyVisibility = () => {
+        if (!cyInstance) return
+        const now = performance.now()
 
-    const updateVisible = () => {
-        cyInstance?.nodes('.hidden').removeClass('hidden')
-        if (!ownShowCompleted) cyInstance?.nodes('.finished').addClass('hidden')
-    }
+        const visibilityCache: Partial<Record<string, boolean>> = {}
+        const isVisible = (id: string) =>
+            (visibilityCache[id] ??= nodeFilters.every(([, filter]) =>
+                filter(fullDataMap[id])
+            ))
 
-    let oldClasses: string[] = []
-
-    const applyClasses = () => {
-        oldClasses.forEach((c) => {
-            if (!nodeClasses || !(c in nodeClasses)) applyClass(c, [])
-        })
-        oldClasses = nodeClasses ? Object.keys(nodeClasses) : []
-        if (!nodeClasses) return
-
-        const applyClass = (clazz: string, ids?: string[]) => {
-            cyInstance?.elements().forEach((e) => {
-                if (ids && ids.includes(e.id())) e.addClass(clazz)
-                else e.removeClass(clazz)
+        cyInstance.batch(() => {
+            const elements = cyInstance!.nodes()
+            elements.forEach((element: cytoscape.SingularElementArgument) => {
+                if (isVisible(element.id())) element.removeClass('hidden')
+                else element.addClass('hidden')
             })
-        }
-        Object.entries(nodeClasses).forEach(([clazz, ids]) => {
-            applyClass(clazz, ids)
         })
+
+        log('Applied visibility', performance.now() - now)
+    }
+
+    let oldClasses: typeof nodeClasses = {}
+    const applyClasses = () => {
+        if (!cyInstance) return
+
+        const now = performance.now()
+
+        const nodes = cyInstance.nodes()
+        const applyClassArr = (clazz: string, ids: string[]) => {
+            nodes.forEach((e): any =>
+                ids.includes(e.id()) ? e.addClass(clazz) : e.removeClass(clazz)
+            )
+        }
+        const applyClassSet = (clazz: string, ids: Set<string>) => {
+            nodes.forEach((e): any =>
+                ids.has(e.id()) ? e.addClass(clazz) : e.removeClass(clazz)
+            )
+        }
+
+        cyInstance.batch(() => {
+            // Clear old classes if not present anymore
+            Object.entries(oldClasses).forEach(([c, keys]) => {
+                if (!(c in nodeClasses)) nodes.removeClass(c)
+            })
+            oldClasses = nodeClasses
+
+            // Apply new classes
+            Object.entries(nodeClasses).forEach(([clazz, ids]) =>
+                ids
+                    ? Array.isArray(ids)
+                        ? applyClassArr(clazz, ids)
+                        : applyClassSet(clazz, ids)
+                    : nodes.removeClass(clazz)
+            )
+        })
+        log('Applied classes', performance.now() - now)
     }
 
     onMount(() => {
@@ -244,19 +310,18 @@
         layout({ animated: true })
     })
 
-    // Update completed and visible nodes
-    $effect(() => {
-        const _unused1 = ownCompleted
-        const _unused2 = ownShowCompleted
-
-        updateCompleted()
-        updateVisible()
-    })
+    // Update visible nodes
+    onMount(() =>
+        subscribeToFilterChanges(() => {
+            applyVisibility()
+            if (!usePresetPositions) layout({ animated: true })
+        })
+    )
 
     // Update node classes
     $effect(() => {
         const _unuded = nodeClasses
-        applyClasses()
+        untrack(applyClasses)
     })
 
     // Update graph when data changes
@@ -293,9 +358,8 @@
         }
         untrack(() => {
             cyInstance?.elements().unselect()
-            updateCompleted()
-            updateVisible()
             applyClasses()
+            applyVisibility()
             layout({ animated: overlap })
         })
     })
@@ -311,19 +375,6 @@
         })
     })
 
-    // Update graph when showCompleted changes and not refreshable (animating)
-    $effect(() => {
-        if (refresh !== undefined) return
-        const _unused1 = ownShowCompleted
-        const _unused2 = ownCompleted
-        if (!cyInstance) return
-        untrack(() => {
-            updateCompleted()
-            updateVisible()
-            requestAnimationFrame(() => layout({ animated: true }))
-        })
-    })
-
     const toPositions = (): Record<string, Position> => {
         const nodes = cyInstance?.nodes()
         if (!nodes) return {}
@@ -336,49 +387,6 @@
         )
         return positions
     }
-    const exportPos = () => console.log(JSON.stringify(toPositions()))
-
-    const align = (dim: 'x' | 'y') => () => {
-        if (!cyInstance) return
-        const otherDim = dim === 'x' ? 'y' : 'x'
-        const nodes = cyInstance.nodes(':selected')
-        if (nodes.length < 2) return
-        const newDim =
-            nodes.reduce((acc, node) => acc + node.position()[dim], 0) /
-            nodes.length
-        nodes.positions((node) => {
-            const pos = node.position()
-            return {
-                [dim]: Math.round(newDim),
-                [otherDim]: pos[otherDim],
-            } as any as Position
-        })
-        nodes.unselect()
-    }
-
-    const autolayout = () => {
-        if (!cyInstance) return
-        const nodes = cyInstance.elements(':selected')
-        if (nodes.length < 2) return
-        nodes.unselect()
-        nodes
-            .layout({
-                name: 'elk',
-                // @ts-ignore-next-line
-                nodeDimensionsIncludeLabels: true,
-                elk: {
-                    algorithm: 'layered',
-                    'elk.direction': 'DOWN',
-                },
-                animate: true,
-                animationDuration: 500,
-                animationEasing: 'ease',
-            })
-            .run()
-            .on('layoutstop', () => {
-                nodes.select()
-            })
-    }
 </script>
 
 <div bind:this={containerDiv} class="container" onresize={center}>
@@ -386,37 +394,8 @@
         <GraphGroupsView cy={cyInstance} />
     {/if}
 </div>
-{#if debugAllowed}
-    <div class:visible={import.meta.env.DEV} class="tools">
-        <Button
-            Icon={AlignX}
-            title="Align X"
-            onclick={align('x')}
-            classes="debug"
-            leftSided
-        />
-        <Button
-            Icon={AlignY}
-            title="Align Y"
-            onclick={align('y')}
-            classes="debug"
-            leftSided
-        />
-        <Button
-            Icon={PencilRuler}
-            title="Auto-layout"
-            onclick={autolayout}
-            classes="debug"
-            leftSided
-        />
-        <Button
-            Icon={Export}
-            title="Export positions"
-            onclick={exportPos}
-            classes="debug"
-            leftSided
-        />
-    </div>
+{#if debugAllowed && import.meta.env.DEV && cyInstance}
+    <GraphViewDebug cy={cyInstance} />
 {/if}
 
 <style>
@@ -424,28 +403,5 @@
         width: 100%;
         height: 100%;
         pointer-events: auto;
-    }
-
-    .tools {
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
-        flex-direction: column;
-        gap: 8px;
-        display: none;
-        z-index: 10;
-
-        &.visible {
-            display: flex;
-            z-index: 1;
-        }
-
-        & :global(.debug) {
-            border-color: rgba(219, 149, 20, 0.6) !important;
-            background-color: #211f1b !important;
-            &:hover {
-                background-color: #4d412c !important;
-            }
-        }
     }
 </style>

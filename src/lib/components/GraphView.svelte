@@ -104,9 +104,7 @@
     } = $props()
 
     $effect(() => console.log('-------------- reloaded --------------'))
-    const log = usePresetPositions
-        ? () => {}
-        : (...x: any[]) => console.warn(...x)
+    const log = () => {}
 
     let containerDiv: HTMLElement
 
@@ -282,12 +280,15 @@
             else nodes.forEach((n) => newCompleted.delete(n))
             completed.update((v) => ({ completed: Array.from(newCompleted) }))
         })
-        cyInstance.on('drag', (e) => {
-            const { x, y } = e.target.position()
-            e.target.position({ x: Math.round(x), y: Math.round(y) })
 
-            savePreferredPosition()
-        })
+        if (usePresetPositions) {
+            cyInstance.on('drag', (e) => {
+                const { x, y } = e.target.position()
+                e.target.position({ x: Math.round(x), y: Math.round(y) })
+
+                savePreferredPosition()
+            })
+        }
     })
 
     const saveFn = () => {

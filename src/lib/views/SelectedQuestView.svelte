@@ -25,7 +25,7 @@
     import DofusDB from '../images/dofusdb.png'
     import DofusPourLesNoobs from '../images/dofusprlesnoobs.png'
 
-    import { onMount } from 'svelte'
+    import { onMount, untrack } from 'svelte'
     import Button from '../components/Button.svelte'
     import GraphViewWrapper from '../components/GraphViewWrapper.svelte'
     import QuestInfo from '../components/QuestInfo.svelte'
@@ -57,41 +57,47 @@
         }
     })
 
-    onMount(() => {
-        const destroy = subscribeToNodeSelect((nodeId) => {
-            const tempNode =
-                nodeId && data.nodes.find(({ id }) => id === nodeId)
-            if (!tempNode) {
-                node = null
-                currData = { nodes: [], edges: [] }
-                setWindowVisibility('selected-quest', false)
-                return
-            }
-            setWindowVisibility('selected-quest', true)
-            node = tempNode
-            currData = onlyPredecessors(data, node.id)
-            const rawExtraEdges = data.edges.filter(
-                ({ from }) => from === tempNode.id
-            )
-            const extraNodes = data.nodes
-                .filter(({ id }) => rawExtraEdges.some(({ to }) => to === id))
-                .filter(({ id }) => !currData.nodes.some((n) => n.id === id)) // remove predecessors
-            const extraEdges = rawExtraEdges.filter(({ to }) =>
-                extraNodes.some(({ id }) => id === to)
-            )
-            currData = {
-                nodes: [...currData.nodes, ...extraNodes],
-                edges: [...currData.edges, ...extraEdges],
-            }
-            childElements = [...extraNodes, ...extraEdges].map(id)
-            targetNode = tempNode.id
+    onMount(() =>
+        untrack(() => {
+            const destroy = subscribeToNodeSelect((nodeId) => {
+                const tempNode =
+                    nodeId && data.nodes.find(({ id }) => id === nodeId)
+                if (!tempNode) {
+                    node = null
+                    currData = { nodes: [], edges: [] }
+                    setWindowVisibility('selected-quest', false)
+                    return
+                }
+                setWindowVisibility('selected-quest', true)
+                node = tempNode
+                currData = onlyPredecessors(data, node.id)
+                const rawExtraEdges = data.edges.filter(
+                    ({ from }) => from === tempNode.id
+                )
+                const extraNodes = data.nodes
+                    .filter(({ id }) =>
+                        rawExtraEdges.some(({ to }) => to === id)
+                    )
+                    .filter(
+                        ({ id }) => !currData.nodes.some((n) => n.id === id)
+                    ) // remove predecessors
+                const extraEdges = rawExtraEdges.filter(({ to }) =>
+                    extraNodes.some(({ id }) => id === to)
+                )
+                currData = {
+                    nodes: [...currData.nodes, ...extraNodes],
+                    edges: [...currData.edges, ...extraEdges],
+                }
+                childElements = [...extraNodes, ...extraEdges].map(id)
+                targetNode = tempNode.id
+            })
+
+            const stored = localStorage.getItem('selected-quest') ?? null
+            selectNode(stored, false)
+
+            return destroy
         })
-
-        const stored = localStorage.getItem('selected-quest') ?? null
-        selectNode(stored, false)
-
-        return destroy
-    })
+    )
 
     const handleMarkCompleted = (id: string, parents: boolean) => () => {
         const nodes: string[] = parents

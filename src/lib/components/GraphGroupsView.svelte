@@ -55,7 +55,7 @@
         const nodesAll = cy.nodes()
         for (const { id, fill, stroke } of groupColors) {
             const nodes = nodesAll.filter(
-                (n) => n.data('group') === id && n.visible()
+                (n) => n.data('group') === id && !n.hasClass('hidden')
             )
             if (!nodes || nodes.length === 0) continue
 

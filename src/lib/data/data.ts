@@ -106,5 +106,9 @@ export const onlyPredecessors = (data: Data, id: string): Data => {
     }
 }
 
-export const id = (node: Quest | Achievement | Edge): string =>
-    'id' in node ? node.id : `${node.from}-${node.to}-${node.type}`
+export const id = (
+    node: Quest | Achievement | (Edge & { _id?: string })
+): string =>
+    'id' in node
+        ? node.id
+        : (node._id ??= `${node.from}-${node.to}-${node.type}`)

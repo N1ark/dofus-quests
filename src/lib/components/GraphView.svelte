@@ -26,7 +26,7 @@
             | Set<string>
             | ((node: Quest | Achievement) => boolean)
     ) => {
-        log('Updating filter', id, predicate)
+        // console.log('Updating filter', id, predicate)
         const matchIndex = nodeFilters.findIndex(
             ([filterId]) => filterId === id
         )
@@ -64,13 +64,12 @@
             }
         }
     }
-
-    const log = (...x: any[]) => {} // console.log(...x)
 </script>
 
 <script lang="ts">
     import {
         type SingularElementArgument as CytoElement,
+        type EdgeSingular,
         type Position,
     } from 'cytoscape'
     import { onMount, untrack } from 'svelte'
@@ -104,6 +103,11 @@
         debugAllowed?: boolean
     } = $props()
 
+    $effect(() => console.log('-------------- reloaded --------------'))
+    const log = usePresetPositions
+        ? () => {}
+        : (...x: any[]) => console.warn(...x)
+
     let containerDiv: HTMLElement
 
     let cyInstance: cytoscape.Core | null = $state.raw(null)
@@ -128,7 +132,15 @@
         if (!cyInstance) return
 
         // we assume visibility has been calculated already
-        let elements = cyInstance.elements().filter((e) => e.visible())
+        // do not use .visible() -- horrible performance!
+        let elements = cyInstance.filter((e) =>
+            e.isNode()
+                ? !e.hasClass('hidden')
+                : !(
+                      (e as any as EdgeSingular).source().hasClass('hidden') ||
+                      (e as any as EdgeSingular).target().hasClass('hidden')
+                  )
+        )
         if (elements.length === 0) return
 
         let nodePositions: Record<string, cytoscape.Position> = {}
@@ -175,7 +187,7 @@
             layout.one('layoutstop', () => cyInstance!.one('resize', center))
         }
 
-        log('Did layout - animated?', animated)
+        log(`Did layout on ${elements.size()} - animated?`, animated)
     }
 
     const applyVisibility = () => {
@@ -327,36 +339,38 @@
     // Update graph when data changes
     $effect(() => {
         const _unused = data
-        if (!cyInstance || usePresetPositions) return
-
-        const nodes = cyInstance.nodes()
-        const overlap = nodes.some((e) =>
-            data.nodes.some((n) => n.id === (e as CytoElement).id())
-        )
-        if (!overlap) {
-            cyInstance.remove(cyInstance.elements())
-            cyInstance.add(toCyto(data))
-        } else {
-            const edges = cyInstance.edges()
-            const nodesRemoveFromCyto = nodes.filter(
-                (e) => !data.nodes.some((n) => n.id === e.id())
-            )
-            const edgesRemoveFromCyto = edges.filter(
-                (e) => !data.edges.some((e2) => e.id() === id(e2))
-            )
-            const nodesAddToCyto = data.nodes.filter(
-                (n) => !nodes.some((e) => (e as CytoElement).id() === n.id)
-            )
-            const edgesAddToCyto = data.edges.filter(
-                (e2) => !edges.some((e) => (e as CytoElement).id() === id(e2))
-            )
-            cyInstance.remove(nodesRemoveFromCyto)
-            cyInstance.remove(edgesRemoveFromCyto)
-            cyInstance.add(
-                toCyto({ nodes: nodesAddToCyto, edges: edgesAddToCyto })
-            )
-        }
         untrack(() => {
+            if (!cyInstance || usePresetPositions) return
+
+            const nodeSet = new Set(data.nodes.map((n) => n.id))
+            const edgeSet = new Set(data.edges.map(id))
+            const nodes = cyInstance.nodes()
+            const overlap = nodes.some((e) =>
+                nodeSet.has((e as CytoElement).id())
+            )
+            if (!overlap) {
+                cyInstance.elements().remove()
+                cyInstance.add(toCyto(data))
+            } else {
+                const edges = cyInstance.edges()
+                const nodesRemoveFromCyto = nodes.filter(
+                    (e) => !nodeSet.has(e.id())
+                )
+                const edgesRemoveFromCyto = edges.filter(
+                    (e) => !edgeSet.has(e.id())
+                )
+                const nodesAddToCyto = data.nodes.filter(
+                    (n) => nodes.getElementById(n.id).length === 0
+                )
+                const edgesAddToCyto = data.edges.filter(
+                    (e) => edges.getElementById(id(e)).length === 0
+                )
+                nodesRemoveFromCyto.remove()
+                edgesRemoveFromCyto.remove()
+                cyInstance.add(
+                    toCyto({ nodes: nodesAddToCyto, edges: edgesAddToCyto })
+                )
+            }
             cyInstance?.elements().unselect()
             applyClasses()
             applyVisibility()

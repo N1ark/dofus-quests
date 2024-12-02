@@ -148,7 +148,6 @@
                       }
                     : {
                           name: 'elk',
-                          // @ts-ignore-next-line
                           nodeDimensionsIncludeLabels: true,
                           elk: {
                               algorithm: 'layered',
@@ -303,7 +302,8 @@
     onMount(() =>
         subscribeToFilterChanges(() => {
             applyVisibility()
-            if (!usePresetPositions) layout({ animated: true })
+            if (!usePresetPositions)
+                requestAnimationFrame(() => layout({ animated: true }))
         })
     )
 

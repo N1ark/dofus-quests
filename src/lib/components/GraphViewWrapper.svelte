@@ -5,11 +5,11 @@
     let ownShowCompleted = true
 
     const updateFilter = () => {
+        console.log('Updating filter')
         setFilter(
             'show-completed',
             ownShowCompleted ? null : (n) => !ownCompleted.has(n.id)
         )
-        console.log('filter updated')
     }
 
     completed.subscribe(({ completed }) => {

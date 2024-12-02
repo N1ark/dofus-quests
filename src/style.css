@@ -89,10 +89,12 @@ select {
     &.danger {
         background-color: #581111;
         border-color: rgba(255, 0, 0, 0.4);
-        &:hover,
-        &:active,
-        &:focus {
-            background-color: #9d1414;
+        &:not(:disabled):not(.link) {
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: #9d1414;
+            }
         }
         &:disabled {
             background-color: #350e0e;

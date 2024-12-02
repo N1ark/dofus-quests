@@ -1,8 +1,8 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import { progressText } from '../components/Progress.svelte'
+    import SplitWindow from '../components/SplitWindow.svelte'
     import Text from '../components/Text.svelte'
-    import Window from '../components/Window.svelte'
     import { data } from '../data/data'
     import { completed } from '../data/state.svelte'
     import { get } from '../locale/localisation.svelte'
@@ -40,7 +40,95 @@
     })
 </script>
 
-<Window
+{#snippet top()}
+    <div class="months">
+        <div class="search">
+            <input
+                type="text"
+                data-placeholder="search"
+                bind:value={searchText}
+            />
+        </div>
+        {#each [...new Array(12)] as _, i}
+            {@const date = new Date(2024, i, 1)}
+            {@const nDays =
+                new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate() -
+                date.getDate() +
+                1}
+            <div class="month">
+                <h3 id={`month-${i}`}>
+                    {date.toLocaleString('default', { month: 'long' })}
+                </h3>
+                <div class="days">
+                    {#each [...new Array(nDays)] as _, j}
+                        {@const day = new Date(
+                            date.getFullYear(),
+                            date.getMonth(),
+                            j + 1
+                        )
+                            .toLocaleDateString('en-US')
+                            .slice(0, -5)}
+                        {@const alma = data.almanax.find(
+                            ({ day, month }) =>
+                                day === j + 1 && month === date.getMonth() + 1
+                        )!}
+                        <button
+                            class="day"
+                            class:completed={ownAlmanax.has(alma.id)}
+                            class:notSearched={searchText.trim() &&
+                                !normalize((alma.id, 'name')).includes(
+                                    searchNormalized
+                                ) &&
+                                !normalize(get(alma.id, 'item')).includes(
+                                    searchNormalized
+                                ) &&
+                                !normalize(get(alma.id, 'effectName')).includes(
+                                    searchNormalized
+                                )}
+                            class:current={today.getDate() === j + 1 &&
+                                today.getMonth() === date.getMonth()}
+                            onmouseenter={() =>
+                                (today = new Date(
+                                    date.getFullYear(),
+                                    date.getMonth(),
+                                    j + 1
+                                ))}
+                            onclick={() => toggleDay(alma.id)}
+                        >
+                            <span>
+                                {j + 1}
+                            </span>
+                        </button>
+                    {/each}
+                </div>
+            </div>
+        {/each}
+    </div>
+{/snippet}
+
+{#snippet bottom()}
+    <div class="info">
+        <div>
+            <div class="date">{today.toLocaleDateString()}</div>
+            <Text element="h3" key={almanax.id} name="name" />
+            <div class="item">
+                <img src={almanax.itemImg} alt={''} />
+                <div>
+                    {almanax.itemQuantity} × <Text
+                        key={almanax.id}
+                        name="item"
+                    />
+                </div>
+            </div>
+        </div>
+        <div>
+            <Text element="h3" key={almanax.id} name="effectName" />
+            <Text element="p" key={almanax.id} name="effectDesc" raw />
+        </div>
+    </div>
+{/snippet}
+
+<SplitWindow
     id="almanax"
     name={{ key: 'almanax' }}
     nameSecondary={progressText(
@@ -48,107 +136,11 @@
         366
     )}
     maxWidth={1100}
->
-    <div class="content">
-        <div class="months">
-            <div class="search">
-                <input
-                    type="text"
-                    data-placeholder="search"
-                    bind:value={searchText}
-                />
-            </div>
-            {#each [...new Array(12)] as _, i}
-                {@const date = new Date(2024, i, 1)}
-                {@const nDays =
-                    new Date(
-                        date.getFullYear(),
-                        date.getMonth() + 1,
-                        0
-                    ).getDate() -
-                    date.getDate() +
-                    1}
-                <div class="month">
-                    <h3 id={`month-${i}`}>
-                        {date.toLocaleString('default', { month: 'long' })}
-                    </h3>
-                    <div class="days">
-                        {#each [...new Array(nDays)] as _, j}
-                            {@const day = new Date(
-                                date.getFullYear(),
-                                date.getMonth(),
-                                j + 1
-                            )
-                                .toLocaleDateString('en-US')
-                                .slice(0, -5)}
-                            {@const alma = data.almanax.find(
-                                ({ day, month }) =>
-                                    day === j + 1 &&
-                                    month === date.getMonth() + 1
-                            )!}
-                            <button
-                                class="day"
-                                class:completed={ownAlmanax.has(alma.id)}
-                                class:notSearched={searchText.trim() &&
-                                    !normalize((alma.id, 'name')).includes(
-                                        searchNormalized
-                                    ) &&
-                                    !normalize(get(alma.id, 'item')).includes(
-                                        searchNormalized
-                                    ) &&
-                                    !normalize(
-                                        get(alma.id, 'effectName')
-                                    ).includes(searchNormalized)}
-                                class:current={today.getDate() === j + 1 &&
-                                    today.getMonth() === date.getMonth()}
-                                onmouseenter={() =>
-                                    (today = new Date(
-                                        date.getFullYear(),
-                                        date.getMonth(),
-                                        j + 1
-                                    ))}
-                                onclick={() => toggleDay(alma.id)}
-                            >
-                                <span>
-                                    {j + 1}
-                                </span>
-                            </button>
-                        {/each}
-                    </div>
-                </div>
-            {/each}
-        </div>
-        <div class="info">
-            <div>
-                <div class="date">{today.toLocaleDateString()}</div>
-                <Text element="h3" key={almanax.id} name="name" />
-                <div class="item">
-                    <img src={almanax.itemImg} alt={''} />
-                    <div>
-                        {almanax.itemQuantity} × <Text
-                            key={almanax.id}
-                            name="item"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div>
-                <Text element="h3" key={almanax.id} name="effectName" />
-                <Text element="p" key={almanax.id} name="effectDesc" raw />
-            </div>
-        </div>
-    </div>
-</Window>
+    {top}
+    {bottom}
+/>
 
 <style>
-    .content {
-        height: 100%;
-        min-height: 100px;
-        display: flex;
-        flex-direction: column;
-        margin: -4px -12px 0 -12px;
-    }
-
     .search {
         display: flex;
         flex-direction: row-reverse;
@@ -164,13 +156,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 8px;
-        height: 100%;
-        overflow-y: auto;
-        flex-shrink: 10;
-        padding: 0 8px 28px 8px;
+        height: unset;
         justify-content: space-evenly;
         align-content: flex-start;
-        scrollbar-gutter: stable;
 
         & .month {
             max-width: 230px;
@@ -212,9 +200,10 @@
             &.completed {
                 --color: #3dd17d;
             }
-            &.current {
+            &.current,
+            &:hover {
                 color: var(--color);
-                background-color: white;
+                background-color: white !important;
             }
             & > span {
                 position: absolute;
@@ -229,15 +218,7 @@
         display: flex;
         flex-direction: row;
         gap: 8px;
-        position: sticky;
-        bottom: 0;
-        z-index: 1;
         min-height: 100px;
-        border-top: 1px solid rgba(128, 128, 128, 0.3);
-        padding: 8px 12px 0 12px;
-        flex-shrink: 0;
-        height: fit-content;
-        transition: height 0.2s;
 
         & > div {
             overflow: hidden;

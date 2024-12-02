@@ -34,10 +34,9 @@
     import ColorPicker from '../components/ColorPicker.svelte'
     import Column from '../components/Column.svelte'
     import Row from '../components/Row.svelte'
+    import SplitWindow from '../components/SplitWindow.svelte'
     import Text from '../components/Text.svelte'
-    import Window, {
-        subscribeToWindowVisibility,
-    } from '../components/Window.svelte'
+    import { subscribeToWindowVisibility } from '../components/Window.svelte'
     import { data } from '../data/data'
     import {
         profiles,
@@ -187,155 +186,142 @@
     </button>
 {/snippet}
 
-<Window id="profile" name={{ key: 'profiles' }} maxWidth={600}>
-    <div class="content-col">
+{#snippet top()}
+    <Column classes="profile-col">
         <Text element="h3" key="pick-profile" />
-        <Column classes="profile-list">
-            {#each ownProfiles.profiles as p}
-                <Row classes="profile-row">
-                    {@render profile(p, () => selectProfile(p.id))}
-                    <Button
-                        Icon={Pencil}
-                        onclick={() => {
-                            confirmDelete = null
-                            if (editedProfile === p.id) {
-                                editedProfile = null
-                                newProfile = dummyProfile()
-                            } else {
-                                editedProfile = p.id
-                                newProfile = { ...p }
-                            }
-                        }}
-                        selected={editedProfile === p.id}
-                    />
-                    <Button
-                        Icon={Trash}
-                        onclick={() => {
-                            confirmDelete = p.id
-                            if (editedProfile !== null) {
-                                editedProfile = null
-                                newProfile = dummyProfile()
-                            }
-                        }}
-                        disabled={ownProfiles.profiles.length < 2}
-                        selected={confirmDelete === p.id}
-                    />
-                    {#if confirmDelete === p.id}
-                        <button
-                            disabled={!confirmDeleteEnabled}
-                            class="danger"
-                            onclick={() => deleteProfile(p.id)}
-                        >
-                            <Text key="confirm" />
-                        </button>
-                    {/if}
-                </Row>
-            {/each}
-        </Column>
-
-        <div class="create-column">
-            <Text
-                element="h3"
-                key={editedProfile !== null ? 'edit-profile' : 'create-profile'}
-            />
-            <div class="create-form">
-                <div>
-                    <input
-                        type="text"
-                        bind:value={newProfile.name}
-                        data-placeholder="profile-name"
-                        maxlength="20"
-                    />
-                    <ColorPicker
-                        color={newProfile.color}
-                        classes="colorpick"
-                        onchange={(c) => (newProfile.color = c)}
-                    />
-                    <div class="genderselect">
-                        <select
-                            onchange={(e) =>
-                                (newProfile.title = +e.currentTarget.value)}
-                        >
-                            {#key ownLang}
-                                {#each titles as title}
-                                    <option
-                                        value={title.id}
-                                        selected={newProfile.title === title.id}
-                                        >{title.text}</option
-                                    >
-                                {/each}
-                            {/key}
-                        </select>
-                        <Button
-                            Icon={Male}
-                            selected={newProfile.gender === 'male'}
-                            onclick={() => (newProfile.gender = 'male')}
-                        />
-                        <Button
-                            Icon={Female}
-                            selected={newProfile.gender === 'female'}
-                            onclick={() => (newProfile.gender = 'female')}
-                        />
-                    </div>
-                </div>
-                <Column classes="icon-list">
-                    {#each profilePictures as img, i}
-                        <Button
-                            Icon={{ src: imageRoot + img }}
-                            selected={i === newProfile.image}
-                            onclick={() => (newProfile.image = i)}
-                        />
-                    {/each}
-                </Column>
-            </div>
-            <Row classes="profile-row preview-row">
-                <div class="preview">
-                    <Text key="preview" />
-                </div>
-                {@render profile(newProfile)}
+        {#each ownProfiles.profiles as p}
+            <Row classes="profile-row">
+                {@render profile(p, () => selectProfile(p.id))}
                 <Button
-                    Icon={Dice}
-                    onclick={() => (newProfile = dummyProfile())}
+                    Icon={Pencil}
+                    onclick={() => {
+                        confirmDelete = null
+                        if (editedProfile === p.id) {
+                            editedProfile = null
+                            newProfile = dummyProfile()
+                        } else {
+                            editedProfile = p.id
+                            newProfile = { ...p }
+                        }
+                    }}
+                    selected={editedProfile === p.id}
                 />
-                <button
-                    onclick={createOrEditProfile}
-                    disabled={!newProfile.name ||
-                        newProfile.name.trim().length < 3}
-                >
-                    <Text key={editedProfile !== null ? 'edit' : 'create'} />
-                </button>
+                <Button
+                    Icon={Trash}
+                    onclick={() => {
+                        confirmDelete = p.id
+                        if (editedProfile !== null) {
+                            editedProfile = null
+                            newProfile = dummyProfile()
+                        }
+                    }}
+                    disabled={ownProfiles.profiles.length < 2}
+                    selected={confirmDelete === p.id}
+                />
+                {#if confirmDelete === p.id}
+                    <button
+                        disabled={!confirmDeleteEnabled}
+                        class="danger"
+                        onclick={() => deleteProfile(p.id)}
+                    >
+                        <Text key="confirm" />
+                    </button>
+                {/if}
             </Row>
+        {/each}
+    </Column>
+{/snippet}
+
+{#snippet bottom()}
+    <div class="create-column">
+        <Text
+            element="h3"
+            key={editedProfile !== null ? 'edit-profile' : 'create-profile'}
+        />
+        <div class="create-form">
+            <div>
+                <input
+                    type="text"
+                    bind:value={newProfile.name}
+                    data-placeholder="profile-name"
+                    maxlength="20"
+                />
+                <ColorPicker
+                    color={newProfile.color}
+                    classes="colorpick"
+                    onchange={(c) => (newProfile.color = c)}
+                />
+                <div class="genderselect">
+                    <select
+                        onchange={(e) =>
+                            (newProfile.title = +e.currentTarget.value)}
+                    >
+                        {#key ownLang}
+                            {#each titles as title}
+                                <option
+                                    value={title.id}
+                                    selected={newProfile.title === title.id}
+                                    >{title.text}</option
+                                >
+                            {/each}
+                        {/key}
+                    </select>
+                    <Button
+                        Icon={Male}
+                        selected={newProfile.gender === 'male'}
+                        onclick={() => (newProfile.gender = 'male')}
+                    />
+                    <Button
+                        Icon={Female}
+                        selected={newProfile.gender === 'female'}
+                        onclick={() => (newProfile.gender = 'female')}
+                    />
+                </div>
+            </div>
+            <Column classes="icon-list">
+                {#each profilePictures as img, i}
+                    <Button
+                        Icon={{ src: imageRoot + img }}
+                        selected={i === newProfile.image}
+                        onclick={() => (newProfile.image = i)}
+                    />
+                {/each}
+            </Column>
         </div>
+        <Row classes="profile-row preview-row">
+            <div class="preview">
+                <Text key="preview" />
+            </div>
+            {@render profile(newProfile)}
+            <Button Icon={Dice} onclick={() => (newProfile = dummyProfile())} />
+            <button
+                onclick={createOrEditProfile}
+                disabled={!newProfile.name || newProfile.name.trim().length < 3}
+            >
+                <Text key={editedProfile !== null ? 'edit' : 'create'} />
+            </button>
+        </Row>
     </div>
-</Window>
+{/snippet}
+
+<SplitWindow
+    id="profile"
+    name={{ key: 'profiles' }}
+    maxWidth={600}
+    {top}
+    {bottom}
+/>
 
 <style>
-    .content-col {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-
-        & :global(.profile-list) {
-            margin-bottom: 2em;
-            flex-grow: 1;
-        }
+    :global(.profile-col) {
+        height: unset;
     }
 
     .create-column {
-        position: sticky;
-        bottom: 0;
-        margin-left: -12px;
-        margin-right: -12px;
-        margin-top: auto;
-        flex-shrink: 0;
-
         display: flex;
         flex-direction: column;
         gap: 6px;
         align-items: flex-start;
-        border-top: 1px solid rgba(128, 128, 128, 0.3);
-        padding: 8px 12px 0 12px;
-        overflow: hidden;
 
         & :global(h3) {
             margin: 0.5em 0 0 0;

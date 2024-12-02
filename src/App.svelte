@@ -22,6 +22,7 @@
     import HelpView from './lib/views/HelpView.svelte'
     import SelectedQuestView from './lib/views/SelectedQuestView.svelte'
 
+    import { fade } from 'svelte/transition'
     import Button from './lib/components/Button.svelte'
     import Column from './lib/components/Column.svelte'
     import GraphViewWrapper from './lib/components/GraphViewWrapper.svelte'
@@ -57,13 +58,22 @@
 </script>
 
 <main>
-    <GraphViewWrapper
-        {data}
-        refresh={refreshIdx}
-        {showGroups}
-        usePresetPositions
-        debugAllowed
-    />
+    <div
+        style:width="100%"
+        style:height="100%"
+        transition:fade={{
+            duration: 200,
+            easing: (t) => -1 * Math.cos(t * (Math.PI / 2)) + 1,
+        }}
+    >
+        <GraphViewWrapper
+            {data}
+            refresh={refreshIdx}
+            {showGroups}
+            usePresetPositions
+            debugAllowed
+        />
+    </div>
     <div class="buttonColumn">
         <Button
             Icon={{ src: imageRoot + profilePictures[ownProfile.image] }}

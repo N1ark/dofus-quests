@@ -1,8 +1,10 @@
 <script lang="ts">
+    import Banner from './lib/images/banner.png'
     import DofusBook from './lib/images/dofusbook.png'
     import DofusDB from './lib/images/dofusdb.png'
     import DofusMap from './lib/images/dofusmap.png'
     import DofusPourLesNoobs from './lib/images/dofusprlesnoobs.png'
+    import Favicon from './lib/images/favicon.png'
 
     import Archive from 'lucide-svelte/icons/archive'
     import Backpack from 'lucide-svelte/icons/backpack'
@@ -56,6 +58,32 @@
             (ownProfile = profiles.find((p) => p.id === current)!)
     )
 </script>
+
+<svelte:head>
+    <title>Dofus Quests</title>
+
+    <link rel="icon" type="image/png" href={Favicon} />
+    <meta property="og:title" content="Dofus Quests" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={Banner} />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="536" />
+    <meta property="og:url" content="https://dofus.n1ark.com" />
+    <meta
+        property="og:description"
+        content="Dofus Quests, un outil compréhensif pour le suivi de la progression dans Dofus !"
+    />
+    <meta
+        name="description"
+        content="Dofus Quests, un outil compréhensif pour le suivi de la progression dans Dofus !"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={Banner} />
+    <meta name="twitter:site" content="@N1ark_" />
+    <meta name="twitter:creator" content="@N1ark_" />
+    <meta name="twitter:title" content="Dofus Quests" />
+</svelte:head>
 
 <main>
     <div

@@ -57,6 +57,13 @@
             nextCompletedChangeRequiresRefresh = false
         }
     })
+
+    $effect(() => {
+        nodeClasses = {
+            ...baseNodeClasses,
+            finished: ownCompleted,
+        }
+    })
 </script>
 
 <GraphView {...rest} {nodeClasses} {refreshPositionsFromStorage} />

@@ -1,4 +1,9 @@
 <script lang="ts">
+    import DofusBook from './lib/images/dofusbook.png'
+    import DofusDB from './lib/images/dofusdb.png'
+    import DofusMap from './lib/images/dofusmap.png'
+    import DofusPourLesNoobs from './lib/images/dofusprlesnoobs.png'
+
     import Archive from 'lucide-svelte/icons/archive'
     import Backpack from 'lucide-svelte/icons/backpack'
     import BadgeHelp from 'lucide-svelte/icons/badge-help'
@@ -10,11 +15,6 @@
     import Reload from 'lucide-svelte/icons/refresh-cw'
     import SlidersHorizontal from 'lucide-svelte/icons/sliders-horizontal'
     import Trophy from 'lucide-svelte/icons/trophy'
-
-    import DofusBook from './lib/images/dofusbook.png'
-    import DofusDB from './lib/images/dofusdb.png'
-    import DofusMap from './lib/images/dofusmap.png'
-    import DofusPourLesNoobs from './lib/images/dofusprlesnoobs.png'
 
     import AlmanaxView from './lib/views/AlmanaxView.svelte'
     import BackupView from './lib/views/BackupView.svelte'

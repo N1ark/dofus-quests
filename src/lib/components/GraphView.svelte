@@ -69,7 +69,6 @@
 <script lang="ts">
     import {
         type SingularElementArgument as CytoElement,
-        type EdgeSingular,
         type Position,
     } from 'cytoscape'
     import { onMount, untrack } from 'svelte'
@@ -129,13 +128,8 @@
     const layout = ({ animated = false }: { animated?: boolean }) => {
         if (!cyInstance) return
 
-        // we assume visibility has been calculated already
-        // do not use .visible() -- horrible performance!
         let elements = cyInstance.filter((e) =>
-            e.isNode()
-                ? !e.hasClass('hidden')
-                : !(e as any as EdgeSingular).source().hasClass('hidden') &&
-                  !(e as any as EdgeSingular).target().hasClass('hidden')
+            usePresetPositions ? e.isNode() : true
         )
         if (elements.length === 0) return
 

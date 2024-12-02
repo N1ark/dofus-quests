@@ -68,7 +68,7 @@
         } catch (e) {
             return {
                 x: 64,
-                y: 64,
+                y: 16,
                 width: window.innerWidth - 128,
                 height: window.innerHeight - 128,
                 visible: false,
@@ -182,7 +182,7 @@
         subscribeToWindowReset(id, () => {
             dimensions = {
                 x: 64,
-                y: 64,
+                y: 16,
                 width: clamp(window.innerWidth - 128, minWidth, maxWidth),
                 height: clamp(window.innerHeight - 128, minHeight, maxHeight),
                 visible: true,

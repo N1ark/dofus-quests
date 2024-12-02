@@ -106,7 +106,7 @@
     } = $props()
 
     $effect(() => console.log('-------------- reloaded --------------'))
-    const log = (...x: any) => {} // console.log
+    const log = import.meta.env.DEV ? console.warn : () => {}
 
     let containerDiv: HTMLElement
 
@@ -246,6 +246,8 @@
             style,
         })
 
+        applyVisibility()
+
         requestAnimationFrame(center)
 
         cyInstance.on('tap', 'node', (event) => {
@@ -365,10 +367,10 @@
 
     // Update graph with new stored positions
     $effect(() => {
-        const _unused = refreshPositionsFromStorage
-        untrack(() => {
-            layout({ animated: true })
-        })
+        if (refreshPositionsFromStorage)
+            untrack(() => {
+                layout({ animated: true })
+            })
     })
 
     const toPositions = (): Record<string, Position> => {

@@ -1,6 +1,29 @@
-<script lang="ts">
-    import { untrack, type ComponentProps } from 'svelte'
+<script lang="ts" module>
     import { completed, profiles, showCompleted } from '../data/state.svelte'
+
+    let ownCompleted = new Set<string>()
+    let ownShowCompleted = true
+
+    const updateFilter = () => {
+        setFilter(
+            'show-completed',
+            ownShowCompleted ? null : (n) => !ownCompleted.has(n.id)
+        )
+        console.log('filter updated')
+    }
+
+    completed.subscribe(({ completed }) => {
+        ownCompleted = new Set(completed)
+        if (!ownShowCompleted) updateFilter()
+    })
+    showCompleted.subscribe((value) => {
+        ownShowCompleted = value
+        updateFilter()
+    })
+</script>
+
+<script lang="ts">
+    import { type ComponentProps } from 'svelte'
     import GraphView, { setFilter } from './GraphView.svelte'
 
     const {
@@ -8,8 +31,6 @@
         ...rest
     }: ComponentProps<typeof GraphView> = $props()
 
-    let ownCompleted = $state.raw(new Set<string>())
-    let ownShowCompleted = $state(true)
     let nodeClasses = $state(baseNodeClasses)
     let refreshPositionsFromStorage = $state(0)
 
@@ -26,28 +47,15 @@
         })
     }
 
-    completed.subscribe(({ completed }) => (ownCompleted = new Set(completed)))
-    showCompleted.subscribe((value) => (ownShowCompleted = value))
-
-    $effect(() => {
+    completed.subscribe(({ completed }) => {
         nodeClasses = {
             ...baseNodeClasses,
-            finished: ownCompleted,
+            finished: new Set(completed),
         }
         if (nextCompletedChangeRequiresRefresh) {
             refreshPositionsFromStorage++
             nextCompletedChangeRequiresRefresh = false
         }
-    })
-    $effect(() => {
-        const _unused1 = ownShowCompleted,
-            _unused2 = ownCompleted
-        untrack(() => {
-            setFilter(
-                'show-completed',
-                ownShowCompleted ? null : (n) => !ownCompleted.has(n.id)
-            )
-        })
     })
 </script>
 

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { untrack, type ComponentProps } from 'svelte'
-    import { completed, showCompleted } from '../data/state.svelte'
+    import { completed, profiles, showCompleted } from '../data/state.svelte'
     import GraphView, { setFilter } from './GraphView.svelte'
 
     const {
@@ -11,6 +11,20 @@
     let ownCompleted = $state.raw(new Set<string>())
     let ownShowCompleted = $state(true)
     let nodeClasses = $state(baseNodeClasses)
+    let refreshPositionsFromStorage = $state(0)
+
+    let nextCompletedChangeRequiresRefresh = false
+
+    if (rest.usePresetPositions) {
+        let oldCurrent: string | null = null
+        profiles.subscribe((newProfiles) => {
+            const newCurrent = newProfiles.current
+            if (oldCurrent && oldCurrent !== newCurrent) {
+                nextCompletedChangeRequiresRefresh = true
+            }
+            oldCurrent = newCurrent
+        })
+    }
 
     completed.subscribe(({ completed }) => (ownCompleted = new Set(completed)))
     showCompleted.subscribe((value) => (ownShowCompleted = value))
@@ -19,6 +33,10 @@
         nodeClasses = {
             ...baseNodeClasses,
             finished: ownCompleted,
+        }
+        if (nextCompletedChangeRequiresRefresh) {
+            refreshPositionsFromStorage++
+            nextCompletedChangeRequiresRefresh = false
         }
     })
     $effect(() => {
@@ -33,4 +51,4 @@
     })
 </script>
 
-<GraphView {nodeClasses} {...rest} />
+<GraphView {...rest} {nodeClasses} {refreshPositionsFromStorage} />

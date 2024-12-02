@@ -5,7 +5,7 @@ import BitSet from './bitset'
 import { data } from './data'
 import { positions as defaultPositions } from './positions'
 
-const log = (...args: any) => {} // (...args: any) => console.warn(...args)
+const log = (...args: any) => {} // console.warn
 
 export type Profile = {
     id: string
@@ -65,7 +65,7 @@ const getPreferredPositions = (): Record<string, Position> => {
         if (storedStr[0] === '{') preferred = JSON.parse(storedStr)
         else {
             const storedArr = storedStr.split('/')
-            preferred = {}
+            preferred = { ...defaultPositions }
             for (let i = 0; i < storedArr.length; i += 3) {
                 preferred[storedArr[i]] = {
                     x: +storedArr[i + 1],
@@ -73,8 +73,7 @@ const getPreferredPositions = (): Record<string, Position> => {
                 }
             }
         }
-
-        return { ...defaultPositions, ...preferred }
+        return preferred
     }
     const stored = localStorage.getItem('preferredPositions')
     if (!stored) return defaultPositions

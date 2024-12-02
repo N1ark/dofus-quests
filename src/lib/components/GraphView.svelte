@@ -91,6 +91,7 @@
         data,
         nodeClasses = {},
         refresh,
+        refreshPositionsFromStorage,
         showGroups,
         usePresetPositions,
         debugAllowed,
@@ -98,19 +99,18 @@
         data: Pick<Data, 'nodes' | 'edges'>
         nodeClasses?: Partial<Record<string, string[] | Set<string>>>
         refresh?: any
+        refreshPositionsFromStorage?: any
         showGroups?: boolean
         usePresetPositions?: boolean
         debugAllowed?: boolean
     } = $props()
 
     $effect(() => console.log('-------------- reloaded --------------'))
-    const log = () => {}
+    const log = (...x: any) => {} // console.log
 
     let containerDiv: HTMLElement
 
     let cyInstance: cytoscape.Core | null = $state.raw(null)
-
-    let ignoreNextPositionUpdate: boolean = true
 
     let ownCompleted: Set<string> = $state.raw(new Set())
     completed.subscribe(({ completed }) => {
@@ -134,33 +134,17 @@
         let elements = cyInstance.filter((e) =>
             e.isNode()
                 ? !e.hasClass('hidden')
-                : !(
-                      (e as any as EdgeSingular).source().hasClass('hidden') ||
-                      (e as any as EdgeSingular).target().hasClass('hidden')
-                  )
+                : !(e as any as EdgeSingular).source().hasClass('hidden') &&
+                  !(e as any as EdgeSingular).target().hasClass('hidden')
         )
         if (elements.length === 0) return
 
-        let nodePositions: Record<string, cytoscape.Position> = {}
-        if (usePresetPositions) {
-            nodePositions = getOfStore(positions)
-            nodePositions = Object.fromEntries(
-                Object.entries(nodePositions).filter(([id, pos]) => {
-                    const elem = elements.getElementById(id)
-                    if (!elem) return false
-                    if (!elem.visible()) return true // this is weird
-                    const currPos = elem.position()
-                    return pos.x !== currPos.x || pos.y !== currPos.y
-                })
-            )
-            log(`Moving ${Object.keys(nodePositions).length} preset nodes`)
-        }
         const layout = elements
             .layout({
                 ...(usePresetPositions
                     ? {
                           name: 'preset',
-                          positions: nodePositions,
+                          positions: getOfStore(positions),
                       }
                     : {
                           name: 'elk',
@@ -293,7 +277,6 @@
 
     const saveFn = () => {
         const newPos = toPositions()
-        ignoreNextPositionUpdate = true
         positions.set(newPos)
     }
     let timeout: number
@@ -312,15 +295,6 @@
                 node.data({ ...data, name: newLabel })
             }
         })
-    })
-
-    positions.subscribe(() => {
-        if (!usePresetPositions) return
-        if (ignoreNextPositionUpdate) {
-            ignoreNextPositionUpdate = false
-            return
-        }
-        layout({ animated: true })
     })
 
     // Update visible nodes
@@ -384,8 +358,15 @@
         if (!refresh) return
         if (!cyInstance) return
         untrack(() => {
-            ignoreNextPositionUpdate = true
             positions.set({ ...basePositions })
+            layout({ animated: true })
+        })
+    })
+
+    // Update graph with new stored positions
+    $effect(() => {
+        const _unused = refreshPositionsFromStorage
+        untrack(() => {
             layout({ animated: true })
         })
     })

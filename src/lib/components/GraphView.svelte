@@ -248,12 +248,13 @@
         })
         cyInstance.on('cxttap', 'node', (event) => {
             const toCompleted = !ownCompleted.has(event.target.id())
-            const nodes: string[] = event.originalEvent.shiftKey
-                ? event.target
-                      .predecessors('node')
-                      .map((n: any) => n.id())
-                      .concat(event.target.id())
-                : [event.target.id()]
+            const nodes: string[] =
+                event.originalEvent.shiftKey || event.originalEvent.ctrlKey
+                    ? event.target
+                          .predecessors('node')
+                          .map((n: any) => n.id())
+                          .concat(event.target.id())
+                    : [event.target.id()]
             let newCompleted = new Set(ownCompleted)
             if (toCompleted) nodes.forEach((n) => newCompleted.add(n))
             else nodes.forEach((n) => newCompleted.delete(n))

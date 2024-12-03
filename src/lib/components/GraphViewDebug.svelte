@@ -72,28 +72,28 @@
         Icon={AlignX}
         title="Align X"
         onclick={align('x')}
-        classes="debug"
+        classes="debug-button"
         leftSided
     />
     <Button
         Icon={AlignY}
         title="Align Y"
         onclick={align('y')}
-        classes="debug"
+        classes="debug-button"
         leftSided
     />
     <Button
         Icon={PencilRuler}
         title="Auto-layout"
         onclick={autolayout}
-        classes="debug"
+        classes="debug-button"
         leftSided
     />
     <Button
         Icon={Export}
         title="Export positions"
         onclick={exportPos}
-        classes="debug"
+        classes="debug-button"
         leftSided
     />
 </div>
@@ -109,7 +109,7 @@
         z-index: 5;
         pointer-events: all;
 
-        & :global(.debug) {
+        & :global(.debug-button) {
             border-color: rgba(219, 149, 20, 0.6) !important;
             background-color: #211f1b !important;
             &:hover {

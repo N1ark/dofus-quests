@@ -148,6 +148,9 @@
     </div>
     <h2>
         <Text key={node.id} name="name" />
+        {#if import.meta.env.DEV}
+            <span class="debug" style:margin-left="8px">{node.id}</span>
+        {/if}
     </h2>
     {#if node.type === 'achievement'}
         <Text element="p" key={node.id} name="description" />

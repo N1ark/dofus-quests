@@ -148,6 +148,12 @@ textarea {
     }
 }
 
+.debug {
+    font-family: monospace;
+    opacity: 0.8;
+    font-size: 0.8em;
+}
+
 ::-webkit-scrollbar {
     width: 16px;
 }

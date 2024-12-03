@@ -477,18 +477,11 @@
 
         & .debug {
             position: absolute;
-            font-size: 0.8em;
-            font-family: monospace;
             left: unset;
             bottom: unset;
             right: 4px;
             top: 0;
             pointer-events: none;
-            background-color: color-mix(
-                in srgb,
-                var(--color),
-                #161616 80%
-            ) !important;
         }
     }
 </style>

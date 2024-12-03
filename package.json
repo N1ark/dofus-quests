@@ -23,6 +23,7 @@
   "dependencies": {
     "@twemoji/api": "^15.1.0",
     "@types/cytoscape": "^3.21.8",
+    "@vercel/analytics": "^1.4.1",
     "cytoscape": "^3.30.3",
     "cytoscape-elk": "^2.2.0",
     "lucide-svelte": "^0.454.0",

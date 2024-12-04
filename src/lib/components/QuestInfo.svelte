@@ -171,6 +171,7 @@
         li:not(.isListBlock),
         :global(h2),
         :global(p),
+        :global(span),
         a {
             width: fit-content;
             pointer-events: auto;
@@ -207,11 +208,11 @@
                 margin: 0.1em 0;
                 border-color: rgba(255, 255, 255, 1);
                 & ul {
-                    border-color: rgba(255, 255, 255, 0.75);
+                    border-color: rgba(255, 255, 255, 0.65);
                     & ul {
-                        border-color: rgba(255, 255, 255, 0.5);
+                        border-color: rgba(255, 255, 255, 0.45);
                         & ul {
-                            border-color: rgba(255, 255, 255, 0.25);
+                            border-color: rgba(255, 255, 255, 0.15);
                         }
                     }
                 }

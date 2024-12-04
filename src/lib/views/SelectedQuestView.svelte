@@ -185,7 +185,7 @@
         pointer-events: none;
     }
     .buttons {
-        position: absolute;
+        position: fixed;
         z-index: 2;
         bottom: 8px;
         left: 8px;

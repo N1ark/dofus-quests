@@ -1,5 +1,5 @@
 <script lang="ts" module>
-    export const imageRoot = 'https://api.beta.dofusdb.fr/img/'
+    export const imageRoot = 'https://api.dofusdb.fr/img/'
     export const profilePictures = [
         'breeds/symbol_1.png',
         'breeds/symbol_2.png',

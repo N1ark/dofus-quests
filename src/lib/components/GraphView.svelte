@@ -9,7 +9,7 @@
         baseData.nodes.map((node) => [node.id, node])
     )
 
-    import cytoscape from 'cytoscape'
+    import cytoscape, { type EdgeSingular } from 'cytoscape'
     // @ts-ignore-next-line
     import elk from 'cytoscape-elk'
     cytoscape.use(elk)
@@ -129,7 +129,12 @@
         if (!cyInstance) return
 
         let elements = cyInstance.filter((e) =>
-            usePresetPositions ? e.isNode() : true
+            usePresetPositions
+                ? e.isNode()
+                : e.isNode()
+                  ? !e.hasClass('hidden')
+                  : !(e as any as EdgeSingular).source().hasClass('hidden') &&
+                    !(e as any as EdgeSingular).target().hasClass('hidden')
         )
         if (elements.length === 0) return
 

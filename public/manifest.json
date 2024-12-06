@@ -1,0 +1,49 @@
+{
+    "short_name": "Dofus Quests",
+    "name": "Dofus Quests",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/icon-256-mask.png",
+            "type": "image/png",
+            "sizes": "256x256",
+            "purpose": "maskable"
+        }
+    ],
+    "id": "/",
+    "start_url": "/",
+    "background_color": "#070809",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#a9d94b",
+    "shortcuts": [],
+    "description": "Dofus Quests, un outil compréhensif pour le suivi de la progression dans Dofus !",
+    "screenshots": [
+        {
+            "src": "/screenshot-1.png",
+            "type": "image/png",
+            "sizes": "1440x900",
+            "form_factor": "wide"
+        },
+        {
+            "src": "/screenshot-2.png",
+            "type": "image/png",
+            "sizes": "482x900",
+            "form_factor": "narrow"
+        }
+    ]
+}

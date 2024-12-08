@@ -161,7 +161,7 @@
         align-content: flex-start;
 
         & .month {
-            max-width: 230px;
+            max-width: 204px;
             & h3 {
                 margin-bottom: 4px;
             }

@@ -43,16 +43,22 @@ export type Edge = {
         | 'AVAILABLE'
 }
 
-export type Category = {
+export type QuestCategory = {
     id: number
     order: number
+}
+
+export type AchievementCategory = {
+    id: number
+    order: number
+    parentId: number
 }
 
 export type Data = {
     nodes: (Quest | Achievement)[]
     edges: Edge[]
-    achievementCategories: Category[]
-    questCategories: Category[]
+    achievementCategories: AchievementCategory[]
+    questCategories: QuestCategory[]
     almanax: Almanax[]
     titles: number[]
 }

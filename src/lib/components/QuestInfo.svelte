@@ -21,6 +21,7 @@
         | Obj<'items', { name: Translated }>
         | Obj<'monsters', { name: Translated }>
         | Obj<'jobs', { name: Translated }>
+        | Obj<'subareas', { name: Translated }>
         // fallback for unknown criterion types:
         | Obj<'unknown', { type: string }>
 
@@ -81,7 +82,7 @@
             <it>{criterion.shortName[ownLang]}</it>
         {:else if criterion.type === 'positions'}
             <it>[{criterion.posX}, {criterion.posY}]</it>
-        {:else if criterion.type === 'npcs' || criterion.type === 'alignments' || criterion.type === 'alignment-ranks' || criterion.type === 'monsters' || criterion.type === 'jobs'}
+        {:else if criterion.type === 'npcs' || criterion.type === 'alignments' || criterion.type === 'alignment-ranks' || criterion.type === 'monsters' || criterion.type === 'jobs' || criterion.type === 'subareas'}
             <it>{criterion.name[ownLang]}</it>
         {:else if criterion.type === 'items'}
             <a
@@ -99,9 +100,13 @@
 
 {#snippet criterionBlock(criterion: CriterionList)}
     {#if criterion.length === 1}
-        {#each criterion[0] as c}
-            {@render criterionAtom(c as CriterionAtom)}
-        {/each}
+        {#if criterion[0][1] === '&' || criterion[0][1] === '|'}
+            {@render criterionBlock(criterion[0] as CriterionList)}
+        {:else}
+            {#each criterion[0] as c}
+                {@render criterionAtom(c as CriterionAtom)}
+            {/each}
+        {/if}
     {:else if criterion.length % 2 === 1}
         {@const textName = criterion[1] === '&' ? 'and' : 'or'}
         <ul>

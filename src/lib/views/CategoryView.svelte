@@ -1,12 +1,12 @@
 <script lang="ts" module>
-    type Category = 'quest' | 'achievement'
-    type Callback = (mode: Category, id: number) => void
+    type Type = 'quest' | 'achievement'
+    type Callback = (mode: Type, id: number) => void
     const listeners: Callback[] = []
 
     const subscribeToSelect = (callback: Callback) => {
         listeners.push(callback)
     }
-    export const selectCategory = (mode: Category, id: number) => {
+    export const selectCategory = (mode: Type, id: number) => {
         listeners.forEach((callback) => callback(mode, id))
     }
 </script>
@@ -21,19 +21,28 @@
         pushWindowToFront,
         setWindowVisibility,
     } from '../components/Window.svelte'
-    import { data } from '../data/data'
+    import {
+        data,
+        type AchievementCategory,
+        type QuestCategory,
+    } from '../data/data'
     import { completed, showCompleted } from '../data/state.svelte'
     import { get } from '../locale/localisation.svelte'
     import { normalize } from '../util'
     import { selectNode } from './SelectedQuestView.svelte'
 
-    const { mode }: { mode: Category } = $props()
+    const { mode }: { mode: Type } = $props()
 
-    const categories = $derived(
-        (mode === 'quest'
-            ? data.questCategories
+    const categories = $derived<(QuestCategory | AchievementCategory)[]>(
+        mode === 'quest'
+            ? data.questCategories.sort((a, b) => a.order - b.order)
             : data.achievementCategories
-        ).sort((a, b) => a.order - b.order)
+                  .filter((a) => a.parentId !== -1)
+                  .sort((a, b) =>
+                      a.parentId === b.parentId
+                          ? a.order - b.order
+                          : a.parentId - b.parentId
+                  )
     )
     const elements = $derived(
         mode === 'quest'
@@ -91,7 +100,7 @@
     <div class="search">
         <input type="text" data-placeholder="search" bind:value={search} />
     </div>
-    {#each categories as category}
+    {#each categories as category, i}
         {@const elems = elements.filter((n) => n.categoryId === category.id)}
         {@const completed = elems.filter(({ id }) => ownCompleted.has(id))}
         {@const displayed = elems
@@ -101,11 +110,17 @@
                     node.id === search ||
                     normalize(get(node.id, 'name')).includes(searchNormalized)
             )}
+        {#if mode === 'achievement' && i > 0 && (category as AchievementCategory).parentId !== (categories[i - 1] as AchievementCategory).parentId}
+            <div class="separator"></div>
+        {/if}
         {#if displayed.length !== 0}
             {#snippet title()}
                 <h3>
                     <Text key={mode[0] + 'C' + category.id} name="name" />
                     <Progress total={elems.length} amount={completed.length} />
+                    {#if import.meta.env.DEV}
+                        <span class="debug">{category.id}</span>
+                    {/if}
                 </h3>
             {/snippet}
             <Accordion
@@ -165,5 +180,10 @@
                 color: #3dd17d;
             }
         }
+    }
+    .separator {
+        margin: 12px 0 18px 0;
+        height: 1px;
+        background-color: rgba(128, 128, 128, 0.4);
     }
 </style>

@@ -44,10 +44,21 @@
     }
 
     const autolayout = () => {
-        const nodes = cy.elements(':selected')
-        if (nodes.length < 2) return
-        nodes.unselect()
-        nodes
+        const nodes = cy.nodes(':selected')
+        const elements = nodes.union(nodes.edgesTo(nodes))
+        if (elements.length < 2) return
+
+        const center = { x: 0, y: 0 }
+        nodes.forEach((node) => {
+            const pos = node.position()
+            center.x += pos.x
+            center.y += pos.y
+        })
+        center.x /= nodes.length
+        center.y /= nodes.length
+
+        elements.unselect()
+        elements
             .layout({
                 name: 'elk',
                 // @ts-ignore-next-line
@@ -59,6 +70,11 @@
                 animate: true,
                 animationDuration: 500,
                 animationEasing: 'ease',
+                transform: (node, pos) => {
+                    pos.x += center.x
+                    pos.y += center.y
+                    return pos
+                },
             })
             .run()
             .on('layoutstop', () => {

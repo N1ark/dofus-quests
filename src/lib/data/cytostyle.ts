@@ -65,6 +65,14 @@ export const GROUP_COLORS = {
     77: '#FF7E16',
     // Forêt Maléfique:
     128: '#2C370C',
+    // Halouine:
+    68: '#FD802D',
+    // Archipel de Vulkania:
+    60: '#FEC622',
+    // Île de Nowel:
+    23: '#A9E8F1',
+    // Ile de Pwak:
+    89: '#502803',
 
     // CUSTOM:
     // Dofus:

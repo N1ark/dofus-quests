@@ -226,6 +226,7 @@
     {
       "requirements": "(EM>1179,0,d)&Wo=0&PL>49",
       "level": 50,
+      "noob": "https://www.dofuspourlesnoobs.com/donjon-de-nowel.html",
       "id": "a430",
       "type": "achievement",
       "categoryId": 23,
@@ -271,6 +272,7 @@
     {
       "requirements": "(EM>872,0,d)&Wo=0&PL>109",
       "level": 110,
+      "noob": "https://www.dofuspourlesnoobs.com/caverne-de-nowel.html",
       "id": "a435",
       "type": "achievement",
       "categoryId": 23,
@@ -316,6 +318,7 @@
     {
       "requirements": "(EM>1194,0,d)&Wo=0&PL>179",
       "level": 180,
+      "noob": "https://www.dofuspourlesnoobs.com/maison-du-papa-nowel.html",
       "id": "a440",
       "type": "achievement",
       "categoryId": 23,
@@ -442,6 +445,7 @@
     {
       "requirements": "",
       "level": 25,
+      "noob": "https://www.dofuspourlesnoobs.com/sourire-sous-cape.html",
       "id": "a454",
       "type": "achievement",
       "categoryId": 23,
@@ -451,6 +455,7 @@
     {
       "requirements": "",
       "level": 85,
+      "noob": "https://www.dofuspourlesnoobs.com/sourire-jaune.html",
       "id": "a455",
       "type": "achievement",
       "categoryId": 23,
@@ -460,6 +465,7 @@
     {
       "requirements": "",
       "level": 125,
+      "noob": "https://www.dofuspourlesnoobs.com/sourire-aux-eacuteclats.html",
       "id": "a456",
       "type": "achievement",
       "categoryId": 23,
@@ -469,6 +475,7 @@
     {
       "requirements": "",
       "level": 150,
+      "noob": "https://www.dofuspourlesnoobs.com/sourire-en-boicircte.html",
       "id": "a457",
       "type": "achievement",
       "categoryId": 23,
@@ -478,6 +485,7 @@
     {
       "requirements": "(Qf=878)&Wo=0&(Qf=712)&Wo=0",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/un-drocircle-de-nowel.html",
       "id": "a463",
       "type": "achievement",
       "categoryId": 23,
@@ -1911,6 +1919,7 @@
     {
       "requirements": "(QF>934,0)&Wo=0&(QF>926,0|QF>927,0|QF>928,0|QF>929,0)&Wo=0&(QF>930,0|QF>931,0|QF>932,0|QF>933,0)&Wo=0&(QF>937,0)&Wo=0&(PO>13220,19)&Wo=0",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/kohrog-en-force.html",
       "id": "a975",
       "type": "achievement",
       "categoryId": 60,
@@ -1920,6 +1929,7 @@
     {
       "requirements": "(QF>935,0)&Wo=0&(QF>926,0|QF>927,0|QF>928,0|QF>929,0)&Wo=0&(QF>930,0|QF>931,0|QF>932,0|QF>933,0)&Wo=0&(QF>937,0)&Wo=0&(PO>13219,19)&Wo=0",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/lantamaiuml-en-force.html",
       "id": "a976",
       "type": "achievement",
       "categoryId": 60,
@@ -1929,6 +1939,7 @@
     {
       "requirements": "(Qf=733)&Wo=0&(Qf=734)&Wo=0&(Qf=735)&Wo=0&(Qf=736)&Wo=0&(Qf=737)&Wo=0&(Qf=738)&Wo=0&(Qf=739)&Wo=0&(Qf=740)&Wo=0",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/tropheacutee-de-chasse.html",
       "id": "a980",
       "type": "achievement",
       "categoryId": 60,
@@ -1938,6 +1949,7 @@
     {
       "requirements": "(Qf=720|Qf=721|Qf=722|Qf=723)&Wo=0&(Qf=724)&Wo=0&(Qf=725)&Wo=0&(Qf=726)&Wo=0&(Qf=741)&Wo=0&(Qf=742)&Wo=0",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/tampon-saisonnier.html",
       "id": "a982",
       "type": "achievement",
       "categoryId": 60,
@@ -1947,6 +1959,7 @@
     {
       "requirements": "(Qf=747)&Wo=0&(Qf=748)&Wo=0&(Qf=749)&Wo=0&(Qf=750)&Wo=0&(Qf=756)&Wo=0&(Qf=757)&Wo=0&(Qf=758)&Wo=0&(Qf=936)&Wo=0",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/lenvers-du-deacutecor.html",
       "id": "a983",
       "type": "achievement",
       "categoryId": 60,
@@ -2226,6 +2239,7 @@
     {
       "requirements": "(QF>890,0)&Wo=0&(QF>848,0)&Wo=0&(QF>857,0)&Wo=0",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/agrave-fond-les-ballons.html",
       "id": "a1070",
       "type": "achievement",
       "categoryId": 23,
@@ -2442,6 +2456,7 @@
     {
       "requirements": "(EM>3306,0,d)&Wo=0&PL>89",
       "level": 100,
+      "noob": "https://www.dofuspourlesnoobs.com/potager-dhalouine.html",
       "id": "a1148",
       "type": "achievement",
       "categoryId": 68,
@@ -3427,6 +3442,7 @@
     {
       "requirements": "(Qf=2033)&Wo=0&(Qf=2034)&Wo=0&(Qf=2045)&Wo=0&(Qf=2046)&Wo=0",
       "level": 100,
+      "noob": "https://www.dofuspourlesnoobs.com/meme-pas-peur.html",
       "id": "a1702",
       "type": "achievement",
       "categoryId": 68,
@@ -3465,6 +3481,7 @@
     {
       "requirements": "(QF>2052,0)&Wo=0&(QF>2053,0)&Wo=0&(QF>2054,0)&Wo=0&(QF>2055,0)&Wo=0",
       "level": 150,
+      "noob": "https://www.dofuspourlesnoobs.com/des-chants-de-nowel.html",
       "id": "a2005",
       "type": "achievement",
       "categoryId": 23,
@@ -3528,6 +3545,7 @@
     {
       "requirements": "(EM>5653,0,d)&Wo=0&PL>59",
       "level": 60,
+      "noob": "https://www.dofuspourlesnoobs.com/fonderie-des-waddicts.html",
       "id": "a2072",
       "type": "achievement",
       "categoryId": 89,
@@ -3537,6 +3555,7 @@
     {
       "requirements": "(EM>5664,0,d)&Wo=0&PL>129",
       "level": 130,
+      "noob": "https://www.dofuspourlesnoobs.com/croquanterie.html",
       "id": "a2075",
       "type": "achievement",
       "categoryId": 89,
@@ -3582,6 +3601,7 @@
     {
       "requirements": "(EM>5666,0,d)&Wo=0&PL>189",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/temple-du-dieu-kao.html",
       "id": "a2082",
       "type": "achievement",
       "categoryId": 89,
@@ -3708,6 +3728,7 @@
     {
       "requirements": "(QF>2066,0)&Wo=0&(QF>2056,0)&Wo=0&(QF>2057,0)&Wo=0&(QF>2058,0)&Wo=0&(QF>2059,0)&Wo=0&(QF>2060,0)&Wo=0&(QF>2069,0)&Wo=0",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/un-brin-de-mystere.html",
       "id": "a2099",
       "type": "achievement",
       "categoryId": 89,
@@ -3717,6 +3738,7 @@
     {
       "requirements": "(QF>2072,0)&Wo=0&(QF>2065,0)&Wo=0&(QF>2061,0)&Wo=0&(QF>2067,0)&Wo=0&(QF>2068,0)&Wo=0&(QF>2077,0)&Wo=0&(QF>2070,0)&Wo=0&(QF>2071,0)&Wo=0&(QF>2076,0)&Wo=0",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/promenades-digestives.html",
       "id": "a2100",
       "type": "achievement",
       "categoryId": 89,
@@ -9164,6 +9186,7 @@
     },
     {
       "requirements": "PL>19",
+      "noob": "https://www.dofuspourlesnoobs.com/esprit-de-nowel.html",
       "id": "q712",
       "achCatId": 23,
       "type": "quest",
@@ -9243,6 +9266,7 @@
     },
     {
       "requirements": "BT=1&Sc=979",
+      "noob": "https://www.dofuspourlesnoobs.com/premier-contact.html",
       "id": "q724",
       "achCatId": 60,
       "type": "quest",
@@ -9254,6 +9278,7 @@
     },
     {
       "requirements": "BT=1&Qf=724",
+      "noob": "https://www.dofuspourlesnoobs.com/laventure-de-la-terre.html",
       "id": "q725",
       "achCatId": 60,
       "type": "quest",
@@ -9265,6 +9290,7 @@
     },
     {
       "requirements": "BT=1&Qf=724",
+      "noob": "https://www.dofuspourlesnoobs.com/cueillette-estivale.html",
       "id": "q726",
       "achCatId": 60,
       "type": "quest",
@@ -9364,6 +9390,7 @@
     },
     {
       "requirements": "BT=1&Qf=724",
+      "noob": "https://www.dofuspourlesnoobs.com/crategravere-dadmission.html",
       "id": "q741",
       "achCatId": 60,
       "type": "quest",
@@ -9375,6 +9402,7 @@
     },
     {
       "requirements": "BT=1&Qf=724",
+      "noob": "https://www.dofuspourlesnoobs.com/chasse-aux-krokilles.html",
       "id": "q742",
       "achCatId": 60,
       "type": "quest",
@@ -9386,6 +9414,7 @@
     },
     {
       "requirements": "(Qf=720|Qf=721|Qf=722|Qf=723)&Qf=724&Qf=725&Qf=726&Qf=741&Qf=742",
+      "noob": "https://www.dofuspourlesnoobs.com/une-enquecircte-alambiqueacutee---investigation.html",
       "id": "q747",
       "achCatId": 60,
       "type": "quest",
@@ -9397,6 +9426,7 @@
     },
     {
       "requirements": "Qf=747",
+      "noob": "https://www.dofuspourlesnoobs.com/une-enquecircte-alambiqueacutee---identification.html",
       "id": "q748",
       "achCatId": 60,
       "type": "quest",
@@ -9408,6 +9438,7 @@
     },
     {
       "requirements": "Qf=748",
+      "noob": "https://www.dofuspourlesnoobs.com/une-enquecircte-alambiqueacutee---confrontation.html",
       "id": "q749",
       "achCatId": 60,
       "type": "quest",
@@ -9419,6 +9450,7 @@
     },
     {
       "requirements": "Qf=749",
+      "noob": "https://www.dofuspourlesnoobs.com/une-enquecircte-alambiqueacutee---reacutesolution.html",
       "id": "q750",
       "achCatId": 60,
       "type": "quest",
@@ -9430,6 +9462,7 @@
     },
     {
       "requirements": "Qf=750",
+      "noob": "https://www.dofuspourlesnoobs.com/ce-nest-quun-au-revoir.html",
       "id": "q756",
       "achCatId": 60,
       "type": "quest",
@@ -9441,6 +9474,7 @@
     },
     {
       "requirements": "Qf=756",
+      "noob": "https://www.dofuspourlesnoobs.com/le-secret-de-la-baie-tarad.html",
       "id": "q757",
       "achCatId": 60,
       "type": "quest",
@@ -9452,6 +9486,7 @@
     },
     {
       "requirements": "Qf=756&(Sv=970,1|Sv=970,2|Sv=970,3)",
+      "noob": "https://www.dofuspourlesnoobs.com/les-bons-comptes-font-les-bons-amis.html",
       "id": "q758",
       "achCatId": 60,
       "type": "quest",
@@ -9727,6 +9762,7 @@
     },
     {
       "requirements": "PL>19&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/distribution-de-marrons.html",
       "id": "q848",
       "achCatId": 23,
       "type": "quest",
@@ -9738,6 +9774,7 @@
     },
     {
       "requirements": "PL>19&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/glugubrr-est-un-vilain-grincheux.html",
       "id": "q849",
       "achCatId": 23,
       "type": "quest",
@@ -9749,6 +9786,7 @@
     },
     {
       "requirements": "PL>80&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/redolphe-est-un-vilain-grincheux.html",
       "id": "q850",
       "achCatId": 23,
       "type": "quest",
@@ -9760,6 +9798,7 @@
     },
     {
       "requirements": "PL>110&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/le-cafard-fadet-est-un-vilain-grincheux.html",
       "id": "q851",
       "achCatId": 23,
       "type": "quest",
@@ -9771,6 +9810,7 @@
     },
     {
       "requirements": "PL>140&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/oogie-betty-est-une-vilaine-grincheuse.html",
       "id": "q852",
       "achCatId": 23,
       "type": "quest",
@@ -9782,6 +9822,7 @@
     },
     {
       "requirements": "PL>19&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/oranges-presseacutees.html",
       "id": "q857",
       "achCatId": 23,
       "type": "quest",
@@ -9793,6 +9834,7 @@
     },
     {
       "requirements": "PL>19&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/mais-pourquoi-est-il-si-meacutechant.html",
       "id": "q859",
       "achCatId": 23,
       "type": "quest",
@@ -9804,6 +9846,7 @@
     },
     {
       "requirements": "PL>19&Qf=859&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/copains-comme-cochons.html",
       "id": "q860",
       "achCatId": 23,
       "type": "quest",
@@ -9815,6 +9858,7 @@
     },
     {
       "requirements": "PL>19&Qf=859&Qf=860&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/la-clef-de-la-reacuteussite.html",
       "id": "q861",
       "achCatId": 23,
       "type": "quest",
@@ -9826,6 +9870,7 @@
     },
     {
       "requirements": "PL>80&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/tous-les-chemins-megravenent-au-rhum.html",
       "id": "q862",
       "achCatId": 23,
       "type": "quest",
@@ -9837,6 +9882,7 @@
     },
     {
       "requirements": "PL>80&Qf=862&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/lempire-de-la-jeteacutee.html",
       "id": "q863",
       "achCatId": 23,
       "type": "quest",
@@ -9848,6 +9894,7 @@
     },
     {
       "requirements": "PL>80&Qf=862&Qf=863&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/fraicirccheur-de-lrsquoivre.html",
       "id": "q864",
       "achCatId": 23,
       "type": "quest",
@@ -9859,6 +9906,7 @@
     },
     {
       "requirements": "PL>110&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/cafarnauumlm.html",
       "id": "q865",
       "achCatId": 23,
       "type": "quest",
@@ -9870,6 +9918,7 @@
     },
     {
       "requirements": "PL>110&Qf=865&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/souvenirs-entomologiques.html",
       "id": "q866",
       "achCatId": 23,
       "type": "quest",
@@ -9881,6 +9930,7 @@
     },
     {
       "requirements": "PL>110&Qf=865&Qf=866&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/meacutetamorphoooose.html",
       "id": "q867",
       "achCatId": 23,
       "type": "quest",
@@ -9892,6 +9942,7 @@
     },
     {
       "requirements": "PL>140&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/cognez-avant-dentrer.html",
       "id": "q868",
       "achCatId": 23,
       "type": "quest",
@@ -9903,6 +9954,7 @@
     },
     {
       "requirements": "PL>140&Qf=868&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/boisson-pour-un-champion.html",
       "id": "q869",
       "achCatId": 23,
       "type": "quest",
@@ -9914,6 +9966,7 @@
     },
     {
       "requirements": "PL>140&Qf=868&Qf=869&(Qa=878|Qf=878)",
+      "noob": "https://www.dofuspourlesnoobs.com/eau-courante.html",
       "id": "q870",
       "achCatId": 23,
       "type": "quest",
@@ -9925,6 +9978,7 @@
     },
     {
       "requirements": "PL>19&Qa=878",
+      "noob": "https://www.dofuspourlesnoobs.com/lrsquoeacutetoile-des-grincheux.html",
       "id": "q877",
       "achCatId": 23,
       "type": "quest",
@@ -9936,6 +9990,7 @@
     },
     {
       "requirements": "PL>19",
+      "noob": "https://www.dofuspourlesnoobs.com/les-eacutetoiles-de-nowel.html",
       "id": "q878",
       "achCatId": 23,
       "type": "quest",
@@ -9947,6 +10002,7 @@
     },
     {
       "requirements": "PL>19",
+      "noob": "https://www.dofuspourlesnoobs.com/un-peu-de-tonus.html",
       "id": "q890",
       "achCatId": 23,
       "type": "quest",
@@ -10358,6 +10414,7 @@
     },
     {
       "requirements": "BT=1&Qa!935&Qf!935&Qf=724",
+      "noob": "https://www.dofuspourlesnoobs.com/kapla.html",
       "id": "q934",
       "achCatId": 60,
       "type": "quest",
@@ -10369,6 +10426,7 @@
     },
     {
       "requirements": "BT=1&Qa!934&Qf!934&Qf=724",
+      "noob": "https://www.dofuspourlesnoobs.com/survivant.html",
       "id": "q935",
       "achCatId": 60,
       "type": "quest",
@@ -10380,6 +10438,7 @@
     },
     {
       "requirements": "Qf=756&Qf=757&((Pm=76286474&PO=12524)|(Pm=76288010&PO!12524))",
+      "noob": "https://www.dofuspourlesnoobs.com/des-koeurs-du-tonnerre.html",
       "id": "q936",
       "achCatId": 60,
       "type": "quest",
@@ -10391,6 +10450,7 @@
     },
     {
       "requirements": "BT=1&((Qf=934&Pm=76284416)|(Qf=935&Pm=76286989))",
+      "noob": "https://www.dofuspourlesnoobs.com/cristal-rasha.html",
       "id": "q937",
       "achCatId": 60,
       "type": "quest",
@@ -17872,6 +17932,7 @@
     },
     {
       "requirements": "PL>79&Sc=967",
+      "noob": "https://www.dofuspourlesnoobs.com/des-bonbons-ou-un-sort.html",
       "id": "q2033",
       "achCatId": 68,
       "type": "quest",
@@ -17883,6 +17944,7 @@
     },
     {
       "requirements": "PL>79&Qf=2033&Sc=967",
+      "noob": "https://www.dofuspourlesnoobs.com/une-citwouille-pour-halouine.html",
       "id": "q2034",
       "achCatId": 68,
       "type": "quest",
@@ -18014,6 +18076,7 @@
     },
     {
       "requirements": "PL>79&Qf=2034&Sc=967",
+      "noob": "https://www.dofuspourlesnoobs.com/le-rituel-de-la-biere.html",
       "id": "q2045",
       "achCatId": 68,
       "type": "quest",
@@ -18025,6 +18088,7 @@
     },
     {
       "requirements": "PL>79&Qf=2045&Sc=967",
+      "noob": "https://www.dofuspourlesnoobs.com/une-friandise-pas-comme-les-autres.html",
       "id": "q2046",
       "achCatId": 68,
       "type": "quest",
@@ -18072,6 +18136,7 @@
     },
     {
       "requirements": "PL>140&Qf=877",
+      "noob": "https://www.dofuspourlesnoobs.com/groocse-se-fait-sonner-les-cloches.html",
       "id": "q2052",
       "achCatId": 23,
       "type": "quest",
@@ -18083,6 +18148,7 @@
     },
     {
       "requirements": "Qf=2052",
+      "noob": "https://www.dofuspourlesnoobs.com/mon-beau-sapik.html",
       "id": "q2053",
       "achCatId": 23,
       "type": "quest",
@@ -18094,6 +18160,7 @@
     },
     {
       "requirements": "Qf=2053",
+      "noob": "https://www.dofuspourlesnoobs.com/petit-repas-de-nowel.html",
       "id": "q2054",
       "achCatId": 23,
       "type": "quest",
@@ -18105,6 +18172,7 @@
     },
     {
       "requirements": "Qf=2054",
+      "noob": "https://www.dofuspourlesnoobs.com/groocse-vous-souhaite-un-joyeux-nowel.html",
       "id": "q2055",
       "achCatId": 23,
       "type": "quest",
@@ -18116,6 +18184,7 @@
     },
     {
       "requirements": "PL>19&Sc=945",
+      "noob": "https://www.dofuspourlesnoobs.com/la-crise-de-foi.html",
       "id": "q2056",
       "achCatId": 89,
       "type": "quest",
@@ -18127,6 +18196,7 @@
     },
     {
       "requirements": "Qf=2056&Sc=945",
+      "noob": "https://www.dofuspourlesnoobs.com/un-oeuf-a-part.html",
       "id": "q2057",
       "achCatId": 89,
       "type": "quest",
@@ -18138,6 +18208,7 @@
     },
     {
       "requirements": "Qf=2057&Sc=945",
+      "noob": "https://www.dofuspourlesnoobs.com/chocomagie-contre-chocomancie.html",
       "id": "q2058",
       "achCatId": 89,
       "type": "quest",
@@ -18149,6 +18220,7 @@
     },
     {
       "requirements": "Qf=2058",
+      "noob": "https://www.dofuspourlesnoobs.com/mystere-et-oeuf-au-chocolat.html",
       "id": "q2059",
       "achCatId": 89,
       "type": "quest",
@@ -18160,6 +18232,7 @@
     },
     {
       "requirements": "Qf=2059&Sc=945",
+      "noob": "https://www.dofuspourlesnoobs.com/le-cas-kao.html",
       "id": "q2060",
       "achCatId": 89,
       "type": "quest",
@@ -18171,6 +18244,7 @@
     },
     {
       "requirements": "PL>19&Qf=2066",
+      "noob": "https://www.dofuspourlesnoobs.com/la-manie-du-recyclage.html",
       "id": "q2061",
       "achCatId": 89,
       "type": "quest",
@@ -18218,6 +18292,7 @@
     },
     {
       "requirements": "(PL>19&Qf=2066)|(PO=20895&DM>9,20895)",
+      "noob": "https://www.dofuspourlesnoobs.com/charli-et-la-chocolaterie.html",
       "id": "q2065",
       "achCatId": 89,
       "type": "quest",
@@ -18229,6 +18304,7 @@
     },
     {
       "requirements": "PL>19&Sc=945",
+      "noob": "https://www.dofuspourlesnoobs.com/l-ile-flottante-au-chocolat.html",
       "id": "q2066",
       "achCatId": 89,
       "type": "quest",
@@ -18240,6 +18316,7 @@
     },
     {
       "requirements": "PL>19&Qf=2066",
+      "noob": "https://www.dofuspourlesnoobs.com/les-problemes-d-une-pictopublicephile.html",
       "id": "q2067",
       "achCatId": 89,
       "type": "quest",
@@ -18251,6 +18328,7 @@
     },
     {
       "requirements": "PL>19&Qf=2066",
+      "noob": "https://www.dofuspourlesnoobs.com/les-aleas-de-la-chocolaterie.html",
       "id": "q2068",
       "achCatId": 89,
       "type": "quest",
@@ -18262,6 +18340,7 @@
     },
     {
       "requirements": "PL>19&Qf=2066",
+      "noob": "https://www.dofuspourlesnoobs.com/la-melodie-du-bonheur.html",
       "id": "q2069",
       "achCatId": 89,
       "type": "quest",
@@ -18273,6 +18352,7 @@
     },
     {
       "requirements": "(PL>19&Qf=2066)",
+      "noob": "https://www.dofuspourlesnoobs.com/et-paf-ca-fait-un-shokipik.html",
       "id": "q2070",
       "achCatId": 89,
       "type": "quest",
@@ -18284,6 +18364,7 @@
     },
     {
       "requirements": "(PL>109&Qf=2066)",
+      "noob": "https://www.dofuspourlesnoobs.com/l-euphorie-des-leporides.html",
       "id": "q2071",
       "achCatId": 89,
       "type": "quest",
@@ -18295,6 +18376,7 @@
     },
     {
       "requirements": "PL>19&Qf=2066",
+      "noob": "https://www.dofuspourlesnoobs.com/chasse-aux-oeufs-de-pwak.html",
       "id": "q2072",
       "achCatId": 89,
       "type": "quest",
@@ -18306,6 +18388,7 @@
     },
     {
       "requirements": "PL>179&Qf=2066",
+      "noob": "https://www.dofuspourlesnoobs.com/des-croquants-a-devorer.html",
       "id": "q2076",
       "achCatId": 89,
       "type": "quest",
@@ -18317,6 +18400,7 @@
     },
     {
       "requirements": "PL>19&Qf=2066",
+      "noob": "https://www.dofuspourlesnoobs.com/jouer-au-chocolatier.html",
       "id": "q2077",
       "achCatId": 89,
       "type": "quest",
@@ -20212,6 +20296,7 @@
     },
     {
       "requirements": "Qf=897&PL>29",
+      "noob": "https://www.dofuspourlesnoobs.com/donjon-educatif.html",
       "id": "q2504",
       "achCatId": 1002,
       "type": "quest",
@@ -20223,6 +20308,7 @@
     },
     {
       "requirements": "Qf=899&PL>39",
+      "noob": "https://www.dofuspourlesnoobs.com/entre-quatre-blops.html",
       "id": "q2505",
       "achCatId": 1002,
       "type": "quest",
@@ -20234,6 +20320,7 @@
     },
     {
       "requirements": "Qf=906&PL>49",
+      "noob": "https://www.dofuspourlesnoobs.com/c-est-radical-ici.html",
       "id": "q2506",
       "achCatId": 1002,
       "type": "quest",
@@ -20245,6 +20332,7 @@
     },
     {
       "requirements": "Qf=1431&PL>69",
+      "noob": "https://www.dofuspourlesnoobs.com/c-est-du-bateau.html",
       "id": "q2507",
       "achCatId": 1002,
       "type": "quest",
@@ -20256,6 +20344,7 @@
     },
     {
       "requirements": "Qf=2507&PL>69",
+      "noob": "https://www.dofuspourlesnoobs.com/le-spectacle-vivant.html",
       "id": "q2508",
       "achCatId": 1002,
       "type": "quest",
@@ -20267,6 +20356,7 @@
     },
     {
       "requirements": "Qf=2508&PL>69",
+      "noob": "https://www.dofuspourlesnoobs.com/tour-du-proprietaire.html",
       "id": "q2509",
       "achCatId": 1002,
       "type": "quest",
@@ -20278,6 +20368,7 @@
     },
     {
       "requirements": "Qf=2509&PL>79",
+      "noob": "https://www.dofuspourlesnoobs.com/tour-d-honneur.html",
       "id": "q2510",
       "achCatId": 1002,
       "type": "quest",
@@ -20301,6 +20392,7 @@
     },
     {
       "requirements": "Qf=1649",
+      "noob": "https://www.dofuspourlesnoobs.com/le-metier-des-aventuriers.html",
       "id": "q2512",
       "achCatId": 53,
       "type": "quest",
@@ -20312,6 +20404,7 @@
     },
     {
       "requirements": "Qf=1651",
+      "noob": "https://www.dofuspourlesnoobs.com/preparation-au-combat.html",
       "id": "q2513",
       "achCatId": 53,
       "type": "quest",

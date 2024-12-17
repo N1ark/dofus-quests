@@ -17,7 +17,32 @@
         }
     })
 
-    const { cy }: { cy: cytoscape.Core } = $props()
+    const textPositions: Record<
+        number,
+        { x: number; y: number; w: number; h: number }
+    > = {}
+    const getClickedGroup = (px: number, py: number) => {
+        const match = Object.entries(textPositions).find(
+            ([_, { x, y, w, h }]) =>
+                x <= px && px <= x + w && y <= py && py <= y + h
+        )
+
+        return match ? +match[0] : null
+    }
+
+    const {
+        cy,
+        setGetClickedGroup,
+    }: {
+        cy: cytoscape.Core
+        setGetClickedGroup?: (
+            fn: (x: number, y: number) => number | null
+        ) => void
+    } = $props()
+
+    $effect(() => {
+        setGetClickedGroup?.(getClickedGroup)
+    })
 
     let canvasDiv = $state<HTMLCanvasElement>()
 
@@ -59,6 +84,8 @@
             )
             if (!nodes || nodes.length === 0) continue
 
+            const selected = cy.scratch('_selected-group') === id
+
             // Rectangle mode
             const bb = nodes.renderedBoundingBox()
             nodeByGroup[id] = bb
@@ -68,7 +95,7 @@
             ctx.fillStyle = fill
             ctx.fill()
             ctx.strokeStyle = stroke
-            ctx.lineWidth = 1
+            ctx.lineWidth = selected ? 2 : 1
             ctx.stroke()
         }
 
@@ -87,6 +114,13 @@
             const maxW = Math.max(...lines.map((l) => ctx.measureText(l).width))
             const textX = bb.x1 - pad + Math.min(0, (rectW - maxW) / 2)
             const textY = bb.y1 - pad - 1
+
+            textPositions[id] = {
+                x: textX - 5,
+                y: textY - 15 * lines.length,
+                w: maxW + 10,
+                h: 15 * lines.length,
+            }
 
             ctx.fillStyle = 'rgba(0, 0, 0, 0.5)'
             ctx.fillRect(

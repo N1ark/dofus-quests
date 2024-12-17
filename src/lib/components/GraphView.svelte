@@ -9,7 +9,10 @@
         baseData.nodes.map((node) => [node.id, node])
     )
 
-    import cytoscape, { type EdgeSingular } from 'cytoscape'
+    import cytoscape, {
+        type EdgeSingular,
+        type NodeCollection,
+    } from 'cytoscape'
     // @ts-ignore-next-line
     import elk from 'cytoscape-elk'
     cytoscape.use(elk)
@@ -110,6 +113,10 @@
     let containerDiv: HTMLElement
 
     let cyInstance: cytoscape.Core | null = $state.raw(null)
+
+    let getClickedGroup: (x: number, y: number) => number | null = $state(
+        () => null
+    )
 
     let ownCompleted: Set<string> = $state.raw(new Set())
     completed.subscribe(({ completed }) => {
@@ -251,6 +258,91 @@
         cyInstance.on('tap', 'node', (event) => {
             selectNode(event.target.id())
         })
+
+        if (showGroups) {
+            // Panning on groups
+            let pannedGroup: NodeCollection | null = null
+            let panStart: Position | null = null
+            let moved = false
+            cyInstance.on('tapstart', (event) => {
+                if (event.target !== cyInstance) return
+                const group = getClickedGroup(
+                    event.renderedPosition.x,
+                    event.renderedPosition.y
+                )
+                if (group !== null) {
+                    pannedGroup = event.cy
+                        .nodes()
+                        .filter(
+                            (n) =>
+                                n.data('group') === group &&
+                                !n.hasClass('hidden')
+                        )
+                    panStart = event.position
+                    moved = false
+                    event.cy.userPanningEnabled(false)
+                    event.cy.boxSelectionEnabled(false)
+                    event.cy.scratch('_selected-group', group)
+                    event.preventDefault()
+                    event.stopPropagation()
+                    event.stopImmediatePropagation()
+                }
+            })
+            cyInstance.on('tapend', (event) => {
+                if (pannedGroup !== null) {
+                    if (moved) {
+                        pannedGroup.positions((e) => ({
+                            x: Math.round(e.position().x),
+                            y: Math.round(e.position().y),
+                        }))
+                        savePreferredPosition()
+                    } else {
+                        const groupId = event.cy.scratch('_selected-group')
+                        const toSelect = pannedGroup
+                        const toUnselect = event.cy
+                            .nodes()
+                            .filter(
+                                (n) =>
+                                    n.selected() && n.data('group') !== groupId
+                            )
+
+                        setTimeout(() => {
+                            toSelect.select()
+                            toUnselect.unselect()
+                        }, 20)
+                    }
+                    pannedGroup = null
+                    panStart = null
+                    event.cy.scratch('_selected-group', null)
+                    event.cy.userPanningEnabled(true)
+                    event.cy.boxSelectionEnabled(true)
+                }
+            })
+            let now = 0
+            let pans = 0
+            cyInstance.on('tapdrag', (event) => {
+                if (pannedGroup && panStart) {
+                    if (performance.now() - now > 1000) {
+                        console.log('Pans:', pans)
+                        now = performance.now()
+                        pans = 0
+                    }
+                    pans++
+
+                    const offset = {
+                        x: event.position.x - panStart.x,
+                        y: event.position.y - panStart.y,
+                    }
+                    moved = true
+                    pannedGroup.shift(offset)
+                    panStart = event.position
+                    event.preventDefault()
+                    event.stopPropagation()
+                    event.stopImmediatePropagation()
+                }
+            })
+        }
+
         cyInstance.on('cxttap', 'node', (event) => {
             const toCompleted = !ownCompleted.has(event.target.id())
             const nodes: string[] =
@@ -389,7 +481,10 @@
 
 <div bind:this={containerDiv} class="container" onresize={center}>
     {#if showGroups && cyInstance}
-        <GraphGroupsView cy={cyInstance} />
+        <GraphGroupsView
+            cy={cyInstance}
+            setGetClickedGroup={(g) => (getClickedGroup = g)}
+        />
     {/if}
 </div>
 {#if debugAllowed && import.meta.env.DEV && cyInstance}

@@ -380,6 +380,13 @@
             text-overflow: ellipsis;
             min-width: 0;
             height: 33px;
+            appearance: none;
+
+            /* add a small arrow to the right side: */
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23999' d='M4.5 6L8 9.5 11.5 6z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 12px;
         }
     }
 

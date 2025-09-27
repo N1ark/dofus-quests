@@ -4410,7 +4410,7 @@
       "type": "achievement",
       "categoryId": 40,
       "order": 45,
-      "dispCatId": 40
+      "dispCatId": 65
     },
     {
       "requirements": "(QF>2529,0)&(QF>2526,0)&(QF>2525,0)&(QF>2527,0)",
@@ -20513,7 +20513,7 @@
       "requirements": "PL>179&Qf=2517",
       "noob": "https://www.dofuspourlesnoobs.com/trois-coeurs-un-roi.html",
       "id": "q2518",
-      "achCatId": 40,
+      "achCatId": 65,
       "type": "quest",
       "categoryId": 4,
       "levels": [
@@ -20525,7 +20525,7 @@
       "requirements": "PL>179&Qf=2518",
       "noob": "https://www.dofuspourlesnoobs.com/destructeur-de-mondes.html",
       "id": "q2519",
-      "achCatId": 40,
+      "achCatId": 65,
       "type": "quest",
       "categoryId": 4,
       "levels": [

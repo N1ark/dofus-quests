@@ -4367,7 +4367,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=6271)&Wo=0&(OA=6272)&Wo=0&(OA=6273)&Wo=0",
+      "requirements": "(OA=6271)&(OA=6272)&(OA=6273)",
       "level": 180,
       "id": "a8459",
       "type": "achievement",
@@ -4376,7 +4376,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(Qf=2511)&Wo=0&(BI=1)&Wo=0",
+      "requirements": "(Qf=2511)&(BI=1)",
       "level": 1,
       "id": "a8518",
       "type": "achievement",
@@ -4385,7 +4385,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(Qf=2502)&Wo=0",
+      "requirements": "(Qf=2502)",
       "level": 2,
       "id": "a8519",
       "type": "achievement",
@@ -4394,7 +4394,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(OA=8518)&Wo=0&(OA=8519)&Wo=0",
+      "requirements": "(OA=8518)&(OA=8519)",
       "level": 2,
       "id": "a8520",
       "type": "achievement",
@@ -4405,15 +4405,17 @@
     {
       "requirements": "(Qf=2515)&(Qf=2516)&(Qf=2517)&(Qf=2518)&(Qf=2519)&(BI=1)",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/question-d-equilibre.html",
       "id": "a8855",
       "type": "achievement",
       "categoryId": 40,
       "order": 45,
-      "dispCatId": 65
+      "dispCatId": 40
     },
     {
       "requirements": "(QF>2529,0)&(QF>2526,0)&(QF>2525,0)&(QF>2527,0)",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/a-la-petite-semaine.html",
       "id": "a8856",
       "type": "achievement",
       "categoryId": 65,
@@ -4423,6 +4425,7 @@
     {
       "requirements": "(Qf=2520)&(Qf=2521)&(Qf=2522)&(Qf=2523)",
       "level": 170,
+      "noob": "https://www.dofuspourlesnoobs.com/on-se-fait-la-bzzzbz.html",
       "id": "a8857",
       "type": "achievement",
       "categoryId": 65,
@@ -4432,6 +4435,7 @@
     {
       "requirements": "(Qf=2530)&(Qf=2531)&(Qf=2536)",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/le-gout-de-la-vie-sauvage.html",
       "id": "a8858",
       "type": "achievement",
       "categoryId": 65,
@@ -4441,6 +4445,7 @@
     {
       "requirements": "(Qf=2532)&(Qf=2533)&(Qf=2534)&(Qf=2535)",
       "level": 200,
+      "noob": "https://www.dofuspourlesnoobs.com/la-part-du-rhoarim.html",
       "id": "a8859",
       "type": "achievement",
       "categoryId": 65,
@@ -20338,7 +20343,7 @@
     },
     {
       "requirements": "BT=1",
-      "noob": "https://www.dofuspourlesnoobs.com/bien-deacutebuter.html",
+      "noob": "https://www.dofuspourlesnoobs.com/bien-debuter.html",
       "id": "q2502",
       "achCatId": 118,
       "type": "quest",
@@ -20434,7 +20439,7 @@
     },
     {
       "requirements": "BT=1",
-      "noob": "https://www.dofuspourlesnoobs.com/vaincre-le-monstre.html",
+      "noob": "https://www.dofuspourlesnoobs.com/vaincre-les-monstres.html",
       "id": "q2511",
       "achCatId": 118,
       "type": "quest",
@@ -20470,6 +20475,7 @@
     },
     {
       "requirements": "PL>149&(Qf=1484|(Qa=1484&Qo>8349))",
+      "noob": "https://www.dofuspourlesnoobs.com/ca-barde-la-haut.html",
       "id": "q2515",
       "achCatId": 65,
       "type": "quest",
@@ -20481,6 +20487,7 @@
     },
     {
       "requirements": "PL>149&Qf=2515&Qf=2520",
+      "noob": "https://www.dofuspourlesnoobs.com/le-vol-des-bourdons.html",
       "id": "q2516",
       "achCatId": 65,
       "type": "quest",
@@ -20492,6 +20499,7 @@
     },
     {
       "requirements": "PL>179&Qf=2516",
+      "noob": "https://www.dofuspourlesnoobs.com/la-proie-des-verites.html",
       "id": "q2517",
       "achCatId": 65,
       "type": "quest",
@@ -20503,8 +20511,9 @@
     },
     {
       "requirements": "PL>179&Qf=2517",
+      "noob": "https://www.dofuspourlesnoobs.com/trois-coeurs-un-roi.html",
       "id": "q2518",
-      "achCatId": 65,
+      "achCatId": 40,
       "type": "quest",
       "categoryId": 4,
       "levels": [
@@ -20514,8 +20523,9 @@
     },
     {
       "requirements": "PL>179&Qf=2518",
+      "noob": "https://www.dofuspourlesnoobs.com/destructeur-de-mondes.html",
       "id": "q2519",
-      "achCatId": 65,
+      "achCatId": 40,
       "type": "quest",
       "categoryId": 4,
       "levels": [
@@ -20525,6 +20535,7 @@
     },
     {
       "requirements": "PL>149",
+      "noob": "https://www.dofuspourlesnoobs.com/un-probleme-de-taille.html",
       "id": "q2520",
       "achCatId": 65,
       "type": "quest",
@@ -20536,6 +20547,7 @@
     },
     {
       "requirements": "Qa=2516&Qo>19299",
+      "noob": "https://www.dofuspourlesnoobs.com/des-petites-betes-qui-font-bzzzbz.html",
       "id": "q2521",
       "achCatId": 65,
       "type": "quest",
@@ -20547,6 +20559,7 @@
     },
     {
       "requirements": "Qa=2516&Qo>19304",
+      "noob": "https://www.dofuspourlesnoobs.com/tetes-de-ponte.html",
       "id": "q2522",
       "achCatId": 65,
       "type": "quest",
@@ -20558,6 +20571,7 @@
     },
     {
       "requirements": "Qa=2516&Qo>19312",
+      "noob": "https://www.dofuspourlesnoobs.com/derive-insectaire.html",
       "id": "q2523",
       "achCatId": 65,
       "type": "quest",
@@ -20569,6 +20583,7 @@
     },
     {
       "requirements": "PL>179&Qf=2515&(WE=229|WE=254)&(DD>7,31745|PO!31745)",
+      "noob": "https://www.dofuspourlesnoobs.com/suivre-son-instinct.html",
       "id": "q2525",
       "achCatId": 65,
       "type": "quest",
@@ -20580,6 +20595,7 @@
     },
     {
       "requirements": "PL>179&Qf=2515&(WE=228|WE=252)&(DD>7,31746|PO!31746)",
+      "noob": "https://www.dofuspourlesnoobs.com/que-la-chasse-commence.html",
       "id": "q2526",
       "achCatId": 65,
       "type": "quest",
@@ -20591,6 +20607,7 @@
     },
     {
       "requirements": "PL>179&Qf=2515&Qf=2516&(WE=230|WE=255)&(DD>7,32026|PO!32026)",
+      "noob": "https://www.dofuspourlesnoobs.com/un-divin-nectar.html",
       "id": "q2527",
       "achCatId": 65,
       "type": "quest",
@@ -20602,6 +20619,7 @@
     },
     {
       "requirements": "PL>179&Qf=2515&(((WE=230|WE=255)&(DD>7,31582|PO!31582))|((WE=229|WE=254)&(DD>7,31581|PO!31581))|((WE=228|WE=252)&(DD>7,31580|PO!31580)))",
+      "noob": "https://www.dofuspourlesnoobs.com/une-petite-demangeaison.html",
       "id": "q2529",
       "achCatId": 65,
       "type": "quest",
@@ -20613,6 +20631,7 @@
     },
     {
       "requirements": "PL>179&Qa=2517&Qo>19282",
+      "noob": "https://www.dofuspourlesnoobs.com/quand-on-la-cherche-on-finit-par-tomber-dessus.html",
       "id": "q2530",
       "achCatId": 65,
       "type": "quest",
@@ -20624,6 +20643,7 @@
     },
     {
       "requirements": "PL>179&Qa=2517&Qo>19391",
+      "noob": "https://www.dofuspourlesnoobs.com/devoir-de-reserve.html",
       "id": "q2531",
       "achCatId": 65,
       "type": "quest",
@@ -20635,6 +20655,7 @@
     },
     {
       "requirements": "PL>179&Qa=2518&Qo>19394",
+      "noob": "https://www.dofuspourlesnoobs.com/un-hote-de-marque.html",
       "id": "q2532",
       "achCatId": 65,
       "type": "quest",
@@ -20646,6 +20667,7 @@
     },
     {
       "requirements": "PL>179&Qa=2518&Qo>19403",
+      "noob": "https://www.dofuspourlesnoobs.com/l-union-sacree.html",
       "id": "q2533",
       "achCatId": 65,
       "type": "quest",
@@ -20657,6 +20679,7 @@
     },
     {
       "requirements": "PL>179&Qf=2515",
+      "noob": "https://www.dofuspourlesnoobs.com/quarante-rugissants.html",
       "id": "q2534",
       "achCatId": 65,
       "type": "quest",
@@ -20668,6 +20691,7 @@
     },
     {
       "requirements": "PL>179&Qf=2515&Qf=2518",
+      "noob": "https://www.dofuspourlesnoobs.com/le-roi-balafre.html",
       "id": "q2535",
       "achCatId": 65,
       "type": "quest",
@@ -20679,6 +20703,7 @@
     },
     {
       "requirements": "PL>179&Qf=2515",
+      "noob": "https://www.dofuspourlesnoobs.com/les-gloutons-des-dimensions.html",
       "id": "q2536",
       "achCatId": 65,
       "type": "quest",

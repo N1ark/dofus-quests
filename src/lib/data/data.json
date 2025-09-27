@@ -188,7 +188,7 @@
   ],
   "nodes": [
     {
-      "requirements": "(OA=427)&Wo=0&(OA=428)&Wo=0&(OA=450)&Wo=0&(OA=451)&Wo=0&(OA=452)&Wo=0",
+      "requirements": "(OA=427)&(OA=428)&(OA=450)&(OA=451)&(OA=452)",
       "level": 200,
       "id": "a426",
       "type": "achievement",
@@ -197,7 +197,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=429)&Wo=0&(OA=445)&Wo=0",
+      "requirements": "(OA=429)&(OA=445)",
       "level": 180,
       "id": "a427",
       "type": "achievement",
@@ -206,7 +206,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=453)&Wo=0&(OA=463)&Wo=0&(OA=464)&Wo=0&(OA=465)&Wo=0",
+      "requirements": "(OA=453)&(OA=463)&(OA=464)&(OA=465)",
       "level": 200,
       "id": "a428",
       "type": "achievement",
@@ -215,7 +215,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=516)&Wo=0&(OA=519)&Wo=0&(OA=521)&Wo=0&(OA=8459)&Wo=0",
+      "requirements": "(OA=516)&(OA=519)&(OA=521)&(OA=8459)",
       "level": 180,
       "id": "a429",
       "type": "achievement",
@@ -224,7 +224,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EM>1179,0,d)&Wo=0&PL>49",
+      "requirements": "(EM>1179,0,d)&PL>49",
       "level": 50,
       "noob": "https://www.dofuspourlesnoobs.com/donjon-de-nowel.html",
       "id": "a430",
@@ -234,7 +234,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>250,0)&Wo=0&PL>49",
+      "requirements": "(EH>250,0)&PL>49",
       "level": 50,
       "id": "a431",
       "type": "achievement",
@@ -243,7 +243,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>241,0)&Wo=0&PL>49",
+      "requirements": "(EH>241,0)&PL>49",
       "level": 50,
       "id": "a432",
       "type": "achievement",
@@ -252,7 +252,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>242,0)&Wo=0&PL>49",
+      "requirements": "(EH>242,0)&PL>49",
       "level": 50,
       "id": "a433",
       "type": "achievement",
@@ -261,7 +261,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>243,0)&Wo=0&PL>49",
+      "requirements": "(EH>243,0)&PL>49",
       "level": 50,
       "id": "a434",
       "type": "achievement",
@@ -270,7 +270,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EM>872,0,d)&Wo=0&PL>109",
+      "requirements": "(EM>872,0,d)&PL>109",
       "level": 110,
       "noob": "https://www.dofuspourlesnoobs.com/caverne-de-nowel.html",
       "id": "a435",
@@ -280,7 +280,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>251,0)&Wo=0&PL>109",
+      "requirements": "(EH>251,0)&PL>109",
       "level": 110,
       "id": "a436",
       "type": "achievement",
@@ -289,7 +289,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>244,0)&Wo=0&PL>109",
+      "requirements": "(EH>244,0)&PL>109",
       "level": 110,
       "id": "a437",
       "type": "achievement",
@@ -298,7 +298,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>245,0)&Wo=0&PL>109",
+      "requirements": "(EH>245,0)&PL>109",
       "level": 110,
       "id": "a438",
       "type": "achievement",
@@ -307,7 +307,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>246,0)&Wo=0&PL>109",
+      "requirements": "(EH>246,0)&PL>109",
       "level": 110,
       "id": "a439",
       "type": "achievement",
@@ -316,7 +316,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EM>1194,0,d)&Wo=0&PL>179",
+      "requirements": "(EM>1194,0,d)&PL>179",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/maison-du-papa-nowel.html",
       "id": "a440",
@@ -326,7 +326,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>252,0)&Wo=0&PL>179",
+      "requirements": "(EH>252,0)&PL>179",
       "level": 180,
       "id": "a441",
       "type": "achievement",
@@ -335,7 +335,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>247,0)&Wo=0&PL>179",
+      "requirements": "(EH>247,0)&PL>179",
       "level": 180,
       "id": "a442",
       "type": "achievement",
@@ -344,7 +344,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>248,0)&Wo=0&PL>179",
+      "requirements": "(EH>248,0)&PL>179",
       "level": 180,
       "id": "a443",
       "type": "achievement",
@@ -353,7 +353,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>249,0)&Wo=0&PL>179",
+      "requirements": "(EH>249,0)&PL>179",
       "level": 180,
       "id": "a444",
       "type": "achievement",
@@ -362,7 +362,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=446)&Wo=0&(OA=447)&Wo=0&(OA=448)&Wo=0&(OA=449)&Wo=0",
+      "requirements": "(OA=446)&(OA=447)&(OA=448)&(OA=449)",
       "level": 180,
       "id": "a445",
       "type": "achievement",
@@ -371,7 +371,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(Ef>842,0)&Wo=0&(Ef>849,0)&Wo=0&(Ef>868,0)&Wo=0&(Ef>3117,0)&Wo=0&(Ef>899,0)&Wo=0&(Ef>901,0)&Wo=0&(Ef>896,0)&Wo=0&PL>49",
+      "requirements": "(Ef>842,0)&(Ef>849,0)&(Ef>868,0)&(Ef>3117,0)&(Ef>899,0)&(Ef>901,0)&(Ef>896,0)&PL>49",
       "level": 50,
       "id": "a446",
       "type": "achievement",
@@ -380,7 +380,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(Ef>867,0)&Wo=0&(Ef>851,0)&Wo=0&(Ef>845,0)&Wo=0&(Ef>3118,0)&Wo=0&(Ef>2622,0)&Wo=0&(Ef>840,0)&Wo=0&(Ef>891,0)&Wo=0&PL>109",
+      "requirements": "(Ef>867,0)&(Ef>851,0)&(Ef>845,0)&(Ef>3118,0)&(Ef>2622,0)&(Ef>840,0)&(Ef>891,0)&PL>109",
       "level": 110,
       "id": "a447",
       "type": "achievement",
@@ -389,7 +389,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(Ef>869,0)&Wo=0&(Ef>839,0)&Wo=0&(Ef>906,0)&Wo=0&(Ef>843,0)&Wo=0&(Ef>3119,0)&Wo=0&(Ef>3108,0)&Wo=0&(Ef>3107,0)&Wo=0&(Ef>3109,0)&Wo=0&PL>179",
+      "requirements": "(Ef>869,0)&(Ef>839,0)&(Ef>906,0)&(Ef>843,0)&(Ef>3119,0)&(Ef>3108,0)&(Ef>3107,0)&(Ef>3109,0)&PL>179",
       "level": 180,
       "id": "a448",
       "type": "achievement",
@@ -398,7 +398,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(Ef>3218,0)&Wo=0&(Ef>3215,0)&Wo=0&(Ef>3216,0)&Wo=0&(Ef>3217,0)&Wo=0",
+      "requirements": "(Ef>3218,0)&(Ef>3215,0)&(Ef>3216,0)&(Ef>3217,0)",
       "level": 150,
       "id": "a449",
       "type": "achievement",
@@ -407,7 +407,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(PO=20735)&Wo=0&PL>124",
+      "requirements": "(PO=20735)&PL>124",
       "level": 125,
       "id": "a450",
       "type": "achievement",
@@ -416,7 +416,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(PO=20736)&Wo=0&PL>134",
+      "requirements": "(PO=20736)&PL>134",
       "level": 135,
       "id": "a451",
       "type": "achievement",
@@ -425,7 +425,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(PO=20737)&Wo=0&PL>149",
+      "requirements": "(PO=20737)&PL>149",
       "level": 150,
       "id": "a452",
       "type": "achievement",
@@ -434,7 +434,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=454)&Wo=0&(OA=455)&Wo=0&(OA=456)&Wo=0&(OA=457)&Wo=0&(OA=1070)&Wo=0",
+      "requirements": "(OA=454)&(OA=455)&(OA=456)&(OA=457)&(OA=1070)",
       "level": 200,
       "id": "a453",
       "type": "achievement",
@@ -483,7 +483,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(Qf=878)&Wo=0&(Qf=712)&Wo=0",
+      "requirements": "(Qf=878)&(Qf=712)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/un-drocircle-de-nowel.html",
       "id": "a463",
@@ -493,7 +493,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(ES>320,0)&Wo=0&(ES>757,0)&Wo=0&(ES>758,0)&Wo=0&(ES>321,0)&Wo=0&(ES>759,0)&Wo=0&(ES>760,0)&Wo=0&(BI=85983744)&Wo=0&(BI=85985792)&Wo=0&(BI=85984770)&Wo=0&(BI=85983746)&Wo=0&(BI=85985794)&Wo=0",
+      "requirements": "(ES>320,0)&(ES>757,0)&(ES>758,0)&(ES>321,0)&(ES>759,0)&(ES>760,0)&(BI=85983744)&(BI=85985792)&(BI=85984770)&(BI=85983746)&(BI=85985794)",
       "level": 200,
       "id": "a464",
       "type": "achievement",
@@ -502,7 +502,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=469)&Wo=0&(OA=473)&Wo=0&(OA=474)&Wo=0&(OA=475)&Wo=0&(OA=484)&Wo=0",
+      "requirements": "(OA=469)&(OA=473)&(OA=474)&(OA=475)&(OA=484)",
       "level": 200,
       "id": "a465",
       "type": "achievement",
@@ -520,7 +520,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EC>13007,4)&Wo=0",
+      "requirements": "(EC>13007,4)",
       "level": 200,
       "id": "a467",
       "type": "achievement",
@@ -529,7 +529,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EC>13007,24)&Wo=0",
+      "requirements": "(EC>13007,24)",
       "level": 200,
       "id": "a468",
       "type": "achievement",
@@ -538,7 +538,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EC>13007,49)&Wo=0",
+      "requirements": "(EC>13007,49)",
       "level": 200,
       "id": "a469",
       "type": "achievement",
@@ -547,7 +547,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EI>27734,499)&Wo=0",
+      "requirements": "(EI>27734,499)",
       "level": 200,
       "id": "a471",
       "type": "achievement",
@@ -556,7 +556,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EI>27735,499)&Wo=0",
+      "requirements": "(EI>27735,499)",
       "level": 200,
       "id": "a472",
       "type": "achievement",
@@ -565,7 +565,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EI>27736,499)&Wo=0",
+      "requirements": "(EI>27736,499)",
       "level": 200,
       "id": "a473",
       "type": "achievement",
@@ -583,7 +583,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EI>12817,0)&Wo=0&(EI>12814,0)&Wo=0&(EI>12819,0)&Wo=0&(EI>12844,0)&Wo=0&(EI>13617,0)&Wo=0&(EI>13009,0)&Wo=0&(EI>12896,0)&Wo=0&(EI>6963,0)&Wo=0",
+      "requirements": "(EI>12817,0)&(EI>12814,0)&(EI>12819,0)&(EI>12844,0)&(EI>13617,0)&(EI>13009,0)&(EI>12896,0)&(EI>6963,0)",
       "level": 200,
       "id": "a475",
       "type": "achievement",
@@ -592,7 +592,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=599)&Wo=0&(OA=565)&Wo=0",
+      "requirements": "(OA=599)&(OA=565)",
       "level": 200,
       "id": "a480",
       "type": "achievement",
@@ -601,7 +601,7 @@
       "dispCatId": 50
     },
     {
-      "requirements": "(OA=922)&Wo=0&(OA=931)&Wo=0&(OA=580)&Wo=0&(OA=932)&Wo=0&(OA=555)&Wo=0",
+      "requirements": "(OA=922)&(OA=931)&(OA=580)&(OA=932)&(OA=555)",
       "level": 200,
       "id": "a481",
       "type": "achievement",
@@ -610,7 +610,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(EI>12823,0)&Wo=0&(EI>13613,0)&Wo=0&(EI>13614,0)&Wo=0&(EI>12821,0)&Wo=0&(EI>13615,0)&Wo=0&(EI>12825,0)&Wo=0&(EI>12827,0)&Wo=0",
+      "requirements": "(EI>12823,0)&(EI>13613,0)&(EI>13614,0)&(EI>12821,0)&(EI>13615,0)&(EI>12825,0)&(EI>12827,0)",
       "level": 200,
       "id": "a484",
       "type": "achievement",
@@ -619,7 +619,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=430)&Wo=0&(OA=431)&Wo=0&(OA=432)&Wo=0&(OA=433)&Wo=0&(OA=434)&Wo=0",
+      "requirements": "(OA=430)&(OA=431)&(OA=432)&(OA=433)&(OA=434)",
       "level": 50,
       "id": "a516",
       "type": "achievement",
@@ -628,7 +628,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=435)&Wo=0&(OA=436)&Wo=0&(OA=437)&Wo=0&(OA=438)&Wo=0&(OA=439)&Wo=0",
+      "requirements": "(OA=435)&(OA=436)&(OA=437)&(OA=438)&(OA=439)",
       "level": 110,
       "id": "a519",
       "type": "achievement",
@@ -637,7 +637,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=440)&Wo=0&(OA=441)&Wo=0&(OA=442)&Wo=0&(OA=443)&Wo=0&(OA=444)&Wo=0",
+      "requirements": "(OA=440)&(OA=441)&(OA=442)&(OA=443)&(OA=444)",
       "level": 180,
       "id": "a521",
       "type": "achievement",
@@ -646,7 +646,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=597)&Wo=0&(OA=656)&Wo=0&(OA=558)&Wo=0&(OA=655)&Wo=0",
+      "requirements": "(OA=597)&(OA=656)&(OA=558)&(OA=655)",
       "level": 100,
       "id": "a548",
       "type": "achievement",
@@ -655,7 +655,7 @@
       "dispCatId": 146
     },
     {
-      "requirements": "(Qf=649)&Wo=0&(Qf=650)&Wo=0&(Qf=651)&Wo=0&(Qf=655)&Wo=0&(Qf=652)&Wo=0&(Qf=653)&Wo=0&(Qf=919)&Wo=0",
+      "requirements": "(Qf=649)&(Qf=650)&(Qf=651)&(Qf=655)&(Qf=652)&(Qf=653)&(Qf=919)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/la-maire-deacutenie.html",
       "id": "a551",
@@ -665,7 +665,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=612)&Wo=0&(Qf=613)&Wo=0&(Qf=614)&Wo=0",
+      "requirements": "(Qf=612)&(Qf=613)&(Qf=614)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/fri-carreacute.html",
       "id": "a552",
@@ -675,7 +675,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=619)&Wo=0&(Qf=620)&Wo=0&(Qf=621)&Wo=0&(Qf=622)&Wo=0&(Qf=623)&Wo=0&(Qf=624)&Wo=0&(Qf=625)&Wo=0&(Qf=626)&Wo=0",
+      "requirements": "(Qf=619)&(Qf=620)&(Qf=621)&(Qf=622)&(Qf=623)&(Qf=624)&(Qf=625)&(Qf=626)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/halte-au-peacuteage.html",
       "id": "a553",
@@ -685,7 +685,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=710|Qf=711|Qf=1316)&Wo=0&(Qf=1317)&Wo=0&(Qf=1318)&Wo=0&(Qf=1326)&Wo=0&(Qf=1327)&Wo=0",
+      "requirements": "(Qf=710|Qf=711|Qf=1316)&(Qf=1317)&(Qf=1318)&(Qf=1326)&(Qf=1327)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/lacircme-de-glace.html",
       "id": "a554",
@@ -695,7 +695,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=1328)&Wo=0",
+      "requirements": "(Qf=1328)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/eacutepilogue-hivernal.html",
       "id": "a555",
@@ -715,7 +715,7 @@
       "dispCatId": 146
     },
     {
-      "requirements": "(Qf=208)&Wo=0&(Qf=209)&Wo=0&(Qf=211)&Wo=0&(Qf=216|Qf=215)&Wo=0&(Qf=217|Qf=221)&Wo=0&(Qf=218|Qf=222)&Wo=0&(Qf=219|Qf=224)&Wo=0&(Qf=220|Qf=225)&Wo=0&(Qf=892|Qf=891)&Wo=0",
+      "requirements": "(Qf=208)&(Qf=209)&(Qf=211)&(Qf=216|Qf=215)&(Qf=217|Qf=221)&(Qf=218|Qf=222)&(Qf=219|Qf=224)&(Qf=220|Qf=225)&(Qf=892|Qf=891)",
       "level": 70,
       "noob": "https://www.dofuspourlesnoobs.com/ecirctre-plus-royaliste-que-le-roi.html",
       "id": "a558",
@@ -725,7 +725,7 @@
       "dispCatId": 146
     },
     {
-      "requirements": "(Qf=2005)&Wo=0&(Qf=2006)&Wo=0&(Qf=153)&Wo=0&(Qf=154)&Wo=0&(Qf=155)&Wo=0&(Qf=156)&Wo=0&(Qf=157)&Wo=0&(Qf=893)&Wo=0",
+      "requirements": "(Qf=2005)&(Qf=2006)&(Qf=153)&(Qf=154)&(Qf=155)&(Qf=156)&(Qf=157)&(Qf=893)",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/le-tour-du-monde-en-27-donjons.html",
       "id": "a559",
@@ -735,7 +735,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=896)&Wo=0&(Qf=2003)&Wo=0&(Qf=897)&Wo=0&(Qf=2504)&Wo=0&(Qf=898)&Wo=0&(Qf=899)&Wo=0",
+      "requirements": "(Qf=896)&(Qf=2003)&(Qf=897)&(Qf=2504)&(Qf=898)&(Qf=899)",
       "level": 50,
       "noob": "https://www.dofuspourlesnoobs.com/premiegravere-eacutedition-de-donjons.html",
       "id": "a560",
@@ -745,7 +745,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=2505)&Wo=0&(Qf=904)&Wo=0&(Qf=905)&Wo=0&(Qf=906)&Wo=0&(Qf=2506)&Wo=0&(Qf=907)&Wo=0",
+      "requirements": "(Qf=2505)&(Qf=904)&(Qf=905)&(Qf=906)&(Qf=2506)&(Qf=907)",
       "level": 70,
       "noob": "https://www.dofuspourlesnoobs.com/donjons-avanceacutes.html",
       "id": "a561",
@@ -755,7 +755,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=908)&Wo=0&(Qf=909)&Wo=0&(Qf=1431)&Wo=0&(Qf=2507)&Wo=0&(Qf=2508)&Wo=0",
+      "requirements": "(Qf=908)&(Qf=909)&(Qf=1431)&(Qf=2507)&(Qf=2508)",
       "level": 90,
       "noob": "https://www.dofuspourlesnoobs.com/donjons-trois-point-cinq.html",
       "id": "a562",
@@ -765,7 +765,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=2509)&Wo=0&(Qf=2510)&Wo=0&(Qf=1432)&Wo=0&(Qf=910)&Wo=0&(Qf=911)&Wo=0&(Qf=912)&Wo=0",
+      "requirements": "(Qf=2509)&(Qf=2510)&(Qf=1432)&(Qf=910)&(Qf=911)&(Qf=912)",
       "level": 120,
       "noob": "https://www.dofuspourlesnoobs.com/le-siegravege-des-donjons.html",
       "id": "a563",
@@ -775,7 +775,7 @@
       "dispCatId": 1002
     },
     {
-      "requirements": "(Qf=913)&Wo=0&(Qf=914)&Wo=0&(Qf=915)&Wo=0&(Qf=916)&Wo=0&(Qf=917)&Wo=0&(Qf=918)&Wo=0",
+      "requirements": "(Qf=913)&(Qf=914)&(Qf=915)&(Qf=916)&(Qf=917)&(Qf=918)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/la-tornade-des-donjons.html",
       "id": "a564",
@@ -795,7 +795,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(Qf=954)&Wo=0",
+      "requirements": "(Qf=954)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/le-repos-du-dragon.html",
       "id": "a568",
@@ -814,7 +814,7 @@
       "dispCatId": 26
     },
     {
-      "requirements": "(PO>13345,99)&Wo=0",
+      "requirements": "(PO>13345,99)",
       "level": 200,
       "id": "a570",
       "type": "achievement",
@@ -823,7 +823,7 @@
       "dispCatId": 26
     },
     {
-      "requirements": "(PO>13345,199)&Wo=0",
+      "requirements": "(PO>13345,199)",
       "level": 200,
       "id": "a572",
       "type": "achievement",
@@ -832,7 +832,7 @@
       "dispCatId": 26
     },
     {
-      "requirements": "(PO>13345,299)&Wo=0",
+      "requirements": "(PO>13345,299)",
       "level": 200,
       "id": "a573",
       "type": "achievement",
@@ -841,7 +841,7 @@
       "dispCatId": 26
     },
     {
-      "requirements": "(OA=579)&Wo=0&(OA=580)&Wo=0",
+      "requirements": "(OA=579)&(OA=580)",
       "level": 200,
       "id": "a577",
       "type": "achievement",
@@ -850,7 +850,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(OA=581)&Wo=0&(OA=582)&Wo=0",
+      "requirements": "(OA=581)&(OA=582)",
       "level": 150,
       "id": "a579",
       "type": "achievement",
@@ -859,7 +859,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(OA=583)&Wo=0&(OA=584)&Wo=0&(OA=917)&Wo=0",
+      "requirements": "(OA=583)&(OA=584)&(OA=917)",
       "level": 200,
       "id": "a580",
       "type": "achievement",
@@ -868,7 +868,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=34)&Wo=0&(Qf=30)&Wo=0&(Qf=35)&Wo=0&(Qf=33)&Wo=0&(Qf=32)&Wo=0&(Qf=29)&Wo=0",
+      "requirements": "(Qf=34)&(Qf=30)&(Qf=35)&(Qf=33)&(Qf=32)&(Qf=29)",
       "level": 130,
       "noob": "https://www.dofuspourlesnoobs.com/nourri-logeacute-blanchi.html",
       "id": "a581",
@@ -878,7 +878,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=117)&Wo=0&(Qf=119)&Wo=0&(Qf=116)&Wo=0&(Qf=115)&Wo=0&(Qf=118)&Wo=0",
+      "requirements": "(Qf=117)&(Qf=119)&(Qf=116)&(Qf=115)&(Qf=118)",
       "level": 150,
       "noob": "https://www.dofuspourlesnoobs.com/balle-aux-prisonniers.html",
       "id": "a582",
@@ -888,7 +888,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=544)&Wo=0&(Qf=545)&Wo=0&(Qf=546)&Wo=0&(Qf=547)&Wo=0&(Qf=548)&Wo=0&(Qf=549)&Wo=0&(Qf=1332)&Wo=0",
+      "requirements": "(Qf=544)&(Qf=545)&(Qf=546)&(Qf=547)&(Qf=548)&(Qf=549)&(Qf=1332)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/une-chambre-douillette.html",
       "id": "a583",
@@ -898,7 +898,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=550)&Wo=0&(Qf=551)&Wo=0&(Qf=552)&Wo=0&(Qf=553)&Wo=0",
+      "requirements": "(Qf=550)&(Qf=551)&(Qf=552)&(Qf=553)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/perdu-de-recherche.html",
       "id": "a584",
@@ -908,7 +908,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=826)&Wo=0&(Qf=894)&Wo=0&(Qf=718)&Wo=0&(Qf=925)&Wo=0&(Qf=920)&Wo=0&(Qf=703)&Wo=0&(Qf=1198)&Wo=0",
+      "requirements": "(Qf=826)&(Qf=894)&(Qf=718)&(Qf=925)&(Qf=920)&(Qf=703)&(Qf=1198)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/losmose.html",
       "id": "a585",
@@ -918,7 +918,7 @@
       "dispCatId": 44
     },
     {
-      "requirements": "(Qf=1199)&Wo=0&(Qf=1201)&Wo=0&(QF>1200,0)&Wo=0",
+      "requirements": "(Qf=1199)&(Qf=1201)&(QF>1200,0)",
       "level": 30,
       "noob": "https://www.dofuspourlesnoobs.com/faire-le-keke.html",
       "id": "a586",
@@ -928,7 +928,7 @@
       "dispCatId": 44
     },
     {
-      "requirements": "(Qf=163)&Wo=0&(Qf=177)&Wo=0&(Qf=170)&Wo=0&(Qf=167)&Wo=0&(Qf=166)&Wo=0&(Qf=162)&Wo=0&(Qf=2455)&Wo=0",
+      "requirements": "(Qf=163)&(Qf=177)&(Qf=170)&(Qf=167)&(Qf=166)&(Qf=162)&(Qf=2455)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/le-theacuteacirctre-des-gobelins.html",
       "id": "a595",
@@ -938,7 +938,7 @@
       "dispCatId": 47
     },
     {
-      "requirements": "(Qf=161)&Wo=0&(Qf=164)&Wo=0&(Qf=165)&Wo=0&(Qf=168)&Wo=0&(Qf=169)&Wo=0",
+      "requirements": "(Qf=161)&(Qf=164)&(Qf=165)&(Qf=168)&(Qf=169)",
       "level": 40,
       "noob": "https://www.dofuspourlesnoobs.com/kaiumlra.html",
       "id": "a596",
@@ -948,7 +948,7 @@
       "dispCatId": 47
     },
     {
-      "requirements": "(Qf=138)&Wo=0&(Qf=132)&Wo=0&(Qf=133)&Wo=0",
+      "requirements": "(Qf=138)&(Qf=132)&(Qf=133)",
       "level": 30,
       "noob": "https://www.dofuspourlesnoobs.com/le-vallon-du-chacircteau.html",
       "id": "a597",
@@ -958,7 +958,7 @@
       "dispCatId": 146
     },
     {
-      "requirements": "(OA=600)&Wo=0&(OA=601)&Wo=0&(OA=602)&Wo=0&(OA=603)&Wo=0",
+      "requirements": "(OA=600)&(OA=601)&(OA=602)&(OA=603)",
       "level": 150,
       "id": "a599",
       "type": "achievement",
@@ -967,7 +967,7 @@
       "dispCatId": 50
     },
     {
-      "requirements": "(Qf=231)&Wo=0&(Qf=232)&Wo=0",
+      "requirements": "(Qf=231)&(Qf=232)",
       "level": 35,
       "noob": "https://www.dofuspourlesnoobs.com/la-grande-kradoc.html",
       "id": "a600",
@@ -977,7 +977,7 @@
       "dispCatId": 50
     },
     {
-      "requirements": "(Qf=239)&Wo=0&(Qf=240)&Wo=0",
+      "requirements": "(Qf=239)&(Qf=240)",
       "level": 40,
       "noob": "https://www.dofuspourlesnoobs.com/haute-voltige.html",
       "id": "a601",
@@ -987,7 +987,7 @@
       "dispCatId": 50
     },
     {
-      "requirements": "(Qf=236)&Wo=0&(Qf=235)&Wo=0&(Qf=234)&Wo=0&(Qf=237)&Wo=0&(Qf=238)&Wo=0&(Qf=241)&Wo=0",
+      "requirements": "(Qf=236)&(Qf=235)&(Qf=234)&(Qf=237)&(Qf=238)&(Qf=241)",
       "level": 150,
       "noob": "https://www.dofuspourlesnoobs.com/service-de-deacutepannage.html",
       "id": "a602",
@@ -997,7 +997,7 @@
       "dispCatId": 50
     },
     {
-      "requirements": "(Qf=230)&Wo=0&(Qf=242)&Wo=0&(Qf=243)&Wo=0&(Qf=233)&Wo=0",
+      "requirements": "(Qf=230)&(Qf=242)&(Qf=243)&(Qf=233)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/sacreacutee-tourbiegravere.html",
       "id": "a603",
@@ -1007,7 +1007,7 @@
       "dispCatId": 50
     },
     {
-      "requirements": "(OA=605)&Wo=0&(OA=606)&Wo=0&(OA=607)&Wo=0&(OA=608)&Wo=0&(OA=609)&Wo=0&(OA=610)&Wo=0&(OA=611)&Wo=0&(OA=612)&Wo=0&(OA=614)&Wo=0",
+      "requirements": "(OA=605)&(OA=606)&(OA=607)&(OA=608)&(OA=609)&(OA=610)&(OA=611)&(OA=612)&(OA=614)",
       "level": 190,
       "id": "a604",
       "type": "achievement",
@@ -1016,7 +1016,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=615)&Wo=0&(Qf=631)&Wo=0&(Qf=674)&Wo=0&(Qf=632)&Wo=0&(Qf=633)&Wo=0&(Qf=677)&Wo=0",
+      "requirements": "(Qf=615)&(Qf=631)&(Qf=674)&(Qf=632)&(Qf=633)&(Qf=677)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/jouer-au-docteur.html",
       "id": "a605",
@@ -1026,7 +1026,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=589)&Wo=0&(Qf=590)&Wo=0&(Qf=591)&Wo=0&(Qf=592)&Wo=0&(Qf=593)&Wo=0&(Qf=594)&Wo=0&(Qf=595)&Wo=0&(Qf=596)&Wo=0&(Qf=597)&Wo=0&(Qf=598)&Wo=0",
+      "requirements": "(Qf=589)&(Qf=590)&(Qf=591)&(Qf=592)&(Qf=593)&(Qf=594)&(Qf=595)&(Qf=596)&(Qf=597)&(Qf=598)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/les-survivants-de-frigost.html",
       "id": "a606",
@@ -1036,7 +1036,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=556|Qf=566)&Wo=0&(Qf=557|Qf=567)&Wo=0&(Qf=558|Qf=568)&Wo=0&(Qf=559|Qf=569)&Wo=0&(Qf=560|Qf=570)&Wo=0&(Qf=561|Qf=571)&Wo=0&(Qf=562|Qf=572)&Wo=0&(Qf=563|Qf=573)&Wo=0&(Qf=564|Qf=574)&Wo=0&(Qf=565|Qf=575)&Wo=0",
+      "requirements": "(Qf=556|Qf=566)&(Qf=557|Qf=567)&(Qf=558|Qf=568)&(Qf=559|Qf=569)&(Qf=560|Qf=570)&(Qf=561|Qf=571)&(Qf=562|Qf=572)&(Qf=563|Qf=573)&(Qf=564|Qf=574)&(Qf=565|Qf=575)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/agriculture-ou-alchimie.html",
       "id": "a607",
@@ -1046,7 +1046,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=542)&Wo=0&(Qf=646)&Wo=0&(Qf=634)&Wo=0&(Qf=543)&Wo=0&(Qf=554)&Wo=0&(Qf=643)&Wo=0&(Qf=617)&Wo=0&(Qf=618)&Wo=0&(Qf=635)&Wo=0&(Qf=640)&Wo=0",
+      "requirements": "(Qf=542)&(Qf=646)&(Qf=634)&(Qf=543)&(Qf=554)&(Qf=643)&(Qf=617)&(Qf=618)&(Qf=635)&(Qf=640)",
       "level": 160,
       "noob": "https://www.dofuspourlesnoobs.com/problegravemes-et-solutions.html",
       "id": "a608",
@@ -1056,7 +1056,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=599)&Wo=0&(QF>600,0)&Wo=0&(QF>555,0)&Wo=0&(Qf=601)&Wo=0&(QF>602,0)&Wo=0&(Qf=603)&Wo=0&(Qf=604)&Wo=0&(Qf=605)&Wo=0&(QF>606,0)&Wo=0",
+      "requirements": "(Qf=599)&(QF>600,0)&(QF>555,0)&(Qf=601)&(QF>602,0)&(Qf=603)&(Qf=604)&(Qf=605)&(QF>606,0)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/objets-trouveacutes.html",
       "id": "a609",
@@ -1066,7 +1066,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=636)&Wo=0&(Qf=637)&Wo=0&(Qf=638)&Wo=0&(Qf=641)&Wo=0&(Qf=642)&Wo=0&(Qf=644)&Wo=0",
+      "requirements": "(Qf=636)&(Qf=637)&(Qf=638)&(Qf=641)&(Qf=642)&(Qf=644)",
       "level": 170,
       "noob": "https://www.dofuspourlesnoobs.com/lheure-cest-lheure.html",
       "id": "a610",
@@ -1076,7 +1076,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=577)&Wo=0&(Qf=579)&Wo=0",
+      "requirements": "(Qf=577)&(Qf=579)",
       "level": 130,
       "noob": "https://www.dofuspourlesnoobs.com/forage-agrave-tout-va.html",
       "id": "a611",
@@ -1086,7 +1086,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=581)&Wo=0&(Qf=582)&Wo=0&(Qf=583)&Wo=0&(Qf=1286)&Wo=0&(Qf=1287)&Wo=0&(Qf=1288)&Wo=0",
+      "requirements": "(Qf=581)&(Qf=582)&(Qf=583)&(Qf=1286)&(Qf=1287)&(Qf=1288)",
       "level": 150,
       "noob": "https://www.dofuspourlesnoobs.com/les-carriegraveres-de-glace.html",
       "id": "a612",
@@ -1096,7 +1096,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=608)&Wo=0&(Qf=609)&Wo=0&(Qf=610)&Wo=0&(Qf=611)&Wo=0",
+      "requirements": "(Qf=608)&(Qf=609)&(Qf=610)&(Qf=611)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/ongles-incarneacutes.html",
       "id": "a614",
@@ -1116,7 +1116,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(OA=871)&Wo=0&(OA=631)&Wo=0&(OA=632)&Wo=0&(OA=633)&Wo=0&(OA=635)&Wo=0&(OA=636)&Wo=0&(OA=637)&Wo=0&(OA=638)&Wo=0&(OA=640)&Wo=0",
+      "requirements": "(OA=871)&(OA=631)&(OA=632)&(OA=633)&(OA=635)&(OA=636)&(OA=637)&(OA=638)&(OA=640)",
       "level": 190,
       "id": "a623",
       "type": "achievement",
@@ -1125,7 +1125,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO=13655)&Wo=0",
+      "requirements": "(PO=13655)",
       "level": 160,
       "noob": "https://www.dofuspourlesnoobs.com/chasse-gardeacutee.html",
       "id": "a631",
@@ -1135,7 +1135,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO=13656)&Wo=0",
+      "requirements": "(PO=13656)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/tire-la-chasse.html",
       "id": "a632",
@@ -1195,7 +1195,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(QF>686,0)&Wo=0&(QF>687,0)&Wo=0&(QF>688,0)&Wo=0&(QF>689,0)&Wo=0&(QF>690,0)&Wo=0&(QF>691,0)&Wo=0&(QF>692,0)&Wo=0&(QF>693,0)&Wo=0",
+      "requirements": "(QF>686,0)&(QF>687,0)&(QF>688,0)&(QF>689,0)&(QF>690,0)&(QF>691,0)&(QF>692,0)&(QF>693,0)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/porte-monstre-treacutesor.html",
       "id": "a640",
@@ -1215,7 +1215,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(OA=1379)&Wo=0&(OA=1380)&Wo=0&(OA=649)&Wo=0&(OA=1381)&Wo=0",
+      "requirements": "(OA=1379)&(OA=1380)&(OA=649)&(OA=1381)",
       "level": 10,
       "id": "a644",
       "type": "achievement",
@@ -1224,7 +1224,7 @@
       "dispCatId": 53
     },
     {
-      "requirements": "(Qf=1649)&Wo=0&(Qf=2512)&Wo=0&(Qf=1650)&Wo=0&(Qf=1651)&Wo=0&(Qf=2513)&Wo=0",
+      "requirements": "(Qf=1649)&(Qf=2512)&(Qf=1650)&(Qf=1651)&(Qf=2513)",
       "level": 8,
       "noob": "https://www.dofuspourlesnoobs.com/cest-le-meacutetier-qui-rentre.html",
       "id": "a649",
@@ -1234,7 +1234,7 @@
       "dispCatId": 53
     },
     {
-      "requirements": "(QF>149,0)&Wo=0&(QF>148,0)&Wo=0&(QF>150,0)&Wo=0",
+      "requirements": "(QF>149,0)&(QF>148,0)&(QF>150,0)",
       "level": 85,
       "noob": "https://www.dofuspourlesnoobs.com/convoyeur-de-fond-en-comble.html",
       "id": "a651",
@@ -1244,7 +1244,7 @@
       "dispCatId": 54
     },
     {
-      "requirements": "(Qf=134)&Wo=0&(Qf=135)&Wo=0&(Qf=137)&Wo=0",
+      "requirements": "(Qf=134)&(Qf=135)&(Qf=137)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/leacutechage-de-bottes.html",
       "id": "a655",
@@ -1254,7 +1254,7 @@
       "dispCatId": 146
     },
     {
-      "requirements": "(Qf=675)&Wo=0&(Qf=681)&Wo=0&(Qf=673)&Wo=0",
+      "requirements": "(Qf=675)&(Qf=681)&(Qf=673)",
       "level": 55,
       "noob": "https://www.dofuspourlesnoobs.com/destinations-aventure.html",
       "id": "a656",
@@ -1264,7 +1264,7 @@
       "dispCatId": 146
     },
     {
-      "requirements": "(QQ>9)&Wo=0",
+      "requirements": "(QQ>9)",
       "level": 200,
       "id": "a813",
       "type": "achievement",
@@ -1273,7 +1273,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>49)&Wo=0",
+      "requirements": "(QQ>49)",
       "level": 200,
       "id": "a815",
       "type": "achievement",
@@ -1282,7 +1282,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>99)&Wo=0",
+      "requirements": "(QQ>99)",
       "level": 200,
       "id": "a816",
       "type": "achievement",
@@ -1291,7 +1291,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>199)&Wo=0",
+      "requirements": "(QQ>199)",
       "level": 200,
       "id": "a817",
       "type": "achievement",
@@ -1300,7 +1300,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>299)&Wo=0",
+      "requirements": "(QQ>299)",
       "level": 200,
       "id": "a818",
       "type": "achievement",
@@ -1309,7 +1309,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>399)&Wo=0",
+      "requirements": "(QQ>399)",
       "level": 200,
       "id": "a819",
       "type": "achievement",
@@ -1318,7 +1318,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>499)&Wo=0",
+      "requirements": "(QQ>499)",
       "level": 200,
       "id": "a820",
       "type": "achievement",
@@ -1327,7 +1327,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(PO>13895,1)&Wo=0",
+      "requirements": "(PO>13895,1)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/inteacuterimaire-frigostien.html",
       "id": "a871",
@@ -1337,7 +1337,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(EM>3391,0,d)&Wo=0&PL>189",
+      "requirements": "(EM>3391,0,d)&PL>189",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/forgefroide-de-missiz-frizz.html",
       "id": "a872",
@@ -1347,7 +1347,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(EM>3409,0,d)&Wo=0&PL>189",
+      "requirements": "(EM>3409,0,d)&PL>189",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/transporteur-de-sylargh.html",
       "id": "a877",
@@ -1357,7 +1357,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(EM>3384,0,d)&Wo=0&PL>189",
+      "requirements": "(EM>3384,0,d)&PL>189",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/salons-prives-de-klime.html",
       "id": "a882",
@@ -1367,7 +1367,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(EM>3397,0,d)&Wo=0&PL>189",
+      "requirements": "(EM>3397,0,d)&PL>189",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/laboratoire-de-nileza.html",
       "id": "a887",
@@ -1377,7 +1377,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(EM>3416,0,d)&Wo=0&PL>189",
+      "requirements": "(EM>3416,0,d)&PL>189",
       "level": 200,
       "id": "a892",
       "type": "achievement",
@@ -1386,7 +1386,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(Qf=1289)&Wo=0&(Qf=1290)&Wo=0&(Qf=1291)&Wo=0&(Qf=1292)&Wo=0&(Qf=1293)&Wo=0&(Qf=630)&Wo=0",
+      "requirements": "(Qf=1289)&(Qf=1290)&(Qf=1291)&(Qf=1292)&(Qf=1293)&(Qf=630)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/linstitut-pisteur.html",
       "id": "a917",
@@ -1396,7 +1396,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(QQ>599)&Wo=0",
+      "requirements": "(QQ>599)",
       "level": 200,
       "id": "a918",
       "type": "achievement",
@@ -1405,7 +1405,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>699)&Wo=0",
+      "requirements": "(QQ>699)",
       "level": 200,
       "id": "a919",
       "type": "achievement",
@@ -1414,7 +1414,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(Qf=1329)&Wo=0",
+      "requirements": "(Qf=1329)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/fraicircchement-pondu.html",
       "id": "a920",
@@ -1424,7 +1424,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=1330)&Wo=0&(Qf=1325)&Wo=0&(Qf=1334)&Wo=0&(Qf=1333)&Wo=0&(Qf=1309)&Wo=0&(Qf=1310)&Wo=0",
+      "requirements": "(Qf=1330)&(Qf=1325)&(Qf=1334)&(Qf=1333)&(Qf=1309)&(Qf=1310)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/lhiver-arrive.html",
       "id": "a921",
@@ -1434,7 +1434,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(OA=552)&Wo=0&(OA=553)&Wo=0&(OA=551)&Wo=0&(OA=921)&Wo=0&(OA=554)&Wo=0&(OA=920)&Wo=0",
+      "requirements": "(OA=552)&(OA=553)&(OA=551)&(OA=921)&(OA=554)&(OA=920)",
       "level": 200,
       "id": "a922",
       "type": "achievement",
@@ -1443,7 +1443,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=1319)&Wo=0&(Qf=1320)&Wo=0&(Qf=1321)&Wo=0&(Qf=1322)&Wo=0&(Qf=1323)&Wo=0&(Qf=1324)&Wo=0",
+      "requirements": "(Qf=1319)&(Qf=1320)&(Qf=1321)&(Qf=1322)&(Qf=1323)&(Qf=1324)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/mais-ougrave-quils-sont-les-frigostiens.html",
       "id": "a923",
@@ -1453,7 +1453,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=1333)&Wo=0",
+      "requirements": "(Qf=1333)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/la-glace-reacutepare-la-glace-remplace.html",
       "id": "a924",
@@ -1463,7 +1463,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=1335)&Wo=0&(Qf=1336)&Wo=0&(Qf=1337)&Wo=0&(Qf=1338)&Wo=0&(Qf=1339)&Wo=0",
+      "requirements": "(Qf=1335)&(Qf=1336)&(Qf=1337)&(Qf=1338)&(Qf=1339)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/noblesse-oblige.html",
       "id": "a925",
@@ -1473,7 +1473,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(OA=923)&Wo=0&(OA=924)&Wo=0&(OA=925)&Wo=0",
+      "requirements": "(OA=923)&(OA=924)&(OA=925)",
       "level": 200,
       "id": "a926",
       "type": "achievement",
@@ -1492,7 +1492,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(QF>1311,0)&Wo=0&(QF>1312,0)&Wo=0&(QF>1313,0)&Wo=0&(QF>1314,0)&Wo=0&(QF>1315,0)&Wo=0",
+      "requirements": "(QF>1311,0)&(QF>1312,0)&(QF>1313,0)&(QF>1314,0)&(QF>1315,0)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/donjons-agrave-lancienne.html",
       "id": "a928",
@@ -1502,7 +1502,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(QF>1299,0)&Wo=0&(QF>1300,0)&Wo=0&(QF>1301,0)&Wo=0&(QF>1302,0)&Wo=0&(QF>1303,0)&Wo=0",
+      "requirements": "(QF>1299,0)&(QF>1300,0)&(QF>1301,0)&(QF>1302,0)&(QF>1303,0)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/regarde-ce-que-jai-trouveacute.html",
       "id": "a929",
@@ -1512,7 +1512,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(OA=927)&Wo=0&(OA=928)&Wo=0&(OA=929)&Wo=0",
+      "requirements": "(OA=927)&(OA=928)&(OA=929)",
       "level": 200,
       "id": "a930",
       "type": "achievement",
@@ -1521,7 +1521,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(OA=926)&Wo=0&(OA=930)&Wo=0&(OA=944)&Wo=0",
+      "requirements": "(OA=926)&(OA=930)&(OA=944)",
       "level": 200,
       "id": "a931",
       "type": "achievement",
@@ -1530,7 +1530,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(OA=552)&Wo=0&(OA=553)&Wo=0&(OA=551)&Wo=0&(OA=604)&Wo=0&(OA=623)&Wo=0&(OA=938)&Wo=0",
+      "requirements": "(OA=552)&(OA=553)&(OA=551)&(OA=604)&(OA=623)&(OA=938)",
       "level": 190,
       "id": "a932",
       "type": "achievement",
@@ -1539,7 +1539,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(EI>11134,4)&Wo=0&PL>109",
+      "requirements": "(EI>11134,4)&PL>109",
       "level": 130,
       "id": "a933",
       "type": "achievement",
@@ -1548,7 +1548,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO>14218,0)&Wo=0&PL>139",
+      "requirements": "(PO>14218,0)&PL>139",
       "level": 160,
       "id": "a934",
       "type": "achievement",
@@ -1557,7 +1557,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO>14219,9)&Wo=0&PL>149",
+      "requirements": "(PO>14219,9)&PL>149",
       "level": 170,
       "id": "a935",
       "type": "achievement",
@@ -1566,7 +1566,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO>14220,4)&Wo=0&PL>159",
+      "requirements": "(PO>14220,4)&PL>159",
       "level": 180,
       "id": "a936",
       "type": "achievement",
@@ -1575,7 +1575,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO>14221,19)&Wo=0&PL>169",
+      "requirements": "(PO>14221,19)&PL>169",
       "level": 190,
       "id": "a937",
       "type": "achievement",
@@ -1584,7 +1584,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(OA=933)&Wo=0&(OA=934)&Wo=0&(OA=935)&Wo=0&(OA=936)&Wo=0&(OA=937)&Wo=0",
+      "requirements": "(OA=933)&(OA=934)&(OA=935)&(OA=936)&(OA=937)",
       "level": 190,
       "id": "a938",
       "type": "achievement",
@@ -1593,7 +1593,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO>14222,4)&Wo=0&PL>179",
+      "requirements": "(PO>14222,4)&PL>179",
       "level": 200,
       "id": "a939",
       "type": "achievement",
@@ -1602,7 +1602,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO>14228,0)&Wo=0&PL>179",
+      "requirements": "(PO>14228,0)&PL>179",
       "level": 200,
       "id": "a940",
       "type": "achievement",
@@ -1611,7 +1611,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO>14229,4)&Wo=0&PL>179",
+      "requirements": "(PO>14229,4)&PL>179",
       "level": 200,
       "id": "a941",
       "type": "achievement",
@@ -1620,7 +1620,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO>14230,4)&Wo=0&PL>179",
+      "requirements": "(PO>14230,4)&PL>179",
       "level": 200,
       "id": "a942",
       "type": "achievement",
@@ -1629,7 +1629,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(PO>14260,4)&Wo=0&PL>189",
+      "requirements": "(PO>14260,4)&PL>189",
       "level": 200,
       "id": "a943",
       "type": "achievement",
@@ -1638,7 +1638,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(OA=939)&Wo=0&(OA=940)&Wo=0&(OA=941)&Wo=0&(OA=942)&Wo=0&(OA=943)&Wo=0",
+      "requirements": "(OA=939)&(OA=940)&(OA=941)&(OA=942)&(OA=943)",
       "level": 200,
       "id": "a944",
       "type": "achievement",
@@ -1647,7 +1647,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(EM>3295,0,d)&Wo=0&PL>39",
+      "requirements": "(EM>3295,0,d)&PL>39",
       "level": 50,
       "id": "a945",
       "type": "achievement",
@@ -1656,7 +1656,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>272,0)&Wo=0&PL>39",
+      "requirements": "(EH>272,0)&PL>39",
       "level": 50,
       "id": "a946",
       "type": "achievement",
@@ -1665,7 +1665,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>273,0)&Wo=0&PL>39",
+      "requirements": "(EH>273,0)&PL>39",
       "level": 50,
       "id": "a947",
       "type": "achievement",
@@ -1674,7 +1674,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>274,0)&Wo=0&PL>39",
+      "requirements": "(EH>274,0)&PL>39",
       "level": 50,
       "id": "a948",
       "type": "achievement",
@@ -1683,7 +1683,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>275,0)&Wo=0&PL>39",
+      "requirements": "(EH>275,0)&PL>39",
       "level": 50,
       "id": "a949",
       "type": "achievement",
@@ -1692,7 +1692,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(OA=945)&Wo=0&(OA=946)&Wo=0&(OA=947)&Wo=0&(OA=948)&Wo=0&(OA=949)&Wo=0",
+      "requirements": "(OA=945)&(OA=946)&(OA=947)&(OA=948)&(OA=949)",
       "level": 50,
       "id": "a950",
       "type": "achievement",
@@ -1701,7 +1701,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EM>3294,0,d)&Wo=0&PL>89",
+      "requirements": "(EM>3294,0,d)&PL>89",
       "level": 100,
       "id": "a951",
       "type": "achievement",
@@ -1710,7 +1710,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>276,0)&Wo=0&PL>89",
+      "requirements": "(EH>276,0)&PL>89",
       "level": 100,
       "id": "a952",
       "type": "achievement",
@@ -1719,7 +1719,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>277,0)&Wo=0&PL>89",
+      "requirements": "(EH>277,0)&PL>89",
       "level": 100,
       "id": "a953",
       "type": "achievement",
@@ -1728,7 +1728,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>278,0)&Wo=0&PL>89",
+      "requirements": "(EH>278,0)&PL>89",
       "level": 100,
       "id": "a954",
       "type": "achievement",
@@ -1737,7 +1737,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>279,0)&Wo=0&PL>89",
+      "requirements": "(EH>279,0)&PL>89",
       "level": 100,
       "id": "a955",
       "type": "achievement",
@@ -1746,7 +1746,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(OA=951)&Wo=0&(OA=952)&Wo=0&(OA=953)&Wo=0&(OA=954)&Wo=0&(OA=955)&Wo=0",
+      "requirements": "(OA=951)&(OA=952)&(OA=953)&(OA=954)&(OA=955)",
       "level": 100,
       "id": "a956",
       "type": "achievement",
@@ -1755,7 +1755,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EM>3293,0,d)&Wo=0&PL>139",
+      "requirements": "(EM>3293,0,d)&PL>139",
       "level": 150,
       "id": "a957",
       "type": "achievement",
@@ -1764,7 +1764,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>280,0)&Wo=0&PL>139",
+      "requirements": "(EH>280,0)&PL>139",
       "level": 150,
       "id": "a958",
       "type": "achievement",
@@ -1773,7 +1773,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>281,0)&Wo=0&PL>139",
+      "requirements": "(EH>281,0)&PL>139",
       "level": 150,
       "id": "a959",
       "type": "achievement",
@@ -1782,7 +1782,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>282,0)&Wo=0&PL>139",
+      "requirements": "(EH>282,0)&PL>139",
       "level": 150,
       "id": "a960",
       "type": "achievement",
@@ -1791,7 +1791,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>283,0)&Wo=0&PL>139",
+      "requirements": "(EH>283,0)&PL>139",
       "level": 150,
       "id": "a961",
       "type": "achievement",
@@ -1800,7 +1800,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(OA=957)&Wo=0&(OA=958)&Wo=0&(OA=959)&Wo=0&(OA=960)&Wo=0&(OA=961)&Wo=0",
+      "requirements": "(OA=957)&(OA=958)&(OA=959)&(OA=960)&(OA=961)",
       "level": 150,
       "id": "a962",
       "type": "achievement",
@@ -1809,7 +1809,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EM>3142,0,d)&Wo=0&PL>189",
+      "requirements": "(EM>3142,0,d)&PL>189",
       "level": 200,
       "id": "a963",
       "type": "achievement",
@@ -1818,7 +1818,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>284,0)&Wo=0&PL>189",
+      "requirements": "(EH>284,0)&PL>189",
       "level": 200,
       "id": "a964",
       "type": "achievement",
@@ -1827,7 +1827,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>285,0)&Wo=0&PL>189",
+      "requirements": "(EH>285,0)&PL>189",
       "level": 200,
       "id": "a965",
       "type": "achievement",
@@ -1836,7 +1836,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>286,0)&Wo=0&PL>189",
+      "requirements": "(EH>286,0)&PL>189",
       "level": 200,
       "id": "a966",
       "type": "achievement",
@@ -1845,7 +1845,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>287,0)&Wo=0&PL>189",
+      "requirements": "(EH>287,0)&PL>189",
       "level": 200,
       "id": "a967",
       "type": "achievement",
@@ -1854,7 +1854,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(OA=963)&Wo=0&(OA=964)&Wo=0&(OA=965)&Wo=0&(OA=966)&Wo=0&(OA=967)&Wo=0",
+      "requirements": "(OA=963)&(OA=964)&(OA=965)&(OA=966)&(OA=967)",
       "level": 200,
       "id": "a968",
       "type": "achievement",
@@ -1863,7 +1863,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(OA=950)&Wo=0&(OA=956)&Wo=0&(OA=962)&Wo=0&(OA=968)&Wo=0",
+      "requirements": "(OA=950)&(OA=956)&(OA=962)&(OA=968)",
       "level": 200,
       "id": "a969",
       "type": "achievement",
@@ -1872,7 +1872,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Ef>3146,0)&Wo=0&(Ef>3148,0)&Wo=0&(Ef>3147,0)&Wo=0&(Ef>3145,0)&Wo=0&(Ef>3149,0)&Wo=0&(Ef>3144,0)&Wo=0&PL>24",
+      "requirements": "(Ef>3146,0)&(Ef>3148,0)&(Ef>3147,0)&(Ef>3145,0)&(Ef>3149,0)&(Ef>3144,0)&PL>24",
       "level": 25,
       "id": "a970",
       "type": "achievement",
@@ -1881,7 +1881,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Ef>3151,0)&Wo=0&(Ef>3153,0)&Wo=0&(Ef>3152,0)&Wo=0&(Ef>3150,0)&Wo=0&(Ef>3154,0)&Wo=0&(Ef>3165,0)&Wo=0&PL>74",
+      "requirements": "(Ef>3151,0)&(Ef>3153,0)&(Ef>3152,0)&(Ef>3150,0)&(Ef>3154,0)&(Ef>3165,0)&PL>74",
       "level": 75,
       "id": "a971",
       "type": "achievement",
@@ -1890,7 +1890,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Ef>3156,0)&Wo=0&(Ef>3158,0)&Wo=0&(Ef>3157,0)&Wo=0&(Ef>3155,0)&Wo=0&(Ef>3159,0)&Wo=0&(Ef>3166,0)&Wo=0&PL>124",
+      "requirements": "(Ef>3156,0)&(Ef>3158,0)&(Ef>3157,0)&(Ef>3155,0)&(Ef>3159,0)&(Ef>3166,0)&PL>124",
       "level": 125,
       "id": "a972",
       "type": "achievement",
@@ -1899,7 +1899,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Ef>3161,0)&Wo=0&(Ef>3163,0)&Wo=0&(Ef>3162,0)&Wo=0&(Ef>3160,0)&Wo=0&(Ef>3164,0)&Wo=0&(Ef>3167,0)&Wo=0&PL>174",
+      "requirements": "(Ef>3161,0)&(Ef>3163,0)&(Ef>3162,0)&(Ef>3160,0)&(Ef>3164,0)&(Ef>3167,0)&PL>174",
       "level": 175,
       "id": "a973",
       "type": "achievement",
@@ -1908,7 +1908,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(OA=970)&Wo=0&(OA=971)&Wo=0&(OA=972)&Wo=0&(OA=973)&Wo=0",
+      "requirements": "(OA=970)&(OA=971)&(OA=972)&(OA=973)",
       "level": 175,
       "id": "a974",
       "type": "achievement",
@@ -1917,7 +1917,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(QF>934,0)&Wo=0&(QF>926,0|QF>927,0|QF>928,0|QF>929,0)&Wo=0&(QF>930,0|QF>931,0|QF>932,0|QF>933,0)&Wo=0&(QF>937,0)&Wo=0&(PO>13220,19)&Wo=0",
+      "requirements": "(QF>934,0)&(QF>926,0|QF>927,0|QF>928,0|QF>929,0)&(QF>930,0|QF>931,0|QF>932,0|QF>933,0)&(QF>937,0)&(PO>13220,19)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/kohrog-en-force.html",
       "id": "a975",
@@ -1927,7 +1927,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(QF>935,0)&Wo=0&(QF>926,0|QF>927,0|QF>928,0|QF>929,0)&Wo=0&(QF>930,0|QF>931,0|QF>932,0|QF>933,0)&Wo=0&(QF>937,0)&Wo=0&(PO>13219,19)&Wo=0",
+      "requirements": "(QF>935,0)&(QF>926,0|QF>927,0|QF>928,0|QF>929,0)&(QF>930,0|QF>931,0|QF>932,0|QF>933,0)&(QF>937,0)&(PO>13219,19)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/lantamaiuml-en-force.html",
       "id": "a976",
@@ -1937,7 +1937,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Qf=733)&Wo=0&(Qf=734)&Wo=0&(Qf=735)&Wo=0&(Qf=736)&Wo=0&(Qf=737)&Wo=0&(Qf=738)&Wo=0&(Qf=739)&Wo=0&(Qf=740)&Wo=0",
+      "requirements": "(Qf=733)&(Qf=734)&(Qf=735)&(Qf=736)&(Qf=737)&(Qf=738)&(Qf=739)&(Qf=740)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/tropheacutee-de-chasse.html",
       "id": "a980",
@@ -1947,7 +1947,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Qf=720|Qf=721|Qf=722|Qf=723)&Wo=0&(Qf=724)&Wo=0&(Qf=725)&Wo=0&(Qf=726)&Wo=0&(Qf=741)&Wo=0&(Qf=742)&Wo=0",
+      "requirements": "(Qf=720|Qf=721|Qf=722|Qf=723)&(Qf=724)&(Qf=725)&(Qf=726)&(Qf=741)&(Qf=742)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/tampon-saisonnier.html",
       "id": "a982",
@@ -1957,7 +1957,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Qf=747)&Wo=0&(Qf=748)&Wo=0&(Qf=749)&Wo=0&(Qf=750)&Wo=0&(Qf=756)&Wo=0&(Qf=757)&Wo=0&(Qf=758)&Wo=0&(Qf=936)&Wo=0",
+      "requirements": "(Qf=747)&(Qf=748)&(Qf=749)&(Qf=750)&(Qf=756)&(Qf=757)&(Qf=758)&(Qf=936)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/lenvers-du-deacutecor.html",
       "id": "a983",
@@ -1967,7 +1967,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(OA=975)&Wo=0&(OA=976)&Wo=0&(OA=980)&Wo=0&(OA=982)&Wo=0&(OA=983)&Wo=0",
+      "requirements": "(OA=975)&(OA=976)&(OA=980)&(OA=982)&(OA=983)",
       "level": 200,
       "id": "a984",
       "type": "achievement",
@@ -1976,7 +1976,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(ES>762,0)&Wo=0&(ES>763,0)&Wo=0&(ES>764,0)&Wo=0&(ES>765,0)&Wo=0&(ES>766,0)&Wo=0&(ES>772,0)&Wo=0&(ES>773,0)&Wo=0&(ES>774,0)&Wo=0",
+      "requirements": "(ES>762,0)&(ES>763,0)&(ES>764,0)&(ES>765,0)&(ES>766,0)&(ES>772,0)&(ES>773,0)&(ES>774,0)",
       "level": 200,
       "id": "a985",
       "type": "achievement",
@@ -1985,7 +1985,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(ES>767,0)&Wo=0&(ES>768,0)&Wo=0&(ES>769,0)&Wo=0&(ES>770,0)&Wo=0&(ES>771,0)&Wo=0",
+      "requirements": "(ES>767,0)&(ES>768,0)&(ES>769,0)&(ES>770,0)&(ES>771,0)",
       "level": 200,
       "id": "a986",
       "type": "achievement",
@@ -1994,7 +1994,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EI>12462,0)&Wo=0&(EI>12460,0)&Wo=0&(EI>12461,0)&Wo=0&(EI>13221,0)&Wo=0&(EI>12611,0)&Wo=0&(EI>12612,0)&Wo=0&(EI>12610,0)&Wo=0&(EI>12609,0)&Wo=0&(EI>13222,0)&Wo=0&(EI>13223,0)&Wo=0",
+      "requirements": "(EI>12462,0)&(EI>12460,0)&(EI>12461,0)&(EI>13221,0)&(EI>12611,0)&(EI>12612,0)&(EI>12610,0)&(EI>12609,0)&(EI>13222,0)&(EI>13223,0)",
       "level": 200,
       "id": "a987",
       "type": "achievement",
@@ -2003,7 +2003,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(OA=969)&Wo=0&(OA=974)&Wo=0&(OA=984)&Wo=0&(OA=985)&Wo=0&(OA=986)&Wo=0&(OA=987)&Wo=0&(OA=5799)&Wo=0",
+      "requirements": "(OA=969)&(OA=974)&(OA=984)&(OA=985)&(OA=986)&(OA=987)&(OA=5799)",
       "level": 200,
       "id": "a988",
       "type": "achievement",
@@ -2012,7 +2012,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Qf=836)&Wo=0&(Qf=837)&Wo=0&(Qf=838)&Wo=0&(Qf=839)&Wo=0&(Qf=840)&Wo=0&(Qf=841)&Wo=0&(Qf=842)&Wo=0&(Qf=843)&Wo=0",
+      "requirements": "(Qf=836)&(Qf=837)&(Qf=838)&(Qf=839)&(Qf=840)&(Qf=841)&(Qf=842)&(Qf=843)",
       "level": 60,
       "noob": "https://www.dofuspourlesnoobs.com/ruseacute-comme-une-lenalde.html",
       "id": "a989",
@@ -2022,7 +2022,7 @@
       "dispCatId": 52
     },
     {
-      "requirements": "(Qf=828)&Wo=0&(Qf=829)&Wo=0&(Qf=830)&Wo=0&(Qf=831)&Wo=0",
+      "requirements": "(Qf=828)&(Qf=829)&(Qf=830)&(Qf=831)",
       "level": 60,
       "noob": "https://www.dofuspourlesnoobs.com/lancer-de-wabbit.html",
       "id": "a990",
@@ -2032,7 +2032,7 @@
       "dispCatId": 52
     },
     {
-      "requirements": "(Qf=833)&Wo=0&(Qf=834)&Wo=0&(Qf=835)&Wo=0",
+      "requirements": "(Qf=833)&(Qf=834)&(Qf=835)",
       "level": 80,
       "noob": "https://www.dofuspourlesnoobs.com/un-wa-de-pacotille.html",
       "id": "a991",
@@ -2042,7 +2042,7 @@
       "dispCatId": 52
     },
     {
-      "requirements": "(Qo>5285)&Wo=0",
+      "requirements": "(Qo>5285)",
       "level": 80,
       "noob": "https://www.dofuspourlesnoobs.com/poil-de-cawotte.html",
       "id": "a992",
@@ -2052,7 +2052,7 @@
       "dispCatId": 52
     },
     {
-      "requirements": "(Qf=827)&Wo=0&(Qf=846)&Wo=0&(Qf=847)&Wo=0",
+      "requirements": "(Qf=827)&(Qf=846)&(Qf=847)",
       "level": 80,
       "noob": "https://www.dofuspourlesnoobs.com/partie-prise.html",
       "id": "a993",
@@ -2062,7 +2062,7 @@
       "dispCatId": 52
     },
     {
-      "requirements": "(OA=989)&Wo=0&(OA=990)&Wo=0&(OA=991)&Wo=0&(OA=992)&Wo=0&(OA=993)&Wo=0&(OA=1071)&Wo=0",
+      "requirements": "(OA=989)&(OA=990)&(OA=991)&(OA=992)&(OA=993)&(OA=1071)",
       "level": 80,
       "id": "a998",
       "type": "achievement",
@@ -2071,7 +2071,7 @@
       "dispCatId": 52
     },
     {
-      "requirements": "(EM>3476,0,d)&Wo=0&PL>99",
+      "requirements": "(EM>3476,0,d)&PL>99",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/theatre-de-dramak.html",
       "id": "a1013",
@@ -2081,7 +2081,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(EM>3534,0,d)&Wo=0&PL>189",
+      "requirements": "(EM>3534,0,d)&PL>189",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/aquadome-de-merkator.html",
       "id": "a1019",
@@ -2091,7 +2091,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(Qf=1433)&Wo=0&(Qf=1438)&Wo=0&(Qf=1439)&Wo=0&(Qf=1441)&Wo=0&(Qf=1440)&Wo=0&(Qf=1442)&Wo=0&(Qf=1443)&Wo=0",
+      "requirements": "(Qf=1433)&(Qf=1438)&(Qf=1439)&(Qf=1441)&(Qf=1440)&(Qf=1442)&(Qf=1443)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/test-deacutetancheacuteiteacute.html",
       "id": "a1020",
@@ -2101,7 +2101,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(BI=1)&Wo=0&(BI=1)&Wo=0&(BI=1)&Wo=0&(BI=1)&Wo=0&(BI=1)&Wo=0&(BI=1)&Wo=0",
+      "requirements": "(BI=1)&(BI=1)&(BI=1)&(BI=1)&(BI=1)&(BI=1)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/bizutage.html",
       "id": "a1030",
@@ -2111,7 +2111,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(QF>1446,0)&Wo=0&(QF>1447,0)&Wo=0&(QF>1448,0)&Wo=0&(QF>1449,0)&Wo=0&(QF>1450,0)&Wo=0&(QF>1451,0)&Wo=0&(QF>1452,0)&Wo=0&(QF>1453,0)&Wo=0&(QF>1454,0)&Wo=0&(QF>1455,0)&Wo=0",
+      "requirements": "(QF>1446,0)&(QF>1447,0)&(QF>1448,0)&(QF>1449,0)&(QF>1450,0)&(QF>1451,0)&(QF>1452,0)&(QF>1453,0)&(QF>1454,0)&(QF>1455,0)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/formation-pratique.html",
       "id": "a1031",
@@ -2121,7 +2121,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(Qf=1456)&Wo=0&(Qf=1457)&Wo=0&(Qf=1458)&Wo=0&(Qf=1459)&Wo=0&(Qf=1460)&Wo=0",
+      "requirements": "(Qf=1456)&(Qf=1457)&(Qf=1458)&(Qf=1459)&(Qf=1460)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/nouvelle-fourneacutee-de-justiciers.html",
       "id": "a1032",
@@ -2131,7 +2131,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(Qf=1423)&Wo=0&(Qf=1424)&Wo=0&(Qf=1425)&Wo=0&(Qf=1461)&Wo=0&(Qf=1444)&Wo=0",
+      "requirements": "(Qf=1423)&(Qf=1424)&(Qf=1425)&(Qf=1461)&(Qf=1444)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/ccedila-va-faire-du-vilain.html",
       "id": "a1033",
@@ -2141,7 +2141,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(OA=1033)&Wo=0&(OA=1030)&Wo=0&(OA=1031)&Wo=0&(OA=1032)&Wo=0",
+      "requirements": "(OA=1033)&(OA=1030)&(OA=1031)&(OA=1032)",
       "level": 200,
       "id": "a1034",
       "type": "achievement",
@@ -2150,7 +2150,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(Qf=1434)&Wo=0&(Qf=1435)&Wo=0&(Qf=1436)&Wo=0&(Qf=1437)&Wo=0&(OA=1013)&Wo=0&(OA=1040)&Wo=0&(OA=1019)&Wo=0&(OA=887)&Wo=0&(OA=877)&Wo=0&(OA=882)&Wo=0&(OA=872)&Wo=0&(OA=892)&Wo=0",
+      "requirements": "(Qf=1434)&(Qf=1435)&(Qf=1436)&(Qf=1437)&(OA=1013)&(OA=1040)&(OA=1019)&(OA=887)&(OA=877)&(OA=882)&(OA=872)&(OA=892)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/mort-ou-vif.html",
       "id": "a1035",
@@ -2160,7 +2160,7 @@
       "dispCatId": 61
     },
     {
-      "requirements": "(Qf=2192)&Wo=0&(Qf=2193)&Wo=0&(Qf=2194)&Wo=0&(Qf=2195)&Wo=0&(Qf=1462)&Wo=0",
+      "requirements": "(Qf=2192)&(Qf=2193)&(Qf=2194)&(Qf=2195)&(Qf=1462)",
       "level": 40,
       "noob": "https://www.dofuspourlesnoobs.com/mais-ougrave-sont-les-dofus.html",
       "id": "a1036",
@@ -2170,17 +2170,17 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(EM>3564,0,d)&Wo=0&PL>189",
+      "requirements": "(EM>3564,0,d)&PL>189",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/pyramide-dombre.html",
       "id": "a1040",
       "type": "achievement",
       "categoryId": 14,
-      "order": 114,
+      "order": 120,
       "dispCatId": 61
     },
     {
-      "requirements": "(Qf=678)&Wo=0",
+      "requirements": "(Qf=678)",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/slip-ou-caleccedilon.html",
       "id": "a1047",
@@ -2190,7 +2190,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=1463)&Wo=0&(Qf=1464)&Wo=0&(Qf=1465)&Wo=0&(Qf=1466)&Wo=0&(Qf=1467)&Wo=0&(Qf=1469)&Wo=0&(Qf=1470)&Wo=0&(Qf=1471)&Wo=0",
+      "requirements": "(Qf=1463)&(Qf=1464)&(Qf=1465)&(Qf=1466)&(Qf=1467)&(Qf=1469)&(Qf=1470)&(Qf=1471)",
       "level": 120,
       "noob": "https://www.dofuspourlesnoobs.com/vert-eacutemeraude.html",
       "id": "a1048",
@@ -2200,7 +2200,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(QQ>799)&Wo=0",
+      "requirements": "(QQ>799)",
       "level": 200,
       "id": "a1049",
       "type": "achievement",
@@ -2209,7 +2209,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>899)&Wo=0",
+      "requirements": "(QQ>899)",
       "level": 200,
       "id": "a1050",
       "type": "achievement",
@@ -2218,7 +2218,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>999)&Wo=0",
+      "requirements": "(QQ>999)",
       "level": 200,
       "id": "a1051",
       "type": "achievement",
@@ -2227,7 +2227,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(Qf=1473)&Wo=0&(Qf=1474)&Wo=0&(Qf=1475)&Wo=0&(Qf=1476)&Wo=0&(Qf=1477)&Wo=0&(Qf=1478)&Wo=0&(Qf=1479)&Wo=0&(Qf=1480)&Wo=0&(Qf=1481)&Wo=0",
+      "requirements": "(Qf=1473)&(Qf=1474)&(Qf=1475)&(Qf=1476)&(Qf=1477)&(Qf=1478)&(Qf=1479)&(Qf=1480)&(Qf=1481)",
       "level": 160,
       "noob": "https://www.dofuspourlesnoobs.com/la-voyageuse-imprudente.html",
       "id": "a1066",
@@ -2237,7 +2237,7 @@
       "dispCatId": 48
     },
     {
-      "requirements": "(QF>890,0)&Wo=0&(QF>848,0)&Wo=0&(QF>857,0)&Wo=0",
+      "requirements": "(QF>890,0)&(QF>848,0)&(QF>857,0)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/agrave-fond-les-ballons.html",
       "id": "a1070",
@@ -2247,7 +2247,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(QF>832,0)&Wo=0&(QF>844,0)&Wo=0&(QF>845,0)&Wo=0&(QF>952,0)&Wo=0",
+      "requirements": "(QF>832,0)&(QF>844,0)&(QF>845,0)&(QF>952,0)",
       "level": 60,
       "noob": "https://www.dofuspourlesnoobs.com/wabbit-en-feu.html",
       "id": "a1071",
@@ -2257,7 +2257,7 @@
       "dispCatId": 52
     },
     {
-      "requirements": "(Qf=1484)&Wo=0&(Qf=1485)&Wo=0&(Qf=1486)&Wo=0",
+      "requirements": "(Qf=1484)&(Qf=1485)&(Qf=1486)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/dun-monde-agrave-lautre.html",
       "id": "a1072",
@@ -2267,7 +2267,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1487)&Wo=0&(Qf=1501)&Wo=0&(Qf=1504)&Wo=0&(Qf=1505)&Wo=0&(Qf=1506)&Wo=0",
+      "requirements": "(Qf=1487)&(Qf=1501)&(Qf=1504)&(Qf=1505)&(Qf=1506)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/mecircme-pas-malle.html",
       "id": "a1073",
@@ -2277,7 +2277,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1488)&Wo=0&(Qf=1490)&Wo=0&(Qf=1502)&Wo=0&(Qf=1497)&Wo=0&(Qf=1498)&Wo=0&(Qf=1499)&Wo=0&(Qf=1500)&Wo=0&(Qf=1507)&Wo=0&(Qf=1508)&Wo=0&(Qf=1509)&Wo=0",
+      "requirements": "(Qf=1488)&(Qf=1490)&(Qf=1502)&(Qf=1497)&(Qf=1498)&(Qf=1499)&(Qf=1500)&(Qf=1507)&(Qf=1508)&(Qf=1509)",
       "level": 150,
       "noob": "https://www.dofuspourlesnoobs.com/apregraves-les-phorreurs-le-reacuteconfort.html",
       "id": "a1074",
@@ -2287,7 +2287,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1492)&Wo=0&(Qf=1493)&Wo=0&(Qf=1494)&Wo=0&(Qf=1495)&Wo=0&(Qf=1496)&Wo=0&(Qf=1514)&Wo=0",
+      "requirements": "(Qf=1492)&(Qf=1493)&(Qf=1494)&(Qf=1495)&(Qf=1496)&(Qf=1514)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/le-roi-et-moi.html",
       "id": "a1075",
@@ -2297,7 +2297,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1489)&Wo=0&(Qf=1491)&Wo=0&(Qf=1503)&Wo=0&(Qf=1510)&Wo=0&(Qf=1511)&Wo=0&(Qf=1512)&Wo=0&(Qf=1513)&Wo=0&(Qf=1515)&Wo=0&(Qf=1516)&Wo=0",
+      "requirements": "(Qf=1489)&(Qf=1491)&(Qf=1503)&(Qf=1510)&(Qf=1511)&(Qf=1512)&(Qf=1513)&(Qf=1515)&(Qf=1516)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/raisons-de-retraite.html",
       "id": "a1076",
@@ -2307,7 +2307,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(OA=1073)&Wo=0&(OA=1074)&Wo=0&(OA=1075)&Wo=0&(OA=1076)&Wo=0&(BI=1)&Wo=0",
+      "requirements": "(OA=1073)&(OA=1074)&(OA=1075)&(OA=1076)&(BI=1)",
       "level": 200,
       "id": "a1077",
       "type": "achievement",
@@ -2316,7 +2316,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1521)&Wo=0&(Qf=1522)&Wo=0&(Qf=1523)&Wo=0&(Qf=1524)&Wo=0&(Qf=1525)&Wo=0&(Qf=1526)&Wo=0&(Qf=1528)&Wo=0&(Qf=1529)&Wo=0",
+      "requirements": "(Qf=1521)&(Qf=1522)&(Qf=1523)&(Qf=1524)&(Qf=1525)&(Qf=1526)&(Qf=1528)&(Qf=1529)",
       "level": 130,
       "noob": "https://www.dofuspourlesnoobs.com/pourpre-profond.html",
       "id": "a1101",
@@ -2326,7 +2326,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(Qf=1530)&Wo=0&(Qf=1531)&Wo=0&(Qf=1532)&Wo=0",
+      "requirements": "(Qf=1530)&(Qf=1531)&(Qf=1532)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/aux-portes-de-la-nuit.html",
       "id": "a1102",
@@ -2336,7 +2336,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1533)&Wo=0&(Qf=1538)&Wo=0&(Qf=1541)&Wo=0&(Qf=1542)&Wo=0&(Qf=1543)&Wo=0",
+      "requirements": "(Qf=1533)&(Qf=1538)&(Qf=1541)&(Qf=1542)&(Qf=1543)",
       "level": 130,
       "noob": "https://www.dofuspourlesnoobs.com/sauveacute-par-le-gong.html",
       "id": "a1103",
@@ -2346,7 +2346,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1534)&Wo=0&(Qf=1536)&Wo=0&(Qf=1539)&Wo=0&(Qf=1544)&Wo=0&(Qf=1545)&Wo=0&(Qf=1546)&Wo=0&(Qf=1547)&Wo=0&(Qf=1553)&Wo=0&(Qf=1554)&Wo=0&(Qf=1555)&Wo=0",
+      "requirements": "(Qf=1534)&(Qf=1536)&(Qf=1539)&(Qf=1544)&(Qf=1545)&(Qf=1546)&(Qf=1547)&(Qf=1553)&(Qf=1554)&(Qf=1555)",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/crache-ton-venin.html",
       "id": "a1104",
@@ -2356,7 +2356,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1548)&Wo=0&(Qf=1549)&Wo=0&(Qf=1550)&Wo=0&(Qf=1551)&Wo=0&(Qf=1552)&Wo=0&(Qf=1562)&Wo=0",
+      "requirements": "(Qf=1548)&(Qf=1549)&(Qf=1550)&(Qf=1551)&(Qf=1552)&(Qf=1562)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/le-jeu-du-trocircne.html",
       "id": "a1105",
@@ -2366,7 +2366,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1535)&Wo=0&(Qf=1537)&Wo=0&(Qf=1540)&Wo=0&(Qf=1556)&Wo=0&(Qf=1557)&Wo=0&(Qf=1558)&Wo=0&(Qf=1559)&Wo=0&(Qf=1560)&Wo=0&(Qf=1561)&Wo=0",
+      "requirements": "(Qf=1535)&(Qf=1537)&(Qf=1540)&(Qf=1556)&(Qf=1557)&(Qf=1558)&(Qf=1559)&(Qf=1560)&(Qf=1561)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/les-voleurs-de-srambad.html",
       "id": "a1106",
@@ -2376,7 +2376,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(OA=1103)&Wo=0&(OA=1104)&Wo=0&(OA=1105)&Wo=0&(OA=1106)&Wo=0&(BI=1)&Wo=0",
+      "requirements": "(OA=1103)&(OA=1104)&(OA=1105)&(OA=1106)&(BI=1)",
       "level": 200,
       "id": "a1107",
       "type": "achievement",
@@ -2385,7 +2385,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1570)&Wo=0&(Qf=1569)&Wo=0&(Qf=1568)&Wo=0",
+      "requirements": "(Qf=1570)&(Qf=1569)&(Qf=1568)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/cest-assez.html",
       "id": "a1134",
@@ -2395,7 +2395,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=1571)&Wo=0&(Qf=1572)&Wo=0&(Qf=1573)&Wo=0",
+      "requirements": "(Qf=1571)&(Qf=1572)&(Qf=1573)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/geacuteneacuterations-futures.html",
       "id": "a1142",
@@ -2405,7 +2405,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1588)&Wo=0&(Qf=1591)&Wo=0&(Qf=1592)&Wo=0&(Qf=1593)&Wo=0",
+      "requirements": "(Qf=1588)&(Qf=1591)&(Qf=1592)&(Qf=1593)",
       "level": 120,
       "noob": "https://www.dofuspourlesnoobs.com/les-temps-qui-courent.html",
       "id": "a1143",
@@ -2415,7 +2415,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1575)&Wo=0&(Qf=1577)&Wo=0&(Qf=1583)&Wo=0&(Qf=1584)&Wo=0&(Qf=1585)&Wo=0&(Qf=1586)&Wo=0&(Qf=1589)&Wo=0&(Qf=1594)&Wo=0&(Qf=1595)&Wo=0&(Qf=1596)&Wo=0",
+      "requirements": "(Qf=1575)&(Qf=1577)&(Qf=1583)&(Qf=1584)&(Qf=1585)&(Qf=1586)&(Qf=1589)&(Qf=1594)&(Qf=1595)&(Qf=1596)",
       "level": 170,
       "noob": "https://www.dofuspourlesnoobs.com/carpe-diem.html",
       "id": "a1144",
@@ -2425,7 +2425,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1579)&Wo=0&(Qf=1580)&Wo=0&(Qf=1581)&Wo=0&(Qf=1582)&Wo=0&(Qf=1601)&Wo=0",
+      "requirements": "(Qf=1579)&(Qf=1580)&(Qf=1581)&(Qf=1582)&(Qf=1601)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/les-puits-du-fou.html",
       "id": "a1145",
@@ -2435,7 +2435,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1590)&Wo=0&(Qf=1597)&Wo=0&(Qf=1598)&Wo=0&(Qf=1599)&Wo=0&(Qf=1600)&Wo=0&(Qf=1602)&Wo=0",
+      "requirements": "(Qf=1590)&(Qf=1597)&(Qf=1598)&(Qf=1599)&(Qf=1600)&(Qf=1602)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/moments-deacutegarement.html",
       "id": "a1146",
@@ -2445,7 +2445,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(OA=1143)&Wo=0&(OA=1144)&Wo=0&(OA=1145)&Wo=0&(OA=1146)&Wo=0&(BI=1)&Wo=0",
+      "requirements": "(OA=1143)&(OA=1144)&(OA=1145)&(OA=1146)&(BI=1)",
       "level": 200,
       "id": "a1147",
       "type": "achievement",
@@ -2454,7 +2454,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(EM>3306,0,d)&Wo=0&PL>89",
+      "requirements": "(EM>3306,0,d)&PL>89",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/potager-dhalouine.html",
       "id": "a1148",
@@ -2464,7 +2464,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(EH>328,0)&Wo=0&PL>89",
+      "requirements": "(EH>328,0)&PL>89",
       "level": 100,
       "id": "a1149",
       "type": "achievement",
@@ -2473,7 +2473,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(EH>329,0)&Wo=0&PL>89",
+      "requirements": "(EH>329,0)&PL>89",
       "level": 100,
       "id": "a1150",
       "type": "achievement",
@@ -2482,7 +2482,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(EH>330,0)&Wo=0&PL>89",
+      "requirements": "(EH>330,0)&PL>89",
       "level": 100,
       "id": "a1151",
       "type": "achievement",
@@ -2491,7 +2491,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(EH>331,0)&Wo=0&PL>89",
+      "requirements": "(EH>331,0)&PL>89",
       "level": 100,
       "id": "a1152",
       "type": "achievement",
@@ -2500,7 +2500,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(OA=1149)&Wo=0&(OA=1150)&Wo=0&(OA=1151)&Wo=0&(OA=1152)&Wo=0",
+      "requirements": "(OA=1149)&(OA=1150)&(OA=1151)&(OA=1152)",
       "level": 100,
       "id": "a1153",
       "type": "achievement",
@@ -2509,7 +2509,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(Ef>3308,0)&Wo=0&(Ef>3309,0)&Wo=0&(Ef>3310,0)&Wo=0&(Ef>3311,0)&Wo=0&(Ef>3307,0)&Wo=0&PL>89",
+      "requirements": "(Ef>3308,0)&(Ef>3309,0)&(Ef>3310,0)&(Ef>3311,0)&(Ef>3307,0)&PL>89",
       "level": 100,
       "id": "a1154",
       "type": "achievement",
@@ -2518,7 +2518,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(EI>13444,0)&Wo=0&(EI>13446,0)&Wo=0&(EI>13448,0)&Wo=0&(EI>13450,0)&Wo=0&(EI>13452,0)&Wo=0&(EI>13454,0)&Wo=0&(EI>13456,0)&Wo=0",
+      "requirements": "(EI>13444,0)&(EI>13446,0)&(EI>13448,0)&(EI>13450,0)&(EI>13452,0)&(EI>13454,0)&(EI>13456,0)",
       "level": 100,
       "id": "a1155",
       "type": "achievement",
@@ -2527,7 +2527,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(Qf=1608)&Wo=0&(Qf=1609)&Wo=0&(Qf=1610)&Wo=0&(Qf=1611)&Wo=0&(Qf=1612)&Wo=0&(Qf=1613)&Wo=0",
+      "requirements": "(Qf=1608)&(Qf=1609)&(Qf=1610)&(Qf=1611)&(Qf=1612)&(Qf=1613)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/par-delagrave-les-apparences.html",
       "id": "a1186",
@@ -2537,7 +2537,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(OA=1072)&Wo=0&(OA=1102)&Wo=0&(OA=1142)&Wo=0&(OA=1186)&Wo=0",
+      "requirements": "(OA=1072)&(OA=1102)&(OA=1142)&(OA=1186)",
       "level": 200,
       "id": "a1187",
       "type": "achievement",
@@ -2546,7 +2546,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(OA=1077)&Wo=0&(OA=1107)&Wo=0&(OA=1147)&Wo=0&(OA=1187)&Wo=0&(Qf=1614)&Wo=0",
+      "requirements": "(OA=1077)&(OA=1107)&(OA=1147)&(OA=1187)&(Qf=1614)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/je-revais-d-un-autre-monde.html",
       "id": "a1188",
@@ -2556,7 +2556,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1434)&Wo=0&(Qf=1436)&Wo=0&(Qf=1435)&Wo=0&(Qf=1437)&Wo=0",
+      "requirements": "(Qf=1434)&(Qf=1436)&(Qf=1435)&(Qf=1437)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/le-plein-de-super-vilains.html",
       "id": "a1197",
@@ -2566,7 +2566,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=1518)&Wo=0&(Qf=1519)&Wo=0&(Qf=1520)&Wo=0&(Qf=1563)&Wo=0&(Qf=1564)&Wo=0&(Qf=1565)&Wo=0&(Qf=1604)&Wo=0&(Qf=1605)&Wo=0&(Qf=1606)&Wo=0",
+      "requirements": "(Qf=1518)&(Qf=1519)&(Qf=1520)&(Qf=1563)&(Qf=1564)&(Qf=1565)&(Qf=1604)&(Qf=1605)&(Qf=1606)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/dimension-carceacuterale.html",
       "id": "a1198",
@@ -2576,7 +2576,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=1622)&Wo=0&(Qf=1623)&Wo=0&(Qf=1624)&Wo=0&(Qf=1625)&Wo=0&(Qf=1626)&Wo=0&(Qf=1627)&Wo=0&(Qf=1628)&Wo=0",
+      "requirements": "(Qf=1622)&(Qf=1623)&(Qf=1624)&(Qf=1625)&(Qf=1626)&(Qf=1627)&(Qf=1628)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/les-sept-saloupiots.html",
       "id": "a1199",
@@ -2586,7 +2586,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(OA=1197)&Wo=0&(OA=1198)&Wo=0&(OA=1199)&Wo=0",
+      "requirements": "(OA=1197)&(OA=1198)&(OA=1199)",
       "level": 200,
       "id": "a1200",
       "type": "achievement",
@@ -2595,7 +2595,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Pa>9)&Wo=0&PL>29",
+      "requirements": "(Pa>9)&PL>29",
       "level": 40,
       "noob": "https://www.dofuspourlesnoobs.com/garde-agrave-vous.html",
       "id": "a1203",
@@ -2605,7 +2605,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pa>19)&Wo=0&PL>49",
+      "requirements": "(Pa>19)&PL>49",
       "level": 60,
       "noob": "https://www.dofuspourlesnoobs.com/chef-oui-chef.html",
       "id": "a1204",
@@ -2615,7 +2615,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pa>29)&Wo=0&PL>69",
+      "requirements": "(Pa>29)&PL>69",
       "level": 80,
       "noob": "https://www.dofuspourlesnoobs.com/adjugeacute-glandu.html",
       "id": "a1205",
@@ -2625,7 +2625,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pa>39)&Wo=0&PL>89",
+      "requirements": "(Pa>39)&PL>89",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/major-de-promotion-canapeacute.html",
       "id": "a1206",
@@ -2635,7 +2635,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pa>49)&Wo=0&PL>109",
+      "requirements": "(Pa>49)&PL>109",
       "level": 120,
       "noob": "https://www.dofuspourlesnoobs.com/aspirateur.html",
       "id": "a1207",
@@ -2645,7 +2645,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pa>59)&Wo=0&PL>129",
+      "requirements": "(Pa>59)&PL>129",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/lieutenant-colon.html",
       "id": "a1208",
@@ -2655,7 +2655,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pa>69)&Wo=0&PL>149",
+      "requirements": "(Pa>69)&PL>149",
       "level": 160,
       "noob": "https://www.dofuspourlesnoobs.com/oheacute-oheacute-capitaine-abandonneacute.html",
       "id": "a1209",
@@ -2665,7 +2665,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pa>79)&Wo=0&PL>169",
+      "requirements": "(Pa>79)&PL>169",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/commande-et-ment.html",
       "id": "a1210",
@@ -2675,7 +2675,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pa>89)&Wo=0&PL>179",
+      "requirements": "(Pa>89)&PL>179",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/colonel-chachabert.html",
       "id": "a1211",
@@ -2685,7 +2685,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pa>99)&Wo=0&PL>189",
+      "requirements": "(Pa>99)&PL>189",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/travail-d-interet-general.html",
       "id": "a1212",
@@ -2695,7 +2695,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pr=2|Pr=3|Pr=4|Pr=5|Pr=6|Pr=7|Pr=8|Pr=9|Pr=10|Pr=11|Pr=13|Pr=14|Pr=15|Pr=16|Pr=17|Pr=19|Pr=20|Pr=21|Pr=22|Pr=23|Pr=24|Pr=25|Pr=26|Pr=27|Pr=28|Pr=29|Pr=30|Pr=31|Pr=32|Pr=33)&Wo=0&PL>49",
+      "requirements": "(Pr=2|Pr=3|Pr=4|Pr=5|Pr=6|Pr=7|Pr=8|Pr=9|Pr=10|Pr=11|Pr=13|Pr=14|Pr=15|Pr=16|Pr=17|Pr=19|Pr=20|Pr=21|Pr=22|Pr=23|Pr=24|Pr=25|Pr=26|Pr=27|Pr=28|Pr=29|Pr=30|Pr=31|Pr=32|Pr=33)&PL>49",
       "level": 60,
       "noob": "https://www.dofuspourlesnoobs.com/agrave-vos-ordres.html",
       "id": "a1213",
@@ -2705,7 +2705,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pr=3|Pr=4|Pr=5|Pr=6|Pr=8|Pr=9|Pr=10|Pr=11|Pr=14|Pr=15|Pr=16|Pr=17|Pr=20|Pr=21|Pr=22|Pr=23|Pr=25|Pr=26|Pr=27|Pr=28|Pr=30|Pr=31|Pr=32|Pr=33)&Wo=0&PL>89",
+      "requirements": "(Pr=3|Pr=4|Pr=5|Pr=6|Pr=8|Pr=9|Pr=10|Pr=11|Pr=14|Pr=15|Pr=16|Pr=17|Pr=20|Pr=21|Pr=22|Pr=23|Pr=25|Pr=26|Pr=27|Pr=28|Pr=30|Pr=31|Pr=32|Pr=33)&PL>89",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/jusquagrave-nouvel-ordre.html",
       "id": "a1214",
@@ -2715,7 +2715,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pr=4|Pr=5|Pr=6|Pr=9|Pr=10|Pr=11|Pr=15|Pr=16|Pr=17|Pr=21|Pr=22|Pr=23|Pr=26|Pr=27|Pr=28|Pr=31|Pr=32|Pr=33)&Wo=0&PL>129",
+      "requirements": "(Pr=4|Pr=5|Pr=6|Pr=9|Pr=10|Pr=11|Pr=15|Pr=16|Pr=17|Pr=21|Pr=22|Pr=23|Pr=26|Pr=27|Pr=28|Pr=31|Pr=32|Pr=33)&PL>129",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/maintien-de-lordre.html",
       "id": "a1215",
@@ -2725,7 +2725,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pr=5|Pr=6|Pr=10|Pr=11|Pr=16|Pr=17|Pr=22|Pr=23|Pr=27|Pr=28|Pr=32|Pr=33)&Wo=0&PL>169",
+      "requirements": "(Pr=5|Pr=6|Pr=10|Pr=11|Pr=16|Pr=17|Pr=22|Pr=23|Pr=27|Pr=28|Pr=32|Pr=33)&PL>169",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/tout-est-en-ordre.html",
       "id": "a1216",
@@ -2735,7 +2735,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pr=6|Pr=11|Pr=17|Pr=23|Pr=28|Pr=33)&Wo=0&PL>189",
+      "requirements": "(Pr=6|Pr=11|Pr=17|Pr=23|Pr=28|Pr=33)&PL>189",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/vos-desirs-sont-des-ordres.html",
       "id": "a1217",
@@ -2745,7 +2745,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Qf=1631)&Wo=0&(Qf=1632)&Wo=0&(Qf=1634)&Wo=0&(Qf=1635)&Wo=0&(Qf=2004)&Wo=0",
+      "requirements": "(Qf=1631)&(Qf=1632)&(Qf=1634)&(Qf=1635)&(Qf=2004)",
       "level": 10,
       "noob": "https://www.dofuspourlesnoobs.com/en-route-pour-laventure.html",
       "id": "a1378",
@@ -2755,7 +2755,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(Qf=1639)&Wo=0&(Qf=1640)&Wo=0&(Qf=1641)&Wo=0",
+      "requirements": "(Qf=1639)&(Qf=1640)&(Qf=1641)",
       "level": 6,
       "noob": "https://www.dofuspourlesnoobs.com/pousseacute-par-le-vent.html",
       "id": "a1379",
@@ -2765,7 +2765,7 @@
       "dispCatId": 53
     },
     {
-      "requirements": "(Qf=1642)&Wo=0&(Qf=1643)&Wo=0&(Qf=1644)&Wo=0&(Qf=1645)&Wo=0&(Qf=1646)&Wo=0&(Qf=1647)&Wo=0&(Qf=1648)&Wo=0",
+      "requirements": "(Qf=1642)&(Qf=1643)&(Qf=1644)&(Qf=1645)&(Qf=1646)&(Qf=1647)&(Qf=1648)",
       "level": 9,
       "noob": "https://www.dofuspourlesnoobs.com/service-dans-la-milice.html",
       "id": "a1380",
@@ -2775,7 +2775,7 @@
       "dispCatId": 53
     },
     {
-      "requirements": "(Qf=1637)&Wo=0&(Qf=1633)&Wo=0&(Qf=1638)&Wo=0&(Qf=1655)&Wo=0",
+      "requirements": "(Qf=1637)&(Qf=1633)&(Qf=1638)&(Qf=1655)",
       "level": 10,
       "noob": "https://www.dofuspourlesnoobs.com/ramdam-sur-incarnam.html",
       "id": "a1381",
@@ -2785,7 +2785,7 @@
       "dispCatId": 53
     },
     {
-      "requirements": "(Qf=1653)&Wo=0&(Qf=1654)&Wo=0&(Qf=1656)&Wo=0&(Qf=1657)&Wo=0&(Qf=1658)&Wo=0&(Qf=1659)&Wo=0&(Qf=1660)&Wo=0&(Qf=1661)&Wo=0&(Qf=1662)&Wo=0&(Qf=1663)&Wo=0",
+      "requirements": "(Qf=1653)&(Qf=1654)&(Qf=1656)&(Qf=1657)&(Qf=1658)&(Qf=1659)&(Qf=1660)&(Qf=1661)&(Qf=1662)&(Qf=1663)",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/bleu-turquoise.html",
       "id": "a1385",
@@ -2795,7 +2795,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(Pr=2|Pr=3|Pr=4|Pr=5|Pr=6|Pr=7|Pr=8|Pr=9|Pr=10|Pr=11|Pr=13|Pr=14|Pr=15|Pr=16|Pr=17|Pr=19|Pr=20|Pr=21|Pr=22|Pr=23|Pr=24|Pr=25|Pr=26|Pr=27|Pr=28|Pr=29|Pr=30|Pr=31|Pr=32|Pr=33)&Wo=0&PL>49&(BI=1)&Wo=0",
+      "requirements": "(Pr=2|Pr=3|Pr=4|Pr=5|Pr=6|Pr=7|Pr=8|Pr=9|Pr=10|Pr=11|Pr=13|Pr=14|Pr=15|Pr=16|Pr=17|Pr=19|Pr=20|Pr=21|Pr=22|Pr=23|Pr=24|Pr=25|Pr=26|Pr=27|Pr=28|Pr=29|Pr=30|Pr=31|Pr=32|Pr=33)&PL>49&(BI=1)",
       "level": 60,
       "noob": "https://www.dofuspourlesnoobs.com/mot-dordre.html",
       "id": "a1392",
@@ -2805,7 +2805,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pr=3|Pr=4|Pr=5|Pr=6|Pr=8|Pr=9|Pr=10|Pr=11|Pr=14|Pr=15|Pr=16|Pr=17|Pr=20|Pr=21|Pr=22|Pr=23|Pr=25|Pr=26|Pr=27|Pr=28|Pr=30|Pr=31|Pr=32|Pr=33)&Wo=0&PL>89&(BI=1)&Wo=0",
+      "requirements": "(Pr=3|Pr=4|Pr=5|Pr=6|Pr=8|Pr=9|Pr=10|Pr=11|Pr=14|Pr=15|Pr=16|Pr=17|Pr=20|Pr=21|Pr=22|Pr=23|Pr=25|Pr=26|Pr=27|Pr=28|Pr=30|Pr=31|Pr=32|Pr=33)&PL>89&(BI=1)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/ordre-du-jour.html",
       "id": "a1393",
@@ -2815,7 +2815,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pr=4|Pr=5|Pr=6|Pr=9|Pr=10|Pr=11|Pr=15|Pr=16|Pr=17|Pr=21|Pr=22|Pr=23|Pr=26|Pr=27|Pr=28|Pr=31|Pr=32|Pr=33)&Wo=0&PL>129&(BI=1)&Wo=0",
+      "requirements": "(Pr=4|Pr=5|Pr=6|Pr=9|Pr=10|Pr=11|Pr=15|Pr=16|Pr=17|Pr=21|Pr=22|Pr=23|Pr=26|Pr=27|Pr=28|Pr=31|Pr=32|Pr=33)&PL>129&(BI=1)",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/mettre-en-ordre.html",
       "id": "a1394",
@@ -2825,7 +2825,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pr=5|Pr=6|Pr=10|Pr=11|Pr=16|Pr=17|Pr=22|Pr=23|Pr=27|Pr=28|Pr=32|Pr=33)&Wo=0&PL>169&(BI=1)&Wo=0",
+      "requirements": "(Pr=5|Pr=6|Pr=10|Pr=11|Pr=16|Pr=17|Pr=22|Pr=23|Pr=27|Pr=28|Pr=32|Pr=33)&PL>169&(BI=1)",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/dans-lordre-des-choses.html",
       "id": "a1395",
@@ -2835,7 +2835,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Pr=6|Pr=11|Pr=17|Pr=23|Pr=28|Pr=33)&Wo=0&PL>189&(BI=1)&Wo=0",
+      "requirements": "(Pr=6|Pr=11|Pr=17|Pr=23|Pr=28|Pr=33)&PL>189&(BI=1)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/vos-desirsfont-desordre.html",
       "id": "a1396",
@@ -2845,7 +2845,7 @@
       "dispCatId": 43
     },
     {
-      "requirements": "(Qf=1666)&Wo=0&(Qf=1667)&Wo=0&(Qf=1668)&Wo=0&(Qf=1669)&Wo=0&(Qf=1670)&Wo=0",
+      "requirements": "(Qf=1666)&(Qf=1667)&(Qf=1668)&(Qf=1669)&(Qf=1670)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/koko-boy.html",
       "id": "a1397",
@@ -2855,7 +2855,7 @@
       "dispCatId": 70
     },
     {
-      "requirements": "(Qf=1671)&Wo=0&(Qf=1672)&Wo=0&(Qf=1673)&Wo=0&(Qf=1675)&Wo=0&(Qf=1676)&Wo=0",
+      "requirements": "(Qf=1671)&(Qf=1672)&(Qf=1673)&(Qf=1675)&(Qf=1676)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/monnaie-de-singe.html",
       "id": "a1400",
@@ -2865,7 +2865,7 @@
       "dispCatId": 70
     },
     {
-      "requirements": "(OA=1397)&Wo=0&(OA=1400)&Wo=0",
+      "requirements": "(OA=1397)&(OA=1400)",
       "level": 100,
       "id": "a1401",
       "type": "achievement",
@@ -2874,7 +2874,7 @@
       "dispCatId": 70
     },
     {
-      "requirements": "(Qf=1693)&Wo=0&(Qf=1694)&Wo=0&(Qf=1695)&Wo=0",
+      "requirements": "(Qf=1693)&(Qf=1694)&(Qf=1695)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/errances-feacutelines.html",
       "id": "a1423",
@@ -2884,7 +2884,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1692)&Wo=0&(Qf=1689)&Wo=0&(Qf=1703)&Wo=0&(Qf=1704)&Wo=0&(Qf=1705)&Wo=0",
+      "requirements": "(Qf=1692)&(Qf=1689)&(Qf=1703)&(Qf=1704)&(Qf=1705)",
       "level": 110,
       "noob": "https://www.dofuspourlesnoobs.com/tu-peux-toujours-te-gratter.html",
       "id": "a1424",
@@ -2894,7 +2894,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1699)&Wo=0&(Qf=1690)&Wo=0&(Qf=1708)&Wo=0&(Qf=1709)&Wo=0&(Qf=1710)&Wo=0&(Qf=1711)&Wo=0&(Qf=1698)&Wo=0&(Qf=1697)&Wo=0&(Qf=1706)&Wo=0",
+      "requirements": "(Qf=1699)&(Qf=1690)&(Qf=1708)&(Qf=1709)&(Qf=1710)&(Qf=1711)&(Qf=1698)&(Qf=1697)&(Qf=1706)",
       "level": 160,
       "noob": "https://www.dofuspourlesnoobs.com/angoraphobie.html",
       "id": "a1425",
@@ -2904,7 +2904,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(Qf=1700)&Wo=0&(Qf=1701)&Wo=0&(Qf=1702)&Wo=0&(Qf=1691)&Wo=0&(Qf=1707)&Wo=0&(Qf=1712)&Wo=0&(Qf=1713)&Wo=0",
+      "requirements": "(Qf=1700)&(Qf=1701)&(Qf=1702)&(Qf=1691)&(Qf=1707)&(Qf=1712)&(Qf=1713)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/on-va-tout-deacutefausser.html",
       "id": "a1426",
@@ -2914,7 +2914,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(OA=1423)&Wo=0&(OA=1424)&Wo=0&(OA=1425)&Wo=0&(OA=1426)&Wo=0&(BI=1)&Wo=0",
+      "requirements": "(OA=1423)&(OA=1424)&(OA=1425)&(OA=1426)&(BI=1)",
       "level": 200,
       "id": "a1427",
       "type": "achievement",
@@ -2923,7 +2923,7 @@
       "dispCatId": 65
     },
     {
-      "requirements": "(QQ>1199)&Wo=0",
+      "requirements": "(QQ>1199)",
       "level": 200,
       "id": "a1444",
       "type": "achievement",
@@ -2932,7 +2932,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(OA=5800)&Wo=0&(OA=988)&Wo=0&(OA=6284)&Wo=0",
+      "requirements": "(OA=5800)&(OA=988)&(OA=6284)",
       "level": 200,
       "id": "a1454",
       "type": "achievement",
@@ -2941,7 +2941,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(OA=1511)&Wo=0&(OA=1512)&Wo=0&(OA=1513)&Wo=0&(OA=1514)&Wo=0&(OA=1515)&Wo=0&(OA=1516)&Wo=0&(OA=1020)&Wo=0",
+      "requirements": "(OA=1511)&(OA=1512)&(OA=1513)&(OA=1514)&(OA=1515)&(OA=1516)&(OA=1020)",
       "level": 200,
       "id": "a1498",
       "type": "achievement",
@@ -2950,7 +2950,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(Qf=1731)&Wo=0&(Qf=1760)&Wo=0",
+      "requirements": "(Qf=1731)&(Qf=1760)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/plouf.html",
       "id": "a1511",
@@ -2960,7 +2960,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(Qf=1733)&Wo=0&(Qf=1734)&Wo=0&(Qf=1735)&Wo=0&(Qf=1736)&Wo=0&(Qf=1743)&Wo=0&(Qf=1744)&Wo=0",
+      "requirements": "(Qf=1733)&(Qf=1734)&(Qf=1735)&(Qf=1736)&(Qf=1743)&(Qf=1744)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/la-mer-en-heacuteritage.html",
       "id": "a1512",
@@ -2970,7 +2970,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(Qf=1737)&Wo=0&(Qf=1738)&Wo=0&(Qf=1739)&Wo=0&(Qf=1740)&Wo=0&(Qf=1741)&Wo=0&(Qf=1742)&Wo=0",
+      "requirements": "(Qf=1737)&(Qf=1738)&(Qf=1739)&(Qf=1740)&(Qf=1741)&(Qf=1742)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/la-guerre-des-profondeurs.html",
       "id": "a1513",
@@ -2980,7 +2980,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(Qf=1745)&Wo=0&(Qf=1746)&Wo=0&(Qf=1747)&Wo=0&(Qf=1756)&Wo=0&(Qf=1758)&Wo=0&(Qf=1759)&Wo=0",
+      "requirements": "(Qf=1745)&(Qf=1746)&(Qf=1747)&(Qf=1756)&(Qf=1758)&(Qf=1759)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/lappel-de-koutoulou.html",
       "id": "a1514",
@@ -2990,7 +2990,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(Qf=1764)&Wo=0&(Qf=1757)&Wo=0&(Qf=1766)&Wo=0&(Qf=1765)&Wo=0",
+      "requirements": "(Qf=1764)&(Qf=1757)&(Qf=1766)&(Qf=1765)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/vous-ne-descendrez-pas-plus-bas.html",
       "id": "a1515",
@@ -3000,7 +3000,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(Qf=1748)&Wo=0&(Qf=1755)&Wo=0&(Qf=1752)&Wo=0&(Qf=1750)&Wo=0&(Qf=1753)&Wo=0&(Qf=1732)&Wo=0&(Qf=1749)&Wo=0&(Qf=1751)&Wo=0&(Qf=1754)&Wo=0",
+      "requirements": "(Qf=1748)&(Qf=1755)&(Qf=1752)&(Qf=1750)&(Qf=1753)&(Qf=1732)&(Qf=1749)&(Qf=1751)&(Qf=1754)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/silence-on-coule.html",
       "id": "a1516",
@@ -3010,7 +3010,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(Qf=1770)&Wo=0&(Qf=1780)&Wo=0&(Qf=1768)&Wo=0&(Qf=1777)&Wo=0&(Qf=1772)&Wo=0&(Qf=1773)&Wo=0&(Qf=1771)&Wo=0&(Qf=1779)&Wo=0",
+      "requirements": "(Qf=1770)&(Qf=1780)&(Qf=1768)&(Qf=1777)&(Qf=1772)&(Qf=1773)&(Qf=1771)&(Qf=1779)",
       "level": 90,
       "noob": "https://www.dofuspourlesnoobs.com/caniablanca.html",
       "id": "a1522",
@@ -3020,7 +3020,7 @@
       "dispCatId": 48
     },
     {
-      "requirements": "(Qf=1774)&Wo=0&(Qf=1775)&Wo=0&(Qf=1776)&Wo=0&(Qf=1778)&Wo=0&(Qf=1769)&Wo=0",
+      "requirements": "(Qf=1774)&(Qf=1775)&(Qf=1776)&(Qf=1778)&(Qf=1769)",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/ccedila-en-valait-la-plaine.html",
       "id": "a1523",
@@ -3030,7 +3030,7 @@
       "dispCatId": 48
     },
     {
-      "requirements": "(Qf=1782)&Wo=0&(Qf=1784)&Wo=0&(Qf=1785)&Wo=0&(Qf=1786)&Wo=0&(Qf=1787)&Wo=0&(Qf=1788)&Wo=0&(Qf=1789)&Wo=0&(Qf=1791)&Wo=0&(Qf=1792)&Wo=0&(Qf=1793)&Wo=0",
+      "requirements": "(Qf=1782)&(Qf=1784)&(Qf=1785)&(Qf=1786)&(Qf=1787)&(Qf=1788)&(Qf=1789)&(Qf=1791)&(Qf=1792)&(Qf=1793)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/quatre-sur-six.html",
       "id": "a1543",
@@ -3040,7 +3040,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(Qf=1794)&Wo=0&(Qf=1796)&Wo=0&(Qf=1795)&Wo=0&(Qf=1797)&Wo=0&(Qf=1798)&Wo=0&(Qf=1799)&Wo=0&(Qf=1800)&Wo=0&(Qf=1810)&Wo=0&(Qf=1814)&Wo=0&(Qf=1816)&Wo=0&(Qf=1819)&Wo=0",
+      "requirements": "(Qf=1794)&(Qf=1796)&(Qf=1795)&(Qf=1797)&(Qf=1798)&(Qf=1799)&(Qf=1800)&(Qf=1810)&(Qf=1814)&(Qf=1816)&(Qf=1819)",
       "level": 80,
       "noob": "https://www.dofuspourlesnoobs.com/le-plein-depice.html",
       "id": "a1544",
@@ -3050,7 +3050,7 @@
       "dispCatId": 74
     },
     {
-      "requirements": "(Qf=1802)&Wo=0&(Qf=1803)&Wo=0&(Qf=1811)&Wo=0&(Qf=1812)&Wo=0&(Qf=1813)&Wo=0&(Qf=1815)&Wo=0&(Qf=1817)&Wo=0&(Qf=1818)&Wo=0",
+      "requirements": "(Qf=1802)&(Qf=1803)&(Qf=1811)&(Qf=1812)&(Qf=1813)&(Qf=1815)&(Qf=1817)&(Qf=1818)",
       "level": 130,
       "noob": "https://www.dofuspourlesnoobs.com/prive-de-desert.html",
       "id": "a1545",
@@ -3060,7 +3060,7 @@
       "dispCatId": 74
     },
     {
-      "requirements": "(Qf=1804)&Wo=0&(Qf=1805)&Wo=0&(Qf=1806)&Wo=0&(Qf=1807)&Wo=0",
+      "requirements": "(Qf=1804)&(Qf=1805)&(Qf=1806)&(Qf=1807)",
       "level": 130,
       "noob": "https://www.dofuspourlesnoobs.com/au-clair-de-la-dune.html",
       "id": "a1546",
@@ -3070,7 +3070,7 @@
       "dispCatId": 74
     },
     {
-      "requirements": "(Qf=1825)&Wo=0&(Qf=942)&Wo=0&(Qf=941)&Wo=0&(Qf=950)&Wo=0&(Qf=1824)&Wo=0",
+      "requirements": "(Qf=1825)&(Qf=942)&(Qf=941)&(Qf=950)&(Qf=1824)",
       "level": 40,
       "noob": "https://www.dofuspourlesnoobs.com/le-bon-air-de-la-mer-dasse.html",
       "id": "a1547",
@@ -3080,7 +3080,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(Qf=1820)&Wo=0&(Qf=1821)&Wo=0&(Qf=1822)&Wo=0&(Qf=1823)&Wo=0&(Qf=949)&Wo=0&(Qf=951)&Wo=0",
+      "requirements": "(Qf=1820)&(Qf=1821)&(Qf=1822)&(Qf=1823)&(Qf=949)&(Qf=951)",
       "level": 60,
       "noob": "https://www.dofuspourlesnoobs.com/sufokons-ensemble.html",
       "id": "a1548",
@@ -3090,7 +3090,7 @@
       "dispCatId": 58
     },
     {
-      "requirements": "(Qf=1829)&Wo=0&(Qf=1831)&Wo=0&(Qf=1832)&Wo=0&(Qf=1833)&Wo=0",
+      "requirements": "(Qf=1829)&(Qf=1831)&(Qf=1832)&(Qf=1833)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/que-cherche-la-corporation.html",
       "id": "a1570",
@@ -3100,7 +3100,7 @@
       "dispCatId": 74
     },
     {
-      "requirements": "(Qf=1836)&Wo=0&(Qf=1835)&Wo=0&(Qf=1839)&Wo=0&(Qf=1827)&Wo=0&(Qf=1828)&Wo=0&(Qf=1840)&Wo=0",
+      "requirements": "(Qf=1836)&(Qf=1835)&(Qf=1839)&(Qf=1827)&(Qf=1828)&(Qf=1840)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/sous-le-soleil-de-saharach.html",
       "id": "a1571",
@@ -3110,7 +3110,7 @@
       "dispCatId": 74
     },
     {
-      "requirements": "(OA=1544)&Wo=0&(OA=1545)&Wo=0&(OA=1546)&Wo=0&(OA=1571)&Wo=0&(OA=1570)&Wo=0",
+      "requirements": "(OA=1544)&(OA=1545)&(OA=1546)&(OA=1571)&(OA=1570)",
       "level": 200,
       "id": "a1572",
       "type": "achievement",
@@ -3119,7 +3119,7 @@
       "dispCatId": 74
     },
     {
-      "requirements": "(Qf=1851)&Wo=0&(Qf=1846)&Wo=0&(Qf=1849)&Wo=0&(Qf=1854)&Wo=0&(Qf=1848)&Wo=0&(Qf=1850)&Wo=0&(Qf=1847)&Wo=0",
+      "requirements": "(Qf=1851)&(Qf=1846)&(Qf=1849)&(Qf=1854)&(Qf=1848)&(Qf=1850)&(Qf=1847)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/la-chasse-aux-chasseurs.html",
       "id": "a1590",
@@ -3129,7 +3129,7 @@
       "dispCatId": 55
     },
     {
-      "requirements": "(QQ>1299)&Wo=0",
+      "requirements": "(QQ>1299)",
       "level": 200,
       "id": "a1592",
       "type": "achievement",
@@ -3138,7 +3138,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(Qf=1858)&Wo=0&(Qf=1859)&Wo=0&(Qf=1860)&Wo=0&(Qf=1861)&Wo=0",
+      "requirements": "(Qf=1858)&(Qf=1859)&(Qf=1860)&(Qf=1861)",
       "level": 70,
       "noob": "https://www.dofuspourlesnoobs.com/les-landes-mortes.html",
       "id": "a1613",
@@ -3148,7 +3148,7 @@
       "dispCatId": 76
     },
     {
-      "requirements": "(Qf=1877)&Wo=0&(Qf=1878)&Wo=0&(Qf=1879)&Wo=0&(Qf=1880)&Wo=0&(Qf=1881)&Wo=0&(Qf=1870)&Wo=0&(Qf=1871)&Wo=0&(Qf=1872)&Wo=0",
+      "requirements": "(Qf=1877)&(Qf=1878)&(Qf=1879)&(Qf=1880)&(Qf=1881)&(Qf=1870)&(Qf=1871)&(Qf=1872)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/hurlements-de-rire.html",
       "id": "a1614",
@@ -3158,7 +3158,7 @@
       "dispCatId": 76
     },
     {
-      "requirements": "(Qf=1862)&Wo=0&(Qf=1873)&Wo=0&(Qf=1883)&Wo=0&(Qf=1884)&Wo=0",
+      "requirements": "(Qf=1862)&(Qf=1873)&(Qf=1883)&(Qf=1884)",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/le-double-effet-gisgoul.html",
       "id": "a1615",
@@ -3168,7 +3168,7 @@
       "dispCatId": 76
     },
     {
-      "requirements": "(Qf=1863)&Wo=0&(Qf=1864)&Wo=0&(Qf=1865)&Wo=0&(Qf=1866)&Wo=0&(Qf=1876)&Wo=0",
+      "requirements": "(Qf=1863)&(Qf=1864)&(Qf=1865)&(Qf=1866)&(Qf=1876)",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/les-spores-c-est-la-sante.html",
       "id": "a1616",
@@ -3178,7 +3178,7 @@
       "dispCatId": 76
     },
     {
-      "requirements": "(Qf=1882)&Wo=0&(Qf=1874)&Wo=0&(Qf=1875)&Wo=0",
+      "requirements": "(Qf=1882)&(Qf=1874)&(Qf=1875)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/vampyre-vous-avez-dit-vampyre.html",
       "id": "a1617",
@@ -3188,7 +3188,7 @@
       "dispCatId": 76
     },
     {
-      "requirements": "(OA=1613)&Wo=0&(OA=1614)&Wo=0&(OA=1615)&Wo=0&(OA=1616)&Wo=0&(OA=1617)&Wo=0",
+      "requirements": "(OA=1613)&(OA=1614)&(OA=1615)&(OA=1616)&(OA=1617)",
       "level": 200,
       "id": "a1618",
       "type": "achievement",
@@ -3197,7 +3197,7 @@
       "dispCatId": 76
     },
     {
-      "requirements": "(QQ>1099)&Wo=0",
+      "requirements": "(QQ>1099)",
       "level": 200,
       "id": "a1620",
       "type": "achievement",
@@ -3206,7 +3206,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(Qf=1905)&Wo=0&(Qf=1906)&Wo=0&(Qf=1907)&Wo=0&(Qf=1908)&Wo=0&(Qf=1909)&Wo=0&(Qf=1911)&Wo=0&(Qf=1912)&Wo=0&(Qf=1913)&Wo=0&(Qf=1914)&Wo=0&(Qf=1915)&Wo=0",
+      "requirements": "(Qf=1905)&(Qf=1906)&(Qf=1907)&(Qf=1908)&(Qf=1909)&(Qf=1911)&(Qf=1912)&(Qf=1913)&(Qf=1914)&(Qf=1915)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/blanc-ivoire.html",
       "id": "a1622",
@@ -3216,7 +3216,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(Qf=1607)&Wo=0&(Qf=1845)&Wo=0&(Qf=1853)&Wo=0&(Qf=1867)&Wo=0&(Qf=1868)&Wo=0&(Qf=1869)&Wo=0&(Qf=1934)&Wo=0&(Qf=1935)&Wo=0&(Qf=1936)&Wo=0&(Qf=1937)&Wo=0",
+      "requirements": "(Qf=1607)&(Qf=1845)&(Qf=1853)&(Qf=1867)&(Qf=1868)&(Qf=1869)&(Qf=1934)&(Qf=1935)&(Qf=1936)&(Qf=1937)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/la-fratrie-des-oublies.html",
       "id": "a1650",
@@ -3226,7 +3226,7 @@
       "dispCatId": 77
     },
     {
-      "requirements": "(Qf=1938)&Wo=0&(Qf=1939)&Wo=0&(Qf=1954)&Wo=0&(Qf=1940)&Wo=0&(Qf=1955)&Wo=0&(Qf=1956)&Wo=0",
+      "requirements": "(Qf=1938)&(Qf=1939)&(Qf=1954)&(Qf=1940)&(Qf=1955)&(Qf=1956)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/l-armee-des-morts.html",
       "id": "a1651",
@@ -3236,7 +3236,7 @@
       "dispCatId": 77
     },
     {
-      "requirements": "(Qf=1948)&Wo=0&(Qf=1949)&Wo=0&(Qf=1950)&Wo=0&(Qf=1951)&Wo=0&(Qf=1952)&Wo=0&(Qf=1953)&Wo=0",
+      "requirements": "(Qf=1948)&(Qf=1949)&(Qf=1950)&(Qf=1951)&(Qf=1952)&(Qf=1953)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/marche-et-creve.html",
       "id": "a1652",
@@ -3246,7 +3246,7 @@
       "dispCatId": 77
     },
     {
-      "requirements": "(Qf=1942)&Wo=0&(Qf=1943)&Wo=0&(Qf=1944)&Wo=0&(Qf=1945)&Wo=0&(Qf=1946)&Wo=0&(Qf=1947)&Wo=0",
+      "requirements": "(Qf=1942)&(Qf=1943)&(Qf=1944)&(Qf=1945)&(Qf=1946)&(Qf=1947)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/cimetiere-marin.html",
       "id": "a1653",
@@ -3256,7 +3256,7 @@
       "dispCatId": 77
     },
     {
-      "requirements": "(OA=1651)&Wo=0&(OA=1652)&Wo=0&(OA=1653)&Wo=0",
+      "requirements": "(OA=1651)&(OA=1652)&(OA=1653)",
       "level": 200,
       "id": "a1654",
       "type": "achievement",
@@ -3265,7 +3265,7 @@
       "dispCatId": 77
     },
     {
-      "requirements": "(OA=1654)&Wo=0&(OA=1650)&Wo=0&(BI=1)&Wo=0",
+      "requirements": "(OA=1654)&(OA=1650)&(BI=1)",
       "level": 200,
       "id": "a1656",
       "type": "achievement",
@@ -3274,7 +3274,7 @@
       "dispCatId": 77
     },
     {
-      "requirements": "(Qf=1680)&Wo=0&(Qf=1681)&Wo=0&(Qf=1682)&Wo=0&(Qf=1683)&Wo=0&(Qf=1684)&Wo=0&(Qf=1685)&Wo=0&(Qf=1686)&Wo=0&(Qf=1687)&Wo=0&(Qf=1688)&Wo=0",
+      "requirements": "(Qf=1680)&(Qf=1681)&(Qf=1682)&(Qf=1683)&(Qf=1684)&(Qf=1685)&(Qf=1686)&(Qf=1687)&(Qf=1688)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/un-tour-en-cellule.html",
       "id": "a1657",
@@ -3284,7 +3284,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=1922)&Wo=0&(Qf=1923)&Wo=0&(Qf=1924)&Wo=0&(Qf=1932)&Wo=0&(Qf=1926)&Wo=0&(Qf=1927)&Wo=0&(Qf=1928)&Wo=0&(Qf=1929)&Wo=0&(Qf=1930)&Wo=0&(Qf=1933)&Wo=0",
+      "requirements": "(Qf=1922)&(Qf=1923)&(Qf=1924)&(Qf=1932)&(Qf=1926)&(Qf=1927)&(Qf=1928)&(Qf=1929)&(Qf=1930)&(Qf=1933)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/maison-de-correction.html",
       "id": "a1658",
@@ -3294,7 +3294,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(OA=1657)&Wo=0&(OA=1658)&Wo=0",
+      "requirements": "(OA=1657)&(OA=1658)",
       "level": 200,
       "id": "a1659",
       "type": "achievement",
@@ -3303,7 +3303,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=1767)&Wo=0&(Qf=1761)&Wo=0&(Qf=1762)&Wo=0",
+      "requirements": "(Qf=1767)&(Qf=1761)&(Qf=1762)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/au-pain-mouille-et-surtout-a-l-eau.html",
       "id": "a1660",
@@ -3313,7 +3313,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=1783)&Wo=0&(Qf=1808)&Wo=0&(Qf=1837)&Wo=0&(Qf=1834)&Wo=0",
+      "requirements": "(Qf=1783)&(Qf=1808)&(Qf=1837)&(Qf=1834)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/un-peu-de-soleil-derriere-les-barreaux.html",
       "id": "a1661",
@@ -3323,7 +3323,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=1674)&Wo=0&(Qf=1852)&Wo=0&(Qf=1855)&Wo=0&(Qf=1856)&Wo=0&(Qf=1857)&Wo=0&(Qf=1430)&Wo=0",
+      "requirements": "(Qf=1674)&(Qf=1852)&(Qf=1855)&(Qf=1856)&(Qf=1857)&(Qf=1430)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/repris-de-justesse.html",
       "id": "a1662",
@@ -3333,7 +3333,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(OA=1660)&Wo=0&(OA=1661)&Wo=0&(OA=1662)&Wo=0",
+      "requirements": "(OA=1660)&(OA=1661)&(OA=1662)",
       "level": 200,
       "id": "a1663",
       "type": "achievement",
@@ -3342,7 +3342,7 @@
       "dispCatId": 42
     },
     {
-      "requirements": "(Qf=1975)&Wo=0&(Qf=1976)&Wo=0&(Qf=1977)&Wo=0",
+      "requirements": "(Qf=1975)&(Qf=1976)&(Qf=1977)",
       "level": 25,
       "noob": "https://www.dofuspourlesnoobs.com/l-occasion-fait-le-larron.html",
       "id": "a1671",
@@ -3352,7 +3352,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(Qf=1988)&Wo=0&(Qf=1989)&Wo=0&(Qf=1990)&Wo=0&(Qf=1991)&Wo=0",
+      "requirements": "(Qf=1988)&(Qf=1989)&(Qf=1990)&(Qf=1991)",
       "level": 40,
       "noob": "https://www.dofuspourlesnoobs.com/la-grande-biblioquete.html",
       "id": "a1672",
@@ -3362,7 +3362,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(Qf=1978)&Wo=0&(Qf=1979)&Wo=0&(Qf=1980)&Wo=0&(Qf=1981)&Wo=0&(Qf=1982)&Wo=0&(Qf=1983)&Wo=0",
+      "requirements": "(Qf=1978)&(Qf=1979)&(Qf=1980)&(Qf=1981)&(Qf=1982)&(Qf=1983)",
       "level": 40,
       "noob": "https://www.dofuspourlesnoobs.com/mercenaire-d-acier.html",
       "id": "a1673",
@@ -3372,7 +3372,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(Qf=1984)&Wo=0&(Qf=1985)&Wo=0&(Qf=1986)&Wo=0&(Qf=1987)&Wo=0",
+      "requirements": "(Qf=1984)&(Qf=1985)&(Qf=1986)&(Qf=1987)",
       "level": 30,
       "noob": "https://www.dofuspourlesnoobs.com/pas-le-temps-de-chomer.html",
       "id": "a1674",
@@ -3382,7 +3382,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(Qf=1992)&Wo=0&(Qf=1993)&Wo=0&(Qf=1994)&Wo=0",
+      "requirements": "(Qf=1992)&(Qf=1993)&(Qf=1994)",
       "level": 30,
       "noob": "https://www.dofuspourlesnoobs.com/l-habitat-urbain.html",
       "id": "a1675",
@@ -3392,7 +3392,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(Qf=1996)&Wo=0&(Qf=1998)&Wo=0&(Qf=2000)&Wo=0&(Qf=1999)&Wo=0&(Qf=2007)&Wo=0&(Qf=2008)&Wo=0",
+      "requirements": "(Qf=1996)&(Qf=1998)&(Qf=2000)&(Qf=1999)&(Qf=2007)&(Qf=2008)",
       "level": 40,
       "noob": "https://www.dofuspourlesnoobs.com/escapades-et-embuscades.html",
       "id": "a1676",
@@ -3402,7 +3402,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(OA=1671)&Wo=0&(OA=1672)&Wo=0&(OA=1673)&Wo=0&(OA=1674)&Wo=0&(OA=1675)&Wo=0&(OA=1676)&Wo=0",
+      "requirements": "(OA=1671)&(OA=1672)&(OA=1673)&(OA=1674)&(OA=1675)&(OA=1676)",
       "level": 40,
       "id": "a1677",
       "type": "achievement",
@@ -3411,7 +3411,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(Qf=1958)&Wo=0&(Qf=1959)&Wo=0&(Qf=2009)&Wo=0&(Qf=1841|Qf=1677|Qf=1615|Qf=938|Qf=716|Qf=704|Qf=1974|Qf=1973|Qf=1972|Qf=1971|Qf=1970|Qf=1969|Qf=1968|Qf=1967|Qf=1966|Qf=1965|Qf=1964|Qf=1963|Qf=2470)&Wo=0&(Qf=1960)&Wo=0&(Qf=1962)&Wo=0",
+      "requirements": "(Qf=1958)&(Qf=1959)&(Qf=2009)&(Qf=1841|Qf=1677|Qf=1615|Qf=938|Qf=716|Qf=704|Qf=1974|Qf=1973|Qf=1972|Qf=1971|Qf=1970|Qf=1969|Qf=1968|Qf=1967|Qf=1966|Qf=1965|Qf=1964|Qf=1963|Qf=2470)&(Qf=1960)&(Qf=1962)",
       "level": 30,
       "noob": "https://www.dofuspourlesnoobs.com/un-citoyen-modele.html",
       "id": "a1678",
@@ -3421,7 +3421,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(OA=1378)&Wo=0&(OA=644)&Wo=0&(OA=1678)&Wo=0&(OA=1677)&Wo=0&(BI=1)&Wo=0",
+      "requirements": "(OA=1378)&(OA=644)&(OA=1678)&(OA=1677)&(BI=1)",
       "level": 40,
       "id": "a1679",
       "type": "achievement",
@@ -3430,7 +3430,7 @@
       "dispCatId": 45
     },
     {
-      "requirements": "(Qf=2010)&Wo=0&(Qf=2011)&Wo=0&(Qf=2012)&Wo=0&(Qf=2013)&Wo=0&(Qf=2014)&Wo=0&(Qf=2015)&Wo=0&(Qf=2016)&Wo=0&(Qf=2017)&Wo=0&(Qf=2018)&Wo=0&(Qf=2019)&Wo=0",
+      "requirements": "(Qf=2010)&(Qf=2011)&(Qf=2012)&(Qf=2013)&(Qf=2014)&(Qf=2015)&(Qf=2016)&(Qf=2017)&(Qf=2018)&(Qf=2019)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/la-bas-sous-la-montagne.html",
       "id": "a1681",
@@ -3440,7 +3440,7 @@
       "dispCatId": 51
     },
     {
-      "requirements": "(Qf=2033)&Wo=0&(Qf=2034)&Wo=0&(Qf=2045)&Wo=0&(Qf=2046)&Wo=0",
+      "requirements": "(Qf=2033)&(Qf=2034)&(Qf=2045)&(Qf=2046)",
       "level": 100,
       "noob": "https://www.dofuspourlesnoobs.com/meme-pas-peur.html",
       "id": "a1702",
@@ -3450,7 +3450,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(OA=1148)&Wo=0&(OA=1153)&Wo=0&(OA=1154)&Wo=0&(OA=1155)&Wo=0&(OA=1702)&Wo=0",
+      "requirements": "(OA=1148)&(OA=1153)&(OA=1154)&(OA=1155)&(OA=1702)",
       "level": 100,
       "id": "a1703",
       "type": "achievement",
@@ -3459,7 +3459,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(Qf=2035)&Wo=0&(Qf=2036)&Wo=0&(Qf=2037)&Wo=0&(Qf=2038)&Wo=0&(Qf=2039)&Wo=0&(Qf=2040)&Wo=0&(Qf=2041)&Wo=0&(Qf=2042)&Wo=0&(Qf=2043)&Wo=0&(Qf=2044)&Wo=0",
+      "requirements": "(Qf=2035)&(Qf=2036)&(Qf=2037)&(Qf=2038)&(Qf=2039)&(Qf=2040)&(Qf=2041)&(Qf=2042)&(Qf=2043)&(Qf=2044)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/noir-d-ebene.html",
       "id": "a1704",
@@ -3469,7 +3469,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(OA=1378)&Wo=0&(OA=1678)&Wo=0&(OA=1036)&Wo=0&(OA=1048)&Wo=0&(OA=1101)&Wo=0&(OA=1385)&Wo=0&(OA=5220)&Wo=0&(OA=565)&Wo=0&(OA=1543)&Wo=0&(OA=1622)&Wo=0&(OA=1704)&Wo=0&(Qf=2048)&Wo=0&(Qf=2049)&Wo=0&(Qf=2050)&Wo=0",
+      "requirements": "(OA=1378)&(OA=1678)&(OA=1036)&(OA=1048)&(OA=1101)&(OA=1385)&(OA=5220)&(OA=565)&(OA=1543)&(OA=1622)&(OA=1704)&(Qf=2048)&(Qf=2049)&(Qf=2050)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/six-sur-six.html",
       "id": "a1705",
@@ -3479,7 +3479,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(QF>2052,0)&Wo=0&(QF>2053,0)&Wo=0&(QF>2054,0)&Wo=0&(QF>2055,0)&Wo=0",
+      "requirements": "(QF>2052,0)&(QF>2053,0)&(QF>2054,0)&(QF>2055,0)",
       "level": 150,
       "noob": "https://www.dofuspourlesnoobs.com/des-chants-de-nowel.html",
       "id": "a2005",
@@ -3489,7 +3489,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(Ef>2819,0)&Wo=0&(Ef>5476,0)&Wo=0",
+      "requirements": "(Ef>2819,0)&(Ef>5476,0)",
       "level": 150,
       "id": "a2006",
       "type": "achievement",
@@ -3498,7 +3498,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(OA=2005)&Wo=0&(OA=2006)&Wo=0",
+      "requirements": "(OA=2005)&(OA=2006)",
       "level": 150,
       "id": "a2007",
       "type": "achievement",
@@ -3507,7 +3507,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>402,0)&Wo=0&PL>59",
+      "requirements": "(EH>402,0)&PL>59",
       "level": 60,
       "id": "a2066",
       "type": "achievement",
@@ -3516,7 +3516,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>403,0)&Wo=0&PL>59",
+      "requirements": "(EH>403,0)&PL>59",
       "level": 60,
       "id": "a2067",
       "type": "achievement",
@@ -3525,7 +3525,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>401,0)&Wo=0&PL>59",
+      "requirements": "(EH>401,0)&PL>59",
       "level": 60,
       "id": "a2068",
       "type": "achievement",
@@ -3534,7 +3534,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=2092)&Wo=0&(OA=2066)&Wo=0&(OA=2067)&Wo=0&(OA=2068)&Wo=0",
+      "requirements": "(OA=2092)&(OA=2066)&(OA=2067)&(OA=2068)",
       "level": 60,
       "id": "a2071",
       "type": "achievement",
@@ -3543,7 +3543,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EM>5653,0,d)&Wo=0&PL>59",
+      "requirements": "(EM>5653,0,d)&PL>59",
       "level": 60,
       "noob": "https://www.dofuspourlesnoobs.com/fonderie-des-waddicts.html",
       "id": "a2072",
@@ -3553,7 +3553,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EM>5664,0,d)&Wo=0&PL>129",
+      "requirements": "(EM>5664,0,d)&PL>129",
       "level": 130,
       "noob": "https://www.dofuspourlesnoobs.com/croquanterie.html",
       "id": "a2075",
@@ -3563,7 +3563,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>405,0)&Wo=0&PL>129",
+      "requirements": "(EH>405,0)&PL>129",
       "level": 130,
       "id": "a2076",
       "type": "achievement",
@@ -3572,7 +3572,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>404,0)&Wo=0&PL>129",
+      "requirements": "(EH>404,0)&PL>129",
       "level": 130,
       "id": "a2077",
       "type": "achievement",
@@ -3581,7 +3581,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=2093)&Wo=0&(OA=2076)&Wo=0&(OA=2081)&Wo=0&(OA=2077)&Wo=0",
+      "requirements": "(OA=2093)&(OA=2076)&(OA=2081)&(OA=2077)",
       "level": 130,
       "id": "a2080",
       "type": "achievement",
@@ -3590,7 +3590,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>406,0)&Wo=0&PL>129",
+      "requirements": "(EH>406,0)&PL>129",
       "level": 130,
       "id": "a2081",
       "type": "achievement",
@@ -3599,7 +3599,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EM>5666,0,d)&Wo=0&PL>189",
+      "requirements": "(EM>5666,0,d)&PL>189",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/temple-du-dieu-kao.html",
       "id": "a2082",
@@ -3609,7 +3609,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>407,0)&Wo=0&PL>189",
+      "requirements": "(EH>407,0)&PL>189",
       "level": 200,
       "id": "a2083",
       "type": "achievement",
@@ -3618,7 +3618,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>408,0)&Wo=0&PL>189",
+      "requirements": "(EH>408,0)&PL>189",
       "level": 200,
       "id": "a2084",
       "type": "achievement",
@@ -3627,7 +3627,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>409,0)&Wo=0&PL>189",
+      "requirements": "(EH>409,0)&PL>189",
       "level": 200,
       "id": "a2085",
       "type": "achievement",
@@ -3636,7 +3636,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=2094)&Wo=0&(OA=2083)&Wo=0&(OA=2084)&Wo=0&(OA=2085)&Wo=0",
+      "requirements": "(OA=2094)&(OA=2083)&(OA=2084)&(OA=2085)",
       "level": 190,
       "id": "a2088",
       "type": "achievement",
@@ -3645,7 +3645,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(Ef>5668,0)&Wo=0&(Ef>5669,0)&Wo=0&(Ef>5670,0)&Wo=0&(Ef>5671,0)&Wo=0&(Ef>5672,0)&Wo=0&PL>189",
+      "requirements": "(Ef>5668,0)&(Ef>5669,0)&(Ef>5670,0)&(Ef>5671,0)&(Ef>5672,0)&PL>189",
       "level": 200,
       "id": "a2089",
       "type": "achievement",
@@ -3654,7 +3654,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(Ef>5677,0)&Wo=0&(Ef>5678,0)&Wo=0&(Ef>5679,0)&Wo=0&(Ef>5680,0)&Wo=0&(Ef>5681,0)&Wo=0&PL>129",
+      "requirements": "(Ef>5677,0)&(Ef>5678,0)&(Ef>5679,0)&(Ef>5680,0)&(Ef>5681,0)&PL>129",
       "level": 130,
       "id": "a2090",
       "type": "achievement",
@@ -3663,7 +3663,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(Ef>5691,0)&Wo=0&(Ef>5652,0)&Wo=0&(Ef>5689,0)&Wo=0&(Ef>5690,0)&Wo=0&(Ef>5692,0)&Wo=0&PL>59",
+      "requirements": "(Ef>5691,0)&(Ef>5652,0)&(Ef>5689,0)&(Ef>5690,0)&(Ef>5692,0)&PL>59",
       "level": 60,
       "id": "a2091",
       "type": "achievement",
@@ -3672,7 +3672,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>410,0)&Wo=0&PL>59",
+      "requirements": "(EH>410,0)&PL>59",
       "level": 60,
       "id": "a2092",
       "type": "achievement",
@@ -3681,7 +3681,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>411,0)&Wo=0&PL>129",
+      "requirements": "(EH>411,0)&PL>129",
       "level": 130,
       "id": "a2093",
       "type": "achievement",
@@ -3690,7 +3690,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>412,0)&Wo=0&PL>189",
+      "requirements": "(EH>412,0)&PL>189",
       "level": 200,
       "id": "a2094",
       "type": "achievement",
@@ -3699,7 +3699,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=2071)&Wo=0&(OA=2080)&Wo=0&(OA=2088)&Wo=0&(OA=8458)&Wo=0",
+      "requirements": "(OA=2071)&(OA=2080)&(OA=2088)&(OA=8458)",
       "level": 190,
       "id": "a2096",
       "type": "achievement",
@@ -3708,7 +3708,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=2091)&Wo=0&(OA=2090)&Wo=0&(OA=2089)&Wo=0",
+      "requirements": "(OA=2091)&(OA=2090)&(OA=2089)",
       "level": 180,
       "id": "a2097",
       "type": "achievement",
@@ -3717,7 +3717,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(ES>910,0)&Wo=0&(ES>912,0)&Wo=0&(ES>911,0)&Wo=0",
+      "requirements": "(ES>910,0)&(ES>912,0)&(ES>911,0)",
       "level": 200,
       "id": "a2098",
       "type": "achievement",
@@ -3726,7 +3726,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(QF>2066,0)&Wo=0&(QF>2056,0)&Wo=0&(QF>2057,0)&Wo=0&(QF>2058,0)&Wo=0&(QF>2059,0)&Wo=0&(QF>2060,0)&Wo=0&(QF>2069,0)&Wo=0",
+      "requirements": "(QF>2066,0)&(QF>2056,0)&(QF>2057,0)&(QF>2058,0)&(QF>2059,0)&(QF>2060,0)&(QF>2069,0)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/un-brin-de-mystere.html",
       "id": "a2099",
@@ -3736,7 +3736,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(QF>2072,0)&Wo=0&(QF>2065,0)&Wo=0&(QF>2061,0)&Wo=0&(QF>2067,0)&Wo=0&(QF>2068,0)&Wo=0&(QF>2077,0)&Wo=0&(QF>2070,0)&Wo=0&(QF>2071,0)&Wo=0&(QF>2076,0)&Wo=0",
+      "requirements": "(QF>2072,0)&(QF>2065,0)&(QF>2061,0)&(QF>2067,0)&(QF>2068,0)&(QF>2077,0)&(QF>2070,0)&(QF>2071,0)&(QF>2076,0)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/promenades-digestives.html",
       "id": "a2100",
@@ -3746,7 +3746,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=2099)&Wo=0&(OA=2100)&Wo=0",
+      "requirements": "(OA=2099)&(OA=2100)",
       "level": 200,
       "id": "a2101",
       "type": "achievement",
@@ -3755,7 +3755,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EI>21052,0)&Wo=0&(EI>21053,0)&Wo=0&(EI>21054,0)&Wo=0&(EI>21055,0)&Wo=0&(EI>21056,0)&Wo=0&(EI>21057,0)&Wo=0&(EI>21042,0)&Wo=0&(EI>21031,0)&Wo=0",
+      "requirements": "(EI>21052,0)&(EI>21053,0)&(EI>21054,0)&(EI>21055,0)&(EI>21056,0)&(EI>21057,0)&(EI>21042,0)&(EI>21031,0)",
       "level": 200,
       "id": "a2102",
       "type": "achievement",
@@ -3764,7 +3764,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=2098)&Wo=0&(OA=2102)&Wo=0",
+      "requirements": "(OA=2098)&(OA=2102)",
       "level": 200,
       "id": "a2103",
       "type": "achievement",
@@ -3773,7 +3773,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=2096)&Wo=0&(OA=2097)&Wo=0&(OA=2103)&Wo=0&(OA=2101)&Wo=0",
+      "requirements": "(OA=2096)&(OA=2097)&(OA=2103)&(OA=2101)",
       "level": 200,
       "id": "a2104",
       "type": "achievement",
@@ -3782,7 +3782,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(Qf=2085)&Wo=0&(Qf=2086)&Wo=0&(Qf=2087)&Wo=0&(Qf=2088)&Wo=0&(Qf=2089)&Wo=0&(Qf=2090)&Wo=0",
+      "requirements": "(Qf=2085)&(Qf=2086)&(Qf=2087)&(Qf=2088)&(Qf=2089)&(Qf=2090)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/larmes-de-crocodaille.html",
       "id": "a2197",
@@ -3792,7 +3792,7 @@
       "dispCatId": 99
     },
     {
-      "requirements": "(Qf=2078)&Wo=0&(Qf=2079)&Wo=0&(Qf=2080)&Wo=0&(Qf=2081)&Wo=0&(Qf=2082)&Wo=0&(Qf=2083)&Wo=0",
+      "requirements": "(Qf=2078)&(Qf=2079)&(Qf=2080)&(Qf=2081)&(Qf=2082)&(Qf=2083)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/reves-de-dragons.html",
       "id": "a2198",
@@ -3802,7 +3802,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(Qf=2130)&Wo=0&(Qf=2131)&Wo=0&(Qf=2132)&Wo=0",
+      "requirements": "(Qf=2130)&(Qf=2131)&(Qf=2132)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/je-suis-malade-completement-malade.html",
       "id": "a2299",
@@ -3812,7 +3812,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(Qf=2111)&Wo=0&(Qf=2115)&Wo=0&(Qf=2116)&Wo=0",
+      "requirements": "(Qf=2111)&(Qf=2115)&(Qf=2116)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/la-guerre-eternelle.html",
       "id": "a2300",
@@ -3822,7 +3822,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(Qf=2112)&Wo=0&(Qf=2113)&Wo=0&(Qf=2114)&Wo=0",
+      "requirements": "(Qf=2112)&(Qf=2113)&(Qf=2114)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/prisonniers-de-la-mer.html",
       "id": "a2301",
@@ -3832,7 +3832,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(Qf=2117)&Wo=0&(Qf=2118)&Wo=0&(Qf=2119)&Wo=0",
+      "requirements": "(Qf=2117)&(Qf=2118)&(Qf=2119)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/jugement-dernier.html",
       "id": "a2302",
@@ -3842,7 +3842,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(OA=2299)&Wo=0&(OA=2300)&Wo=0&(OA=2301)&Wo=0&(OA=2302)&Wo=0",
+      "requirements": "(OA=2299)&(OA=2300)&(OA=2301)&(OA=2302)",
       "level": 200,
       "id": "a2303",
       "type": "achievement",
@@ -3851,7 +3851,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(Qf=2121)&Wo=0&(Qf=2122)&Wo=0&Qf=2136&Wo=0&(Qf=2137)&Wo=0&(Qf=2138)&Wo=0",
+      "requirements": "(Qf=2121)&(Qf=2122)&Qf=2136&(Qf=2137)&(Qf=2138)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/l-avenir-du-futur.html",
       "id": "a2304",
@@ -3861,7 +3861,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(QQ>1399)&Wo=0",
+      "requirements": "(QQ>1399)",
       "level": 200,
       "id": "a2305",
       "type": "achievement",
@@ -3870,7 +3870,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(Qf=2062)&Wo=0&(Qf=2063)&Wo=0&(Qf=2064)&Wo=0&(Qf=2097)&Wo=0&(Qf=2098)&Wo=0&(Qf=2099)&Wo=0&(Qf=2120)&Wo=0&(Qf=2133)&Wo=0&(Qf=2135)&Wo=0",
+      "requirements": "(Qf=2062)&(Qf=2063)&(Qf=2064)&(Qf=2097)&(Qf=2098)&(Qf=2099)&(Qf=2120)&(Qf=2133)&(Qf=2135)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/eliocalypse-resonance.html",
       "id": "a2306",
@@ -3880,7 +3880,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(Qf=2149)&Wo=0&(Qf=2150)&Wo=0&(Qf=2151)&Wo=0&(Qf=2152)&Wo=0&(Qf=2153)&Wo=0&(Qf=2154)&Wo=0&(Qf=2155)&Wo=0&(Qf=2197)&Wo=0",
+      "requirements": "(Qf=2149)&(Qf=2150)&(Qf=2151)&(Qf=2152)&(Qf=2153)&(Qf=2154)&(Qf=2155)&(Qf=2197)",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/les-grands-esprits-se-rencontrent.html",
       "id": "a3034",
@@ -3890,7 +3890,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2156)&Wo=0&(Qf=2181)&Wo=0&(Qf=2182)&Wo=0&(Qf=2183)&Wo=0&(Qf=2184)&Wo=0&(Qf=2185)&Wo=0&(Qf=2186)&Wo=0",
+      "requirements": "(Qf=2156)&(Qf=2181)&(Qf=2182)&(Qf=2183)&(Qf=2184)&(Qf=2185)&(Qf=2186)",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/suivre-la-voie.html",
       "id": "a3055",
@@ -3900,7 +3900,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2157)&Wo=0&(Qf=2159)&Wo=0&(Qf=2166)&Wo=0",
+      "requirements": "(Qf=2157)&(Qf=2159)&(Qf=2166)",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/nature-spirituelle.html",
       "id": "a3056",
@@ -3910,7 +3910,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2161)&Wo=0&(Qf=2164)&Wo=0&(Qf=2163)&Wo=0",
+      "requirements": "(Qf=2161)&(Qf=2164)&(Qf=2163)",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/de-quel-bois-je-me-chauffe.html",
       "id": "a3057",
@@ -3920,7 +3920,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2171)&Wo=0&(Qf=2170)&Wo=0&(Qf=2167)&Wo=0&(Qf=2168)&Wo=0",
+      "requirements": "(Qf=2171)&(Qf=2170)&(Qf=2167)&(Qf=2168)",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/des-larmes-de-pierre.html",
       "id": "a3058",
@@ -3930,7 +3930,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2174)&Wo=0&(Qf=2175)&Wo=0&(Qf=2177)&Wo=0&(Qf=2178)&Wo=0",
+      "requirements": "(Qf=2174)&(Qf=2175)&(Qf=2177)&(Qf=2178)",
       "level": 140,
       "noob": "https://www.dofuspourlesnoobs.com/sous-des-nuages-de-cendre.html",
       "id": "a3059",
@@ -3940,7 +3940,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(OA=3034)&Wo=0&(OA=3055)&Wo=0&(OA=3056)&Wo=0&(OA=3057)&Wo=0&(OA=3058)&Wo=0&(OA=3059)&Wo=0",
+      "requirements": "(OA=3034)&(OA=3055)&(OA=3056)&(OA=3057)&(OA=3058)&(OA=3059)",
       "level": 140,
       "id": "a3060",
       "type": "achievement",
@@ -3949,7 +3949,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2179)&Wo=0&(Qf=2198)&Wo=0&(Qf=2180)&Wo=0",
+      "requirements": "(Qf=2179)&(Qf=2198)&(Qf=2180)",
       "level": 170,
       "noob": "https://www.dofuspourlesnoobs.com/le-gardien-de-l-immacule.html",
       "id": "a3078",
@@ -3959,7 +3959,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2162)&Wo=0&(Qf=2165)&Wo=0&(Qf=2172)&Wo=0&(Qf=2173)&Wo=0&(Qf=2176)&Wo=0",
+      "requirements": "(Qf=2162)&(Qf=2165)&(Qf=2172)&(Qf=2173)&(Qf=2176)",
       "level": 170,
       "noob": "https://www.dofuspourlesnoobs.com/a-tombeaux-ouverts.html",
       "id": "a3079",
@@ -3969,7 +3969,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(OA=3078)&Wo=0&(OA=3079)&Wo=0",
+      "requirements": "(OA=3078)&(OA=3079)",
       "level": 170,
       "id": "a3080",
       "type": "achievement",
@@ -3978,7 +3978,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2200)&Wo=0&(Qf=2201)&Wo=0&(Qf=2202)&Wo=0",
+      "requirements": "(Qf=2200)&(Qf=2201)&(Qf=2202)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/un-reve-en-clair-obscur.html",
       "id": "a3082",
@@ -3988,7 +3988,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2204)&Wo=0&(Qf=2169)&Wo=0&(Qf=2199)&Wo=0&(Qf=2203)&Wo=0&(Qf=2205)&Wo=0&(Qf=2158)&Wo=0",
+      "requirements": "(Qf=2204)&(Qf=2169)&(Qf=2199)&(Qf=2203)&(Qf=2205)&(Qf=2158)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/deux-dragons-entrent-dans-un-bar.html",
       "id": "a3098",
@@ -3998,7 +3998,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(OA=3082)&Wo=0&(OA=3098)&Wo=0&(OA=3101)&Wo=0",
+      "requirements": "(OA=3082)&(OA=3098)&(OA=3101)",
       "level": 200,
       "id": "a3099",
       "type": "achievement",
@@ -4007,7 +4007,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(OA=3060)&Wo=0&(OA=3080)&Wo=0&(OA=3099)&Wo=0",
+      "requirements": "(OA=3060)&(OA=3080)&(OA=3099)",
       "level": 200,
       "id": "a3100",
       "type": "achievement",
@@ -4016,7 +4016,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2187)&Wo=0&(Qf=2188)&Wo=0&(Qf=2189)&Wo=0&(Qf=2190)&Wo=0&(Qf=2191)&Wo=0",
+      "requirements": "(Qf=2187)&(Qf=2188)&(Qf=2189)&(Qf=2190)&(Qf=2191)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/les-secrets-du-pandawushu.html",
       "id": "a3101",
@@ -4026,7 +4026,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2406)&Wo=0&(Qf=2407)&Wo=0&(Qf=2408)&Wo=0&(Qf=2160)&Wo=0",
+      "requirements": "(Qf=2406)&(Qf=2407)&(Qf=2408)&(Qf=2160)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/apres-la-pluie.html",
       "id": "a5076",
@@ -4036,7 +4036,7 @@
       "dispCatId": 114
     },
     {
-      "requirements": "(Qf=2149)&Wo=0&(Qf=2150)&Wo=0&(Qf=2151)&Wo=0&(Qf=2152)&Wo=0&(Qf=2153)&Wo=0&(Qf=2154)&Wo=0&(Qf=2155)&Wo=0&(Qf=2197)&Wo=0&(Qf=2179)&Wo=0&(Qf=2198)&Wo=0&(Qf=2180)&Wo=0&(Qf=2200)&Wo=0&(Qf=2201)&Wo=0&(Qf=2202)&Wo=0&(Qf=2406)&Wo=0&(Qf=2407)&Wo=0&(Qf=2408)&Wo=0&(Qf=2160)&Wo=0",
+      "requirements": "(Qf=2149)&(Qf=2150)&(Qf=2151)&(Qf=2152)&(Qf=2153)&(Qf=2154)&(Qf=2155)&(Qf=2197)&(Qf=2179)&(Qf=2198)&(Qf=2180)&(Qf=2200)&(Qf=2201)&(Qf=2202)&(Qf=2406)&(Qf=2407)&(Qf=2408)&(Qf=2160)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/eliocalypse-resilience.html",
       "id": "a5077",
@@ -4046,7 +4046,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(Qf=2414)&Wo=0&(Qf=2415)&Wo=0&(Qf=2416)&Wo=0&(Qf=2417)&Wo=0&(Qf=2418)&Wo=0",
+      "requirements": "(Qf=2414)&(Qf=2415)&(Qf=2416)&(Qf=2417)&(Qf=2418)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/d-autres-moeurs.html",
       "id": "a5078",
@@ -4056,7 +4056,7 @@
       "dispCatId": 123
     },
     {
-      "requirements": "(Qf=2411)&Wo=0&(Qf=2412)&Wo=0&(Qf=2413)&Wo=0",
+      "requirements": "(Qf=2411)&(Qf=2412)&(Qf=2413)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/ravages.html",
       "id": "a5081",
@@ -4066,7 +4066,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(Qf=2421)&Wo=0&(Qf=2422)&Wo=0&(Qf=2423)&Wo=0&(Qf=2425)&Wo=0",
+      "requirements": "(Qf=2421)&(Qf=2422)&(Qf=2423)&(Qf=2425)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/eliocalypse-reminiscence.html",
       "id": "a5162",
@@ -4076,7 +4076,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(OA=2306)&Wo=0&(OA=2304)&Wo=0&(OA=5077)&Wo=0&(OA=5081)&Wo=0&(OA=5162)&Wo=0",
+      "requirements": "(OA=2306)&(OA=2304)&(OA=5077)&(OA=5081)&(OA=5162)",
       "level": 200,
       "id": "a5163",
       "type": "achievement",
@@ -4085,7 +4085,7 @@
       "dispCatId": 102
     },
     {
-      "requirements": "(Qf=2424)&Wo=0&(Qf=2428)&Wo=0&(Qf=2426)&Wo=0&(Qf=2427)&Wo=0&(Qf=2437)&Wo=0&Qf=2439&Wo=0&Qf=2440&Wo=0&Qf=2441&Wo=0",
+      "requirements": "(Qf=2424)&(Qf=2428)&(Qf=2426)&(Qf=2427)&(Qf=2437)&Qf=2439&Qf=2440&Qf=2441",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/demons-et-merveilles.html",
       "id": "a5165",
@@ -4095,7 +4095,7 @@
       "dispCatId": 125
     },
     {
-      "requirements": "(QQ>1599)&Wo=0",
+      "requirements": "(QQ>1599)",
       "level": 200,
       "id": "a5174",
       "type": "achievement",
@@ -4104,7 +4104,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(QQ>1499)&Wo=0",
+      "requirements": "(QQ>1499)",
       "level": 200,
       "id": "a5175",
       "type": "achievement",
@@ -4113,7 +4113,7 @@
       "dispCatId": 118
     },
     {
-      "requirements": "(Qf=2431)&Wo=0&(Qf=2434)&Wo=0&(Qf=2435)&Wo=0&(Qf=2432)&Wo=0&(Qf=2433)&Wo=0&(Qf=2436)&Wo=0",
+      "requirements": "(Qf=2431)&(Qf=2434)&(Qf=2435)&(Qf=2432)&(Qf=2433)&(Qf=2436)",
       "level": 110,
       "noob": "https://www.dofuspourlesnoobs.com/freres-ennemis.html",
       "id": "a5204",
@@ -4123,7 +4123,7 @@
       "dispCatId": 46
     },
     {
-      "requirements": "(Qf=1781)&Wo=0&(Qf=2442)&Wo=0&(Qf=2443)&Wo=0&(Qf=2444)&Wo=0&(Qf=2445)&Wo=0&(Qf=2446)&Wo=0&(Qf=2447)&Wo=0&(Qf=2448)&Wo=0",
+      "requirements": "(Qf=1781)&(Qf=2442)&(Qf=2443)&(Qf=2444)&(Qf=2445)&(Qf=2446)&(Qf=2447)&(Qf=2448)",
       "level": 180,
       "noob": "https://www.dofuspourlesnoobs.com/ocre-d-ambre.html",
       "id": "a5220",
@@ -4133,7 +4133,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(Qf=2450)&Wo=0&(Qf=2451)&Wo=0&(Qf=2452)&Wo=0&(Qf=2453)&Wo=0",
+      "requirements": "(Qf=2450)&(Qf=2451)&(Qf=2452)&(Qf=2453)",
       "level": 150,
       "noob": "https://www.dofuspourlesnoobs.com/mortelle-randonnee.html",
       "id": "a5221",
@@ -4143,7 +4143,7 @@
       "dispCatId": 128
     },
     {
-      "requirements": "(Qf=2409)&Wo=0&(Qf=2420)&Wo=0&(Qf=2449)&Wo=0",
+      "requirements": "(Qf=2409)&(Qf=2420)&(Qf=2449)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/le-secret-des-dofus-prologue.html",
       "id": "a5222",
@@ -4153,7 +4153,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "PO>26776,0&PO>26778,0&PO>26780,0&PO>26782,0&PO>26784,0&PO>26786,0&PO>26789,0&Wo=0",
+      "requirements": "PO>26776,0&PO>26778,0&PO>26780,0&PO>26782,0&PO>26784,0&PO>26786,0&PO>26789,0",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/cherche-et-trouve.html",
       "id": "a5223",
@@ -4163,7 +4163,7 @@
       "dispCatId": 128
     },
     {
-      "requirements": "(EI>27296,0)&Wo=0&(EI>27310,0)&Wo=0&(EI>27311,0)&Wo=0&(EI>27299,0)&Wo=0&(EI>27300,0)&Wo=0&(EI>27301,0)&Wo=0&(EI>27302,0)&Wo=0",
+      "requirements": "(EI>27296,0)&(EI>27310,0)&(EI>27311,0)&(EI>27299,0)&(EI>27300,0)&(EI>27301,0)&(EI>27302,0)",
       "level": 200,
       "id": "a5799",
       "type": "achievement",
@@ -4172,7 +4172,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Ef>7175,0)&Wo=0",
+      "requirements": "(Ef>7175,0)",
       "level": 200,
       "id": "a5800",
       "type": "achievement",
@@ -4181,7 +4181,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Qf=2463)&Wo=0&(Qf=2464)&Wo=0&(Qf=2465)&Wo=0&(Qf=2466)&Wo=0&(Qf=2468)&Wo=0",
+      "requirements": "(Qf=2463)&(Qf=2464)&(Qf=2465)&(Qf=2466)&(Qf=2468)",
       "level": 50,
       "noob": "https://www.dofuspourlesnoobs.com/l-enfant-regardait-tomber-la-neige.html",
       "id": "a5925",
@@ -4191,7 +4191,7 @@
       "dispCatId": 140
     },
     {
-      "requirements": "(Qf=2471)&Wo=0&(Qf=2472)&Wo=0&(Qf=2473)&Wo=0&(Qf=2474)&Wo=0",
+      "requirements": "(Qf=2471)&(Qf=2472)&(Qf=2473)&(Qf=2474)",
       "level": 190,
       "noob": "https://www.dofuspourlesnoobs.com/un-clan-heteroclite.html",
       "id": "a5928",
@@ -4201,7 +4201,7 @@
       "dispCatId": 140
     },
     {
-      "requirements": "(Qf=2478)&Wo=0&(Qf=2479)&Wo=0&(Qf=2480)&Wo=0",
+      "requirements": "(Qf=2478)&(Qf=2479)&(Qf=2480)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/conseiller-en-patrimoine.html",
       "id": "a5931",
@@ -4211,7 +4211,7 @@
       "dispCatId": 140
     },
     {
-      "requirements": "(Qf=2482)&Wo=0&(Qf=2475)&Wo=0&(Qf=2477)&Wo=0&(Qf=2481)&Wo=0",
+      "requirements": "(Qf=2482)&(Qf=2475)&(Qf=2477)&(Qf=2481)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/le-bouquet-final.html",
       "id": "a5932",
@@ -4221,7 +4221,7 @@
       "dispCatId": 140
     },
     {
-      "requirements": "(OA=5925)&Wo=0&(OA=5928)&Wo=0&(OA=5931)&Wo=0&(OA=5932)&Wo=0",
+      "requirements": "(OA=5925)&(OA=5928)&(OA=5931)&(OA=5932)",
       "level": 200,
       "id": "a5933",
       "type": "achievement",
@@ -4230,7 +4230,7 @@
       "dispCatId": 140
     },
     {
-      "requirements": "(EH>1267,0)&Wo=0&PL>89",
+      "requirements": "(EH>1267,0)&PL>89",
       "level": 90,
       "id": "a6270",
       "type": "achievement",
@@ -4239,7 +4239,7 @@
       "dispCatId": 68
     },
     {
-      "requirements": "(EH>1278,0)&Wo=0&PL>49",
+      "requirements": "(EH>1278,0)&PL>49",
       "level": 50,
       "id": "a6271",
       "type": "achievement",
@@ -4248,7 +4248,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>1279,0)&Wo=0&PL>109",
+      "requirements": "(EH>1279,0)&PL>109",
       "level": 110,
       "id": "a6272",
       "type": "achievement",
@@ -4257,7 +4257,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>1280,0)&Wo=0&PL>179",
+      "requirements": "(EH>1280,0)&PL>179",
       "level": 180,
       "id": "a6273",
       "type": "achievement",
@@ -4266,7 +4266,7 @@
       "dispCatId": 23
     },
     {
-      "requirements": "(EH>1102,0)&Wo=0&PL>39",
+      "requirements": "(EH>1102,0)&PL>39",
       "level": 50,
       "id": "a6274",
       "type": "achievement",
@@ -4275,7 +4275,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>1101,0)&Wo=0&PL>89",
+      "requirements": "(EH>1101,0)&PL>89",
       "level": 100,
       "id": "a6275",
       "type": "achievement",
@@ -4284,7 +4284,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>1100,0)&Wo=0&PL>139",
+      "requirements": "(EH>1100,0)&PL>139",
       "level": 150,
       "id": "a6276",
       "type": "achievement",
@@ -4293,7 +4293,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>1103,0)&Wo=0&PL>189",
+      "requirements": "(EH>1103,0)&PL>189",
       "level": 200,
       "id": "a6277",
       "type": "achievement",
@@ -4302,7 +4302,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(EH>1405,0)&Wo=0&PL>59",
+      "requirements": "(EH>1405,0)&PL>59",
       "level": 60,
       "id": "a6280",
       "type": "achievement",
@@ -4311,7 +4311,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>1404,0)&Wo=0&PL>129",
+      "requirements": "(EH>1404,0)&PL>129",
       "level": 130,
       "id": "a6281",
       "type": "achievement",
@@ -4320,7 +4320,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(EH>1406,0)&Wo=0&PL>189",
+      "requirements": "(EH>1406,0)&PL>189",
       "level": 200,
       "id": "a6282",
       "type": "achievement",
@@ -4329,7 +4329,7 @@
       "dispCatId": 89
     },
     {
-      "requirements": "(OA=6277)&Wo=0&(OA=6275)&Wo=0&(OA=6276)&Wo=0&(OA=6274)&Wo=0",
+      "requirements": "(OA=6277)&(OA=6275)&(OA=6276)&(OA=6274)",
       "level": 200,
       "id": "a6284",
       "type": "achievement",
@@ -4338,7 +4338,7 @@
       "dispCatId": 60
     },
     {
-      "requirements": "(Qf=1618)&Wo=0&(Qf=1619)&Wo=0&(Qf=1620)&Wo=0&(Qf=1621)&Wo=0&(Qf=2486)&Wo=0&(Qf=2487)&Wo=0&(Qf=2488)&Wo=0",
+      "requirements": "(Qf=1618)&(Qf=1619)&(Qf=1620)&(Qf=1621)&(Qf=2486)&(Qf=2487)&(Qf=2488)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/l-arbre-qui-cache-la-foret.html",
       "id": "a7760",
@@ -4348,7 +4348,7 @@
       "dispCatId": 146
     },
     {
-      "requirements": "(OA=5222)&Wo=0&(PO=27803|Qo>18983)&Wo=0&(OA=7760)&Wo=0&(Qf=2489)&Wo=0&(BI=1)&Wo=0",
+      "requirements": "(OA=5222)&(PO=27803|Qo>18983)&(OA=7760)&(Qf=2489)&(BI=1)",
       "level": 200,
       "noob": "https://www.dofuspourlesnoobs.com/en-attendant-le-printemps.html",
       "id": "a7761",
@@ -4358,7 +4358,7 @@
       "dispCatId": 1001
     },
     {
-      "requirements": "(OA=6280)&Wo=0&(OA=6281)&Wo=0&(OA=6282)&Wo=0",
+      "requirements": "(OA=6280)&(OA=6281)&(OA=6282)",
       "level": 200,
       "id": "a8458",
       "type": "achievement",
@@ -4401,6 +4401,60 @@
       "categoryId": 118,
       "order": 8,
       "dispCatId": 118
+    },
+    {
+      "requirements": "(Qf=2515)&(Qf=2516)&(Qf=2517)&(Qf=2518)&(Qf=2519)&(BI=1)",
+      "level": 200,
+      "id": "a8855",
+      "type": "achievement",
+      "categoryId": 40,
+      "order": 45,
+      "dispCatId": 65
+    },
+    {
+      "requirements": "(QF>2529,0)&(QF>2526,0)&(QF>2525,0)&(QF>2527,0)",
+      "level": 200,
+      "id": "a8856",
+      "type": "achievement",
+      "categoryId": 65,
+      "order": 24,
+      "dispCatId": 65
+    },
+    {
+      "requirements": "(Qf=2520)&(Qf=2521)&(Qf=2522)&(Qf=2523)",
+      "level": 170,
+      "id": "a8857",
+      "type": "achievement",
+      "categoryId": 65,
+      "order": 21,
+      "dispCatId": 65
+    },
+    {
+      "requirements": "(Qf=2530)&(Qf=2531)&(Qf=2536)",
+      "level": 200,
+      "id": "a8858",
+      "type": "achievement",
+      "categoryId": 65,
+      "order": 22,
+      "dispCatId": 65
+    },
+    {
+      "requirements": "(Qf=2532)&(Qf=2533)&(Qf=2534)&(Qf=2535)",
+      "level": 200,
+      "id": "a8859",
+      "type": "achievement",
+      "categoryId": 65,
+      "order": 23,
+      "dispCatId": 65
+    },
+    {
+      "requirements": "OA=8855&(OA=8857)&OA=8858&(OA=8859)&OA=8856&(BI=1)",
+      "level": 200,
+      "id": "a8860",
+      "type": "achievement",
+      "categoryId": 65,
+      "order": 25,
+      "dispCatId": 65
     },
     {
       "requirements": "PL>109",
@@ -8721,7 +8775,7 @@
       ]
     },
     {
-      "requirements": "PL>99&Qa!637&Qa!638",
+      "requirements": "PL>99",
       "noob": "https://www.dofuspourlesnoobs.com/blessure-de-chasse.html",
       "id": "q636",
       "achCatId": 51,
@@ -8733,7 +8787,7 @@
       ]
     },
     {
-      "requirements": "PL>99&Qa!636&Qa!638",
+      "requirements": "PL>99&Qf=636&DH>12,32105",
       "noob": "https://www.dofuspourlesnoobs.com/chasse-dangereuse.html",
       "id": "q637",
       "achCatId": 51,
@@ -8745,7 +8799,7 @@
       ]
     },
     {
-      "requirements": "PL>99&Qa!636&Qa!637",
+      "requirements": "PL>99&Qf=637&DH>12,32105",
       "noob": "https://www.dofuspourlesnoobs.com/rentrer-brocouille.html",
       "id": "q638",
       "achCatId": 51,
@@ -8781,7 +8835,7 @@
       ]
     },
     {
-      "requirements": "PL>149",
+      "requirements": "PL>149&(PO!32113|DM>29,32113)",
       "noob": "https://www.dofuspourlesnoobs.com/bonmonstres-de-neige.html",
       "id": "q642",
       "achCatId": 51,
@@ -17955,7 +18009,7 @@
       ]
     },
     {
-      "requirements": "Qf=1462&PL>100&Sc=842",
+      "requirements": "Qf=1462&PL>99&Sc=842",
       "noob": "https://www.dofuspourlesnoobs.com/l-epee-du-rocher.html",
       "id": "q2035",
       "achCatId": 1001,
@@ -17986,12 +18040,12 @@
       "type": "quest",
       "categoryId": 4,
       "levels": [
-        120,
+        130,
         200
       ]
     },
     {
-      "requirements": "Qf=2037&PL>189&Sc=842",
+      "requirements": "Qf=2037&PL>179&Sc=842",
       "noob": "https://www.dofuspourlesnoobs.com/a-la-recherche-de-crocoburio.html",
       "id": "q2038",
       "achCatId": 1001,
@@ -20413,6 +20467,226 @@
         8,
         8
       ]
+    },
+    {
+      "requirements": "PL>149&(Qf=1484|(Qa=1484&Qo>8349))",
+      "id": "q2515",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 4,
+      "levels": [
+        170,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>149&Qf=2515&Qf=2520",
+      "id": "q2516",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 4,
+      "levels": [
+        170,
+        170
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2516",
+      "id": "q2517",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 4,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2517",
+      "id": "q2518",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 4,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2518",
+      "id": "q2519",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 4,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>149",
+      "id": "q2520",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        170,
+        170
+      ]
+    },
+    {
+      "requirements": "Qa=2516&Qo>19299",
+      "id": "q2521",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        170,
+        170
+      ]
+    },
+    {
+      "requirements": "Qa=2516&Qo>19304",
+      "id": "q2522",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        170,
+        170
+      ]
+    },
+    {
+      "requirements": "Qa=2516&Qo>19312",
+      "id": "q2523",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        170,
+        170
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2515&(WE=229|WE=254)&(DD>7,31745|PO!31745)",
+      "id": "q2525",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2515&(WE=228|WE=252)&(DD>7,31746|PO!31746)",
+      "id": "q2526",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2515&Qf=2516&(WE=230|WE=255)&(DD>7,32026|PO!32026)",
+      "id": "q2527",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2515&(((WE=230|WE=255)&(DD>7,31582|PO!31582))|((WE=229|WE=254)&(DD>7,31581|PO!31581))|((WE=228|WE=252)&(DD>7,31580|PO!31580)))",
+      "id": "q2529",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qa=2517&Qo>19282",
+      "id": "q2530",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qa=2517&Qo>19391",
+      "id": "q2531",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qa=2518&Qo>19394",
+      "id": "q2532",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qa=2518&Qo>19403",
+      "id": "q2533",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2515",
+      "id": "q2534",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2515&Qf=2518",
+      "id": "q2535",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
+    },
+    {
+      "requirements": "PL>179&Qf=2515",
+      "id": "q2536",
+      "achCatId": 65,
+      "type": "quest",
+      "categoryId": 57,
+      "levels": [
+        200,
+        200
+      ]
     }
   ],
   "almanax": [
@@ -21025,7 +21299,7 @@
       "day": 16
     },
     {
-      "itemId": 8233,
+      "itemId": 8236,
       "itemImg": "https://api.dofusdb.fr/img/items/17105.png",
       "itemQuantity": 1,
       "month": 3,
@@ -21474,7 +21748,7 @@
     },
     {
       "itemId": 405,
-      "itemImg": "https://api.dofusdb.fr/img/items/34083.png",
+      "itemImg": "https://api.dofusdb.fr/img/items/34561.png",
       "itemQuantity": 50,
       "month": 5,
       "id": "q1214",
@@ -21570,7 +21844,7 @@
     },
     {
       "itemId": 532,
-      "itemImg": "https://api.dofusdb.fr/img/items/34561.png",
+      "itemImg": "https://api.dofusdb.fr/img/items/34083.png",
       "itemQuantity": 40,
       "month": 5,
       "id": "q1226",
@@ -24962,6 +25236,31 @@
       "type": "FINISHED"
     },
     {
+      "from": "a8855",
+      "to": "a8860",
+      "type": "FINISHED"
+    },
+    {
+      "from": "a8856",
+      "to": "a8860",
+      "type": "FINISHED"
+    },
+    {
+      "from": "a8857",
+      "to": "a8860",
+      "type": "FINISHED"
+    },
+    {
+      "from": "a8858",
+      "to": "a8860",
+      "type": "FINISHED"
+    },
+    {
+      "from": "a8859",
+      "to": "a8860",
+      "type": "FINISHED"
+    },
+    {
       "from": "a887",
       "to": "a1035",
       "type": "FINISHED"
@@ -26369,6 +26668,11 @@
     {
       "from": "q1484",
       "to": "q1699",
+      "type": "IN_PROGRESS"
+    },
+    {
+      "from": "q1484",
+      "to": "q2515",
       "type": "IN_PROGRESS"
     },
     {
@@ -31102,13 +31406,188 @@
       "type": "FINISHED"
     },
     {
+      "from": "q2515",
+      "to": "q2516",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2515",
+      "to": "q2525",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2515",
+      "to": "q2526",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2515",
+      "to": "q2529",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2515",
+      "to": "q2534",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2515",
+      "to": "q2536",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2516",
+      "to": "q2517",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2516",
+      "to": "q2521",
+      "type": "IN_PROGRESS"
+    },
+    {
+      "from": "q2516",
+      "to": "q2522",
+      "type": "IN_PROGRESS"
+    },
+    {
+      "from": "q2516",
+      "to": "q2523",
+      "type": "IN_PROGRESS"
+    },
+    {
+      "from": "q2516",
+      "to": "q2527",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2517",
+      "to": "q2518",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2517",
+      "to": "q2530",
+      "type": "IN_PROGRESS"
+    },
+    {
+      "from": "q2517",
+      "to": "q2531",
+      "type": "IN_PROGRESS"
+    },
+    {
+      "from": "q2518",
+      "to": "q2519",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2518",
+      "to": "q2532",
+      "type": "IN_PROGRESS"
+    },
+    {
+      "from": "q2518",
+      "to": "q2533",
+      "type": "IN_PROGRESS"
+    },
+    {
+      "from": "q2518",
+      "to": "q2535",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2519",
+      "to": "a8855",
+      "type": "FINISHED"
+    },
+    {
       "from": "q252",
       "to": "q253",
       "type": "FINISHED"
     },
     {
+      "from": "q2520",
+      "to": "a8857",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2520",
+      "to": "q2516",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2521",
+      "to": "a8857",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2522",
+      "to": "a8857",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2523",
+      "to": "a8857",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2525",
+      "to": "a8856",
+      "type": "FINISHED_N_TIMES"
+    },
+    {
+      "from": "q2526",
+      "to": "a8856",
+      "type": "FINISHED_N_TIMES"
+    },
+    {
+      "from": "q2527",
+      "to": "a8856",
+      "type": "FINISHED_N_TIMES"
+    },
+    {
+      "from": "q2529",
+      "to": "a8856",
+      "type": "FINISHED_N_TIMES"
+    },
+    {
       "from": "q253",
       "to": "q255",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2530",
+      "to": "a8858",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2531",
+      "to": "a8858",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2532",
+      "to": "a8859",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2533",
+      "to": "a8859",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2534",
+      "to": "a8859",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2535",
+      "to": "a8859",
+      "type": "FINISHED"
+    },
+    {
+      "from": "q2536",
+      "to": "a8858",
       "type": "FINISHED"
     },
     {
@@ -32848,48 +33327,18 @@
     },
     {
       "from": "q636",
-      "to": "a610",
-      "type": "FINISHED"
-    },
-    {
-      "from": "q636",
       "to": "q637",
-      "type": "NOT_FINISHED"
-    },
-    {
-      "from": "q636",
-      "to": "q638",
-      "type": "NOT_FINISHED"
-    },
-    {
-      "from": "q637",
-      "to": "a610",
       "type": "FINISHED"
-    },
-    {
-      "from": "q637",
-      "to": "q636",
-      "type": "NOT_FINISHED"
     },
     {
       "from": "q637",
       "to": "q638",
-      "type": "NOT_FINISHED"
+      "type": "FINISHED"
     },
     {
       "from": "q638",
       "to": "a610",
       "type": "FINISHED"
-    },
-    {
-      "from": "q638",
-      "to": "q636",
-      "type": "NOT_FINISHED"
-    },
-    {
-      "from": "q638",
-      "to": "q637",
-      "type": "NOT_FINISHED"
     },
     {
       "from": "q64",
@@ -34584,7 +35033,44 @@
     465,
     466,
     467,
-    468
+    468,
+    469,
+    470,
+    471,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    479,
+    480,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    491,
+    492,
+    493,
+    494,
+    495,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508
   ],
   "questCategories": [
     {
@@ -34593,7 +35079,7 @@
     },
     {
       "id": 3,
-      "order": 20
+      "order": 21
     },
     {
       "id": 4,
@@ -34601,7 +35087,7 @@
     },
     {
       "id": 5,
-      "order": 25
+      "order": 26
     },
     {
       "id": 6,
@@ -34609,7 +35095,7 @@
     },
     {
       "id": 7,
-      "order": 34
+      "order": 35
     },
     {
       "id": 9,
@@ -34621,31 +35107,31 @@
     },
     {
       "id": 11,
-      "order": 31
+      "order": 32
     },
     {
       "id": 13,
-      "order": 36
+      "order": 37
     },
     {
       "id": 16,
-      "order": 22
-    },
-    {
-      "id": 17,
       "order": 23
     },
     {
-      "id": 18,
+      "id": 17,
       "order": 24
     },
     {
+      "id": 18,
+      "order": 25
+    },
+    {
       "id": 19,
-      "order": 35
+      "order": 36
     },
     {
       "id": 21,
-      "order": 33
+      "order": 34
     },
     {
       "id": 23,
@@ -34657,11 +35143,11 @@
     },
     {
       "id": 26,
-      "order": 30
+      "order": 31
     },
     {
       "id": 27,
-      "order": 28
+      "order": 29
     },
     {
       "id": 28,
@@ -34669,11 +35155,11 @@
     },
     {
       "id": 29,
-      "order": 19
+      "order": 20
     },
     {
       "id": 30,
-      "order": 41
+      "order": 42
     },
     {
       "id": 31,
@@ -34689,15 +35175,15 @@
     },
     {
       "id": 35,
-      "order": 15
-    },
-    {
-      "id": 36,
       "order": 16
     },
     {
+      "id": 36,
+      "order": 17
+    },
+    {
       "id": 37,
-      "order": 29
+      "order": 30
     },
     {
       "id": 38,
@@ -34705,15 +35191,15 @@
     },
     {
       "id": 39,
-      "order": 39
+      "order": 40
     },
     {
       "id": 40,
-      "order": 37
+      "order": 38
     },
     {
       "id": 41,
-      "order": 40
+      "order": 41
     },
     {
       "id": 42,
@@ -34721,11 +35207,11 @@
     },
     {
       "id": 44,
-      "order": 32
+      "order": 33
     },
     {
       "id": 45,
-      "order": 17
+      "order": 18
     },
     {
       "id": 46,
@@ -34733,27 +35219,31 @@
     },
     {
       "id": 47,
-      "order": 42
+      "order": 43
     },
     {
       "id": 49,
-      "order": 21
+      "order": 22
     },
     {
       "id": 50,
-      "order": 26
-    },
-    {
-      "id": 52,
       "order": 27
     },
     {
+      "id": 52,
+      "order": 28
+    },
+    {
       "id": 53,
-      "order": 18
+      "order": 19
     },
     {
       "id": 55,
-      "order": 38
+      "order": 39
+    },
+    {
+      "id": 57,
+      "order": 15
     }
   ]
 }

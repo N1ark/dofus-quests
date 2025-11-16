@@ -1,5 +1,9 @@
 {
-    "name": "worker-name",
+    "name": "dofus-quests",
+    "main": ".svelte-kit/cloudflare/_worker.js",
     "compatibility_date": "2025-11-16",
-    "main": "src/main.ts",
+    "assets": {
+        "binding": "ASSETS",
+        "directory": ".svelte-kit/cloudflare",
+    },
 }
